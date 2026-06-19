@@ -1,0 +1,42 @@
+# =============================================================================
+# Athlete profile — EDIT THESE VALUES to match you.
+# Not secret (no tokens here), so it's fine to keep in the repo.
+# =============================================================================
+
+ftp: 317            # Functional Threshold Power, watts. RE-ANCHOR after each retest
+                    # (plan retests at start of Phase 2 and end of Phase 4).
+max_hr: 197         # Max heart rate, bpm — your peak on record (197 on VO2 efforts 5/02, 5/09)
+resting_hr: 48      # Resting HR baseline, bpm (Oura will refine this over time)
+weight_kg: 79       # Used for W/kg                       <-- set yours (placeholder)
+
+timezone: "America/Chicago"   # Used to decide which calendar day "today" is
+
+# How many days of history to pull/keep. 56+ gives reliable fitness (CTL) and trends.
+history_days: 56
+
+# Longitudinal review window (weeks) for per-workout-type trend analysis
+trend_weeks: 8
+
+# Interval detection — how the analyzer finds work intervals in threshold/VO2
+# sessions to measure power "fade" across reps. Tune if your intervals are
+# very short or very long.
+interval_detection:
+  work_frac_ftp: 0.88   # smoothed power above this %FTP counts as a work interval
+  min_interval_s: 60    # ignore efforts shorter than this (surges, sprints)
+  gap_merge_s: 25       # bridge brief dips inside one interval
+  smooth_s: 10          # rolling-average window for detection
+
+# -----------------------------------------------------------------------------
+# Recommendation thresholds. Sensible starting points — tune as you learn your
+# own numbers. All are used by the rule-based engine and shown to Claude as
+# context during the interactive /training-brief.
+# -----------------------------------------------------------------------------
+thresholds:
+  readiness_low: 70          # Oura readiness below this => caution
+  readiness_high: 85         # above this + low recent load => green light to push
+  sleep_low: 70              # Oura sleep score below this => caution
+  resting_hr_elevated: 5     # bpm above baseline => caution (illness/fatigue)
+  hrv_drop_pct: 12           # HRV this % below baseline => caution
+  decoupling_high: 6.0       # Pw:Hr aerobic decoupling % above this => fatigue/durability flag
+  tss_ramp_7d_high: 450      # rolling 7-day TSS above this => high load, watch recovery
+  if_overshoot: 0.08         # actual IF this much above target => harder than planned

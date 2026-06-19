@@ -1,0 +1,217 @@
+# =============================================================================
+# 20-Week Pyramidal FTP Build — encoded from your plan.
+#
+# Periodized into 4 phases. A date resolves to a workout by:
+#   1. an exact-date entry under `schedule:` (FTP tests) — highest priority
+#   2. the phase whose week range contains that date -> that phase's weekday
+#
+# Watt targets below are anchored to FTP 315. RE-ANCHOR after each retest:
+# update `ftp` in config/athlete.yaml and bump the watt targets in the affected
+# phase (or just ask Claude via /training-review to re-anchor them).
+#
+# Workout fields: type, duration_min, target_watts, target_if, target_tss, description
+# Types used: Rest, Recovery, Endurance, SweetSpot, Threshold, VO2max, Test
+# =============================================================================
+
+meta:
+  name: "20-Week Pyramidal FTP Build"
+  goal: "Raise FTP from 315; crit specificity by peak"
+  start_date: 2026-06-15        # Monday of Week 1 (you started Tue 6/16)
+  ftp_at_start: 315
+
+phases:
+  # -------------------------------------------------------------------------
+  - name: "Phase 1 — Aerobic Base"
+    weeks: [1, 6]
+    week_template:
+      monday:
+        type: Recovery
+        duration_min: 30
+        target_watts: "<200"
+        target_if: 0.50
+        description: "Rest, or 30 min easy spin. Genuinely easy."
+      tuesday:
+        type: Endurance
+        duration_min: 90
+        target_watts: "200-230"
+        target_if: 0.66
+        target_tss: 65
+        description: "Z2, 75-90 min. Conversational, cadence 90+."
+      wednesday:
+        type: SweetSpot
+        duration_min: 75
+        target_watts: "280-295"
+        target_if: 0.82
+        target_tss: 78
+        description: "WU 15min, SST 2x15min @ 285W (3 min easy between), CD. Build toward 2x20."
+      thursday:
+        type: Endurance
+        duration_min: 75
+        target_watts: "200-230"
+        target_if: 0.65
+        target_tss: 52
+        description: "Z2, 60-90 min."
+      friday:
+        type: Rest
+        description: "Full rest."
+      saturday:
+        type: Endurance
+        duration_min: 180
+        target_watts: "200-230"
+        target_if: 0.66
+        target_tss: 130
+        description: "Long Z2, 2.5-3.5 hr. Biggest aerobic stimulus of the week — fuel well."
+      sunday:
+        type: Endurance
+        duration_min: 90
+        target_watts: "Z2 200-230, tempo 240-285"
+        target_if: 0.70
+        target_tss: 72
+        description: "Z2 90 min with 2x10 min tempo @ 240-285W in the back half."
+
+  # -------------------------------------------------------------------------
+  - name: "Phase 2 — Threshold Build"
+    weeks: [7, 12]
+    week_template:
+      monday:
+        type: Rest
+        description: "Rest or easy spin."
+      tuesday:
+        type: Threshold
+        duration_min: 75
+        target_watts: "300-330"
+        target_if: 0.85
+        target_tss: 92
+        description: "WU, Threshold 2x20 min @ 100% FTP (build to 3x15), CD. Re-anchor to new FTP."
+      wednesday:
+        type: Endurance
+        duration_min: 75
+        target_watts: "200-230"
+        target_if: 0.65
+        target_tss: 52
+        description: "Z2, 75 min."
+      thursday:
+        type: Threshold
+        duration_min: 75
+        target_watts: "under 290 / over 330"
+        target_if: 0.88
+        target_tss: 95
+        description: "Over-unders: 2 sets of 4x(3 min under @290W / 2 min over @330W). Trains lactate shuttling."
+      friday:
+        type: Rest
+        description: "Full rest."
+      saturday:
+        type: Endurance
+        duration_min: 165
+        target_watts: "Z2 200-230, tempo 240-285"
+        target_if: 0.71
+        target_tss: 135
+        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 240-285W."
+      sunday:
+        type: Endurance
+        duration_min: 90
+        target_watts: "200-230"
+        target_if: 0.65
+        target_tss: 62
+        description: "Z2, 90 min."
+
+  # -------------------------------------------------------------------------
+  - name: "Phase 3 — VO2max Block"
+    weeks: [13, 16]
+    week_template:
+      monday:
+        type: Rest
+        description: "Rest."
+      tuesday:
+        type: VO2max
+        duration_min: 60
+        target_watts: "340-365"
+        target_if: 0.88
+        target_tss: 85
+        description: "WU, 4x4 min @ 115% FTP (~360W) w/ 4 min easy between, CD."
+      wednesday:
+        type: Endurance
+        duration_min: 60
+        target_watts: "200-230"
+        target_if: 0.63
+        target_tss: 40
+        description: "Easy Z2. Lower volume block — keep this genuinely easy."
+      thursday:
+        type: VO2max
+        duration_min: 60
+        target_watts: "360 / 200"
+        target_if: 0.86
+        target_tss: 80
+        description: "30/15s: 30 sec @ 360W / 15 sec @ 200W x13, 2-3 sets."
+      friday:
+        type: Rest
+        description: "Rest."
+      saturday:
+        type: Endurance
+        duration_min: 135
+        target_watts: "200-230"
+        target_if: 0.66
+        target_tss: 98
+        description: "Z2 endurance, 2-2.5 hr."
+      sunday:
+        type: Endurance
+        duration_min: 75
+        target_watts: "200-230"
+        target_if: 0.63
+        target_tss: 48
+        description: "Easy Z2 or rest."
+
+  # -------------------------------------------------------------------------
+  - name: "Phase 4 — Consolidation + Peak"
+    weeks: [17, 20]
+    week_template:
+      monday:
+        type: Rest
+        description: "Rest."
+      tuesday:
+        type: Threshold
+        duration_min: 90
+        target_watts: "98-100% FTP (re-anchor)"
+        target_if: 0.86
+        target_tss: 110
+        description: "Threshold 2x25-30 min @ 98-100% FTP. Re-anchor to current FTP."
+      wednesday:
+        type: Endurance
+        duration_min: 75
+        target_watts: "200-230"
+        target_if: 0.65
+        target_tss: 52
+        description: "Z2, 75 min."
+      thursday:
+        type: Threshold
+        duration_min: 75
+        target_watts: "under 290 / over 330+"
+        target_if: 0.88
+        target_tss: 95
+        description: "Over-unders, longer overs."
+      friday:
+        type: Rest
+        description: "Full rest."
+      saturday:
+        type: Endurance
+        duration_min: 150
+        target_watts: "Z2 + surges to race pace"
+        target_if: 0.72
+        target_tss: 120
+        description: "Endurance with race-pace surges (crit specificity)."
+      sunday:
+        type: Endurance
+        duration_min: 90
+        target_watts: "200-230"
+        target_if: 0.64
+        target_tss: 58
+        description: "Easy Z2."
+
+# Date-specific overrides — FTP tests (re-anchor zones + update athlete.yaml ftp).
+schedule:
+  2026-07-28:                     # start of Phase 2 (week 7)
+    type: Test
+    description: "FTP retest (20-min test x0.95, or ramp). You'll likely be ~325. Re-anchor zones."
+  2026-10-27:                     # end of block (week 20)
+    type: Test
+    description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."

@@ -1,0 +1,7 @@
+requests>=2.31
+PyYAML>=6.0
+python-dotenv>=1.0
+tzdata>=2024.1   # ensures zoneinfo timezones resolve on the cloud's Linux sandbox
+# Optional — only needed for the auto-written coach narrative in scheduled runs.
+# The system runs fine without it. Uncomment to enable:
+# anthropic>=0.40
