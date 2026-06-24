@@ -15,9 +15,11 @@ then stay available to answer follow-up questions.
 
 **Fetch + compute** — Strava and Oura tokens are provided as environment variables:
 2. `python3 -m trainingtracker fetch` — pulls fresh Strava (covers Zwift) + Oura into `data/`.
-3. `python3 -m trainingtracker brief --no-coach` — computes today's structured briefing.
+3. `python3 -m trainingtracker brief --no-coach --quiet` — computes today's briefing and writes it
+   to `data/briefings/latest.md` (it does **not** print the markdown, to avoid duplicate output).
 
 **Reason like a coach** (go beyond the rule-based verdict), reading:
+- `data/briefings/latest.md` — the computed briefing (verdict, recovery, last workout, load, fitness)
 - `config/athlete.yaml`, `config/training-plan.yaml`
 - `data/workout_history.json` — per-ride intervals, **fade %**, NP, IF, TSS, decoupling
 - `data/oura.json` — readiness / sleep / resting-HR / HRV trend (look across days, not just today)
@@ -26,7 +28,8 @@ Weigh recovery against today's planned intensity; check whether the last session
 hot/easy vs plan (IF overshoot, decoupling, interval fade); protect the week's key session;
 note the current **phase / week** and how today fits the block.
 
-**Post a tight, numeric summary** as your message (this becomes the session I open to chat):
+**Post a tight, numeric summary** as your message (this becomes the session I open to chat). Your
+reply should be **only this summary** — do not paste the raw briefing markdown or echo command output:
 - **Verdict:** Proceed / Modify / Push / Rest — if Modify, the exact change (e.g. "3×12 → 3×10 @ same power").
 - **Why:** 2–4 signals with numbers.
 - **Watch:** one thing to monitor today.

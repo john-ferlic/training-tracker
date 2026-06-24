@@ -140,8 +140,11 @@ def cmd_brief(args) -> int:
     dated = config.BRIEFINGS_DIR / f"{today.isoformat()}.md"
     (config.BRIEFINGS_DIR / "latest.md").write_text(md)
     dated.write_text(md)
-    print(md)
-    print(f"\n(written to {dated})", file=sys.stderr)
+    if getattr(args, "quiet", False):
+        print(f"Briefing written to {dated} (read it from there).")
+    else:
+        print(md)
+        print(f"\n(written to {dated})", file=sys.stderr)
     return 0
 
 
@@ -248,6 +251,8 @@ def build_parser() -> argparse.ArgumentParser:
 
     b = sub.add_parser("brief", help="today's recommendation from history")
     b.add_argument("--no-coach", action="store_true", help="skip the optional Claude narrative")
+    b.add_argument("--quiet", action="store_true",
+                   help="write the briefing to file without printing the full markdown")
     b.set_defaults(func=cmd_brief)
 
     r = sub.add_parser("run", help="fetch + brief (local one-shot)")
