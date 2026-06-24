@@ -11,7 +11,7 @@ from datetime import date, timedelta
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from trainingtracker import fitness, trends, workout  # noqa: E402
+from trainingtracker import fitness, profile, trends, workout  # noqa: E402
 
 FTP = 250
 
@@ -142,6 +142,28 @@ def test_build_review_smoke():
     review = trends.build_review({"thresholds": {"decoupling_high": 6.0}}, plan, hist, {}, today, weeks=8)
     for key in ("fitness", "trends", "volume", "weaknesses"):
         assert key in review
+
+
+# ----- profile / stat sync -------------------------------------------------
+def test_suggest_profile_updates_flags_real_changes():
+    athlete = {"ftp": 317, "weight_kg": 79, "resting_hr": 48, "max_hr": 197}
+    strava = {"ftp": 325, "weight": 78.5}  # FTP up 8, weight 0.5kg (below threshold)
+    oura = {"2026-06-10": {"resting_hr": 44}, "2026-06-11": {"resting_hr": 43},
+            "2026-06-12": {"resting_hr": 44}}
+    rides = [{"max_hr": 199}, {"max_hr": 192}]
+    ch = {c["field"]: c for c in profile.suggest_profile_updates(athlete, strava, oura, rides)}
+    assert ch["ftp"]["suggested"] == 325
+    assert ch["resting_hr"]["suggested"] == 44       # median 44 vs 48 (>=3)
+    assert ch["max_hr"]["suggested"] == 199          # peak 199 >= 197+2
+    assert "weight_kg" not in ch                     # 0.5kg delta is below threshold
+
+
+def test_suggest_profile_updates_no_change_and_no_lowering():
+    athlete = {"ftp": 317, "weight_kg": 79, "resting_hr": 44, "max_hr": 197}
+    strava = {"ftp": 317, "weight": 79.0}
+    oura = {"2026-06-10": {"resting_hr": 44}}
+    rides = [{"max_hr": 198}, {"max_hr": 150}]  # peak 198 = +1, below +2 bump; never lowers
+    assert profile.suggest_profile_updates(athlete, strava, oura, rides) == []
 
 
 def _run_all():

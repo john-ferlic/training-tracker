@@ -72,7 +72,8 @@ re-provision the sandbox and answer.
   `data/workout_history.json` and have the routine commit it each run so it accumulates.
 - **After an FTP retest:** update `ftp` in `config/athlete.yaml`, commit, and push — the routine
   picks it up on the next run.
-- **Plan adaptation:** the routine can propose changes to `config/training-plan.yaml` and push them
-  as a branch/PR for you to review and merge (see the prompt). Needs the GitHub connection to have
-  **write** access; git auth is handled by the connection — no extra secret.
+- **Plan & stat adaptation:** the routine can propose changes to `config/training-plan.yaml` (training)
+  and `config/athlete.yaml` (FTP / weight / resting & max HR, via `sync-profile`) and push each as a
+  branch/PR for you to review and merge. Needs the GitHub connection to have **write** access; git
+  auth is handled by the connection — no extra secret.
 - The routine reuses everything local: same package, same analysis, same plan.

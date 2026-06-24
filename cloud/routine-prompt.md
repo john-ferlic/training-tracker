@@ -35,10 +35,16 @@ note the current **phase / week** and how today fits the block.
 or my data. Re-run `fetch`, `analyze`, or `review` as needed to answer precisely — never quote
 fade/NP/decoupling from memory; pull it from the pipeline.
 
-**Adapting the plan:** if your analysis warrants changing upcoming training (e.g. add a threshold
-session next week, extend an interval, insert a recovery day), edit `config/training-plan.yaml`,
-commit it to a new branch named `plan-update-<date>`, and push it with a clear message + PR
-description explaining the change and the data behind it — so the athlete can review and merge.
-Never rewrite the plan on `main` directly. If the change is borderline, just recommend it in your
-summary and ask first. (Git auth comes from the repo connection — no extra secret needed, provided
-the connection has write access.)
+**Adapting the plan and stats** — both via a reviewed branch/PR, never editing `main` directly.
+(Git auth comes from the repo connection — no extra secret, as long as it has write access.)
+
+- *Plan:* if your analysis warrants changing upcoming training (add a threshold session next week,
+  extend an interval, insert a recovery day), edit `config/training-plan.yaml`, commit to a branch
+  `plan-update-<date>`, and push a PR describing the change and the data behind it.
+- *Stats:* run `python3 -m trainingtracker sync-profile`. If it suggests changes to FTP, weight,
+  resting HR, or max HR, apply them to `config/athlete.yaml` with **surgical line edits that preserve
+  the comments** (do not rewrite the whole file), commit to a branch `stats-update-<date>`, and push
+  a PR listing each change and its reason. A max-HR bump can be a HR-strap glitch — name the source
+  ride so the athlete can sanity-check before merging.
+
+If a change is borderline, just recommend it in your summary and ask first.

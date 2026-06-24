@@ -6,6 +6,7 @@
     python -m trainingtracker run           # fetch + brief (local one-shot)
     python -m trainingtracker analyze       # deep analysis of the latest workout (--id N)
     python -m trainingtracker review        # longitudinal trends, fitness, weaknesses
+    python -m trainingtracker sync-profile  # suggest athlete.yaml stat updates (FTP, HR, weight)
     python -m trainingtracker show-plan     # print today + next days from the plan
 """
 from __future__ import annotations
@@ -15,7 +16,7 @@ import sys
 from datetime import date, datetime, timedelta
 from typing import Any
 
-from . import analysis, briefing, config, history, plan as plan_mod, store, trends, workout
+from . import analysis, briefing, config, history, plan as plan_mod, profile, store, trends, workout
 from .briefing import render_markdown
 
 
@@ -189,6 +190,30 @@ def cmd_review(args) -> int:
     return 0
 
 
+def cmd_sync_profile(args) -> int:
+    """Report suggested config/athlete.yaml updates (FTP, weight, resting/max HR)
+    from current data. Read-only — apply via a reviewed edit/PR to keep comments."""
+    athlete = config.load_athlete()
+    rides = history.records(history.load())
+    oura = store.load_oura()
+    strava_athlete: dict[str, Any] = {}
+    try:
+        from .clients.strava import StravaClient
+
+        strava_athlete = StravaClient().get_athlete()
+    except RuntimeError as e:
+        print(f"Strava profile unavailable ({e}); checking Oura + ride data only.", file=sys.stderr)
+
+    changes = profile.suggest_profile_updates(athlete, strava_athlete, oura, rides)
+    if not changes:
+        print("No stat changes suggested — config/athlete.yaml is current.")
+        return 0
+    print("Suggested config/athlete.yaml updates:")
+    for c in changes:
+        print(f"  {c['field']}: {c['current']} -> {c['suggested']}   ({c['reason']})")
+    return 0
+
+
 def cmd_show_plan(args) -> int:
     athlete = config.load_athlete()
     plan = config.load_plan()
@@ -238,6 +263,10 @@ def build_parser() -> argparse.ArgumentParser:
     rv = sub.add_parser("review", help="longitudinal trends, fitness, and weaknesses")
     rv.add_argument("--weeks", type=int, default=0, help="window in weeks (default: athlete.trend_weeks)")
     rv.set_defaults(func=cmd_review)
+
+    sub.add_parser("sync-profile",
+                   help="suggest athlete.yaml updates (FTP, weight, resting/max HR) from current data"
+                   ).set_defaults(func=cmd_sync_profile)
 
     s = sub.add_parser("show-plan", help="print today + upcoming planned workouts")
     s.add_argument("--days", type=int, default=4)

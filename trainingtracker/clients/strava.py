@@ -154,3 +154,8 @@ class StravaClient:
             {"keys": ",".join(keys), "key_by_type": "true"},
         )
         return {k: v.get("data", []) for k, v in raw.items() if isinstance(v, dict)}
+
+    def get_athlete(self) -> dict[str, Any]:
+        """Authenticated athlete profile. Includes `ftp` and `weight` (kg) when set
+        in Strava — used to keep config/athlete.yaml current."""
+        return self._get("/athlete")

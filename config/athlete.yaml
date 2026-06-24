@@ -6,7 +6,7 @@
 ftp: 317            # Functional Threshold Power, watts. RE-ANCHOR after each retest
                     # (plan retests at start of Phase 2 and end of Phase 4).
 max_hr: 197         # Max heart rate, bpm — your peak on record (197 on VO2 efforts 5/02, 5/09)
-resting_hr: 48      # Resting HR baseline, bpm (Oura will refine this over time)
+resting_hr: 44      # Resting HR baseline, bpm (synced from Oura median; sync-profile keeps it current)
 weight_kg: 79       # Used for W/kg                       <-- set yours (placeholder)
 
 timezone: "America/Chicago"   # Used to decide which calendar day "today" is
