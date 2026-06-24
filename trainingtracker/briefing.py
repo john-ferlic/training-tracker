@@ -1,5 +1,4 @@
-"""Render the structured assessment into a Markdown briefing and a short
-notification summary."""
+"""Render the structured assessment into a Markdown briefing."""
 from __future__ import annotations
 
 from datetime import date
@@ -23,16 +22,6 @@ def _fmt_plan(w: dict[str, Any]) -> str:
     if w.get("description"):
         line += f"\n  {w['description']}"
     return line
-
-
-def notification_text(assessment: dict[str, Any]) -> tuple[str, str]:
-    v = assessment["verdict"]
-    emoji = VERDICT_EMOJI.get(v["verdict"], "")
-    title = f"{emoji} {v['verdict']}: {assessment['today_plan'].get('type', 'Training')}"
-    rec = assessment["recovery"]
-    readiness = rec.get("readiness")
-    prefix = f"{RECOVERY_EMOJI.get(rec['status'], '')} readiness {readiness} · " if readiness else ""
-    return title, prefix + v["headline"]
 
 
 def render_markdown(assessment: dict[str, Any], athlete: dict[str, Any], coach: str | None = None) -> str:

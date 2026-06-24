@@ -36,9 +36,10 @@ At **claude.ai/code/routines** (or `/schedule` in the Claude Code CLI):
 - **Schedule:** daily, **6:30 AM**, timezone **America/Chicago**
 - **Prompt:** paste the full contents of [`cloud/routine-prompt.md`](routine-prompt.md)
 
-## 4. Add your tokens as routine secrets (environment variables)
+## 4. Add your tokens as environment variables
 
-Copy the values straight from your local `.env`:
+In the routine's **environment** (the "Default" chip next to the repo on the Edit-routine screen →
+create/edit an environment), add these as environment variables, copying values from your `.env`:
 - `STRAVA_CLIENT_ID`
 - `STRAVA_CLIENT_SECRET`
 - `STRAVA_REFRESH_TOKEN`
@@ -49,11 +50,13 @@ coaching reasoning itself.
 
 ## 5. Allow the network the routine needs
 
-The cloud sandbox blocks outbound traffic by default. Add these to the routine's allowed hosts
-(without them, `fetch`/`pip` fail silently):
+The cloud sandbox blocks unlisted outbound traffic by default. In the same **environment** (the
+"Default" chip → edit environment), add your two API hosts to the allowed domains:
 - `www.strava.com` — Strava API
 - `api.ouraring.com` — Oura API
-- `pypi.org` and `files.pythonhosted.org` — pip install
+
+Package registries (PyPI) are already in the default "Trusted" set, so you usually **don't** need
+`pypi.org` / `files.pythonhosted.org`. If the first run's `pip install` fails on network, add them then.
 
 ## 6. Test it
 
@@ -69,4 +72,7 @@ re-provision the sandbox and answer.
   `data/workout_history.json` and have the routine commit it each run so it accumulates.
 - **After an FTP retest:** update `ftp` in `config/athlete.yaml`, commit, and push — the routine
   picks it up on the next run.
+- **Plan adaptation:** the routine can propose changes to `config/training-plan.yaml` and push them
+  as a branch/PR for you to review and merge (see the prompt). Needs the GitHub connection to have
+  **write** access; git auth is handled by the connection — no extra secret.
 - The routine reuses everything local: same package, same analysis, same plan.

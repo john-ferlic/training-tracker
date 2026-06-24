@@ -3,7 +3,7 @@
     python -m trainingtracker setup-check   # verify config + credentials
     python -m trainingtracker fetch         # pull Strava + Oura -> analyze -> history
     python -m trainingtracker brief         # today's recommendation from history
-    python -m trainingtracker run           # fetch + brief + macOS notification
+    python -m trainingtracker run           # fetch + brief (local one-shot)
     python -m trainingtracker analyze       # deep analysis of the latest workout (--id N)
     python -m trainingtracker review        # longitudinal trends, fitness, weaknesses
     python -m trainingtracker show-plan     # print today + next days from the plan
@@ -16,7 +16,7 @@ from datetime import date, datetime, timedelta
 from typing import Any
 
 from . import analysis, briefing, config, history, plan as plan_mod, store, trends, workout
-from .briefing import notification_text, render_markdown
+from .briefing import render_markdown
 
 
 def _today(athlete: dict[str, Any]):
@@ -141,12 +141,6 @@ def cmd_brief(args) -> int:
     dated.write_text(md)
     print(md)
     print(f"\n(written to {dated})", file=sys.stderr)
-
-    if args.notify:
-        from .notify import notify
-
-        title, message = notification_text(assessment)
-        notify(title, message, open_path=dated)
     return 0
 
 
@@ -156,7 +150,6 @@ def cmd_run(args) -> int:
         print("Fetch failed; not generating briefing. Use --allow-partial to "
               "brief from cached data anyway.", file=sys.stderr)
         return rc
-    args.notify = True
     args.no_coach = getattr(args, "no_coach", False)
     return cmd_brief(args)
 
@@ -229,11 +222,10 @@ def build_parser() -> argparse.ArgumentParser:
     sub.add_parser("fetch", help="pull Strava + Oura, analyze into history").set_defaults(func=cmd_fetch)
 
     b = sub.add_parser("brief", help="today's recommendation from history")
-    b.add_argument("--notify", action="store_true", help="also send a macOS notification")
     b.add_argument("--no-coach", action="store_true", help="skip the optional Claude narrative")
     b.set_defaults(func=cmd_brief)
 
-    r = sub.add_parser("run", help="fetch + brief + notify (the daily entrypoint)")
+    r = sub.add_parser("run", help="fetch + brief (local one-shot)")
     r.add_argument("--no-coach", action="store_true")
     r.add_argument("--allow-partial", action="store_true",
                    help="still brief from cached data if fetch fails")

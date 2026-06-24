@@ -33,5 +33,12 @@ note the current **phase / week** and how today fits the block.
 
 **Then remain available.** I may reply through the day with questions about the recommendation
 or my data. Re-run `fetch`, `analyze`, or `review` as needed to answer precisely — never quote
-fade/NP/decoupling from memory; pull it from the pipeline. If a plan change is warranted, propose
-the exact edit to `config/training-plan.yaml` and confirm before writing.
+fade/NP/decoupling from memory; pull it from the pipeline.
+
+**Adapting the plan:** if your analysis warrants changing upcoming training (e.g. add a threshold
+session next week, extend an interval, insert a recovery day), edit `config/training-plan.yaml`,
+commit it to a new branch named `plan-update-<date>`, and push it with a clear message + PR
+description explaining the change and the data behind it — so the athlete can review and merge.
+Never rewrite the plan on `main` directly. If the change is borderline, just recommend it in your
+summary and ask first. (Git auth comes from the repo connection — no extra secret needed, provided
+the connection has write access.)

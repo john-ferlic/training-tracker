@@ -12,7 +12,7 @@ Strava ─┐
         ├─► fetch (Python) ─► local cache ─┐
 Oura  ──┘                                  │
                                            ▼
-              training-plan.yaml ──►  analysis  ──►  daily briefing + macOS notification
+              training-plan.yaml ──►  analysis  ──►  daily briefing + recommendation
                                     (plan vs actual,        │
                                      recovery, decoupling)   └─► /training-brief for deep Claude reasoning
 ```
@@ -82,20 +82,16 @@ targets, or ask Claude via `/training-review`).
 
 ```bash
 .venv/bin/python -m trainingtracker setup-check
-.venv/bin/python -m trainingtracker run        # first real fetch + briefing + notification
+.venv/bin/python -m trainingtracker run        # first real fetch + briefing
 ```
 
 ---
 
 ## Daily use
 
-**Option A — automatic (recommended).** Install a macOS scheduled job that runs every
-morning and pops a notification:
-
-```bash
-scripts/install_schedule.sh 6 30      # 6:30 AM daily
-launchctl start com.trainingtracker.daily   # test it immediately
-```
+**Option A — automatic in the cloud (recommended).** A daily Claude routine running in
+Anthropic's cloud that posts a coaching summary you can chat into all day, and can propose plan
+changes as reviewable PRs. Setup: **[cloud/SETUP.md](cloud/SETUP.md)**.
 
 **Option B — on demand from the terminal:**
 
@@ -209,7 +205,7 @@ ceiling, etc. Adjust them as you learn your own numbers.
 - **Zwift has no public API** — but because Zwift auto-uploads to Strava as `VirtualRide`
   activities (with power), Strava is the single source for both. Zwift rides are tagged in
   the briefing.
-- The scheduled job only runs when your Mac is on. `launchd` will catch up at the next
-  wake if it was asleep at the scheduled time.
-- Everything is local. The only outbound calls are to Strava and Oura (and Anthropic, only
-  if you opt into the coach narrative).
+- The **cloud routine** ([cloud/SETUP.md](cloud/SETUP.md)) runs even when your Mac is off, and
+  re-fetches fresh data on each run.
+- Locally, the only outbound calls are to Strava and Oura (and Anthropic, only if you opt into
+  the coach narrative).
