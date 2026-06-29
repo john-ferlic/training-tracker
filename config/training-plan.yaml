@@ -41,8 +41,8 @@ phases:
         type: SweetSpot
         duration_min: 75
         target_watts: "280-295"
-        target_if: 0.82
-        target_tss: 78
+        target_if: 0.74            # Calibrated for 2x15 @ 285W with proper WU/CD.
+        target_tss: 65             # Bump to IF 0.78 / TSS 72 once you're built to 2x20.
         description: "WU 15min, SST 2x15min @ 285W (3 min easy between), CD. Build toward 2x20."
       thursday:
         type: Endurance
