@@ -10,6 +10,27 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-07-03 — Wed SST missed; Z2 durability trending sharply better
+
+- **Missed session:** Wed 7/01 SST (planned 2×17 @ 285W progression) — no ride logged.
+  Rest of the week was on plan (Tue 90-min Z2, Thu 80-min Z2).
+- **Progression impact:** original 6/29 plan was 2×17 → 2×20 → 2×20 → 2×20 → retest 7/28
+  (three 2×20 sessions banked). With 7/01 skipped, revised ladder is
+  **2×17 on 7/08 → 2×20 on 7/15 → 2×20 on 7/22 → retest 7/28** (two 2×20s banked).
+  Retest confidence slightly reduced but the 317 anchor still tests cleanly with two
+  full 2×20 reps under it. Do NOT jump straight to 2×20 on 7/08 to catch up — the
+  step from 2×15 to 2×20 without an intermediate is where SST progressions blow up.
+- **Aerobic durability trend (positive):** Z2 decoupling has walked down over the last
+  five endurance rides — **7.7% → 5.6% → 2.7% → 4.5% (long) → 3.1% → 2.7% → 0.7% → -0.2%**
+  (7/02: 80 min, NP 225w / 71% FTP, HR 135, decoupling -0.2%). HR at the same NP is
+  falling: 6/17 endurance was NP 210 @ HR 138; 7/02 was NP 225 @ HR 135. That's the
+  Phase 1 central adaptation showing up — the aerobic engine is holding power with
+  less cardiac cost.
+- **Focus stays:** protect Saturday's 180-min long ride (biggest weekly stimulus) and
+  execute the 2×17 on Wed 7/08 cleanly. No junk volume to "make up" the missed SST.
+
+---
+
 ## 2026-06-29 — Wed SST calibration fixed; FTP 317 anchor confirmed
 
 - **Plan change:** Phase 1 Wednesday SST — `target_if` 0.82 → **0.74**, `target_tss` 78 → **65**.
