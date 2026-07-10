@@ -10,6 +10,30 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-07-10 — Wed 7/08 SST banked as 2×20 @ 285W (0% fade); ladder restored
+
+- **In-session upgrade earned:** Wed 7/08 SST executed clean at **285W / 90% FTP** with
+  interval 1 = 16:51 (HR 158) → interval 2 = 19:52 (HR 160), fade **0.0%**, mean 90% FTP.
+  Per the 6/29 rule ("if interval #1 finishes with HR <165, take #2 to 20 min") the athlete
+  bumped rep 2 to 20 min. That's a **de-facto 2×20 banked six weeks before the 7/28 retest**.
+- **Ladder restored:** the 7/01 miss had trimmed the pre-retest 2×20 count from 3 → 2.
+  With 7/08 now effectively a 2×20 rep, the revised ladder is
+  **7/08 (~2×20 upgrade) → 2×20 on 7/15 → 2×20 on 7/22 → retest 7/28** — three 2×20s under
+  the 317 anchor again. Retest confidence back to the 6/29 baseline.
+- **Aerobic-cost trend confirmed:** same 285W, lower HR — 6/24 SST intervals HR 163→167,
+  7/08 SST intervals HR 158→160. -5 bpm at the same power over two weeks. Central adaptation
+  still tracking the direction the 7/03 log flagged.
+- **New watch — endurance IF creeping hot:** last two Z2 rides overshot the target.
+  7/05 (short endurance): NP 233w / IF **0.736** vs target 0.65, decoupling 0.4%.
+  7/09 (short endurance): NP 227w / IF **0.717** vs target 0.65, decoupling **5.5%** (near
+  the 6% flag). No single ride is a red flag, but Thursday endurance is supposed to be the
+  session that lets Wednesday absorb and Saturday go big. Watch that Thu discipline; if IF
+  overshoot repeats next week, dial the trainer target down to 210W and hold it.
+- **Focus:** protect Saturday 7/11 long ride (180 min, 130 TSS — the week's biggest lever)
+  and execute the 7/15 SST at 2×20 without a further bump. No plan or FTP change.
+
+---
+
 ## 2026-07-03 — Wed SST missed; Z2 durability trending sharply better
 
 - **Missed session:** Wed 7/01 SST (planned 2×17 @ 285W progression) — no ride logged.
