@@ -23,14 +23,23 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 - **Aerobic-cost trend confirmed:** same 285W, lower HR — 6/24 SST intervals HR 163→167,
   7/08 SST intervals HR 158→160. -5 bpm at the same power over two weeks. Central adaptation
   still tracking the direction the 7/03 log flagged.
-- **New watch — endurance IF creeping hot:** last two Z2 rides overshot the target.
-  7/05 (short endurance): NP 233w / IF **0.736** vs target 0.65, decoupling 0.4%.
-  7/09 (short endurance): NP 227w / IF **0.717** vs target 0.65, decoupling **5.5%** (near
-  the 6% flag). No single ride is a red flag, but Thursday endurance is supposed to be the
-  session that lets Wednesday absorb and Saturday go big. Watch that Thu discipline; if IF
-  overshoot repeats next week, dial the trainer target down to 210W and hold it.
+- **New watch — pre-ride fueling (not durability):** Thursday 7/09 endurance ran hot on
+  paper (NP 227w / IF **0.717** vs 0.65, decoupling **5.5%**) but the athlete confirmed the
+  ride was essentially fasted. That reframes the read cleanly:
+  - 7/05 short endurance was *harder* — IF **0.736** — but decoupling was **0.4%**. If
+    aerobic base were the issue, 7/05 should have looked worse; the delta is fueling.
+  - 5.5% decoupling on an 80-min fasted Z2-upper is textbook back-half glycogen drop,
+    not an aerobic under-adaptation signal.
+  - Efficiency factor 1.658 says HR-for-power stayed strong overall — the drift was in
+    the tail, consistent with running out of on-board fuel.
+  So the signal is **fueling discipline**, not durability. Rule: **carb-load before any
+  Z2 ride ≥60 min**, and 60–90 g/hr on-bike for the Saturday long ride and any Wednesday
+  SST. If a Thursday endurance IF overshoot repeats *with* proper fueling, then dial the
+  trainer target down to 210W — but don't treat well-fueled effort creep and fasted
+  decoupling as the same problem.
 - **Focus:** protect Saturday 7/11 long ride (180 min, 130 TSS — the week's biggest lever)
-  and execute the 7/15 SST at 2×20 without a further bump. No plan or FTP change.
+  with **~2 g/kg carbs in the 2 hr pre-ride + 60–90 g/hr on-bike**. Execute the 7/15 SST
+  at 2×20 without a further bump. No plan or FTP change.
 
 ---
 
