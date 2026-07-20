@@ -10,6 +10,45 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-07-20 — 4-day unplanned rest (Thu–Sun) mid-taper; autonomic watch on
+
+- **Missed sessions:** last logged ride was Wed **7/15 SST**. Thu 7/16 (Z2 75'/52 TSS),
+  Sat 7/18 (long Z2 180'/130 TSS) and Sun 7/19 (Z2+tempo 90'/72 TSS) were all skipped.
+  That's **254 TSS not banked**, including the week's biggest aerobic stimulus (Saturday
+  long ride). 7-day TSS 136 · 3-day 0 · form (TSB) 8.2 — plenty fresh, but the aerobic
+  stimulus for week 6 is gone.
+- **Wed 7/15 SST was clean:** 2×19:51 @ **285W / 90% FTP**, fade **0.0%**, interval HR
+  163→167 (drift 4 bpm within reps — sustainable). Overall NP 246 / IF 0.777 / TSS 89
+  reads "harder than planned" on the briefing rule, but that's the same structural
+  artifact as 6/24: the 8.0% overall decoupling is dragged by long low-power CD/recovery
+  pulls, not by within-interval drift. Under the 2×20 progression the calibrated target
+  is IF 0.78 — this session hit it. Second 2×20 banked.
+- **Autonomic signals worth watching, not acting on:** HRV has walked down the last
+  five mornings — 63 (7/15) → 58 → 76 → 52 → 53 → **54** today (base 61, so today is
+  ~11% low, right at the threshold). Body-temperature deviation flipped positive and
+  climbed: -0.29 (7/17) → -0.08 → +0.28 → **+0.39** today. Readiness held (81), sleep
+  fine (86, 8.5h), RHR 44 = base 43. Pattern is more "mild systemic load / could be
+  pre-illness / heat / life stress" than a clear red flag. Not enough to modify a
+  30-min recovery spin, but the direction matters this close to retest.
+- **Retest ladder — Wed 7/22 is now the anchor session.**
+  Pre-retest 2×20s banked: 7/08 (upgrade) ✓ · 7/15 ✓ · **7/22 pending** · retest 7/28.
+  With the weekend gone, this Wednesday's 2×20 @ 285W is the last confirmation rep
+  under the 317 anchor. Do NOT try to "make up" the Saturday long ride mid-week —
+  that would jeopardize 7/22.
+- **This week's execution:**
+  - **Mon 7/20** — per plan: 30 min genuine recovery.
+  - **Tue 7/21** — Z2 90' / IF 0.66 as planned; if HRV/body-temp still off tomorrow
+    AM (HRV <55 or temp >+0.3), drop to 60' Z2. Do not push the tempo end.
+  - **Wed 7/22** — the key session. Full **2×20 @ 285W** as planned. If the athlete
+    wakes up with obvious illness signs, defer 24 h and let the retest slide a day —
+    do not execute this session sick.
+  - **Thu–Sun** — plan as written. No compensatory volume for the missed weekend;
+    residual TSB helps the retest.
+- **Focus:** protect Wed 7/22 2×20. Sanity-check body temp / HRV tomorrow morning
+  before Tuesday's Z2.
+
+---
+
 ## 2026-07-10 — Wed 7/08 SST banked as 2×20 @ 285W (0% fade); ladder restored
 
 - **In-session upgrade earned:** Wed 7/08 SST executed clean at **285W / 90% FTP** with
