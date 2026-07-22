@@ -10,6 +10,34 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-07-22 — 7 days off; retest ladder trimmed, Wed re-entry at 2×15 (not 2×20)
+
+- **Trend shift:** last logged ride was **7/15 SST**. No rides 7/16 → 7/21 (7 days). CTL
+  33.1 (down from ~40 at peak), ramp **-6.1/wk**, TSB **+13.6** (fresh but detraining-side
+  of fresh). Oura across the gap was generally green (readiness 77–92, sleep 62–91 with
+  one short-sleep night on 7/14), so this reads as a schedule gap, not illness.
+- **7/15 SST was a clean 2×20 — but ran hotter than 7/08:** intervals
+  2×19:51 @ **285W / 90% FTP**, fade **0.0%**, HR **163 → 167** (intra-interval drift ~4 bpm).
+  Compare 7/08: HR 158 → 160 (drift ~2 bpm). Same power, +5 bpm avg HR and +2 bpm more drift
+  on 7/15. Whole-ride decoupling **8.0%** (>6% flag) — partly the long WU/CD math, but the
+  hotter intervals contributed. Even without the week off, the ceiling was closer on 7/15
+  than 7/08.
+- **Revised ladder to the 7/28 retest:**
+  - Original (6/29): 7/08 → 7/15 → **7/22 (2×20)** → retest 7/28 — three 2×20s.
+  - Revised: 7/08 (2×20 upgrade) + 7/15 (2×20) banked → **7/22 = 2×15 re-entry @ 285W**
+    (confirm HR-for-power came back cleanly after 7 days off) → 7/25 long ride stays →
+    **retest 7/28 holds** (TSB is fresh; a re-entry 2×15 protects the retest more than a
+    third 2×20 would).
+  - Do NOT try to "make up" the week's missed volume. The retest is the deliverable.
+- **Wed 7/22 in-session rule:** if interval 1 HR stays ≤163 at 285W (matching 7/08),
+  execute rep 2 as 2×15 as written — no upgrade. If HR climbs >165 by minute 10, hold
+  the target watts, do NOT extend, and treat as durability signal — we'll adjust the
+  7/25 long ride carbs/pace and reconsider whether 7/28 needs to slide to 7/30.
+- **Focus:** clean 2×15 today, well-fueled Saturday long ride (biggest week stimulus),
+  arrive at the retest with TSB in the +5 to +10 range, not deeper detraining.
+
+---
+
 ## 2026-07-10 — Wed 7/08 SST banked as 2×20 @ 285W (0% fade); ladder restored
 
 - **In-session upgrade earned:** Wed 7/08 SST executed clean at **285W / 90% FTP** with
