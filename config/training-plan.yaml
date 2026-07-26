@@ -22,7 +22,9 @@ meta:
 phases:
   # -------------------------------------------------------------------------
   - name: "Phase 1 — Aerobic Base"
-    weeks: [1, 6]
+    weeks: [1, 8]                  # was [1, 6]; extended +2wk after 7/16-7/26 gap so
+                                   # re-entry week (W7) + one full W6-template repeat (W8)
+                                   # sit before the retest on 8/11.
     week_template:
       monday:
         type: Recovery
@@ -71,7 +73,7 @@ phases:
 
   # -------------------------------------------------------------------------
   - name: "Phase 2 — Threshold Build"
-    weeks: [7, 12]
+    weeks: [9, 14]                 # was [7, 12]; shifted +2wk with Phase 1 extension.
     week_template:
       monday:
         type: Rest
@@ -117,7 +119,7 @@ phases:
 
   # -------------------------------------------------------------------------
   - name: "Phase 3 — VO2max Block"
-    weeks: [13, 16]
+    weeks: [15, 18]                # was [13, 16]; shifted +2wk.
     week_template:
       monday:
         type: Rest
@@ -163,7 +165,7 @@ phases:
 
   # -------------------------------------------------------------------------
   - name: "Phase 4 — Consolidation + Peak"
-    weeks: [17, 20]
+    weeks: [19, 22]                # was [17, 20]; shifted +2wk.
     week_template:
       monday:
         type: Rest
@@ -207,11 +209,66 @@ phases:
         target_tss: 58
         description: "Easy Z2."
 
-# Date-specific overrides — FTP tests (re-anchor zones + update athlete.yaml ftp).
+# Date-specific overrides — highest priority per date. Used for tests and for the
+# 7/26-8/02 re-entry ramp after the 11-day off-bike gap (7/16-7/26). Week of 8/03
+# runs the normal Phase 1 W6 template (proves pattern is back); retest 8/11.
 schedule:
-  2026-07-28:                     # start of Phase 2 (week 7)
+  # -------------------- Re-entry ramp (7/26 → 8/02) --------------------
+  2026-07-26:                     # today — was Endurance 90 min w/ 2x10 tempo
+    type: Endurance
+    duration_min: 60
+    target_watts: "200-230"
+    target_if: 0.66
+    target_tss: 44
+    description: "Re-entry ride #1 after 11-day gap. Pure Z2, NO tempo blocks. If HR runs away at 210W or legs empty, cut to 45 min easy spin — don't force it."
+  2026-07-27:                     # Mon — Rest (matches Phase 1 Mon but stated explicitly for the log)
+    type: Rest
+    description: "Rest between re-entry rides #1 and #2. 20-min easy spin is fine if legs feel stiff."
+  2026-07-28:                     # was the FTP test date
+    type: Endurance
+    duration_min: 60
+    target_watts: "200-230"
+    target_if: 0.66
+    target_tss: 44
+    description: "Re-entry ride #2. Z2, cadence 90+. FTP retest pushed from today to 8/11 — do NOT test today."
+  2026-07-29:                     # SST re-entry, stepped back from 2x20 @ 285W
+    type: SweetSpot
+    duration_min: 60
+    target_watts: "270-280"
+    target_if: 0.72
+    target_tss: 52
+    description: "Re-entry SST: WU 15min, 2x10 min @ 275W (~87% FTP, 3 min easy between), CD. If HR <162 at end of rep 1, take rep 2 to 12 min. Deliberately below the 2x20 @ 285W last done 7/15 — one clean step-back before rebuilding."
+  2026-07-30:
+    type: Endurance
+    duration_min: 60
+    target_watts: "200-230"
+    target_if: 0.65
+    target_tss: 42
+    description: "Re-entry Z2, 60 min. Conversational."
+  2026-07-31:
+    type: Rest
+    description: "Full rest."
+  2026-08-01:                     # long ride re-entry — 120 min not 180
+    type: Endurance
+    duration_min: 120
+    target_watts: "200-230"
+    target_if: 0.66
+    target_tss: 87
+    description: "Long ride re-entry — 120 min Z2, NO tempo. Fuel well (60-90 g/hr on-bike, ~2 g/kg carbs in the 2 hr pre-ride). Was 180 min — stepped back by an hour."
+  2026-08-02:
+    type: Endurance
+    duration_min: 60
+    target_watts: "200-230"
+    target_if: 0.65
+    target_tss: 42
+    description: "Easy Z2 close to re-entry week. Was 90 min w/ tempo — no tempo this week."
+
+  # -------------------- Test week --------------------
+  # Week of 8/03 runs the normal Phase 1 W6 template (SST Wed 2x18 @ 285W, long Sat 180 min).
+  # Test is Tue 8/11 — falls in the extended Phase 1 window so we override it here.
+  2026-08-11:                     # was 2026-07-28; pushed +2wk after the gap.
     type: Test
-    description: "FTP retest (20-min test x0.95, or ramp). You'll likely be ~325. Re-anchor zones."
-  2026-10-27:                     # end of block (week 20)
+    description: "FTP retest (20-min test x0.95, or ramp). Pushed from 7/28 to give a full 2-week re-entry runway (re-entry week 7/27-8/02 + full Phase 1 W6 repeat 8/03-8/09) after the 11-day off-bike gap. Anchoring off detrained fitness would poison the whole Phase 2 block. Re-anchor zones after."
+  2026-11-10:                     # was 2026-10-27; final test shifted +2wk with the phases.
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."

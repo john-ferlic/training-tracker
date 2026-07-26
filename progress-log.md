@@ -10,6 +10,63 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-07-26 — 11-day off-bike gap; 2-week re-entry ramp + retest pushed 7/28 → 8/11
+
+- **Gap (athlete-confirmed):** last ride Wed 7/15 (the clean 2×20 @ 285W SST, 0.0%
+  fade, HR 163→167). Nothing 7/16–7/26 — life admin, not injury or illness. **11
+  days off** heading into today (Sun 7/26), with the FTP retest originally scheduled
+  for Tue 7/28.
+- **Recovery held up:** Oura through 7/24 — readiness steady 77–92 (median 83),
+  sleep mostly 7+ h, RHR flat 43–46, temperature deviation only a small bump
+  7/19 (+0.28) / 7/20 (+0.39) and back to baseline. HRV drifted 76 → 52 across the
+  layoff but readiness never flagged — reads as reduced training signal, not illness.
+- **Fitness cost:** CTL **31.8** (from ~40+ pre-gap), TSB **+21.3** ("fresh /
+  detraining risk"), ramp **-5.9/wk**. Legs will be springy but the pattern is
+  lost — HR-for-power and aerobic drift will be off for a session or two, so power
+  in reps needs a deliberate step-down before it steps back up.
+- **Why 8/11, not 8/04:** first draft of this update pushed the retest by one week
+  (to 8/04) and repeated the W6 template. On second look that's too rushed — 11
+  days off is closer to a phase-transition-sized layoff than a normal down-week,
+  and anchoring a 12+ week Phase-2 block off a low false number is the expensive
+  mistake. Pushing to 8/11 costs one week of schedule and buys a full re-entry
+  ramp + one W6-template repeat as the calibration check before testing.
+- **Plan changes (this PR):**
+  - **Phases shifted +2 weeks.** Phase 1 [1,6] → **[1,8]**; Phase 2 [7,12] →
+    **[9,14]**; Phase 3 [13,16] → **[15,18]**; Phase 4 [17,20] → **[19,22]**.
+    Final test 10/27 → **11/10**. Structure preserved, calendar delayed.
+  - **Re-entry ramp — schedule overrides 7/26 → 8/02:**
+    - **Sun 7/26** — Endurance **60 min Z2 200–230W** (NO tempo). 44 TSS.
+      If HR runs away or legs empty, cut to 45 min easy spin.
+    - **Mon 7/27** — Rest (20-min spin fine if stiff).
+    - **Tue 7/28** — Endurance **60 min Z2**. 44 TSS. (Was the FTP test.)
+    - **Wed 7/29** — SST re-entry: **2×10 @ 275W (~87% FTP)**, 60 min total,
+      52 TSS. If end-of-rep-1 HR <162, take rep 2 to 12 min. Deliberately below
+      the 7/15 2×20 @ 285W — one step-back rep before rebuilding.
+    - **Thu 7/30** — Endurance **60 min Z2**. 42 TSS.
+    - **Fri 7/31** — Full rest.
+    - **Sat 8/01** — Long ride re-entry: **120 min Z2** (not 180), NO tempo.
+      87 TSS. Fuel per the 7/10 rule (~2 g/kg pre + 60–90 g/hr on-bike).
+    - **Sun 8/02** — Endurance **60 min Z2**. 42 TSS.
+    - Re-entry week total: ~311 TSS vs the W6 template's ~440 TSS — about 70%.
+  - **Week of 8/03 — normal Phase 1 W6 template** (no overrides). SST Wed 8/05
+    back to **2×15 @ 285W** (one rep below the 7/15 2×20 — proves the top of the
+    ladder is back before testing). Long Sat 8/08 = 180 min. If that week
+    executes clean (decoupling <5% at proper fueling, SST 0% fade), test 8/11
+    is honest.
+  - **Test Tue 8/11** — 20-min × 0.95 or ramp. Re-anchor watt targets after.
+- **Watches (in priority order):**
+  1. **Wed 7/29 SST HR/fade** — first hard data point. HR climbing >167 at
+     end of rep 1 at 275W or fade >2% means still detrained; push next week's
+     8/05 SST down to 2×15 @ 280W instead of 285W.
+  2. **Sat 8/01 long-ride decoupling** — >5% at proper fueling = aerobic base
+     didn't fully hold; slide the test one more week to 8/18.
+  3. **HRV recovery** — the 76 → 52 drift across the gap should reverse in the
+     first week back if the read was accurate (reduced-signal, not illness).
+     If HRV keeps dropping *while* training resumes, that's the illness flag
+     the temp-dev bump didn't catch — pause and reassess.
+
+---
+
 ## 2026-07-10 — Wed 7/08 SST banked as 2×20 @ 285W (0% fade); ladder restored
 
 - **In-session upgrade earned:** Wed 7/08 SST executed clean at **285W / 90% FTP** with
