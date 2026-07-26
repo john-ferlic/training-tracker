@@ -10,6 +10,36 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-07-26 — 11-day off-bike gap; FTP retest pushed 7/28 → 8/04
+
+- **Gap:** last ride was Wed 7/15 (the 2×20 @ 285W SST — clean, 0.0% fade, HR 163→167).
+  Nothing logged since. 11 days off the bike heading into today (Sun 7/26).
+- **Recovery held up:** Oura through 7/24 shows readiness steady 77–87, sleep mostly
+  7+ h, RHR flat 43–46, temperature deviation only a small bump 7/19 (+0.28) / 7/20
+  (+0.39) and back to baseline. HRV drifted from 76 → 52 across the layoff but
+  readiness never flagged — reads as reduced training signal, not illness.
+- **Fitness cost:** CTL 31.8 (from ~40+ pre-gap), TSB **+21.3** (fresh / detraining
+  zone), ramp **-5.9/wk**. Legs will be springy but pattern is lost — power sits fine
+  in reps, aerobic drift and HR-for-power will be off for a session or two.
+- **Plan change (this PR):** move the Phase-2 opener FTP retest **7/28 → 8/04**.
+  Testing 48 h after an 11-day gap returns a low number that anchors the whole next
+  block wrong; better to spend the week of 7/27 re-earning the pattern and test off
+  a real week. Week of 7/27 becomes a Phase-1 re-entry week — repeat the W6 template
+  as written (nothing to add), test Tue 8/04. Phase 2 slides by one week; no other
+  dates change.
+- **Today (Sun 7/26):** modify the scheduled endurance-with-tempo — drop the 2×10
+  tempo blocks, ride **60–75 min pure Z2 200–230W**. Reactivation, not a workout.
+  If it feels awful (HR runaway at 210W, legs empty), cut it to 45 min spin. Save
+  the tempo intent for Wed's re-entry SST.
+- **Wed 7/29 re-entry SST:** step back to **2×12 @ 275W (~87% FTP)**, not the 2×20
+  @ 285W of two weeks ago. If HR stays <162 at the end of rep 1, take rep 2 to 15
+  min. Rebuild the top of the ladder in one clean session before the 8/04 test.
+- **Watch:** whether the Sat 8/01 long ride can absorb ~90–120 min at Z2 without
+  Pw:Hr decoupling >5% at proper fueling. That's the honest read on whether 8/04
+  is a test week or another push.
+
+---
+
 ## 2026-07-10 — Wed 7/08 SST banked as 2×20 @ 285W (0% fade); ladder restored
 
 - **In-session upgrade earned:** Wed 7/08 SST executed clean at **285W / 90% FTP** with

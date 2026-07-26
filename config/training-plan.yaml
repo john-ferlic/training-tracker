@@ -209,9 +209,9 @@ phases:
 
 # Date-specific overrides — FTP tests (re-anchor zones + update athlete.yaml ftp).
 schedule:
-  2026-07-28:                     # start of Phase 2 (week 7)
-    type: Test
-    description: "FTP retest (20-min test x0.95, or ramp). You'll likely be ~325. Re-anchor zones."
+  2026-08-04:                     # was 2026-07-28; pushed +7d after 11-day off-bike gap (7/16-7/26).
+    type: Test                    # Week of 7/27 becomes a Phase-1 re-entry week: repeat W6 template
+    description: "FTP retest (20-min test x0.95, or ramp). Pushed from 7/28 to give one full re-entry week after an 11-day off-bike gap; testing off detrained fitness would return a low, meaningless number. Re-anchor zones after."
   2026-10-27:                     # end of block (week 20)
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."
