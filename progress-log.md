@@ -10,6 +10,64 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-06 — Retest came in at 305 (317 → **305**, -3.8%); all watt targets re-anchored
+
+- **FTP 317 → 305** (Zwift ramp test, Tue 8/04). The 7/26 log's prediction was
+  "315–322 base case, <312 = something didn't repair." It came in **305** — below
+  the stated floor. The honest read: **the 7/26 estimate was too optimistic**, not
+  that the test was bad. That entry leaned on the ~1–3% short-gap literature and
+  argued the Phase 1 ceiling wouldn't unwind in 10 days. Actual loss was **3.8%**
+  over what became a **19-day** disruption (last real training block ended 7/15;
+  the 7/27–8/02 re-entry week was all Z2 + one soft SST). Longer gap than the
+  model assumed, and the re-entry week deliberately carried no threshold work —
+  so there was nothing holding the top end. Worth remembering next time: the
+  "trained cyclists barely lose FTP" argument is about *aerobic* retention, and
+  threshold expression decays faster than the aerobic base under it.
+- **The ramp test itself looks valid, not a bad day:**
+  - Peak sustained block **341W for 427s**, avg HR **180**, ride max HR **192** =
+    97% of the 197 max on record. He genuinely emptied it — this wasn't a test
+    abandoned early.
+  - Ramp protocol (75% of best 1-min) usually *under*-reads for diesel riders,
+    which is this athlete's profile (0.0% fade on 2×20 SST, strong Z2 durability).
+    That was the argument for treating 305 as pessimistic.
+  - **But the 8/06 over-unders killed that argument.** Athlete ran them at the
+    305 anchor (280/320W) and reported "extremely difficult." If 305 under-read
+    true FTP, a 305-anchored session should have felt *easier* than usual. It
+    felt harder. Two independent signals converge: **305 is real**, and may even
+    be slightly generous for right now.
+- **No max-HR change.** 8/04 ramp peaked 192 vs the 197 on record (5/02, 5/09
+  VO2 efforts). Below baseline, so `max_hr: 197` stays. `resting_hr: 44` and
+  `weight_kg: 79` unchanged — `sync-profile` suggested nothing.
+- **Plan changes (this PR) — re-anchored 317 → 305 across Phases 2–4:**
+  - Phase 2 Tue Threshold: `300-330` → **`290-305`**.
+  - Phase 2 Thu Over-unders: under `290` / over `330` → **under `280` / over `320`**.
+  - Phase 2/3/4 Z2: `200-230` → **`195-225`** (230W was 75.4% of 305 — that had
+    drifted into tempo, which is exactly how Z2 rides quietly turn into junk).
+  - Phase 2 tempo: `240-285` → **`230-275`** (Sat long ride, 3×12 blocks).
+  - Phase 3 VO2: `340-365` → **`325-350`**; 30/15s `360/200` → **`345/195`**.
+  - Phase 4 Thu over-unders: under `290` / over `330+` → **under `280` / over `320+`**.
+  - Phase 1 and the 7/26–8/02 re-entry overrides left at the old anchor — both
+    are in the past, and rewriting them would falsify the historical record.
+- **Progression step-back on Tue 8/11 (review this one):** plan template says
+  2×20 @ 100% FTP. Encoded a note to **open at 2×15 @ 295W** instead. Rationale:
+  8/11 is the first true threshold session in ~4 weeks, and 8/06 at the correct
+  anchor already ran very hard. Build 2×15 → 2×20 → 3×15 across W9–W11 rather
+  than opening at the endpoint. Same mistake the 7/03 entry called out about
+  jumping 2×15 → 2×20 without an intermediate.
+- **Watches:**
+  1. **8/11 threshold HR/fade at 295W.** Fade >3% or HR >175 by end of rep 1 =
+     305 is still optimistic; drop the anchor to ~298 and re-test in 3 weeks.
+  2. **Z2 decoupling is back to 4.8%** (was down to -0.2% on 7/02 pre-gap).
+     Under the new 305 anchor the Z2 band is honest again; if decoupling doesn't
+     walk back under 3% within two weeks of consistent Z2, the aerobic base took
+     more of a hit than the FTP number alone shows.
+  3. **CTL 32.9, ramp -2.5/wk.** Fitness is still bleeding. Consistency over
+     intensity for the next 2–3 weeks — the Saturday long ride is the lever.
+- **Goal line in `meta` still reads "Raise FTP from 315."** Left as-is — it
+  records the original intent of the block. The working anchor is 305.
+
+---
+
 ## 2026-07-26 — 11-day off-bike gap; 1-week re-entry ramp + retest pushed 7/28 → 8/04
 
 - **Gap (athlete-confirmed):** last ride Wed 7/15 (the clean 2×20 @ 285W SST, 0.0%

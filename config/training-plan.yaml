@@ -5,7 +5,7 @@
 #   1. an exact-date entry under `schedule:` (FTP tests) — highest priority
 #   2. the phase whose week range contains that date -> that phase's weekday
 #
-# Watt targets below are anchored to FTP 315. RE-ANCHOR after each retest:
+# Watt targets below are anchored to FTP 305 (8/04 ramp retest). RE-ANCHOR after each retest:
 # update `ftp` in config/athlete.yaml and bump the watt targets in the affected
 # phase (or just ask Claude via /training-review to re-anchor them).
 #
@@ -81,38 +81,38 @@ phases:
       tuesday:
         type: Threshold
         duration_min: 75
-        target_watts: "300-330"
+        target_watts: "290-305"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold 2x20 min @ 100% FTP (build to 3x15), CD. Re-anchor to new FTP."
+        description: "WU, Threshold 2x20 min @ 100% FTP = 305W (build to 3x15), CD. First one back (8/11): open at 2x15 @ 295W, not 2x20 @ 305 — 8/06 over-unders at the 305 anchor ran very hard."
       wednesday:
         type: Endurance
         duration_min: 75
-        target_watts: "200-230"
+        target_watts: "195-225"
         target_if: 0.65
         target_tss: 52
         description: "Z2, 75 min."
       thursday:
         type: Threshold
         duration_min: 75
-        target_watts: "under 290 / over 330"
+        target_watts: "under 280 / over 320"
         target_if: 0.88
         target_tss: 95
-        description: "Over-unders: 2 sets of 4x(3 min under @290W / 2 min over @330W). Trains lactate shuttling."
+        description: "Over-unders: 2 sets of 4x(3 min under @280W / 2 min over @320W). Trains lactate shuttling."
       friday:
         type: Rest
         description: "Full rest."
       saturday:
         type: Endurance
         duration_min: 165
-        target_watts: "Z2 200-230, tempo 240-285"
+        target_watts: "Z2 195-225, tempo 230-275"
         target_if: 0.71
         target_tss: 135
-        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 240-285W."
+        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 230-275W."
       sunday:
         type: Endurance
         duration_min: 90
-        target_watts: "200-230"
+        target_watts: "195-225"
         target_if: 0.65
         target_tss: 62
         description: "Z2, 90 min."
@@ -127,38 +127,38 @@ phases:
       tuesday:
         type: VO2max
         duration_min: 60
-        target_watts: "340-365"
+        target_watts: "325-350"
         target_if: 0.88
         target_tss: 85
-        description: "WU, 4x4 min @ 115% FTP (~360W) w/ 4 min easy between, CD."
+        description: "WU, 4x4 min @ 115% FTP (~350W) w/ 4 min easy between, CD."
       wednesday:
         type: Endurance
         duration_min: 60
-        target_watts: "200-230"
+        target_watts: "195-225"
         target_if: 0.63
         target_tss: 40
         description: "Easy Z2. Lower volume block — keep this genuinely easy."
       thursday:
         type: VO2max
         duration_min: 60
-        target_watts: "360 / 200"
+        target_watts: "345 / 195"
         target_if: 0.86
         target_tss: 80
-        description: "30/15s: 30 sec @ 360W / 15 sec @ 200W x13, 2-3 sets."
+        description: "30/15s: 30 sec @ 345W / 15 sec @ 195W x13, 2-3 sets."
       friday:
         type: Rest
         description: "Rest."
       saturday:
         type: Endurance
         duration_min: 135
-        target_watts: "200-230"
+        target_watts: "195-225"
         target_if: 0.66
         target_tss: 98
         description: "Z2 endurance, 2-2.5 hr."
       sunday:
         type: Endurance
         duration_min: 75
-        target_watts: "200-230"
+        target_watts: "195-225"
         target_if: 0.63
         target_tss: 48
         description: "Easy Z2 or rest."
@@ -180,14 +180,14 @@ phases:
       wednesday:
         type: Endurance
         duration_min: 75
-        target_watts: "200-230"
+        target_watts: "195-225"
         target_if: 0.65
         target_tss: 52
         description: "Z2, 75 min."
       thursday:
         type: Threshold
         duration_min: 75
-        target_watts: "under 290 / over 330+"
+        target_watts: "under 280 / over 320+"
         target_if: 0.88
         target_tss: 95
         description: "Over-unders, longer overs."
@@ -204,7 +204,7 @@ phases:
       sunday:
         type: Endurance
         duration_min: 90
-        target_watts: "200-230"
+        target_watts: "195-225"
         target_if: 0.64
         target_tss: 58
         description: "Easy Z2."
