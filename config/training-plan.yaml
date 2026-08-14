@@ -269,6 +269,10 @@ schedule:
   2026-08-04:                     # was 2026-07-28; pushed +1wk after the gap.
     type: Test
     description: "FTP retest (20-min test x0.95, or ramp). Pushed one week from 7/28 to allow a re-entry week (7/27-8/02) after the 11-day off-bike gap. Re-anchor watt targets after."
+  2026-09-08:                     # ADDED 8/13. Mid-build retest at the end of Phase 2 (wk 13),
+                                  # six days before the Phase 3 VO2 block opens on Mon 9/14.
+    type: Test
+    description: "FTP retest (20-min x0.95 preferred over ramp — ramp under-reads for this rider). Added because the 305 anchor looks stale: 8/11 held 2x(17/20min) @ 294W at HR 169/171 with 0.0% fade, and 8/13 held 20min @ 295W at HR 167 — vs the pre-gap 7/15 best of 2x20 @ 285W at HR 163/167. That is +10W at the same HR, i.e. threshold expression is now ABOVE pre-gap. Phase 3 watt targets (VO2 325-350W) are anchored to FTP, so testing before 9/14 keeps the VO2 block from running too easy. Re-anchor Phase 3/4 targets after."
   2026-11-03:                     # was 2026-10-27; final test shifted +1wk with the phases.
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."

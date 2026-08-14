@@ -10,6 +10,69 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-13 — Threshold expression now **above** pre-gap; 305 anchor looks stale → retest inserted 9/08
+
+- **Headline: the gap is paid back at threshold, and then some.** Same 20-minute
+  block, same heart rate, +10W:
+  - **7/15** (pre-gap best, FTP 317 anchor): 2×20 @ **285/284W**, HR **163 → 167**, fade 0.4%.
+  - **8/11** (post-gap, 305 anchor): 16:55 + 19:55 @ **294W**, HR **169 → 171**, fade **0.0%**,
+    decoupling **-1.4%**.
+  - **8/13**: 19:55 @ **295W**, HR **167**.
+  That clears the 8/06 watch ("fade >3% or HR >175 by end of rep 1 = 305 still optimistic")
+  by a wide margin — it went the other way.
+- **Therefore: FTP 305 is probably under-reading.** A 20-min block at a true 97% FTP
+  should be close to maximal; his HR sat at **167-171** against a **197** max (85-87%),
+  with **zero** fade. That is sweet-spot/upper-threshold physiology, not threshold-limit
+  physiology. Best guess at true current FTP: **312-320**. The 8/04 ramp likely
+  under-read — it came at the end of a re-entry week that deliberately carried no
+  threshold work, and the 8/06 log already noted ramp protocols under-read for diesel
+  riders. **Not changing `ftp` on inference** — 305 stays in config until a real test.
+- **Plan change (this PR): FTP retest added Tue 2026-09-08.** End of Phase 2 (week 13),
+  six days before the Phase 3 VO2 block opens Mon 9/14. Prefer **20-min × 0.95 over a
+  ramp** this time. Rationale: Phase 3 watt targets (VO2 325-350W, 30/15s at 345W) are
+  all anchored to FTP; opening that block on a stale-low anchor makes the intervals too
+  easy and wastes the block. Previously the next test was **11/03** — after the entire
+  VO2 phase.
+- **The one real regression: long-ride durability.** Short Z2 has fully recovered, long
+  Z2 has not.
+  - Short Z2, same power: **6/21 198W @ HR 138** → **8/12 198W @ HR 129**. **-9 bpm**
+    at identical power, decoupling 7.7% → **0.5%**. Clean win.
+  - Long rides: **7/04** 180min, 223W @ HR 142, EF 1.578, decoupling **1.5%** →
+    **8/08** 159min, 217W @ HR 147, EF 1.471, decoupling **9.8%**. Less power, higher
+    HR, decoupling up 6×. Long-ride EF trend 1.557 → 1.578 → 1.522 → 1.479 → **1.471**.
+  - Read: the 3-hour engine took more of the gap's damage than the 1-hour engine, and
+    the Saturday long ride is the lever that fixes it. No plan change — Phase 2 Saturday
+    (165 min + 3×12 tempo) is already the right medicine. **Watch: 8/15 decoupling.**
+    If it's still >6% *with proper fueling*, the durability deficit is structural and
+    Phase 3's reduced Saturday (135 min) should be held at 165 instead.
+- **CTL 46.5, ramp +2.8/wk** — above the ~40-44 pre-gap level, up from **31.8** on 7/26.
+  Fitness is fully rebuilt. TSB -5.2 (neutral).
+- **8/13 over-unders aborted — fueling/hydration, not fatigue.** Session ran 20 min @
+  295W clean (HR 167), then fragmented: 8:03 @ 299W, 4:25 @ 298W, 3:16 @ 303W. Athlete
+  reported hip-flexor cramp in set 2 rep 1, then side stitch and "dead / can't feel my
+  quads." Diagnosis is **not** central fatigue:
+  - Oura was green that morning — readiness **87**, RHR **41** (base 44), HRV **61**, 7.96h.
+  - Ride max HR **178** vs **197** max — 19 bpm of headroom left on the table. Work HR
+    flat at **165-167** all session (vs 8/06 same workout, which ramped 154 → **179**).
+  - Fade **-4.7%** — the final fragment (303W) was the *highest* power of the day.
+  - Fueling: big pasta/burger lunch 5.5h out (glycogen fine), but the 45-min pre-ride
+    meal was PB sandwich + yogurt + fruit (~25-30g fat, 5-8g fiber — slow gastric
+    emptying, gut competing with legs for blood flow), and **water only** on the bike
+    across 71 min with 47% of time in Z4.
+  - **New standing rule — indoor threshold/VO2 fueling:** main meal **3h** out
+    (~2 g/kg = ~158g carb, low fat / low fibre); if eating inside 60 min, fast carb only;
+    on-bike **60-90 g carb/hr + 500-800 mg sodium/hr**; fan on. The 7/10 entry flagged a
+    version of this (fasted Z2, 5.5% decoupling) — second occurrence, so it's a pattern,
+    not a one-off. The 8/08 long ride's 9.8% decoupling likely belongs to it too.
+- **Ignore the 12.0% decoupling on 8/13** — the athlete stopped mid-set with HR high and
+  power at zero, which corrupts the Pw:Hr split. Not a durability datapoint.
+- **Adherence:** 22/35 endurance and 7/9 threshold sessions in 8 weeks. Most of the
+  endurance shortfall is the 11-day gap itself; excluding it, ~81%. Not a flag yet.
+- **No stat changes.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current.
+
+---
+
 ## 2026-08-06 — Retest came in at 305 (317 → **305**, -3.8%); all watt targets re-anchored
 
 - **FTP 317 → 305** (Zwift ramp test, Tue 8/04). The 7/26 log's prediction was
