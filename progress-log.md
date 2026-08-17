@@ -10,6 +10,53 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-17 — 8/15 durability watch: **improving, not resolved**; Tuesday threshold progresses to 2×20 @ 300W
+
+- **The 8/13 watch item resolves halfway.** That entry said: *"Watch: 8/15 decoupling. If
+  it's still >6% with proper fueling, the durability deficit is structural."* The long
+  ride came in at **8.0%** — still over the 6.0% flag, but the rest of the ride says the
+  engine moved, not stalled:
+  - **8/08**: 159 min, NP **217W**, avg HR **147**, EF **1.471**, decoupling **9.8%**.
+  - **8/15**: 165 min, NP **211W**, avg HR **135**, EF **1.563**, decoupling **8.0%**.
+  - Six more minutes, 6W less, **12 bpm lower**, EF **+6.3%**. Long-ride EF trend
+    1.578 (7/04) → 1.471 (8/08) → **1.563**, i.e. back to within 1% of the pre-gap best.
+  - Caveat on the number itself: both rides carry ~22% Z3 time with the tempo blocks in
+    the back half, which structurally inflates a first-half/second-half Pw:Hr split. The
+    decoupling figure is directionally useful here, the EF and HR comparison more so.
+  - **No plan change yet.** The 8/13 entry's contingency — hold Phase 3's Saturday at
+    165 min instead of 135 — stays **open, not triggered**. Phase 3 doesn't open until
+    9/14, so 8/22, 8/29 and 9/05 all report before that call is due. Decide it on 9/05.
+    Trigger: if long-ride decoupling is still >6% *with* the fueling protocol run, hold
+    165 min.
+- **Short Z2 keeps making new best numbers.** 8/09 203W @ HR 132 (EF 1.533) → 8/12 198W
+  @ HR 129 (EF 1.534) → **8/16 202W @ HR 124, EF 1.630**, decoupling **0.8%**. That is
+  the best aerobic-efficiency ride on record for this block, and it came the day after a
+  165-min long ride.
+- **Plan change (this PR): Phase 2 Tuesday threshold steps to 2×20 min @ 300W.** The old
+  description still carried the stale "first one back (8/11): open at 2×15 @ 295W" note.
+  8/11 answered it — 16:55 + 19:55 @ **294W**, HR **169 → 171**, fade **0.0%**,
+  decoupling **-1.4%** — so rep 1 goes to a full 20 min and power adds ~6W. Deliberately
+  **300W, not the 305 on the anchor**: the 305 itself is suspect-low (see 8/13), so
+  chasing the round number matters less than a clean +2% step with the duration
+  extension. Auto-regression built in: readiness <80 or RHR ≥47 in the morning → 2×15 @
+  294W.
+- **Fueling protocol written into the plan file, not just this log.** The 8/13 standing
+  rule (main meal ~3h out at ~2 g/kg carb low-fat/low-fibre; 60-90 g carb/hr +
+  500-800 mg sodium/hr on-bike; fan on) is now in the Phase 2 Tuesday and Thursday
+  descriptions so it appears in the daily briefing on the days it matters. Thursday also
+  gets the falsifiable version: if set 2 fragments **again** with that fueling in place,
+  it's a fitness ceiling rather than a fuelling failure, and the overs drop 320 → 310W.
+- **Load and recovery both green.** Week of 8/10-8/16 was **416 TSS**, the biggest of the
+  block (250 → 320 → **416** over three weeks). CTL **46.5**, ramp **+2.2/wk**, TSB
+  **-2.4**. Oura this morning: readiness **91**, sleep **87** / **8.0h**, RHR **42**
+  (base 44), HRV **78** vs a 28-day median of **60.5**; last-7 HRV median **65**. Absorbing
+  the biggest week of the block with HRV *rising* is the signal that the ramp is
+  affordable — no recovery week pulled forward.
+- **No stat changes.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current. Next test remains **Tue 9/08**.
+
+---
+
 ## 2026-08-13 — Threshold expression now **above** pre-gap; 305 anchor looks stale → retest inserted 9/08
 
 - **Headline: the gap is paid back at threshold, and then some.** Same 20-minute

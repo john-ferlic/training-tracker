@@ -84,7 +84,7 @@ phases:
         target_watts: "290-305"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold 2x20 min @ 100% FTP = 305W (build to 3x15), CD. First one back (8/11): open at 2x15 @ 295W, not 2x20 @ 305 — 8/06 over-unders at the 305 anchor ran very hard."
+        description: "WU, Threshold 2x20 min @ 300W (build to 305W, then 3x15), CD. Progression step set 8/17: 8/11 held 16:55+19:55 @ 294W at HR 169/171 with 0.0% fade, so take rep 1 to a full 20 min and add ~6W. Back off to 2x15 @ 294W if morning readiness <80 or RHR >=47. FUEL: main meal ~3h out (~2 g/kg carb, low fat/low fibre), 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on."
       wednesday:
         type: Endurance
         duration_min: 75
@@ -98,7 +98,7 @@ phases:
         target_watts: "under 280 / over 320"
         target_if: 0.88
         target_tss: 95
-        description: "Over-unders: 2 sets of 4x(3 min under @280W / 2 min over @320W). Trains lactate shuttling."
+        description: "Over-unders: 2 sets of 4x(3 min under @280W / 2 min over @320W). Trains lactate shuttling. FUEL — non-negotiable after the 8/13 abort (cramp + stitch on water only, green Oura, ride max HR 178 vs 197): main meal ~3h out (~2 g/kg carb, low fat/low fibre), 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. If set 2 fragments again WITH that fueling in place, it is a fitness ceiling and the overs drop to 310W."
       friday:
         type: Rest
         description: "Full rest."
