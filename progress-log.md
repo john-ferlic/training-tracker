@@ -10,6 +10,79 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-18 — Aerobic engine snapped back; **durability drift is the standing limiter** → Phase 3 Saturday held at 165 min
+
+- **The 8/13 watch resolved — and it split two ways.** The call was: "Watch 8/15
+  decoupling. If it's still >6% *with proper fuelling*, the durability deficit is
+  structural and Phase 3's reduced Saturday (135 min) should be held at 165 instead."
+  - **Efficiency: fixed.** 8/08 159min @ 209W, HR **147**, EF **1.471** → 8/15 165min
+    @ 206W, HR **135**, EF **1.563**. **-12 bpm** at the same power, and EF is now back
+    above the pre-gap 7/12 ride (1.522). The lower HR reads as the fuelling rule landing.
+  - **Drift: not fixed.** Decoupling **8.0%** — still over the 6.0% flag, and the third
+    straight long ride above it: **7/12 6.2% → 8/08 9.8% → 8/15 8.0%**. Against a
+    pre-gap baseline of **7/04 1.5%**.
+  - Read: whole-ride efficiency and within-ride durability are recovering on different
+    clocks. The 1-hour engine is done (see below), the 3-hour engine is not.
+- **Plan change (this PR): Phase 3 Saturday 135 → 165 min**, TSS 98 → 120. The VO2 block
+  does not get to shrink the one session that treats the limiter. Reverts to 135 once two
+  consecutive long rides land under 6%.
+- **Plan change (this PR): the Saturday tempo blocks are not being ridden.** Phase 2
+  Saturday prescribes 3×12 min tempo @ 230-275W. Both post-gap long rides were flat Z2 —
+  **8/08 VI 1.04, 8/15 VI 1.02** (NP 217/211 vs avg 209/206). Nothing above 88% FTP was
+  detectable either. Made explicit in the description: the tempo blocks *are* the
+  durability stimulus, not a garnish. Fuelling rule written into the plan alongside it.
+- **Short Z2 is now the best it has ever been.** 8/16: 80 min @ 200W, HR **124**,
+  EF **1.630**, decoupling **0.8%**. Trend at ~200W: 6/23 HR 140 → 7/11 HR 132 →
+  8/12 HR 129 → **8/16 HR 124**. That is **-16 bpm at the same power** across the block,
+  and it is now better than the pre-gap 7/11 peak (EF 1.627).
+- **Threshold prescription stepped up (this PR).** Tuesday's description carried a stale
+  "first one back (8/11)" note. Replaced with the live progression: **2×20 @ 300W**,
+  rep 2 to 305W only if rep 1 finishes at **HR ≤172**. Basis: 8/11 held 16:55 + 19:55
+  @ **294W** at HR **169/171**, fade **0.0%**, decoupling **-1.4%**. Stepping watts and
+  duration in the same session is the aggressive move; this steps duration first and buys
+  the 305 datapoint conditionally.
+- **The 305 anchor still looks stale-low**, unchanged from 8/13. 8/13's over-unders
+  fragmented on fuelling but the *last* fragment was the day's highest power (3:16 @
+  **303W**), fade **-4.7%**, ride max HR **178 vs 197 max**. `ftp` stays 305 in config
+  until the **9/08** retest — no inference edits.
+- **Load:** CTL **45.4**, TSB **+3.4**, 7-day TSS **332**, ramp **+0.2/wk** (was +2.8/wk
+  on 8/13). The ramp has flattened — expected, and appropriate with a retest three weeks
+  out and durability being rebuilt rather than loaded.
+- **Recovery is running green and getting greener.** Last 5 days readiness
+  88/88/84/91/**87**, RHR **40-43** vs base 44, HRV **85/65/78/63** vs base 62. Today's
+  sleep score **75** is the week's low (7.4h) — the only soft number on the board.
+- **No stat changes.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current.
+
+### Addendum, same day — the session was ridden, and it is the best threshold work on record
+
+- **8/18 executed: 2×20 @ 299W (HR 162) + 304W (HR 169)**, fade **−1.7%**, decoupling
+  **2.7%**, EF **1.801**, NP 267, IF 0.876, 90 TSS, ride max HR **177**. The HR gate
+  (rep 1 avg ≤172) passed by 10 bpm, so rep 2 took the 305W step.
+- **vs 8/11, one week earlier, same format:** rep 1 **294W/HR 169 → 299W/HR 162**
+  (+5W, +3 min, **−7 bpm**); rep 2 **294W/HR 171 → 304W/HR 169** (**+10W, −2 bpm**).
+  EF **1.711 → 1.801** (+5.3%).
+- **vs 7/15, the pre-gap best at the same 2×20 format:** **285/284W at HR 163/167 →
+  299/304W at HR 162/169**. That is **+15W and +20W at the same heart rate**, with
+  decoupling **8.0% → 2.7%** and EF **1.653 → 1.801** (+9.0%).
+- **Rep 2 was the stronger rep** (−1.7% fade) and ride max HR was **177 against a 197
+  max — 20 bpm of headroom** at 304W for 20 minutes. Average work HR ~165 = **84% of
+  max**. That is not threshold-limit physiology.
+- **FTP estimate tightens upward: 315-322** (was 312-320 on 8/13). `ftp` **stays 305**
+  in config — still no inference edits; the **9/08** retest decides it.
+- **Plan (this PR): next Tuesday's rung is time, not watts — 3×15 @ 305W**, 45 min of
+  work vs today's 40. Durability is the standing limiter, so time-at-threshold is the
+  better currency than another 5W.
+- **Open question for Thu 8/20:** over-unders are prescribed under 280 / over 320 against
+  the 305 anchor. If true FTP is ~318 those overs are barely over threshold — but this
+  session has failed twice (8/06 ran genuinely hard, HR ramping 167→175→179; 8/13
+  fragmented on fuelling), so targets stay as written and Thursday is the diagnostic.
+  If it also runs capped and clean, move the retest up from 9/08 to 8/25.
+- **Load after the session:** CTL **47.6**, TSB **−7.3**, 7-day TSS **422** (approaching
+  the 450 flag), ramp back to **+2.4/wk**.
+
+---
+
 ## 2026-08-13 — Threshold expression now **above** pre-gap; 305 anchor looks stale → retest inserted 9/08
 
 - **Headline: the gap is paid back at threshold, and then some.** Same 20-minute
