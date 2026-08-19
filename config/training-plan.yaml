@@ -84,7 +84,7 @@ phases:
         target_watts: "290-305"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold 2x20 min @ 300W (build to 305W, then 3x15), CD. Progression step set 8/17: 8/11 held 16:55+19:55 @ 294W at HR 169/171 with 0.0% fade, so take rep 1 to a full 20 min and add ~6W. Back off to 2x15 @ 294W if morning readiness <80 or RHR >=47. FUEL: main meal ~3h out (~2 g/kg carb, low fat/low fibre), 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on."
+        description: "WU, Threshold reps @ ~100% FTP, CD. Progression as of 8/18 (session done): 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801, ride max HR 177 vs 197 — the best threshold session on record and clearly submaximal. Next rung is TIME, not watts: 3x15 @ 305W (45 min work, 4 min easy between), since long-ride durability is the standing limiter. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
       wednesday:
         type: Endurance
         duration_min: 75
@@ -108,7 +108,7 @@ phases:
         target_watts: "Z2 195-225, tempo 230-275"
         target_if: 0.71
         target_tss: 135
-        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 230-275W."
+        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 230-275W. The tempo blocks are the durability stimulus — ride them: 8/08 (VI 1.04) and 8/15 (VI 1.02) were both flat Z2 with no tempo detectable. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr on the bike."
       sunday:
         type: Endurance
         duration_min: 90
@@ -150,11 +150,16 @@ phases:
         description: "Rest."
       saturday:
         type: Endurance
-        duration_min: 135
+        duration_min: 165          # HELD at 165 on 8/18 (was 135) — the 8/13 log's pre-committed
+                                   # rule fired: 8/15 long-ride decoupling came in at 8.0%, still
+                                   # above the 6.0% flag and the 3rd straight Saturday over it
+                                   # (7/12 6.2% -> 8/08 9.8% -> 8/15 8.0%). Durability is the
+                                   # standing limiter, so the VO2 block does not get to shrink
+                                   # the one session that treats it.
         target_watts: "195-225"
         target_if: 0.66
-        target_tss: 98
-        description: "Z2 endurance, 2-2.5 hr."
+        target_tss: 120
+        description: "Z2 endurance, 2.5-2.75 hr. Held at 165 min (not cut to 135) while long-ride decoupling stays >6% — this is the durability lever. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. Cut to 135 min once two consecutive long rides come in under 6%."
       sunday:
         type: Endurance
         duration_min: 75
