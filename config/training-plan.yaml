@@ -98,7 +98,7 @@ phases:
         target_watts: "under 280 / over 320"
         target_if: 0.88
         target_tss: 95
-        description: "Over-unders: 2 sets of 4x(3 min under @280W / 2 min over @320W). Trains lactate shuttling."
+        description: "Over-unders: 2 sets of 4x(3 min under @280W / 2 min over @320W). Trains lactate shuttling. FUEL — non-negotiable after the 8/13 abort (cramp + stitch on water only, green Oura, ride max HR 178 vs 197): main meal ~3h out (~2 g/kg carb, low fat/low fibre), 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. If set 2 fragments again WITH that fueling in place, it is a fitness ceiling and the overs drop to 310W."
       friday:
         type: Rest
         description: "Full rest."

@@ -10,6 +10,60 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-19 — First real recovery dip of the block (one short night); Thursday's fueling protocol restored to the plan
+
+- **Recovery stepped down hard, and it is a sleep event, not a fatigue event.** Readiness
+  **76** (prior five days 88/84/91/87/… — this is the lowest since 8/09's 69), sleep score
+  **69**, and **5.85 h** slept. That is the **second-shortest night in the whole 55-day
+  window** (only 7/14's 5.33 h was worse) and **-1.9 h against the trailing 14-day mean of
+  7.75 h**.
+  - RHR **46 vs base 44**; the Oura resting-HR contributor fell **100 → 69** overnight.
+  - HRV **55 vs base 62** = **-11.3%**, just inside the 12% caution flag; vs the 14-day
+    mean of 64.6 it is -14.9%.
+  - **But HRV balance is 91** — near the block high (93 on 8/17) — and temperature
+    deviation is **+0.07**, flat. The long-run autonomic trend is intact and there is no
+    illness signal. This is one night's debt landing on top of the hardest threshold
+    session on record (8/18: 90 TSS, IF 0.876).
+- **Historical rhyme, logged as a watch item, not a prediction.** The last time sleep went
+  this low (**7/14, 5.33 h**) the 11-day off-bike gap of **7/16-7/26** started two days
+  later. Two short nights in a row is the pattern worth catching early; one is not.
+- **Today's call: ride Wednesday Z2, but capped.** 75 min held, band narrowed
+  **195-225W → 195-205W**, with an HR ceiling of **135**. Reference for that ceiling —
+  HR at ~200W has run **6/23 140 → 7/11 132 → 8/12 129 → 8/16 124**, so 135 leaves 11 bpm
+  of allowance for the short night. The reason to cap is not today; it is **Thursday
+  8/20**, which is the pre-committed diagnostic session.
+- **Plan fix (this PR): the Thursday over-unders fueling protocol was missing and is
+  restored.** The 8/18 work branched off `main` rather than off the open 8/17 branch, so
+  the Thursday description silently reverted to the bare "Trains lactate shuttling" line
+  and lost both the fueling rule and the pre-committed **"if set 2 fragments again WITH
+  fueling in place, it is a fitness ceiling and the overs drop to 310W."** That text is
+  the whole point of tomorrow's session — 8/13 fragmented on fuelling (decoupling
+  **12.0%**, ride max HR 178 vs 197) and 8/06 ran genuinely hard (decoupling **7.9%**,
+  fade -4.3%). Restored verbatim. **This is the only plan change in this PR**; the rest of
+  the diff against `main` is the unmerged 8/17 + 8/18 work.
+- **No stat changes.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current. Note the RHR baseline stays 44 despite today's 46; it is a median and one day
+  does not move it.
+- **Load, for the record:** CTL **45.1**, TSB **-1.9** (neutral), 7-day TSS **369**, ramp
+  **+1.3/wk**. The ramp ticked back up from +0.2/wk as the 8/18 session landed. Nothing
+  here is overreaching territory.
+- **Open recommendation, NOT actioned — needs your call.** Yesterday's log pre-committed:
+  "if Thursday also runs capped and clean, move the retest up from **9/08 to 8/25**." The
+  retest date is **left at 9/08** in this PR. Moving a test date is a real plan change and
+  the evidence for it does not exist until Thursday is ridden, so it stays a
+  recommendation. If 8/20 comes in with the overs held and decoupling under ~6%, that is
+  three clean sessions against the 305 anchor (8/11, 8/18, 8/20) and the argument for
+  testing two weeks early becomes hard to refuse.
+
+### Housekeeping — branch state
+
+`main` is stale by two runs. PR **#10** (`plan-update-2026-08-17`) is still open and
+carries the 8/17 + 8/18 plan work; PR **#11** was closed unmerged. This PR
+(`plan-update-2026-08-19`) contains **everything in #10 plus the Thursday restore plus this
+entry**, so merging it makes #10 redundant — close #10 rather than merging both.
+
+---
+
 ## 2026-08-18 — Aerobic engine snapped back; **durability drift is the standing limiter** → Phase 3 Saturday held at 165 min
 
 - **The 8/13 watch resolved — and it split two ways.** The call was: "Watch 8/15
