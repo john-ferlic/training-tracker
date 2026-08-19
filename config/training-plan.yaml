@@ -84,7 +84,7 @@ phases:
         target_watts: "290-305"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold 2x20 min @ 100% FTP = 305W (build to 3x15), CD. Progression as of 8/18: 8/11 held 16:55+19:55 @ 294W at HR 169/171 with 0.0% fade, so step to 2x20 @ 300W; take rep 2 to 305W only if rep 1 finishes at HR <=172. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr on-bike, fan on) — 8/13 fragmented on fuelling, not fitness."
+        description: "WU, Threshold reps @ ~100% FTP, CD. Progression as of 8/18 (session done): 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801, ride max HR 177 vs 197 — the best threshold session on record and clearly submaximal. Next rung is TIME, not watts: 3x15 @ 305W (45 min work, 4 min easy between), since long-ride durability is the standing limiter. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
       wednesday:
         type: Endurance
         duration_min: 75

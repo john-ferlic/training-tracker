@@ -54,6 +54,33 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 - **No stat changes.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
   current.
 
+### Addendum, same day — the session was ridden, and it is the best threshold work on record
+
+- **8/18 executed: 2×20 @ 299W (HR 162) + 304W (HR 169)**, fade **−1.7%**, decoupling
+  **2.7%**, EF **1.801**, NP 267, IF 0.876, 90 TSS, ride max HR **177**. The HR gate
+  (rep 1 avg ≤172) passed by 10 bpm, so rep 2 took the 305W step.
+- **vs 8/11, one week earlier, same format:** rep 1 **294W/HR 169 → 299W/HR 162**
+  (+5W, +3 min, **−7 bpm**); rep 2 **294W/HR 171 → 304W/HR 169** (**+10W, −2 bpm**).
+  EF **1.711 → 1.801** (+5.3%).
+- **vs 7/15, the pre-gap best at the same 2×20 format:** **285/284W at HR 163/167 →
+  299/304W at HR 162/169**. That is **+15W and +20W at the same heart rate**, with
+  decoupling **8.0% → 2.7%** and EF **1.653 → 1.801** (+9.0%).
+- **Rep 2 was the stronger rep** (−1.7% fade) and ride max HR was **177 against a 197
+  max — 20 bpm of headroom** at 304W for 20 minutes. Average work HR ~165 = **84% of
+  max**. That is not threshold-limit physiology.
+- **FTP estimate tightens upward: 315-322** (was 312-320 on 8/13). `ftp` **stays 305**
+  in config — still no inference edits; the **9/08** retest decides it.
+- **Plan (this PR): next Tuesday's rung is time, not watts — 3×15 @ 305W**, 45 min of
+  work vs today's 40. Durability is the standing limiter, so time-at-threshold is the
+  better currency than another 5W.
+- **Open question for Thu 8/20:** over-unders are prescribed under 280 / over 320 against
+  the 305 anchor. If true FTP is ~318 those overs are barely over threshold — but this
+  session has failed twice (8/06 ran genuinely hard, HR ramping 167→175→179; 8/13
+  fragmented on fuelling), so targets stay as written and Thursday is the diagnostic.
+  If it also runs capped and clean, move the retest up from 9/08 to 8/25.
+- **Load after the session:** CTL **47.6**, TSB **−7.3**, 7-day TSS **422** (approaching
+  the 450 flag), ramp back to **+2.4/wk**.
+
 ---
 
 ## 2026-08-13 — Threshold expression now **above** pre-gap; 305 anchor looks stale → retest inserted 9/08
