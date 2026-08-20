@@ -26,23 +26,57 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 - **Load is neutral, not limiting.** CTL **46.8**, TSB **−0.1**, 7-day TSS **335** (flag 450),
   3-day **144**, ramp **+0.1/wk**. Room to work; Friday is a full rest day before Saturday's
   165-min durability session, which stays the protected session of the week.
-- **Why today is the diagnostic.** Thursday prescribes under **280W** / over **320W** against the
-  305 anchor. Against the current **315-322** FTP estimate that is **~88% / ~101%** — i.e. if the
-  estimate is right, this should ride like alternating sweet spot, not like over-unders. The
-  session has failed twice at these exact numbers: **8/06** ran away (3×8:53 @ 303W, HR
-  **167 → 175 → 179**, decoupling **7.9%**, 18% of time in Z5) and **8/13** fragmented on
-  fuelling (decoupling **12.0%**, work broken into 20:00 + 8:03 + 4:25 + 3:16).
+- **Detector caveat — read this before judging any over-under session.** `work_frac_ftp` 0.88 ×
+  FTP 305 = **268W**, and the prescribed *unders* are 280W (92% FTP). Both unders and overs sit
+  above the work threshold, so a correctly-ridden set of 4×(3 min @ 280 / 2 min @ 320) is
+  detected as **one continuous ~20:00 interval at the blended average of 296W**, not as eight
+  reps. Eight short reps in the table would mean the session was ridden *wrong*. Prior runs read
+  the single long interval as a failure to follow the structure; it is the opposite.
+- **Re-reading the two prior attempts, this changes the record.**
+  - **8/06 was never this session.** "Zwift - At/Over/Under" is a stock workout: 3×**8:53 @ 303W**,
+    HR **167 → 175 → 179**, max HR 189, **18% of time in Z5**, decoupling 7.9%. Nine-minute blocks,
+    not 3/2 — and ridden two days after the 8/04 ramp test. It tells us nothing about the
+    prescribed over-under and should stop being counted against it.
+  - **8/13 set 1 was textbook.** **19:55 @ 295W** against a prescribed 20:00 @ **296W** blended —
+    within 5 seconds and 1 watt — at HR **167**, ride max power 374W (the overs were hit).
+  - **8/13 set 2 is where it broke:** 8:03 + 4:25 + 3:16 = **15:44 of 20:00 (79%)**, in three
+    pieces. But the set-2 HRs were **167 / 165 / 165** — flat-to-lower than set 1, not drifting.
+    Whatever ended the session, it was not a heart-rate ceiling and not cardiac drift.
+  - **The 12.0% decoupling is substantially an artifact.** Decoupling compares first-half to
+    second-half Pw:HR over the whole ride; inserting unplanned rest into the back half drops
+    second-half average power while HR stays elevated, which inflates it mechanically. With
+    interval HR flat at 165-167 throughout, 12% is not independent evidence of aerobic drift.
+  - **Net: the prescribed session has one real attempt, not two, and it half-worked.** The
+    limiter on display is *completing 40 min in this format*, not the wattage.
+- **Why today is still the diagnostic.** Thursday prescribes under **280W** / over **320W** against
+  the 305 anchor. Against the current **315-322** FTP estimate that is **~88% / ~101%** — the
+  unders are sweet spot and the overs are barely over, so if the estimate is right this rides like
+  a threshold alternation rather than a true lactate-shuttling set. That softness is the point:
+  a *complete, HR-capped* 40 min at these numbers is the evidence the anchor is stale.
 - **Gate for moving the retest (replaces "capped and clean" in the 8/18 addendum).**
-  - **Move the FTP retest up from 9/08 to Tue 8/25** only if *all four* hold: the full 40 min of
-    work is completed as 2×4×(3 min @ 280 / 2 min @ 320); the **last over of set 2 is HR ≤175**;
-    **fade ≥ −2%**; **decoupling <5%**.
-  - **Keep the retest at 9/08** if HR ramps past **178** or decoupling exceeds **6.0%** — that
-    reads as 305 being nearer the truth than 8/18 implied, and the anchor gets its full three
-    weeks. A partial result (clean but short of 40 min) also keeps 9/08.
-- **Fuelling is part of the test, not a footnote.** The 8/13 failure was a fuelling failure and
-  the 8/18 success came with the rule applied. Same rule today: main meal 3 h out, 60-90 g carb/hr
-  and 500-800 mg sodium/hr on the bike, fan on. An under-fuelled result is not a fitness result
-  and should not be used to move the retest either way.
+  - **Move the FTP retest up from 9/08 to Tue 8/25** only if *all three* hold: the **full 40 min**
+    is completed as 2 sets with **no unplanned stops** (i.e. two ~20:00 intervals at ~296W blended,
+    per the detector caveat above); the **last over of set 2 at HR ≤175**; **fade ≥ −2%**.
+  - **Keep the retest at 9/08** if set 2 fragments again, or HR ramps past **178**. A clean but
+    short result keeps 9/08 — a repeat of 8/13 is a repeat, not progress.
+  - **Decoupling is deliberately *not* in the gate** for this session, because fragmentation
+    inflates it (see above) and it would double-count the completion criterion. Record it, but
+    judge this session on completion and interval HR.
+- **Asked whether to bump the watts today — answer is no, and the reason is which half failed.**
+  8/18 held **40:00 of work at 301W avg** (299/304, HR 162/169, fade −1.7%) — more total work at
+  higher power than 8/13's 36:48 at ~297W, and clean. So threshold *expression* clearly supports
+  the set-1 blend. But 8/13 failed in **set 2**, and adding watts loads the half that has never
+  been completed. Time-at-target before watts — the same call made for Tuesday (3×15 @ 305 rather
+  than 2×20 at a higher number). Note also that in an over-under the *unders* are the recovery
+  valley: raising them is the harder change, not the softer one, and neither number moves today.
+  The real re-anchor comes from the retest, and it will be a larger step than freelancing would
+  give — at a tested FTP near 318 the session becomes roughly **under 300 / over 340**.
+- **Fuelling is part of the test, not a footnote.** Set-2 HR flat at 165-167 while power broke up
+  is consistent with substrate running out rather than a cardiovascular ceiling, which fits the
+  fuelling read carried since 8/13 — though it is circumstantial, not proven. The 8/18 success came
+  with the rule applied. Same rule today: main meal 3 h out, 60-90 g carb/hr and 500-800 mg
+  sodium/hr on the bike, fan on. An under-fuelled result is not a fitness result and should not be
+  used to move the retest either way.
 
 ---
 
