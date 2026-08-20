@@ -10,6 +10,42 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-20 — Thursday over-unders are the FTP-anchor diagnostic; the "capped and clean" gate gets numbers
+
+- **No config changes today.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current. No plan edit either: the 8/18 pre-commitment to leave Thursday's targets *as written*
+  is precisely what makes today a valid test, so touching the watts would destroy the datapoint.
+  This entry exists to carry the decision rule forward to the next run.
+- **Recovery: a one-night dip, already gone.** 8/19 was the week's only red number — readiness
+  **73**, sleep **69**, **5.85 h**, RHR **46**. Today: readiness **89**, sleep **88**, **8.25 h**,
+  RHR **44** (= base), HRV **61** vs base 62; hrv_balance contributor 92, recovery_index 100.
+  Nothing carried over.
+- **Tuesday was absorbed.** The 8/18 threshold session (90 TSS, IF 0.876) was followed by 8/19
+  easy Z2 at **197.6W / HR 126 / EF 1.580 / decoupling 0.4%** — in line with the 8/16 benchmark
+  (200W / HR 124 / EF 1.630). No HR drift at Z2 two days after the best threshold work on record.
+- **Load is neutral, not limiting.** CTL **46.8**, TSB **−0.1**, 7-day TSS **335** (flag 450),
+  3-day **144**, ramp **+0.1/wk**. Room to work; Friday is a full rest day before Saturday's
+  165-min durability session, which stays the protected session of the week.
+- **Why today is the diagnostic.** Thursday prescribes under **280W** / over **320W** against the
+  305 anchor. Against the current **315-322** FTP estimate that is **~88% / ~101%** — i.e. if the
+  estimate is right, this should ride like alternating sweet spot, not like over-unders. The
+  session has failed twice at these exact numbers: **8/06** ran away (3×8:53 @ 303W, HR
+  **167 → 175 → 179**, decoupling **7.9%**, 18% of time in Z5) and **8/13** fragmented on
+  fuelling (decoupling **12.0%**, work broken into 20:00 + 8:03 + 4:25 + 3:16).
+- **Gate for moving the retest (replaces "capped and clean" in the 8/18 addendum).**
+  - **Move the FTP retest up from 9/08 to Tue 8/25** only if *all four* hold: the full 40 min of
+    work is completed as 2×4×(3 min @ 280 / 2 min @ 320); the **last over of set 2 is HR ≤175**;
+    **fade ≥ −2%**; **decoupling <5%**.
+  - **Keep the retest at 9/08** if HR ramps past **178** or decoupling exceeds **6.0%** — that
+    reads as 305 being nearer the truth than 8/18 implied, and the anchor gets its full three
+    weeks. A partial result (clean but short of 40 min) also keeps 9/08.
+- **Fuelling is part of the test, not a footnote.** The 8/13 failure was a fuelling failure and
+  the 8/18 success came with the rule applied. Same rule today: main meal 3 h out, 60-90 g carb/hr
+  and 500-800 mg sodium/hr on the bike, fan on. An under-fuelled result is not a fitness result
+  and should not be used to move the retest either way.
+
+---
+
 ## 2026-08-18 — Aerobic engine snapped back; **durability drift is the standing limiter** → Phase 3 Saturday held at 165 min
 
 - **The 8/13 watch resolved — and it split two ways.** The call was: "Watch 8/15
