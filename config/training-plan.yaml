@@ -108,7 +108,7 @@ phases:
         target_watts: "Z2 195-225, tempo 230-275"
         target_if: 0.71
         target_tss: 135
-        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 230-275W. The tempo blocks are the durability stimulus — ride them: 8/08 (VI 1.04) and 8/15 (VI 1.02) were both flat Z2 with no tempo detectable. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr on the bike."
+        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 230-275W. The tempo blocks ARE being ridden, correctly — corrected 8/20: 8/08 logged 36.2 min and 8/15 logged 36.2 min in Z3 (232-274W) against a prescribed 36 min. The earlier 'flat Z2, no tempo detectable' note was a detection artifact (tempo sits below the 268W interval threshold, and 36 min at ~250W barely moves VI on a 165-min ride at ~206W) — do not re-derive it from VI or the interval table. Keep riding them as prescribed. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr on the bike."
       sunday:
         type: Endurance
         duration_min: 90

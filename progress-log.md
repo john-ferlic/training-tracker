@@ -62,6 +62,33 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   - **Decoupling is deliberately *not* in the gate** for this session, because fragmentation
     inflates it (see above) and it would double-count the completion criterion. Record it, but
     judge this session on completion and interval HR.
+- **CORRECTION to the 8/18 entry: the Saturday tempo blocks *are* being ridden.** That entry
+  claimed 8/08 and 8/15 were "both flat Z2 with no tempo detectable" and made it a plan change.
+  Wrong, and wrong the same way as the over-under read. Z3 Tempo is defined in `metrics.py` as
+  **0.76-0.90 × FTP = 232-274W** — essentially identical to the prescribed 230-275W band. Actual
+  time in that band: **8/08 = 36.2 min**, **8/15 = 36.2 min**, against a prescribed 3×12 = **36
+  min**. Executed precisely, two weeks running. The false negative came from two directions at
+  once: the interval detector's 268W work threshold sits *above* most of the tempo band so
+  `intervals` returns null, and 36 min at ~250W inside a 165-min ride averaging 206W moves VI by
+  almost nothing (hence 1.04 / 1.02). Plan description corrected in this PR. **Neither VI nor the
+  interval table can see sub-threshold work — use time-in-zone for anything below 268W.**
+- **That makes the durability limiter more stubborn, not less.** Prior read was "decoupling is
+  high because he's skipping the stimulus." Actual: he is delivering the stimulus as prescribed
+  and decoupling is *still* **9.8% (8/08)** and **8.0% (8/15)**. Note the pre-gap long rides had
+  **0%** Z3 (6/27, 7/04, 7/12) — so the tempo blocks are new as of 8/08, and it is plausible that
+  adding 36 min of tempo is itself part of why decoupling rose from 6.2% (7/12) to 8-10%. Worth
+  isolating before concluding the durability deficit is worsening. Saturday stays protected either
+  way; if anything its value goes up.
+- **Asked whether tonight's session could move to Friday's rest day.** Load is identical —
+  7-day TSS through 8/22 is **433** under either ordering, 3-day through 8/22 is **230** under
+  either, and a rest day is still taken (it moves from Fri to Thu). The cost is purely ordering:
+  it puts a 95-TSS threshold session the day before the long ride. Given the correction above —
+  Saturday is being executed correctly and is the only session treating the standing limiter —
+  the ruling is: **do not insert Friday on top of an unchanged Saturday.** Either skip the
+  over-unders this week (retest stays 9/08, next attempt 8/27, nothing structural lost — the
+  preferred option), or reshuffle to Fri over-unders / Sat easy 90 / Sun long 165, accepting one
+  recovery day before Tuesday's 3×15 @ 305 instead of two. The over-unders is a diagnostic;
+  Saturday is treatment. Do not trade treatment for a test.
 - **Asked whether to bump the watts today — answer is no, and the reason is which half failed.**
   8/18 held **40:00 of work at 301W avg** (299/304, HR 162/169, fade −1.7%) — more total work at
   higher power than 8/13's 36:48 at ~297W, and clean. So threshold *expression* clearly supports
