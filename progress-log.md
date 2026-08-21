@@ -62,6 +62,38 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   - **Decoupling is deliberately *not* in the gate** for this session, because fragmentation
     inflates it (see above) and it would double-count the completion criterion. Record it, but
     judge this session on completion and interval HR.
+- **Interval detection fixed in code (this PR), and it settles both corrections with real data.**
+  The detector had two blind spots, both now closed, validated against re-pulled Strava streams
+  for all 31 rides in history — **zero changes to any ride that already detected intervals, zero
+  false positives on the 20 easy rides**, three rides corrected:
+  - **Sub-threshold work was invisible.** A fixed 0.88×FTP cutoff cannot see work below it, so
+    prescribed tempo (0.76-0.90 FTP) registered as nothing. Now, when nothing sustained clears
+    the cutoff, detection falls back to splitting the ride's own power distribution (Otsu), with
+    guards so flat rides still return nothing. **8/15 now resolves as 12:00 / 11:58 / 11:58 @
+    244W, HR 143 / 144 / 145, fade 0.0%.** 8/08 resolves as 11:59 / 11:57 / 11:58 @ 249W. That is
+    3×12 min tempo ridden to the second, twice — the "not being ridden" claim is dead, measured
+    rather than inferred. It also surfaced **6/28: 2×10:06 @ 249W**, the Phase 1 Sunday 2×10 tempo,
+    likewise ridden correctly.
+  - **Over-unders fused into one block.** With unders at 280W above the 268W cutoff, a correct set
+    merged into a single ~20:00 interval at the blended average. Blocks are now re-split
+    internally. **8/13 set 1 resolves as under 2:56 @ 281 / over 2:00 @ 318 / under 3:00 @ 281 /
+    over 1:59 @ 318 / under 3:00 @ 280 / over 2:00 @ 318 / under 3:01 @ 280 / over 1:59 @ 316** —
+    four complete under/over pairs, exactly as prescribed. Set 2 gives two more complete pairs
+    then fragments. **Fade across the overs: 0.2%.**
+  - **New signal: `fade_pct_overs`.** Whole-block averages blend the unders back in and mask the
+    progression; an over-under should be judged on the overs. 8/13's overs held **318W flat across
+    all six** (first→last 0.0%) while the session fell apart — further evidence the failure was
+    substrate, not power.
+  - Absent intervals are now stated explicitly in the briefing ("no sustained work blocks found at
+    any cutoff — read time-in-zone") instead of silently rendering nothing, which is what both
+    misreadings grew from. Detection basis and threshold are recorded on every ride.
+  - `fetch --reanalyze` added: stored rides keep whatever the detector produced when they were
+    first analyzed, so any detection or FTP change needs a re-run to reach history. All 31 rides
+    re-analyzed on this branch.
+  - **Known limitation:** Phase 3 Thursday prescribes 30/15s (30 sec @ 345W / 15 sec @ 195W).
+    Segments shorter than `segment_min_s` (45 s) are not resolved, so that session will report as
+    fused blocks. Left untuned deliberately — no 30/15 session has been ridden yet, so there is
+    nothing to validate against. Revisit with real data when the VO2 block opens 9/14.
 - **CORRECTION to the 8/18 entry: the Saturday tempo blocks *are* being ridden.** That entry
   claimed 8/08 and 8/15 were "both flat Z2 with no tempo detectable" and made it a plan change.
   Wrong, and wrong the same way as the over-under read. Z3 Tempo is defined in `metrics.py` as

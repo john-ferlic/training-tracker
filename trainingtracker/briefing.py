@@ -4,6 +4,8 @@ from __future__ import annotations
 from datetime import date
 from typing import Any
 
+from . import workout
+
 VERDICT_EMOJI = {"PROCEED": "✅", "MODIFY": "🔧", "PUSH": "🚀", "REST": "😴"}
 RECOVERY_EMOJI = {"green": "🟢", "amber": "🟡", "red": "🔴", "unknown": "⚪"}
 
@@ -90,9 +92,20 @@ def render_markdown(assessment: dict[str, Any], athlete: dict[str, Any], coach: 
             iv = ride.get("intervals") or {}
             extra = ""
             if iv:
-                extra = f" · {iv['count']} intervals @ ~{iv['mean_pct_ftp']}% FTP"
-                if iv.get("fade_pct") is not None:
-                    extra += f", fade {iv['fade_pct']}%"
+                ou = iv.get("over_under")
+                if ou:
+                    extra = (
+                        f" · {ou['over_count']} overs @ {ou['over_avg_power']}w / "
+                        f"{ou['under_count']} unders @ {ou['under_avg_power']}w"
+                    )
+                    if ou.get("fade_pct_overs") is not None:
+                        extra += f", fade across overs {ou['fade_pct_overs']}%"
+                else:
+                    extra = f" · {iv['count']} intervals @ ~{iv['mean_pct_ftp']}% FTP"
+                    if iv.get("fade_pct") is not None:
+                        extra += f", fade {iv['fade_pct']}%"
+                if (iv.get("detection") or {}).get("basis") == "adaptive":
+                    extra += f" (detected at {iv['detection']['threshold_w']}w — sub-threshold work)"
             lines.append(f"Detected: **{ride['classified_type']}**{extra}")
         lines.append(f"Planned: {_fmt_plan(lw['planned']).splitlines()[0]}")
         if lw["harder_than_expected"]:
@@ -169,18 +182,50 @@ def render_workout(record: dict[str, Any], planned: dict[str, Any], athlete: dic
     if iv:
         lines.append("")
         lines.append(f"## Intervals ({iv['count']})")
+        det = iv.get("detection") or {}
+        if det.get("basis") == "adaptive":
+            cutoff_pct = round(workout.DEFAULTS["work_frac_ftp"] * 100)
+            lines.append(
+                f"_No sustained work above the {cutoff_pct}% FTP cutoff; detected against this "
+                f"ride's own split at {det['threshold_w']}w ({det['threshold_pct_ftp']}% FTP) "
+                f"— sub-threshold work such as tempo blocks._"
+            )
         lines.append("| # | dur | avg W | %FTP | avg HR |")
         lines.append("|---|-----|-------|------|--------|")
         for it in iv["intervals"]:
             mins = f"{it['duration_s'] // 60}:{it['duration_s'] % 60:02d}"
             lines.append(f"| {it['n']} | {mins} | {it.get('avg_power', '-')} | "
                          f"{it.get('pct_ftp', '-')}% | {it.get('avg_hr', '-')} |")
+            for sg in it.get("segments", []):
+                smins = f"{sg['duration_s'] // 60}:{sg['duration_s'] % 60:02d}"
+                lines.append(f"| ↳ {sg['n']} {sg['label']} | {smins} | {sg.get('avg_power', '-')} | "
+                             f"{sg.get('pct_ftp', '-')}% | {sg.get('avg_hr', '-')} |")
+        ou = iv.get("over_under")
+        if ou:
+            lines.append("")
+            lines.append(
+                f"**Over/under:** {ou['over_count']} overs @ {ou['over_avg_power']}w · "
+                f"{ou['under_count']} unders @ {ou['under_avg_power']}w · "
+                f"fade across the overs {ou['fade_pct_overs']}% "
+                f"(first→last {ou['first_to_last_pct_overs']}%)."
+            )
+            lines.append(
+                "_Judge an over-under on the overs — whole-block averages blend the unders back in._"
+            )
         if iv.get("fade_pct") is not None:
             f = iv["fade_pct"]
             verdict = "held well" if f < 2 else ("mild fade" if f < 5 else "significant fade — struggled late")
             lines.append("")
             lines.append(f"**Fade:** {f}% across reps (first→last {iv.get('first_to_last_pct', '?')}%) "
                          f"— {verdict}.")
+    elif record.get("time_in_zones"):
+        # Absent intervals previously read as "the session wasn't ridden". Say
+        # plainly that nothing sustained was found, so it can't be misread.
+        lines.append("")
+        lines.append(
+            "## Intervals (0)\n_No sustained work blocks found at any cutoff. For work below "
+            "~0.9x FTP, read time-in-zone below rather than concluding the session was skipped._"
+        )
 
     tiz = record.get("time_in_zones")
     if tiz:
