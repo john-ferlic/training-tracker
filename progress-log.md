@@ -10,6 +10,46 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-21 — Rest day holds. Pre-test openers added Mon 8/24; the 8/25 test gets a pacing protocol.
+
+- **Today is Rest and stays Rest.** Plan calls for it and nothing argues otherwise. 7-day TSS
+  **427** against the 450 flag, 3-day **146**, TSB **−3.6**, CTL **47.8**, ramp **+2.2/wk**. This
+  is the first genuinely loaded week of the block; the Friday zero is what makes 8/22 and 8/25
+  both usable.
+- **No stat changes.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all current.
+  The FTP anchor is stale but that is what Tuesday's test is for; do not pre-emptively move it.
+- **Recovery is not today's constraint — and today has no Oura record yet.** Last night's ring
+  data had not synced at run time, so the briefing shows UNKNOWN. Going in: 8/20 readiness **89**,
+  sleep **88**, **8.25 h**, RHR **44** (= baseline), HRV **61** (base 62). The 8/19 dip
+  (readiness 73, sleep 69, 5.85 h) was one night and did not carry.
+- **Thursday's session was absorbed cleanly, which is the point.** 8/20: NP **271**, IF **0.888**,
+  92 TSS, EF **1.783**, avg HR **152**, ride max **177** vs 197. Overs 8× at **322W** with
+  **0.0% fade**; unders **286W**. The briefing's ⚠️ "harder than planned / decoupling 6.1%" is the
+  same interval-shape artifact logged on 8/13 — eight recovery valleys break the whole-ride
+  first-half/second-half Pw:HR comparison. Interval HR (164 → 168 across sets, last over 175) says
+  the opposite. Do not treat 6.1% as a fatigue signal here.
+- **Plan changes (this PR):**
+  - **Mon 8/24 changed from template Rest → 30-min openers** (20 min Z2 190-210W, 3×1 min @ 320W,
+    5 min easy; ~20 TSS). Reasoning: Sun 60 min + Mon rest leaves two near-blank days before a max
+    effort, and the last test (**8/04 ramp**, preceded by a 23-TSS spin on 8/03) read **305** —
+    now looking 10-17W low. Cost is small and measured: projected 8/25 TSB **+3.1 → +1.1**, both
+    neutral. Written with an explicit skip clause if readiness <70 or legs are heavy.
+  - **8/25 test entry gets a protocol**, not just a date: WU 15 min + 3×1 min @ 320W, then
+    minutes 0-5 at **328-332W** (hard ceiling 335), minutes 5-15 at **330-335W**, empty the tank
+    from minute 15. FTP = 20-min avg × 0.95. **330 avg → FTP 314; 340 → FTP 323.** Anchored on
+    8/18 (2×20 @ 299/304W, fade −1.7%, submaximal) and 8/20 (8×2 min @ 322W, 0.0% fade, 20 bpm of
+    HR headroom). HR expectation: ~165-172 by min 5, 178-183 by min 15, 185-192 at the line
+    (8/04 ramp peaked 192).
+  - **Saturday 8/22 stays at 165 min with the 3×12 tempo.** The 8/13 pre-commitment holds it while
+    long-ride decoupling is >6%, and 8/15 came in at **8.0%** — third straight Saturday over the
+    flag (7/12 **6.2%** → 8/08 **9.8%** → 8/15 **8.0%**). Durability is still the standing limiter
+    and it does not get cut to buy 2 TSB points before a test.
+- **Watch for next run:** whether Saturday 8/22's decoupling finally drops under 6.0%. Two
+  consecutive long rides under the flag is the pre-committed trigger to cut Phase 3 Saturdays
+  from 165 → 135 min. 8/15 was one data point in the right direction (9.8% → 8.0%).
+
+---
+
 ## 2026-08-20 (evening) — **The gate fired on all three. FTP retest moves 9/08 → Tue 8/25.**
 
 - **The session was ridden, complete, and above prescription.** 2 sets × 4×(3 min under / 2 min
