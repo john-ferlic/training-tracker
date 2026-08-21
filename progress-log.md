@@ -52,6 +52,25 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   interval session with eight recovery valleys; the whole-ride first-half/second-half Pw:HR
   comparison is not meaningful on that shape — the same artifact documented for 8/13. Interval HR
   and fade both say the opposite. This is a limitation of the rule, not a signal about the ride.
+- **Athlete-reported RPE: legs burning hard by the end of the session** (subjective; the pipeline
+  cannot see this). Read as expected rather than a warning, for three reasons, and recorded so the
+  8/25 test result can be interpreted against it:
+  - **Duration, not intensity, explains it.** **41:30 above 268W** across a 44-min span with a
+    single **5:06** break, of which **17:32 was above 305W**. Even at an FTP of 318 the 300W blend
+    is ~94% held near-continuously for 40 min — close to a 40-min maximal effort before adding
+    17 min above threshold. The 4-min rest in 8/18's 2×20 is a materially easier shape.
+  - **Burn is a lactate signal; fade is a capacity signal.** The overs ran 323/323/323/321/323/
+    323/323/321 — **0.0% fade**, last rep within 2W of the first, peak HR 177/197. Loaded muscles
+    with intact power and submaximal HR is what a correctly-pitched over-under looks like.
+  - **Ruled out:** cadence **83.6** sits inside the normal band (82.7-85.9 across every hard
+    session), so this was not a low-cadence/high-force session. And it was ridden on TSB **−11**
+    two days after the best threshold session on record.
+  - **Calibration:** this does mean 8/20 sat near the top of the sustainable range for this format.
+    Expect the 8/25 test at **315-322**, not higher. A result near 312 is still a real result.
+  - **Falsifier for the stale-anchor read** (none of which occurred): overs fading >3-4%, HR past
+    182, or failure to complete set 2.
+  - **Watch:** legs still heavy Saturday morning, 36+ hr out with a rest day between, would be a
+    different signal — trim the tempo blocks rather than ride them flat.
 - **Classifier now reads this session as VO2max** (19% of time in Z5) rather than Threshold. That
   is correct against a 305 anchor — the overs are 106% FTP. It should revert to Threshold once
   FTP is re-anchored, which is itself a sign the anchor is wrong.
