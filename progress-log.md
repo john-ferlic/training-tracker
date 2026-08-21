@@ -62,6 +62,23 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   - **Decoupling is deliberately *not* in the gate** for this session, because fragmentation
     inflates it (see above) and it would double-count the completion criterion. Record it, but
     judge this session on completion and interval HR.
+- **HR spec for the session, derived from 8/13's correctly-executed set 1** (avg **167**, peak
+  **178**, over-peaks ramping 169 → 173 → 176 → 177 — which then failed in set 2, so today must
+  run under it). Max HR 197.
+  - **Set 1:** avg **160-166** (84% max), peak **≤174**; over-peaks by rep ≤166 / ≤170 / ≤172 /
+    ≤174; each under sheds 5-8 bpm, floor ≤168 by rep 4.
+  - **Set 2:** avg **165-171** (87% max), peak **≤178**; over-peaks ≤172 / ≤174 / ≤175 / **≤175**
+    (the gate); each under sheds ≥4 bpm.
+  - **Cross-check:** 8/18 held 20 min at **304W** — above today's 296W blend — at avg 162 / peak
+    170 (rep 1). Set 1 running hotter than that means fuel, heat or fatigue, not fitness; back off
+    early rather than at rep 8.
+  - **Abort at any over peaking ≥182** (92% max). 8/06 peaked **189** (96%) and ran away.
+  - **Clearance check:** on 8/13 each 3-min under shed **−2 / −7 / −7 bpm** — 280W is a genuine
+    recovery valley for this rider, so the unders were working. Two consecutive unders shedding
+    **<3 bpm** ends the session regardless of power.
+  - **Do not expect set-2 cardiac drift.** On 8/13 HR was flat between sets (167 → 167) with the
+    overs holding 318W throughout. Power broke while HR and watts both held — the reason fuelling,
+    not pacing, is the variable under test.
 - **Interval detection fixed in code (this PR), and it settles both corrections with real data.**
   The detector had two blind spots, both now closed, validated against re-pulled Strava streams
   for all 31 rides in history — **zero changes to any ride that already detected intervals, zero
