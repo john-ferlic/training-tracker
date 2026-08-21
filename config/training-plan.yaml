@@ -84,7 +84,7 @@ phases:
         target_watts: "290-305"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold reps @ ~100% FTP, CD. Progression as of 8/18 (session done): 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801, ride max HR 177 vs 197 — the best threshold session on record and clearly submaximal. Next rung is TIME, not watts: 3x15 @ 305W (45 min work, 4 min easy between), since long-ride durability is the standing limiter. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
+        description: "WU, Threshold reps @ ~100% FTP, CD. NOTE (8/20): Tue 8/25 is an FTP RETEST, not this session — the 3x15 @ 305W rung moves to 9/01 and must be re-anchored to the tested FTP first (at ~318 it becomes roughly 3x15 @ 318W). Progression to date: 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801; 8/20 held 2x20 over-unders at 300W blended (8 overs @ 322W, 0.0% fade) with ride max HR 177 vs 197. Both clearly submaximal. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
       wednesday:
         type: Endurance
         duration_min: 75
@@ -274,10 +274,21 @@ schedule:
   2026-08-04:                     # was 2026-07-28; pushed +1wk after the gap.
     type: Test
     description: "FTP retest (20-min test x0.95, or ramp). Pushed one week from 7/28 to allow a re-entry week (7/27-8/02) after the 11-day off-bike gap. Re-anchor watt targets after."
-  2026-09-08:                     # ADDED 8/13. Mid-build retest at the end of Phase 2 (wk 13),
-                                  # six days before the Phase 3 VO2 block opens on Mon 9/14.
+  2026-08-25:                     # MOVED UP from 2026-09-08 on 8/20. The pre-committed gate on the
+                                  # Thursday over-under fired on all three criteria, so the retest
+                                  # comes forward two weeks rather than training on a stale anchor.
     type: Test
-    description: "FTP retest (20-min x0.95 preferred over ramp — ramp under-reads for this rider). Added because the 305 anchor looks stale: 8/11 held 2x(17/20min) @ 294W at HR 169/171 with 0.0% fade, and 8/13 held 20min @ 295W at HR 167 — vs the pre-gap 7/15 best of 2x20 @ 285W at HR 163/167. That is +10W at the same HR, i.e. threshold expression is now ABOVE pre-gap. Phase 3 watt targets (VO2 325-350W) are anchored to FTP, so testing before 9/14 keeps the VO2 block from running too easy. Re-anchor Phase 3/4 targets after."
+    description: "FTP retest (20-min x0.95 preferred over ramp — ramp under-reads for this rider). Moved up from 9/08: the 8/20 over-under passed every gate criterion — full 40 min completed as 2x4x(3/2), overs 8x322W with 0.0% fade, last over HR 175, ride max 177 vs 197 max. Rode it ABOVE prescription (unders 286W vs 280, overs 322W vs 320, blend 300W vs 296) and still finished with 20 bpm of HR headroom. Also set a 40-min best of 283W two days after 8/18's 284W. FTP estimate 315-322 against a 305 anchor; do not train another block on it. Replaces the 9/08 slot entirely — do NOT also test 9/08. Supersedes the Tuesday 3x15 @ 305, which moves to 9/01 at re-anchored watts. Re-anchor Phase 2/3/4 targets after."
+  # -------------------- Protecting the 8/25 test --------------------
+  2026-08-23:                     # ADDED 8/20. Sunday trimmed 90 -> 60 min purely to freshen for
+                                  # the Tuesday test. Saturday stays at 165 min — it is the
+                                  # durability session and is not the one to cut.
+    type: Endurance
+    duration_min: 60
+    target_watts: "195-225"
+    target_if: 0.65
+    target_tss: 42
+    description: "Easy Z2, 60 min (trimmed from 90). Freshens Tue 8/25's FTP test: projected TSB +1.4 at 90 min vs +3.2 at 60 min. Genuinely easy — no tempo."
   2026-11-03:                     # was 2026-10-27; final test shifted +1wk with the phases.
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."

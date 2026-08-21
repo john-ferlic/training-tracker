@@ -10,6 +10,54 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-20 (evening) — **The gate fired on all three. FTP retest moves 9/08 → Tue 8/25.**
+
+- **The session was ridden, complete, and above prescription.** 2 sets × 4×(3 min under / 2 min
+  over), **19:53 + 19:56 = 39:49** of work, no unplanned stops. Every target overshot: **unders
+  286W** (vs 280), **overs 322W** (vs 320), **blend 300W** (vs 296). NP 271, IF 0.888, 92 TSS,
+  EF 1.783.
+- **Gate result — all three criteria met:**
+  1. Full 40 min as 2 sets, no stops ✅ (39:49, 8 overs + 8 unders)
+  2. Last over of set 2 at HR ≤175 ✅ (**175** exactly, peak 177)
+  3. Fade ≥ −2% ✅ (**0.0%** overall, **0.0%** across the overs, first→last 0.6%)
+- **Against the HR spec written this morning, it landed almost exactly on prediction.** Set 1 avg
+  **164** (predicted 160-166), peak **173** (predicted ≤174). Set 2 avg **168** (predicted 165-171),
+  peak **177** (predicted ≤178). The 182 abort line was never approached.
+- **Clearance held throughout.** Every under after the first shed HR — set 1 **−2 / −5 / −4**,
+  set 2 **−4 / −2 / −5**. Never two consecutive unders under 3 bpm. 286W is comfortably a
+  recovery valley for this rider.
+- **This is the session that failed twice, now passed at higher power.** vs **8/13**, one week
+  earlier: set 1 **295W → 300W** at HR **167 → 164** (+5W, **−3 bpm**), peak **178 → 173**, and a
+  complete set 2 where 8/13 managed 15:44 of 20:00. vs **8/06**: peak HR **189 → 177** (96% → 90%
+  of max) for a *harder* session.
+- **New 40-min best territory, two days after the last one.** Best 40-min power: pre-gap 7/15
+  **275W** → 8/18 **284W** → 8/20 **283W**. Best 20-min: 7/15 **285W** → 8/18 **305W** → 8/20
+  **301W**. Note these are prescribed sessions, not max efforts — they are floors, not ceilings.
+- **The overs sat at 106% of the 305 anchor and did not fade at all** (322/323/323/321/323/323/
+  323/321). 16 minutes above threshold, dead flat, finishing 20 bpm under max HR. Against FTP 305
+  that is not plausible; against ~318 it is exactly right.
+- **Plan changes (this PR):**
+  - **Retest moved 9/08 → Tue 8/25**, replacing the 9/08 slot entirely. Rationale written into
+    the schedule entry.
+  - **Tuesday's 3×15 @ 305 deferred to 9/01** and must be re-anchored to the tested FTP first
+    (~3×15 @ 318 if the test lands where the evidence points).
+  - **Sunday 8/23 trimmed 90 → 60 min** purely to freshen for the test — projected TSB **+1.4**
+    at 90 min vs **+3.2** at 60. Saturday stays at 165 min; the durability session is not the one
+    to cut.
+- **Load is now the thing to watch, not recovery.** CTL **49.0** (was 46.8 this morning), ATL
+  **60.0**, TSB **−11.0**, ramp **+2.3/wk** (was +0.1). 7-day TSS **427** against the 450 flag,
+  5 rides this week. Projected 7-day through 8/22 is ~430 — under the flag but the first genuinely
+  loaded week of the block. The Fri rest / trimmed Sun / Mon rest sequence is what keeps 8/25 usable.
+- **Decoupling 6.1% tripped the "harder than planned" rule and should be ignored here.** It is an
+  interval session with eight recovery valleys; the whole-ride first-half/second-half Pw:HR
+  comparison is not meaningful on that shape — the same artifact documented for 8/13. Interval HR
+  and fade both say the opposite. This is a limitation of the rule, not a signal about the ride.
+- **Classifier now reads this session as VO2max** (19% of time in Z5) rather than Threshold. That
+  is correct against a 305 anchor — the overs are 106% FTP. It should revert to Threshold once
+  FTP is re-anchored, which is itself a sign the anchor is wrong.
+
+---
+
 ## 2026-08-20 — Thursday over-unders are the FTP-anchor diagnostic; the "capped and clean" gate gets numbers
 
 - **No config changes today.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
