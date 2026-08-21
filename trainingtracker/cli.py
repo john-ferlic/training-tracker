@@ -62,7 +62,7 @@ def cmd_setup_check(_args) -> int:
     return 0 if ok else 1
 
 
-def cmd_fetch(_args) -> int:
+def cmd_fetch(_args=None) -> int:
     athlete = config.load_athlete()
     plan = config.load_plan()
     ftp = float(athlete.get("ftp") or 0)
@@ -85,12 +85,19 @@ def cmd_fetch(_args) -> int:
         print(f"Strava: {e}", file=sys.stderr)
         return 1
 
+    # --reanalyze re-runs analysis over rides already in history. Needed after
+    # any change to interval detection or FTP, otherwise stored rides keep the
+    # numbers produced by the older logic and the fix never reaches them.
+    reanalyze = bool(getattr(_args, "reanalyze", False))
+
     hist = history.load()
     new_rides = 0
+    redone = 0
     for a in activities:
         if a.get("type") not in ("Ride", "VirtualRide"):
             continue
-        if history.has(hist, a.get("id")):
+        known = history.has(hist, a.get("id"))
+        if known and not reanalyze:
             continue
         try:
             streams = strava.get_streams(a["id"])
@@ -100,10 +107,14 @@ def cmd_fetch(_args) -> int:
         if rec.get("date"):
             rec["planned_type"] = plan_mod.workout_for(plan, date.fromisoformat(rec["date"])).get("type")
         history.upsert(hist, rec)
-        new_rides += 1
+        if known:
+            redone += 1
+        else:
+            new_rides += 1
     history.save(hist)
-    print(f"Strava: {new_rides} new rides analyzed ({len(hist)} total in history, "
-          f"window {window_days}d).")
+    print(f"Strava: {new_rides} new rides analyzed"
+          + (f", {redone} re-analyzed" if redone else "")
+          + f" ({len(hist)} total in history, window {window_days}d).")
 
     # --- Oura ---
     try:
@@ -247,7 +258,11 @@ def build_parser() -> argparse.ArgumentParser:
     sub = p.add_subparsers(dest="command", required=True)
 
     sub.add_parser("setup-check", help="verify config + credentials").set_defaults(func=cmd_setup_check)
-    sub.add_parser("fetch", help="pull Strava + Oura, analyze into history").set_defaults(func=cmd_fetch)
+    f = sub.add_parser("fetch", help="pull Strava + Oura, analyze into history")
+    f.add_argument("--reanalyze", action="store_true",
+                   help="also re-run analysis on rides already in history "
+                        "(use after changing interval detection or FTP)")
+    f.set_defaults(func=cmd_fetch)
 
     b = sub.add_parser("brief", help="today's recommendation from history")
     b.add_argument("--no-coach", action="store_true", help="skip the optional Claude narrative")

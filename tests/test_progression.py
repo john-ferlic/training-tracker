@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from trainingtracker import fitness, profile, trends, workout  # noqa: E402
 
 FTP = 250
+DEFAULT_CUTOFF_W = round(workout.DEFAULTS["work_frac_ftp"] * FTP)
 
 
 # ----- interval detection + fade --------------------------------------------
@@ -41,6 +42,93 @@ def test_interval_no_fade_when_steady():
     watts = ([240] * 600 + [120] * 300) * 3
     ia = workout.interval_analysis(watts, [150] * len(watts), FTP)
     assert ia is not None and abs(ia["fade_pct"]) < 2
+
+
+# ----- sub-threshold work (tempo blocks below the %FTP cutoff) ---------------
+# Regression: a prescribed 3x12 tempo block at 0.76-0.90 FTP sits BELOW the
+# 0.88 FTP work cutoff, so it registered as zero intervals and read as a
+# skipped session. Real rides on 2026-08-08/08-15 hit exactly this.
+def _long_ride_with_tempo(base=170, tempo=205, reps=3, rep_s=720, gap_s=600):
+    watts = [base] * 900
+    for _ in range(reps):
+        watts += [tempo] * rep_s + [base] * gap_s
+    return watts + [base] * 900
+
+
+def test_sub_threshold_tempo_blocks_are_detected():
+    watts = _long_ride_with_tempo()          # tempo 205 = 0.82 FTP, under the 0.88 cutoff
+    ia = workout.interval_analysis(watts, [140] * len(watts), FTP)
+    assert ia is not None, "tempo blocks below 0.88 FTP must not read as a skipped session"
+    assert ia["count"] == 3
+    assert all(700 <= iv["duration_s"] <= 740 for iv in ia["intervals"])
+    assert ia["detection"]["basis"] == "adaptive"
+    assert ia["detection"]["threshold_w"] < DEFAULT_CUTOFF_W
+
+
+def test_steady_zone2_stays_empty_under_adaptive_detection():
+    # The adaptive fallback must not invent structure in a genuinely flat ride.
+    assert workout.interval_analysis([170] * 3000, [130] * 3000, FTP) is None
+
+
+def test_noisy_zone2_does_not_invent_intervals():
+    # Real trainer data wobbles; wobble is not structure.
+    watts = [170 + (i % 7) - 3 for i in range(4000)]
+    ia = workout.interval_analysis(watts, [130] * 4000, FTP)
+    assert ia is None or ia["count"] == 0
+
+
+def test_above_threshold_work_still_uses_the_ftp_cutoff():
+    # When real above-cutoff work exists, detection must be unchanged.
+    watts = ([240] * 600 + [120] * 300) * 3
+    ia = workout.interval_analysis(watts, [150] * len(watts), FTP)
+    assert ia is not None and ia["count"] == 3
+    assert ia["detection"]["basis"] == "ftp"
+    assert ia["detection"]["threshold_w"] == DEFAULT_CUTOFF_W
+
+
+# ----- over/under sub-structure ---------------------------------------------
+# Regression: in an over-under BOTH halves clear the work cutoff, so a correct
+# set fuses into one block at the blended average and the reps vanish. The real
+# 2026-08-13 session logged one 19:55 block at 295W instead of 4x(3min/2min).
+def _over_under_set(under=225, over=260, unders_s=180, overs_s=120, reps=4):
+    watts: list[int] = []
+    for _ in range(reps):
+        watts += [under] * unders_s + [over] * overs_s
+    return watts
+
+
+def test_over_under_block_is_decomposed():
+    watts = [120] * 300 + _over_under_set() + [120] * 300
+    ia = workout.interval_analysis(watts, [160] * len(watts), FTP)
+    assert ia is not None and ia["count"] == 1, "the set should fuse into one work block"
+    segs = ia["intervals"][0].get("segments")
+    assert segs is not None, "the block must be re-split into over/under reps"
+    assert len(segs) == 8
+    assert [s["label"] for s in segs] == ["under", "over"] * 4
+    assert ia["structure"] == "over_under"
+    assert ia["over_under"]["over_count"] == 4
+    assert ia["over_under"]["under_count"] == 4
+    assert abs(ia["over_under"]["fade_pct_overs"]) < 2
+
+
+def test_over_under_reports_fade_across_overs():
+    # Overs decay 260 -> 250 -> 240 -> 230 while the unders hold: the blended
+    # block average hides this, fade_pct_overs must not.
+    watts = [120] * 300
+    for over in (260, 250, 240, 230):
+        watts += [225] * 180 + [over] * 120
+    ia = workout.interval_analysis(watts, [160] * len(watts), FTP)
+    assert ia is not None and ia["structure"] == "over_under"
+    assert ia["over_under"]["fade_pct_overs"] > 5
+
+
+def test_steady_threshold_block_is_not_split():
+    # A single sustained 20 min effort has no over/under structure to find.
+    watts = [120] * 300 + [240] * 1200 + [120] * 300
+    ia = workout.interval_analysis(watts, [165] * len(watts), FTP)
+    assert ia is not None and ia["count"] == 1
+    assert "segments" not in ia["intervals"][0]
+    assert ia["structure"] == "steady"
 
 
 # ----- classification --------------------------------------------------------

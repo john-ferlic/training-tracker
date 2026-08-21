@@ -10,6 +10,200 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-20 (evening) — **The gate fired on all three. FTP retest moves 9/08 → Tue 8/25.**
+
+- **The session was ridden, complete, and above prescription.** 2 sets × 4×(3 min under / 2 min
+  over), **19:53 + 19:56 = 39:49** of work, no unplanned stops. Every target overshot: **unders
+  286W** (vs 280), **overs 322W** (vs 320), **blend 300W** (vs 296). NP 271, IF 0.888, 92 TSS,
+  EF 1.783.
+- **Gate result — all three criteria met:**
+  1. Full 40 min as 2 sets, no stops ✅ (39:49, 8 overs + 8 unders)
+  2. Last over of set 2 at HR ≤175 ✅ (**175** exactly, peak 177)
+  3. Fade ≥ −2% ✅ (**0.0%** overall, **0.0%** across the overs, first→last 0.6%)
+- **Against the HR spec written this morning, it landed almost exactly on prediction.** Set 1 avg
+  **164** (predicted 160-166), peak **173** (predicted ≤174). Set 2 avg **168** (predicted 165-171),
+  peak **177** (predicted ≤178). The 182 abort line was never approached.
+- **Clearance held throughout.** Every under after the first shed HR — set 1 **−2 / −5 / −4**,
+  set 2 **−4 / −2 / −5**. Never two consecutive unders under 3 bpm. 286W is comfortably a
+  recovery valley for this rider.
+- **This is the session that failed twice, now passed at higher power.** vs **8/13**, one week
+  earlier: set 1 **295W → 300W** at HR **167 → 164** (+5W, **−3 bpm**), peak **178 → 173**, and a
+  complete set 2 where 8/13 managed 15:44 of 20:00. vs **8/06**: peak HR **189 → 177** (96% → 90%
+  of max) for a *harder* session.
+- **New 40-min best territory, two days after the last one.** Best 40-min power: pre-gap 7/15
+  **275W** → 8/18 **284W** → 8/20 **283W**. Best 20-min: 7/15 **285W** → 8/18 **305W** → 8/20
+  **301W**. Note these are prescribed sessions, not max efforts — they are floors, not ceilings.
+- **The overs sat at 106% of the 305 anchor and did not fade at all** (322/323/323/321/323/323/
+  323/321). 16 minutes above threshold, dead flat, finishing 20 bpm under max HR. Against FTP 305
+  that is not plausible; against ~318 it is exactly right.
+- **Plan changes (this PR):**
+  - **Retest moved 9/08 → Tue 8/25**, replacing the 9/08 slot entirely. Rationale written into
+    the schedule entry.
+  - **Tuesday's 3×15 @ 305 deferred to 9/01** and must be re-anchored to the tested FTP first
+    (~3×15 @ 318 if the test lands where the evidence points).
+  - **Sunday 8/23 trimmed 90 → 60 min** purely to freshen for the test — projected TSB **+1.4**
+    at 90 min vs **+3.2** at 60. Saturday stays at 165 min; the durability session is not the one
+    to cut.
+- **Load is now the thing to watch, not recovery.** CTL **49.0** (was 46.8 this morning), ATL
+  **60.0**, TSB **−11.0**, ramp **+2.3/wk** (was +0.1). 7-day TSS **427** against the 450 flag,
+  5 rides this week. Projected 7-day through 8/22 is ~430 — under the flag but the first genuinely
+  loaded week of the block. The Fri rest / trimmed Sun / Mon rest sequence is what keeps 8/25 usable.
+- **Decoupling 6.1% tripped the "harder than planned" rule and should be ignored here.** It is an
+  interval session with eight recovery valleys; the whole-ride first-half/second-half Pw:HR
+  comparison is not meaningful on that shape — the same artifact documented for 8/13. Interval HR
+  and fade both say the opposite. This is a limitation of the rule, not a signal about the ride.
+- **Classifier now reads this session as VO2max** (19% of time in Z5) rather than Threshold. That
+  is correct against a 305 anchor — the overs are 106% FTP. It should revert to Threshold once
+  FTP is re-anchored, which is itself a sign the anchor is wrong.
+
+---
+
+## 2026-08-20 — Thursday over-unders are the FTP-anchor diagnostic; the "capped and clean" gate gets numbers
+
+- **No config changes today.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current. No plan edit either: the 8/18 pre-commitment to leave Thursday's targets *as written*
+  is precisely what makes today a valid test, so touching the watts would destroy the datapoint.
+  This entry exists to carry the decision rule forward to the next run.
+- **Recovery: a one-night dip, already gone.** 8/19 was the week's only red number — readiness
+  **73**, sleep **69**, **5.85 h**, RHR **46**. Today: readiness **89**, sleep **88**, **8.25 h**,
+  RHR **44** (= base), HRV **61** vs base 62; hrv_balance contributor 92, recovery_index 100.
+  Nothing carried over.
+- **Tuesday was absorbed.** The 8/18 threshold session (90 TSS, IF 0.876) was followed by 8/19
+  easy Z2 at **197.6W / HR 126 / EF 1.580 / decoupling 0.4%** — in line with the 8/16 benchmark
+  (200W / HR 124 / EF 1.630). No HR drift at Z2 two days after the best threshold work on record.
+- **Load is neutral, not limiting.** CTL **46.8**, TSB **−0.1**, 7-day TSS **335** (flag 450),
+  3-day **144**, ramp **+0.1/wk**. Room to work; Friday is a full rest day before Saturday's
+  165-min durability session, which stays the protected session of the week.
+- **Detector caveat — read this before judging any over-under session.** `work_frac_ftp` 0.88 ×
+  FTP 305 = **268W**, and the prescribed *unders* are 280W (92% FTP). Both unders and overs sit
+  above the work threshold, so a correctly-ridden set of 4×(3 min @ 280 / 2 min @ 320) is
+  detected as **one continuous ~20:00 interval at the blended average of 296W**, not as eight
+  reps. Eight short reps in the table would mean the session was ridden *wrong*. Prior runs read
+  the single long interval as a failure to follow the structure; it is the opposite.
+- **Re-reading the two prior attempts, this changes the record.**
+  - **8/06 was never this session.** "Zwift - At/Over/Under" is a stock workout: 3×**8:53 @ 303W**,
+    HR **167 → 175 → 179**, max HR 189, **18% of time in Z5**, decoupling 7.9%. Nine-minute blocks,
+    not 3/2 — and ridden two days after the 8/04 ramp test. It tells us nothing about the
+    prescribed over-under and should stop being counted against it.
+  - **8/13 set 1 was textbook.** **19:55 @ 295W** against a prescribed 20:00 @ **296W** blended —
+    within 5 seconds and 1 watt — at HR **167**, ride max power 374W (the overs were hit).
+  - **8/13 set 2 is where it broke:** 8:03 + 4:25 + 3:16 = **15:44 of 20:00 (79%)**, in three
+    pieces. But the set-2 HRs were **167 / 165 / 165** — flat-to-lower than set 1, not drifting.
+    Whatever ended the session, it was not a heart-rate ceiling and not cardiac drift.
+  - **The 12.0% decoupling is substantially an artifact.** Decoupling compares first-half to
+    second-half Pw:HR over the whole ride; inserting unplanned rest into the back half drops
+    second-half average power while HR stays elevated, which inflates it mechanically. With
+    interval HR flat at 165-167 throughout, 12% is not independent evidence of aerobic drift.
+  - **Net: the prescribed session has one real attempt, not two, and it half-worked.** The
+    limiter on display is *completing 40 min in this format*, not the wattage.
+- **Why today is still the diagnostic.** Thursday prescribes under **280W** / over **320W** against
+  the 305 anchor. Against the current **315-322** FTP estimate that is **~88% / ~101%** — the
+  unders are sweet spot and the overs are barely over, so if the estimate is right this rides like
+  a threshold alternation rather than a true lactate-shuttling set. That softness is the point:
+  a *complete, HR-capped* 40 min at these numbers is the evidence the anchor is stale.
+- **Gate for moving the retest (replaces "capped and clean" in the 8/18 addendum).**
+  - **Move the FTP retest up from 9/08 to Tue 8/25** only if *all three* hold: the **full 40 min**
+    is completed as 2 sets with **no unplanned stops** (i.e. two ~20:00 intervals at ~296W blended,
+    per the detector caveat above); the **last over of set 2 at HR ≤175**; **fade ≥ −2%**.
+  - **Keep the retest at 9/08** if set 2 fragments again, or HR ramps past **178**. A clean but
+    short result keeps 9/08 — a repeat of 8/13 is a repeat, not progress.
+  - **Decoupling is deliberately *not* in the gate** for this session, because fragmentation
+    inflates it (see above) and it would double-count the completion criterion. Record it, but
+    judge this session on completion and interval HR.
+- **HR spec for the session, derived from 8/13's correctly-executed set 1** (avg **167**, peak
+  **178**, over-peaks ramping 169 → 173 → 176 → 177 — which then failed in set 2, so today must
+  run under it). Max HR 197.
+  - **Set 1:** avg **160-166** (84% max), peak **≤174**; over-peaks by rep ≤166 / ≤170 / ≤172 /
+    ≤174; each under sheds 5-8 bpm, floor ≤168 by rep 4.
+  - **Set 2:** avg **165-171** (87% max), peak **≤178**; over-peaks ≤172 / ≤174 / ≤175 / **≤175**
+    (the gate); each under sheds ≥4 bpm.
+  - **Cross-check:** 8/18 held 20 min at **304W** — above today's 296W blend — at avg 162 / peak
+    170 (rep 1). Set 1 running hotter than that means fuel, heat or fatigue, not fitness; back off
+    early rather than at rep 8.
+  - **Abort at any over peaking ≥182** (92% max). 8/06 peaked **189** (96%) and ran away.
+  - **Clearance check:** on 8/13 each 3-min under shed **−2 / −7 / −7 bpm** — 280W is a genuine
+    recovery valley for this rider, so the unders were working. Two consecutive unders shedding
+    **<3 bpm** ends the session regardless of power.
+  - **Do not expect set-2 cardiac drift.** On 8/13 HR was flat between sets (167 → 167) with the
+    overs holding 318W throughout. Power broke while HR and watts both held — the reason fuelling,
+    not pacing, is the variable under test.
+- **Interval detection fixed in code (this PR), and it settles both corrections with real data.**
+  The detector had two blind spots, both now closed, validated against re-pulled Strava streams
+  for all 31 rides in history — **zero changes to any ride that already detected intervals, zero
+  false positives on the 20 easy rides**, three rides corrected:
+  - **Sub-threshold work was invisible.** A fixed 0.88×FTP cutoff cannot see work below it, so
+    prescribed tempo (0.76-0.90 FTP) registered as nothing. Now, when nothing sustained clears
+    the cutoff, detection falls back to splitting the ride's own power distribution (Otsu), with
+    guards so flat rides still return nothing. **8/15 now resolves as 12:00 / 11:58 / 11:58 @
+    244W, HR 143 / 144 / 145, fade 0.0%.** 8/08 resolves as 11:59 / 11:57 / 11:58 @ 249W. That is
+    3×12 min tempo ridden to the second, twice — the "not being ridden" claim is dead, measured
+    rather than inferred. It also surfaced **6/28: 2×10:06 @ 249W**, the Phase 1 Sunday 2×10 tempo,
+    likewise ridden correctly.
+  - **Over-unders fused into one block.** With unders at 280W above the 268W cutoff, a correct set
+    merged into a single ~20:00 interval at the blended average. Blocks are now re-split
+    internally. **8/13 set 1 resolves as under 2:56 @ 281 / over 2:00 @ 318 / under 3:00 @ 281 /
+    over 1:59 @ 318 / under 3:00 @ 280 / over 2:00 @ 318 / under 3:01 @ 280 / over 1:59 @ 316** —
+    four complete under/over pairs, exactly as prescribed. Set 2 gives two more complete pairs
+    then fragments. **Fade across the overs: 0.2%.**
+  - **New signal: `fade_pct_overs`.** Whole-block averages blend the unders back in and mask the
+    progression; an over-under should be judged on the overs. 8/13's overs held **318W flat across
+    all six** (first→last 0.0%) while the session fell apart — further evidence the failure was
+    substrate, not power.
+  - Absent intervals are now stated explicitly in the briefing ("no sustained work blocks found at
+    any cutoff — read time-in-zone") instead of silently rendering nothing, which is what both
+    misreadings grew from. Detection basis and threshold are recorded on every ride.
+  - `fetch --reanalyze` added: stored rides keep whatever the detector produced when they were
+    first analyzed, so any detection or FTP change needs a re-run to reach history. All 31 rides
+    re-analyzed on this branch.
+  - **Known limitation:** Phase 3 Thursday prescribes 30/15s (30 sec @ 345W / 15 sec @ 195W).
+    Segments shorter than `segment_min_s` (45 s) are not resolved, so that session will report as
+    fused blocks. Left untuned deliberately — no 30/15 session has been ridden yet, so there is
+    nothing to validate against. Revisit with real data when the VO2 block opens 9/14.
+- **CORRECTION to the 8/18 entry: the Saturday tempo blocks *are* being ridden.** That entry
+  claimed 8/08 and 8/15 were "both flat Z2 with no tempo detectable" and made it a plan change.
+  Wrong, and wrong the same way as the over-under read. Z3 Tempo is defined in `metrics.py` as
+  **0.76-0.90 × FTP = 232-274W** — essentially identical to the prescribed 230-275W band. Actual
+  time in that band: **8/08 = 36.2 min**, **8/15 = 36.2 min**, against a prescribed 3×12 = **36
+  min**. Executed precisely, two weeks running. The false negative came from two directions at
+  once: the interval detector's 268W work threshold sits *above* most of the tempo band so
+  `intervals` returns null, and 36 min at ~250W inside a 165-min ride averaging 206W moves VI by
+  almost nothing (hence 1.04 / 1.02). Plan description corrected in this PR. **Neither VI nor the
+  interval table can see sub-threshold work — use time-in-zone for anything below 268W.**
+- **That makes the durability limiter more stubborn, not less.** Prior read was "decoupling is
+  high because he's skipping the stimulus." Actual: he is delivering the stimulus as prescribed
+  and decoupling is *still* **9.8% (8/08)** and **8.0% (8/15)**. Note the pre-gap long rides had
+  **0%** Z3 (6/27, 7/04, 7/12) — so the tempo blocks are new as of 8/08, and it is plausible that
+  adding 36 min of tempo is itself part of why decoupling rose from 6.2% (7/12) to 8-10%. Worth
+  isolating before concluding the durability deficit is worsening. Saturday stays protected either
+  way; if anything its value goes up.
+- **Asked whether tonight's session could move to Friday's rest day.** Load is identical —
+  7-day TSS through 8/22 is **433** under either ordering, 3-day through 8/22 is **230** under
+  either, and a rest day is still taken (it moves from Fri to Thu). The cost is purely ordering:
+  it puts a 95-TSS threshold session the day before the long ride. Given the correction above —
+  Saturday is being executed correctly and is the only session treating the standing limiter —
+  the ruling is: **do not insert Friday on top of an unchanged Saturday.** Either skip the
+  over-unders this week (retest stays 9/08, next attempt 8/27, nothing structural lost — the
+  preferred option), or reshuffle to Fri over-unders / Sat easy 90 / Sun long 165, accepting one
+  recovery day before Tuesday's 3×15 @ 305 instead of two. The over-unders is a diagnostic;
+  Saturday is treatment. Do not trade treatment for a test.
+- **Asked whether to bump the watts today — answer is no, and the reason is which half failed.**
+  8/18 held **40:00 of work at 301W avg** (299/304, HR 162/169, fade −1.7%) — more total work at
+  higher power than 8/13's 36:48 at ~297W, and clean. So threshold *expression* clearly supports
+  the set-1 blend. But 8/13 failed in **set 2**, and adding watts loads the half that has never
+  been completed. Time-at-target before watts — the same call made for Tuesday (3×15 @ 305 rather
+  than 2×20 at a higher number). Note also that in an over-under the *unders* are the recovery
+  valley: raising them is the harder change, not the softer one, and neither number moves today.
+  The real re-anchor comes from the retest, and it will be a larger step than freelancing would
+  give — at a tested FTP near 318 the session becomes roughly **under 300 / over 340**.
+- **Fuelling is part of the test, not a footnote.** Set-2 HR flat at 165-167 while power broke up
+  is consistent with substrate running out rather than a cardiovascular ceiling, which fits the
+  fuelling read carried since 8/13 — though it is circumstantial, not proven. The 8/18 success came
+  with the rule applied. Same rule today: main meal 3 h out, 60-90 g carb/hr and 500-800 mg
+  sodium/hr on the bike, fan on. An under-fuelled result is not a fitness result and should not be
+  used to move the retest either way.
+
+---
+
 ## 2026-08-18 — Aerobic engine snapped back; **durability drift is the standing limiter** → Phase 3 Saturday held at 165 min
 
 - **The 8/13 watch resolved — and it split two ways.** The call was: "Watch 8/15
