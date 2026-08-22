@@ -40,6 +40,32 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 - **8/20's 6.1% decoupling flag: ignore, as pre-committed.** Interval-shaped ride, eight recovery
   valleys, 0.0% fade across the overs, ride max HR 177 vs 197. Same rule limitation as 8/13.
 
+### Later 8/22 — **Retracting "ramp under-reads for this rider." Tuesday is a ramp.**
+
+- **Athlete chose the ramp protocol.** Re-examining the claim that justified preferring 20-min:
+  it rested entirely on 8/04's **317 → 305**, which the preceding **11-day layoff** explains
+  without any protocol bias. Nothing else supported it.
+- **The 8/04 ramp file corroborates its own result.** Detected work segment: **433 s (7:13)
+  averaging 340W to failure**, HR **179 avg / 192 max**, cadence 88.2. A ~7-min max of 340W maps
+  to FTP ≈ **309** by the usual 7-min ≈ 110% FTP relation — within a few watts of the 305 the
+  ramp printed. The protocol was reading this rider correctly on the day.
+- **Four methods now converge on 315-320, and the ramp is one of them:**
+  | Method | Estimate |
+  |---|---|
+  | 8/04 ramp, 7-min proxy (340W) + 18 days of demonstrated gain | 315-319 |
+  | 8/18 threshold 2×20 @ 299/304W at 86% max HR | 316-320 |
+  | 8/20 over-unders, 40 min @ 300W blended, overs 8×322W at 0.0% fade | 315-320 |
+  | 8/04 ramp raw (0.75 × ~407W 1-min peak) | 305 — but 18 days stale |
+- **Ramp is arguably the better instrument here, not the worse one.** 8/04 was a ramp on the same
+  platform, so **ramp-vs-ramp cancels protocol bias entirely** and measures progression directly.
+  It also removes the pacing risk: this rider has ridden the whole block precisely to prescription
+  and has no max 20-min pacing rehearsal in the block, which biases a first 20-min test low.
+- **Validity gate written into the 8/25 plan entry:** peak HR **≥ 190** (8/04 hit 192), plus record
+  **best 1-min power** and the **final-7-min average** against 8/04's 340W. Under **310** printed →
+  treat as suspect and validate on 9/01's 3×15 before re-anchoring; 8/18's 2×20 at 299/304W and
+  86% max HR is not compatible with a sub-310 FTP.
+- **Prediction for Tuesday's printed number: 308-316, best guess ~312.**
+
 ---
 
 ## 2026-08-20 (evening) — **The gate fired on all three. FTP retest moves 9/08 → Tue 8/25.**
