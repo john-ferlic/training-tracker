@@ -10,6 +10,56 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-22 — Saturday holds at 165 min. The tempo-block HR ramp has collapsed +7 → +2 bpm; whole-ride decoupling is under-reporting it.
+
+- **No config changes today.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current. No plan edit either: the 8/21 PR already pre-committed Saturday at 165 min with the
+  3×12 tempo, and today's data agrees with that call. This entry is the trend note, appended to
+  that PR so the log stays in date order and there is one review to do, not two.
+- **Verdict PROCEED, full prescription.** 165 min, Z2 195-225W, 3×12 min tempo @ 230-275W,
+  IF 0.71, 135 TSS.
+- **Recovery is green and there is room to work.** No Oura record for 8/22 at run time (ring had
+  not synced), so going by 8/21: readiness **85**, sleep **81**, **7.47 h**, RHR **42** (baseline
+  44, i.e. *below* it), HRV **61** (base ~62). The 8/19 dip (readiness 73, 5.85 h) is two nights
+  gone. Load is the lightest it has been all block: 7-day TSS **295** against the 450 flag (the
+  427 of 8/20-8/21 rolled off with the 8/15 long ride), 3-day **92**, CTL **45.3**, TSB **+1.2**.
+- **The real durability finding — block-level HR, not whole-ride decoupling.** The two long rides
+  that carry the 3×12 tempo are directly comparable, and between them the drift essentially
+  disappeared:
+  - **8/08** — 159 min, avg 209W, avg HR **147**, EF **1.471**. Tempo blocks 3×12 min at **249W**
+    (82% FTP) at HR **156 / 159 / 163** — **+7 bpm** across three identical-power reps.
+  - **8/15** — 165 min, avg 206W, avg HR **135**, EF **1.563**. Tempo blocks 3×12 min at **244W**
+    (80% FTP) at HR **143 / 144 / 145** — **+2 bpm**.
+  - Same session, one week apart: **−12 bpm** whole-ride HR at ~the same power, **+6.3% EF**, and
+    the rep-to-rep ramp cut by five bpm. That is a large durability gain. Headline decoupling
+    moved only **9.8% → 8.0%** and still reads as a failure.
+- **Why the headline number is suspect: the decoupling jump coincides exactly with introducing the
+  tempo blocks, not with a fitness regression.** Long rides *without* Z3 ran **1.5-6.2%**
+  (6/27 4.5%, 7/04 1.5%, 7/12 6.2%, 8/01 4.0%, all ≤0.3% Z3). The first two long rides *with*
+  ~22% Z3 read **9.8%** and **8.0%**. Decoupling compares first-half to second-half Pw:HR; if the
+  36 min of tempo sits in the back half (as Phase 1's version explicitly prescribed — "in the back
+  half"), second-half HR rises disproportionately to power and the metric inflates mechanically.
+  This is the same class of artifact already documented for the over-unders on 8/13 and 8/20.
+- **This matters because a pre-committed rule is keyed to the suspect number.** Phase 3 Saturdays
+  stay at 165 min (not 135) "once two consecutive long rides come in under 6%". If the 6% gate is
+  being inflated by block placement, that rule may never release even after durability is fixed.
+  **Recommended, not applied — asking first:** judge the Saturday durability gate on the
+  **tempo-block HR ramp (rep 1 → rep 3 ≤ +3 bpm at equal power)** with whole-ride decoupling as a
+  secondary read, rather than on decoupling alone. Do not change the rule until the athlete signs
+  off, and ideally not until the block start-times are checked against the halfway mark.
+- **Today's ride is the third datapoint and the one to judge on.** Target: rep 1 → rep 3 HR ramp
+  **≤ +2 bpm** (matching 8/15), whole-ride EF ≥ **1.56**. Fuel it — 60-90 g carb/hr and
+  500-800 mg sodium/hr on the bike, fan on. The 8/08 → 8/15 improvement is most plausibly fuelling
+  and cooling plus a week of adaptation; both are repeatable, and neither is repeatable by accident.
+- **Cost to Tuesday's test is small and already accepted.** Riding the full 135 TSS today leaves
+  8/25 TSB at roughly **−1** (rest Monday) or **−3** with the openers added in this PR, against
+  about **+3** if Saturday were cut to ~90 TSS. A ~4-point TSB swing does not decide a 20-min
+  test; a durability datapoint before the FTP re-anchor does. Saturday is not the session to cut.
+- **Watch for next run:** the 8/22 tempo-block HRs and whole-ride decoupling. Also whether PR #14
+  merged before Mon 8/24 — the openers only exist if it does.
+
+---
+
 ## 2026-08-21 — Rest day holds. Pre-test openers added Mon 8/24; the 8/25 test gets a pacing protocol.
 
 - **Today is Rest and stays Rest.** Plan calls for it and nothing argues otherwise. 7-day TSS
