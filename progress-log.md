@@ -37,13 +37,23 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   would give **−1.3**. A 3.5-point TSB swing does not change a 20-min effort for a rider who set
   a 40-min best of 283W at TSB **−11** — so the 60 min stays, and it is ridden genuinely easy.
 - **`sync-profile` clean.** FTP 305, max HR 197, RHR 44, weight 79 all current — no stat edit.
-- **Recovery trend into the test is the best of the block.** 8/18-8/22 readiness **87 / 73 / 89 /
-  85 / 91**, RHR **42 / 46 / 44 / 42 / 41** vs base 44, HRV **63 / 55 / 61 / 61 / 68** vs base 61.
-  The 8/19 dip was one 5.85 h night and cleared in a day. Load is not limiting either: 7-day TSS
-  **365** vs the 450 flag, CTL **45.3**, ramp **+1.3/wk**.
-- **Data gap, noted not acted on:** no Oura record for 8/23 at fetch time (09:46 CDT) — the ring
-  had not synced, so today's brief ran with no recovery input. Going by plan is safe at 42 TSS;
-  if today's readiness lands **<75** or RHR **≥49**, cut to a 40-min spin.
+- **Recovery trend into the test.** 8/18-8/23 readiness **87 / 73 / 89 / 85 / 91 / 76**, RHR
+  **42 / 46 / 44 / 42 / 41 / 43** vs base 44, HRV **63 / 55 / 61 / 61 / 68 / 58** vs base 62.
+  Load is not limiting either: 7-day TSS **365** vs the 450 flag, CTL **45.3**, ramp **+1.3/wk**.
+- **Today's readiness dip is sleep debt, not autonomic strain — the stated <75 gate did not fire.**
+  The ring synced after the first run; 8/23 came in at readiness **76**, sleep score **73**,
+  **6.26 h**. But the drop is entirely in the behavioural contributors — `previous_night` **61**,
+  `previous_day_activity` **53** (the 160-min ride), `sleep_balance` **71** — while the
+  physiological ones are clean: **RHR 43, below the 44 baseline**, `resting_heart_rate` **96**,
+  HRV **58** vs base 62 (**−6.5%**, well inside the 12% flag), `hrv_balance` **87**, body-temp
+  deviation **−0.28**. This is the milder twin of 8/19 (readiness 73 on RHR **46** and HRV **55**),
+  which cleared in a single day and was followed by an above-prescription over-under. **Ride the
+  60 min as planned** — an easy Z2 hour at HR ~130 is not what threatens Tuesday.
+- **Pre-committed read for Mon 8/24 (the test is decided by sleep, not by today's ride).** The
+  60 → 40 min question is worth **1.2 TSB points** on test morning (+0.3 vs +1.5) — noise. Sleep
+  is the live variable. On Monday morning: **two consecutive nights under 6.5 h, or readiness
+  <75, → move the retest to Wed 8/26** and swap Wednesday's 75-min Z2 into Tuesday. One short
+  night alone is not enough to move it — 8/19→8/20 already showed this rider rebounds in a day.
 - **Watch for Phase 3:** the Saturday-165-min rule says cut to 135 once **two consecutive** long
   rides come in under 6% decoupling. 8/22 is the **first**. If 8/29 also lands under 6%, the
   Phase 3 Saturday can drop to 135 min — do not act on one datapoint.
