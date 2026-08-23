@@ -10,6 +10,44 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-23 — **Trend shift: the durability read came back negative. Third datapoint, and the Saturday long ride is finally under the 6% decoupling flag.** No config change.
+
+- **The 8/22 pre-committed read fired on the "trend holds" side.** Yesterday's instruction was to
+  repeat the tempo blocks at 244-250W and read block 1 → block 3 HR: **≤ +3 bpm** = trend holds,
+  **≥ +6 bpm** = under-fuelled and Sunday gets trimmed further. Result: **3×12 @ 244W, HR
+  142 / 141 / 141 → −1 bpm**, fade 0.0%. Trend holds comfortably; **Sunday stays at 60 min /
+  42 TSS**, not trimmed further.
+- **Three clean datapoints on the same scale now, and the slope is steep:**
+  - **8/08** — 3×12 @ **249W**, HR **156 / 159 / 163** → **+7 bpm**
+  - **8/15** — 3×12 @ **244W**, HR **143 / 144 / 145** → **+2 bpm**
+  - **8/22** — 3×12 @ **244W**, HR **142 / 141 / 141** → **−1 bpm**
+  At held power the drift has gone from +7 to −1 in two weeks, and absolute tempo HR is down
+  **~15 bpm for −5W** since 8/08.
+- **Whole-ride numbers now agree with the intra-block read.** Saturday-session decoupling
+  **9.8% → 8.0% → 3.8%** — the first long ride of the block to come in under the **6.0%** flag.
+  Whole-ride EF **1.471 → 1.563 → 1.632** at 209 → 206 → 208W; avg HR **147 → 135 → 130** at
+  essentially the same power. The 8/22 caveat still stands (intra-block drift is the primary
+  metric on this session, not whole-ride decoupling) — but with both pointing the same direction,
+  **durability is no longer clearly the limiter it was on 8/13.**
+- **The session itself was on plan, slightly under, not over.** 160.3 min vs 165 prescribed,
+  IF **0.696** vs 0.71 target, **129 TSS** vs 135, NP 212. No intensity overshoot two days out
+  from the test — exactly what was wanted.
+- **Test-day freshness is set.** With today at 42 TSS and Monday rest, Tue 8/25 projects to
+  **CTL 44.1 / ATL 43.8 / TSB +0.3**. Full rest today would buy **+3.8**, the un-trimmed 90 min
+  would give **−1.3**. A 3.5-point TSB swing does not change a 20-min effort for a rider who set
+  a 40-min best of 283W at TSB **−11** — so the 60 min stays, and it is ridden genuinely easy.
+- **`sync-profile` clean.** FTP 305, max HR 197, RHR 44, weight 79 all current — no stat edit.
+- **Recovery trend into the test is the best of the block.** 8/18-8/22 readiness **87 / 73 / 89 /
+  85 / 91**, RHR **42 / 46 / 44 / 42 / 41** vs base 44, HRV **63 / 55 / 61 / 61 / 68** vs base 61.
+  The 8/19 dip was one 5.85 h night and cleared in a day. Load is not limiting either: 7-day TSS
+  **365** vs the 450 flag, CTL **45.3**, ramp **+1.3/wk**.
+- **Data gap, noted not acted on:** no Oura record for 8/23 at fetch time (09:46 CDT) — the ring
+  had not synced, so today's brief ran with no recovery input. Going by plan is safe at 42 TSS;
+  if today's readiness lands **<75** or RHR **≥49**, cut to a 40-min spin.
+- **Watch for Phase 3:** the Saturday-165-min rule says cut to 135 once **two consecutive** long
+  rides come in under 6% decoupling. 8/22 is the **first**. If 8/29 also lands under 6%, the
+  Phase 3 Saturday can drop to 135 min — do not act on one datapoint.
+
 ## 2026-08-22 — **Trend shift: the Saturday tempo blocks now have a clean durability number, and it is improving fast.** No config change.
 
 - **No stat or plan edit.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
