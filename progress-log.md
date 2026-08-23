@@ -24,12 +24,14 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   - **8/15** — 3×12 @ **244W**, HR **143 / 144 / 145** → **+2 bpm** across the three blocks.
   - Fade **0.0%** on both. Absolute tempo HR fell **13 bpm for −5W**; whole-ride EF **1.471 →
     1.563** at 209W → 206W. That is a large durability gain in one week.
-- **Whole-ride decoupling on the Saturday ride is not a clean read — use the intra-block drift
-  instead.** 9.8% → 8.0% against the 6.0% flag looks red, but a 165-min ride with three back-half
-  tempo blocks inflates the first-half/second-half Pw:HR comparison by construction — the same
-  artifact class already documented for the over-unders on 8/13 and 8/20. **Block 3 HR minus
-  block 1 HR at held power is the durability number to track on this session.** Do not re-derive
-  a fatigue verdict from whole-ride decoupling here.
+- **Whole-ride decoupling: track the intra-block drift alongside it, not instead of it.**
+  (Written pre-ride: "9.8% → 8.0% is inflated by construction on this ride shape — a 165-min ride
+  with three back-half tempo blocks skews the first-half/second-half Pw:HR comparison, same
+  artifact class as the over-unders on 8/13 and 8/20; ignore it." **That over-stated the artifact
+  — see the 8/22 result below.** The same shape, same blocks, same power produced **3.8%** today.
+  Shape inflates the number somewhat, but it is not the dominant term, and 9.8 → 3.8 over three
+  weeks is real durability gain.) **Block 3 HR minus block 1 HR at held power** remains the
+  cleanest single durability read on this session; whole-ride decoupling is a valid second signal.
 - **Focus for today's session:** repeat **244-250W** on the tempo blocks rather than riding the
   275W top of the prescribed band, so 8/22 is a clean third datapoint on the same scale instead
   of a new stimulus three days before the test. Read: **≤ +3 bpm** block 1 → block 3 = the trend
@@ -65,6 +67,31 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   treat as suspect and validate on 9/01's 3×15 before re-anchoring; 8/18's 2×20 at 299/304W and
   86% max HR is not compatible with a sub-310 FTP.
 - **Prediction for Tuesday's printed number: 308-316, best guess ~312.**
+
+### 8/22 result — **best long ride in the file. The tempo blocks now shed HR.**
+
+- **160.3 min · 207.9W avg · NP 212 · IF 0.696 · 129 TSS · avg HR 130 · max HR 150 · EF 1.632 ·
+  decoupling 3.8% · cadence 80.1.** Ridden exactly to prescription: blocks at **244 / 244 / 244W**
+  (asked for 244-250, not the 275 band top), Z2 at ~208W (asked for 200-210, not 225), 73% Z2 /
+  22.5% Z3 / 0% Z4.
+- **Three-week durability progression, monotonic on every axis:**
+  | Date | Blocks | Block HR | Drift | Ride HR @ ~208W | EF | Decoupling |
+  |---|---|---|---|---|---|---|
+  | 8/08 | 3×12 @ 249W | 156 / 159 / 163 | **+7** | 147 | 1.471 | 9.8% |
+  | 8/15 | 3×12 @ 244W | 143 / 144 / 145 | **+2** | 135 | 1.563 | 8.0% |
+  | 8/22 | 3×12 @ 244W | 142 / 141 / 141 | **−1** | **130** | **1.632** | **3.8%** |
+- **The blocks now get easier as the ride goes on** — block 3 sits 1 bpm *below* block 1 at
+  identical power, two hours in. That is the durability limiter closing.
+- **−17 bpm for the same power in two weeks** (147 → 130 at ~208W), and **EF 1.632 is the best
+  long-ride EF in the 56-day window** — above the pre-gap July rides (1.557 / 1.578 / 1.522).
+  Decoupling 3.8% is the lowest since 7/04 and clears the 6.0% flag outright.
+- **Correction to this morning's decoupling call, recorded above.** The artifact framing was
+  over-stated; today proves most of the 8-10% was genuine drift and it has largely resolved.
+- **Cadence stayed at 80.1** (79.6 on 8/15) despite a suggested 85-90 on the blocks. Only open
+  item from the session; low priority.
+- **Tuesday projection with the actual 129 TSS: TSB +2.2** with Sunday at the trimmed 60 min.
+  **Restoring Sunday to 90 min would drop it to +0.5** — so the earlier suggestion to restore it
+  is withdrawn. **Keep Sunday at 60.**
 
 ---
 
