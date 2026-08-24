@@ -46,31 +46,44 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   swap Wednesday's 75-min Z2 into Tuesday, and run Thursday 8/27 as endurance rather than the
   over-under that week (its watt targets are stale until the re-anchor regardless). **One marker
   alone is not enough** — 8/19 → 8/20 already established that this rider rebounds in a day.
-- **Openers back ON for today — reversing the morning call.** The first pass on this run said Rest
-  holds and declined to re-propose PR #14's openers, on the grounds that the case was thin at
-  TSB +0.3 and thinner at +5.2. **That reasoning weighed only TSB and was wrong.** Two things it
-  missed:
-  - **The last suprathreshold work was 8/20** (over-unders, overs 8×322W). The test is **five
-    days** later. Nothing since has touched 280W — 8/22's long ride logged **0.0%** of time in Z4.
-  - **Resting today makes it two full days off since the last ride of any kind** (8/22). The
-    missed Sunday turned a one-day gap into a two-day one, which is precisely why PR #14's
-    premise changed rather than merely being re-litigated: that PR proposed openers *on top of*
-    a ridden Sunday. They are now the only thing between the test and two blank days.
-  - **Cost is small and measured.** Test-morning TSB: **+5.2** at full rest, **+3.4** at ~18 TSS
-    of openers, **+1.0** at the full 60-min Z2, **0.0** at 75 min. The opener spends 1.8 points
-    and still tests from +3.4.
+- **Settled: full rest today. The priming moves into the test-day warm-up, where it belongs.**
+  This took two reversals to land on, so the reasoning is recorded in full — the useful part is
+  the principle at the end, not the wobble.
+  - **First call (wrong): Rest, no openers**, on the grounds that PR #14 was closed and the case
+    was thin at TSB +5.2. That weighed TSB alone.
+  - **Second call (also wrong): openers back on**, because the first pass missed that **the last
+    suprathreshold work was 8/20** (over-unders, overs 8×322W) — five days before the test, with
+    8/22's long ride logging **0.0%** of time in Z4 — and that resting today means **two full
+    days off since the last ride of any kind**. Both facts are real. The error was the inference
+    drawn from them.
+  - **Settled call: rest.** The facts above call for the legs to see ~320W before the 20-min
+    effort. They do **not** specify *when*. PR #14's own protocol already puts **3×1 min @ 320W
+    in the test-day warm-up**, twelve minutes before the effort — so the day-before openers were
+    largely redundant with the warm-up prescribed in the same PR. Day-before openers are a
+    road-racing convention, for when race-morning warm-up is constrained; this is an indoor
+    Zwift test where the warm-up is fully controlled, so the primers go in the warm-up at **zero
+    TSB cost** instead of costing 1.8 points a day early. **Test-morning TSB stays +5.2.**
+  - **Principle for future taper decisions:** the question is never "openers or rest," it is
+    "have the legs seen race-intensity power recently enough." On an indoor test, the warm-up
+    answers that more cheaply than the day before does. Reach for day-before openers only when
+    the warm-up cannot carry the primers.
 - **Explicitly NOT making up the missed Sunday.** A 60-75 min Z2 today buys nothing that matters
   tomorrow — 42 TSS moves CTL by **0.1** — while costing 4.2 TSB points to prime nothing. The
-  value of Sunday's ride was never its TSS. Prescribed instead, per PR #14's session: **20 min
-  easy Z2 @ 190-210W, then 3×1 min @ 320W with 2 min easy between, then 5 min easy. ~30 min,
-  ~18-20 TSS.** 320W is the 8/20 over-under wattage — a known-repeatable number, not a new
-  stimulus. **Skip the 3×1 min if the legs feel heavy on the warm-up**, and skip the session
-  entirely if they feel heavy at all; a flat day before a test beats a primed one on bad legs.
-- **The 8/04 precedent cuts toward the primers, not toward volume.** That test was preceded by a
-  68-min spin at NP **136**, max HR **125** (23 TSS) — a day-before ride with no high-end priming
-  whatsoever — and read **305**, now looking 10-17W low. Today's HRV dip does not argue against
-  this: three one-minute efforts inside an easy half hour is not an autonomic load, and the
-  number already reads as a single-night artifact.
+  value of Sunday's ride was never its TSS. Test-morning TSB by option: **+5.2** at full rest,
+  **+3.4** at ~18 TSS of openers, **+1.0** at a 60-min Z2, **0.0** at 75 min.
+- **Erring toward rest is also the cheap direction on an HRV-low day.** The number reads as a
+  single-night artifact (see above) and 25 easy minutes would not have been an autonomic load —
+  but with the priming relocated to the warm-up there is nothing left to trade for, so the
+  conservative option is now also the free one.
+- **The warm-up is therefore non-negotiable, and it exists nowhere in the live plan.** Do not roll
+  into the 20-min effort off ten easy minutes. Per PR #14 (closed): **15 min building 180 → 240W,
+  then 3×1 min @ 320W with 1 min easy between, then 5 min easy spin, then start.** 320W is the
+  8/20 over-under wattage — known-repeatable, not a new stimulus. This raises the priority of the
+  open protocol question below: the warm-up spec is the most time-sensitive thing missing.
+- **The 8/04 precedent supports this reading.** That test was preceded by a 68-min spin at NP
+  **136**, max HR **125** (23 TSS) — a day-before ride, but with no high-end priming anywhere,
+  warm-up included — and read **305**, now looking 10-17W low. The failure was missing primers,
+  not a missing day-before ride.
 - **Open question — the 8/25 test protocol is ambiguous in the live config. Flagged, deliberately
   not resolved here.** Two problems, both ~24 h out:
   1. **Ramp vs 20-min.** PR #15's title states it retracts *"ramp under-reads"* and that 8/25 is
