@@ -10,6 +10,65 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-24 — **Rest holds and the test stays Tue 8/25. First HRV flag of the block — it reads as noise. Sunday was not ridden, so the athlete is fresher than planned.** No config change.
+
+- **The 8/23 pre-committed gate did not fire, so the retest stays on Tuesday.** The stated
+  condition was *two consecutive nights under 6.5 h, or readiness <75, → move the retest to
+  Wed 8/26*. This morning: readiness **88**, sleep score **91**, **8.13 h**. Only one short night
+  (8/23, 6.26 h) and it did not repeat. **Test stays Tue 8/25.**
+- **Correction to the projection in the 8/23 entry: Sunday 8/23 was not ridden.** That entry
+  assumed the trimmed 60 min / **42 TSS** would happen; actual TSS for 8/23 was **0**. Test-day
+  freshness is therefore **CTL 44.6 / ATL 39.4 / TSB +5.2**, not the **+0.3** projected — about
+  five points fresher, not less. No action needed: +5.2 is squarely in the useful range for a
+  20-min effort and this rider set a 40-min best of 283W at TSB **−11**. Recorded so a later run
+  does not re-derive test-day form from the stale number.
+- **Today is the first day this block to trip the HRV flag, and every corroborating marker says
+  it is a single-night artifact.** HRV **51** vs base **62** — **−17%**, across the configured
+  12% threshold, and the lowest reading since 8/09. Against that, essentially everything else is
+  at or near its best of the block:
+  - **RHR 44 — exactly the baseline**, not elevated at all.
+  - **Body-temp deviation +0.05**, contributor score **100**.
+  - **Sleep score 91** and **8.13 h** — the best night in the last 16 days; efficiency **93**,
+    also the window's highest; `previous_night` contributor **100**.
+  - Oura's own multi-day **`hrv_balance` 86** — the HRV *trend* is intact; only the single night
+    is low.
+  - Load offers no mechanism either: 7-day TSS **365** against the 450 flag and falling, TSB
+    heading to **+5.2**.
+- **Compare the two genuine dips for contrast.** 8/09, the last time HRV read **51**, came with
+  RHR **50** and readiness **69** — the whole constellation moved. 8/19, this block's real dip,
+  was readiness **73** on RHR **46**, HRV **55**, **5.85 h** — and it cleared in a single day and
+  was followed by an above-prescription over-under. A lone HRV nadir sitting on top of clean RHR,
+  clean temperature and the best sleep of the block is a measurement/autonomic wobble, not
+  accumulated fatigue. **Do not move the test on it.**
+- **Pre-committed gate for Tue 8/25 morning, before the test.** Test as planned unless **two** of
+  the following are true: HRV **≤52** for a second consecutive night; RHR **≥49** (baseline +5);
+  body-temp deviation **≥+0.30**; readiness **<75**. Any two → move the retest to **Wed 8/26**,
+  swap Wednesday's 75-min Z2 into Tuesday, and run Thursday 8/27 as endurance rather than the
+  over-under that week (its watt targets are stale until the re-anchor regardless). **One marker
+  alone is not enough** — 8/19 → 8/20 already established that this rider rebounds in a day.
+- **Today is Rest and stays Rest — no openers.** PR #14, which would have put 30 min of openers
+  (20 min Z2 + 3×1 min @ 320W, ~20 TSS) on today, was **closed unmerged**, so the live plan's
+  template Rest stands. Not re-proposing it: the case for openers was thin at TSB +0.3 and is
+  thinner at **+5.2**, and it is not worth re-litigating a closed decision the day before a test.
+- **Open question — the 8/25 test protocol is ambiguous in the live config. Flagged, deliberately
+  not resolved here.** Two problems, both ~24 h out:
+  1. **Ramp vs 20-min.** PR #15's title states it retracts *"ramp under-reads"* and that 8/25 is
+     a ramp — but its merged diff touches **only `progress-log.md`**. `config/training-plan.yaml`
+     therefore still reads *"20-min x0.95 preferred over ramp — ramp under-reads for this
+     rider."* The stated intent and the live config disagree.
+  2. **No pacing numbers.** The full 20-min protocol (warm-up, minute-by-minute wattage ceilings,
+     HR expectations, the 330 avg → FTP 314 / 340 → FTP 323 anchors) lived in the closed PR #14
+     and does not exist anywhere in the live plan.
+  Both need the athlete's call, not a unilateral edit — recommended in today's summary and
+  awaiting sign-off.
+- **`sync-profile` clean.** FTP 305, max HR 197, RHR 44, weight 79 all current — no stat edit.
+- **Watch for the next run:** tomorrow's HRV and RHR against the gate above, and then the test
+  result itself. On a completed test, `ftp` in `config/athlete.yaml` and the Phase 2/3/4 watt
+  targets both need re-anchoring, and the Tuesday 3×15 deferred to 9/01 has to be rewritten at
+  the new number.
+
+---
+
 ## 2026-08-22 — **Trend shift: the Saturday tempo blocks now have a clean durability number, and it is improving fast.** No config change.
 
 - **No stat or plan edit.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
