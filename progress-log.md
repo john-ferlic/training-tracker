@@ -46,10 +46,31 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   swap Wednesday's 75-min Z2 into Tuesday, and run Thursday 8/27 as endurance rather than the
   over-under that week (its watt targets are stale until the re-anchor regardless). **One marker
   alone is not enough** — 8/19 → 8/20 already established that this rider rebounds in a day.
-- **Today is Rest and stays Rest — no openers.** PR #14, which would have put 30 min of openers
-  (20 min Z2 + 3×1 min @ 320W, ~20 TSS) on today, was **closed unmerged**, so the live plan's
-  template Rest stands. Not re-proposing it: the case for openers was thin at TSB +0.3 and is
-  thinner at **+5.2**, and it is not worth re-litigating a closed decision the day before a test.
+- **Openers back ON for today — reversing the morning call.** The first pass on this run said Rest
+  holds and declined to re-propose PR #14's openers, on the grounds that the case was thin at
+  TSB +0.3 and thinner at +5.2. **That reasoning weighed only TSB and was wrong.** Two things it
+  missed:
+  - **The last suprathreshold work was 8/20** (over-unders, overs 8×322W). The test is **five
+    days** later. Nothing since has touched 280W — 8/22's long ride logged **0.0%** of time in Z4.
+  - **Resting today makes it two full days off since the last ride of any kind** (8/22). The
+    missed Sunday turned a one-day gap into a two-day one, which is precisely why PR #14's
+    premise changed rather than merely being re-litigated: that PR proposed openers *on top of*
+    a ridden Sunday. They are now the only thing between the test and two blank days.
+  - **Cost is small and measured.** Test-morning TSB: **+5.2** at full rest, **+3.4** at ~18 TSS
+    of openers, **+1.0** at the full 60-min Z2, **0.0** at 75 min. The opener spends 1.8 points
+    and still tests from +3.4.
+- **Explicitly NOT making up the missed Sunday.** A 60-75 min Z2 today buys nothing that matters
+  tomorrow — 42 TSS moves CTL by **0.1** — while costing 4.2 TSB points to prime nothing. The
+  value of Sunday's ride was never its TSS. Prescribed instead, per PR #14's session: **20 min
+  easy Z2 @ 190-210W, then 3×1 min @ 320W with 2 min easy between, then 5 min easy. ~30 min,
+  ~18-20 TSS.** 320W is the 8/20 over-under wattage — a known-repeatable number, not a new
+  stimulus. **Skip the 3×1 min if the legs feel heavy on the warm-up**, and skip the session
+  entirely if they feel heavy at all; a flat day before a test beats a primed one on bad legs.
+- **The 8/04 precedent cuts toward the primers, not toward volume.** That test was preceded by a
+  68-min spin at NP **136**, max HR **125** (23 TSS) — a day-before ride with no high-end priming
+  whatsoever — and read **305**, now looking 10-17W low. Today's HRV dip does not argue against
+  this: three one-minute efforts inside an easy half hour is not an autonomic load, and the
+  number already reads as a single-night artifact.
 - **Open question — the 8/25 test protocol is ambiguous in the live config. Flagged, deliberately
   not resolved here.** Two problems, both ~24 h out:
   1. **Ramp vs 20-min.** PR #15's title states it retracts *"ramp under-reads"* and that 8/25 is
