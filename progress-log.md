@@ -10,6 +10,50 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-25 — **Test day. The 8/22 durability prediction beat its own target (0 bpm drift), and the Sunday ride was skipped — openers written into the test.** Plan edit; no stat change.
+
+- **`sync-profile` clean.** FTP 305, max HR 197, RHR 44, weight 79 all current — no `athlete.yaml`
+  edit today. The next FTP change should come from *this evening's test result*, not from a sync.
+- **The 8/22 pre-committed read passed, and then some.** The 8/22 entry set the bar at "**≤ +3 bpm**
+  block 1 → block 3 = the trend holds; **≥ +6 bpm** = under-fuelled." Actual: 3×12 @ **244W**,
+  HR **142 / 141 / 141** → **0 bpm**, fade 0.0%. Three clean same-power datapoints now:
+  - **8/08** — 3×12 @ 249W, HR 156/159/163 → **+7 bpm**
+  - **8/15** — 3×12 @ 244W, HR 143/144/145 → **+2 bpm**
+  - **8/22** — 3×12 @ 244W, HR 142/141/141 → **0 bpm**
+  Whole-ride decoupling on the same 160-165 min session tracked it down: **9.8% → 8.0% → 3.8%**,
+  now well under the 6.0% flag without needing the artifact caveat. Whole-ride EF **1.471 → 1.563
+  → 1.632**. Tempo HR at held power is down **~15 bpm in two weeks**. The Phase 1/2 aerobic work
+  has landed; durability is no longer the limiter it was in early August.
+- **Sunday 8/23 was not ridden.** The 8/20 PR trimmed it 90 → 60 min specifically to arrive at the
+  test at **TSB +3.2**; riding 0 instead puts the test at **TSB +5.2** on **three consecutive
+  zero-TSS days** (last ride 8/22). This is the one thing about today that is *worse* than planned,
+  not better — past roughly +3, extra freshness stops helping a 20-min effort and starts costing
+  neuromuscular sharpness. **Plan edit (this PR): a mandatory opener protocol on the 8/25 test
+  entry** — 20 min build + **3×1 min @ 330-340W**, 2 min easy between, 5 min easy before the clock.
+  Same warm-up written into the **11/03** final test, plus "arrive on one easy 60-min day, not on
+  multiple full rest days."
+- **Also encoded: pacing/HR spec and an abort rule.** Floor **325W** (= FTP 309 — below that the
+  test is not measuring fitness); open 5 min **330W**, settle **333-338W**, empty the last 3 min.
+  Final 5 min HR should sit **180-188**; a plateau under **172** at target watts is under-pacing,
+  not a ceiling (reference: 8/20's last over was 175 at 322W with peak 177 vs 197 max). If the test
+  is not completed today, fallback is **Thu 8/27 with that week's over-under dropped, not moved** —
+  and not later than that, because 9/01's 3×15 has to be anchored to a tested number.
+- **Recovery is amber on one metric only, and it is the soft one.** HRV **53** vs base 61 (**−13%**,
+  just past the 12% flag), second low night in a row (8/24 **51**). But readiness **88**, sleep
+  **84** / 7.73 h, RHR **42** — *two below* the 44 baseline — temp **−0.03**, HRV-balance
+  contributor **86**. The illness/overreach signature (RHR up, temp up) is absent; the trigger looks
+  like **8/23's 6.26 h night** (sleep score 73), with 8.13 h and 7.73 h since. Read as noise, not
+  a stop signal. **Verdict: proceed with the test.**
+- **Ignore the review's volume gaps this week.** `review` reports Endurance **19/31** and Threshold
+  **6/10** over 8 weeks and flags both amber. Those counts are dominated by the **7/16-7/26 off-bike
+  gap**; the last two weeks are near-perfect (8/17-8/23 hit six of seven days, missing only Sunday
+  8/23). Do not re-derive an "under-doing threshold" verdict from that number until the gap rolls
+  out of the 8-week window in mid-September.
+- **Load context.** CTL **44.6**, ATL 39.4, TSB **+5.2**, ramp **−1.1/wk**. 7-day TSS **275**
+  against the 450 flag, 3-day **0**. Nothing about load is limiting today.
+
+---
+
 ## 2026-08-22 — **Trend shift: the Saturday tempo blocks now have a clean durability number, and it is improving fast.** No config change.
 
 - **No stat or plan edit.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
