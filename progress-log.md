@@ -10,6 +10,52 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-26 — **Plan re-anchored to FTP 320. Every Phase 2/3/4 watt target rescaled +4.9%.**
+
+- **Plan change (this PR).** Multiply-through of 320/305 on Phases 2, 3 and 4. `target_if` and
+  `target_tss` are unchanged everywhere — they are FTP-relative by construction, so this is the
+  same training stress at a corrected anchor, not a load increase. **Phase 1 is deliberately NOT
+  rescaled** — it finished 8/02 and its numbers are history.
+
+  | Session | was (FTP 305) | now (FTP 320) |
+  |---|---|---|
+  | Z2 endurance (all phases) | 195-225 | **205-235** |
+  | Sat tempo blocks | 230-275 | **240-290** |
+  | P2 Tue threshold | 290-305 | **305-320** |
+  | P2/P4 Thu over-unders | under 280 / over 320 | **under 294 / over 336** |
+  | P3 Tue 4×4 VO2 | 325-350 | **340-368** |
+  | P3 Thu 30/15s | 345 / 195 | **362 / 205** |
+  | P4 Tue threshold | "98-100% FTP" | **314-320** |
+
+- **The deferred rung is now 3×15 @ 320W on 9/01, and it is the confirmation, not a new test.**
+  Written into the Phase 2 Tuesday note with an explicit read: HR ≤170 and fade ≥ −2% ⇒ 320 is
+  still conservative and the anchor moves again; HR >178 or fade < −4% ⇒ 320 is right, repeat the
+  rung. No extra test before 11/03.
+- **Added a 2026-08-27 schedule override — the first ride at the new watts.** Watts match the
+  rescaled template; the entry exists to carry an HR spec, because tomorrow is a **+3.6% blended
+  step** (311W vs the 300W ridden 8/20) and **+14W on the overs** (336 vs 322). Spec, scaled from
+  what 8/20 actually produced: set 1 avg **166-172** / peak ≤178; set 2 avg **170-176** / peak
+  ≤182; **abort at 186**, or if two consecutive unders fail to shed ≥3 bpm — that combination
+  means 320 is too high and the anchor comes back to ~312.
+- **Two guardrails written into descriptions so the rescale doesn't destroy running series:**
+  1. **Saturday tempo: ride 255-260W, the bottom of the new band — not 290.** The durability
+     series (8/08 3×12 @ 249W, +7 bpm; 8/15 @ 244W, +2 bpm; 8/22 the third datapoint) only means
+     something at comparable power. Jumping to the top of the rescaled band would be a new
+     stimulus dressed up as a continuation.
+  2. **Detector caveat survives the re-anchor.** `work_frac_ftp` 0.88 × 320 = **282W**, still
+     below the 294W unders, so a correctly-ridden over-under is *still* detected as one
+     continuous ~20:00 interval per set at the 311W blend. Eight short reps in the table means it
+     was ridden wrong. Noted in the 8/27 entry.
+- **One thing to watch that the rescale creates: Z2 goes up 10W on four rides a week.** Same
+  %FTP, but a real absolute change. The Wednesday/Sunday descriptions now say to govern by HR
+  (~124-132 bpm has been the Z2 pattern: 8/16 200W/124, 8/19 198W/126, 8/12 198W/129) and ride
+  the bottom of the band if HR sits above it. If EF on the easy days drops below ~1.55 over the
+  next fortnight, the Z2 band is too high regardless of what the anchor says.
+- **Depends on `stats-update-2026-08-26`** (FTP 305 → 320). Merge that first; these watts are
+  meaningless without it.
+
+---
+
 ## 2026-08-26 — **FTP 305 → 320 (+4.9%). The 8/25 retest landed, and it landed exactly where the 8/20 gate said it would.**
 
 - **Stat change (this PR): `ftp: 305` → `ftp: 320`.** Nothing else moved — max HR stays **197**

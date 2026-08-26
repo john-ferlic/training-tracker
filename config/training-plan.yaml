@@ -5,7 +5,9 @@
 #   1. an exact-date entry under `schedule:` (FTP tests) — highest priority
 #   2. the phase whose week range contains that date -> that phase's weekday
 #
-# Watt targets below are anchored to FTP 305 (8/04 ramp retest). RE-ANCHOR after each retest:
+# Watt targets below are anchored to FTP 320 (8/25 ramp retest; was 305 from 8/04).
+# Phases 2/3/4 were rescaled by 320/305 = +4.9% on 8/26. Phase 1 is complete and is left
+# at its historical 305-era numbers on purpose — do not rescale it. RE-ANCHOR after each retest:
 # update `ftp` in config/athlete.yaml and bump the watt targets in the affected
 # phase (or just ask Claude via /training-review to re-anchor them).
 #
@@ -81,41 +83,41 @@ phases:
       tuesday:
         type: Threshold
         duration_min: 75
-        target_watts: "290-305"
+        target_watts: "305-320"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold reps @ ~100% FTP, CD. NOTE (8/20): Tue 8/25 is an FTP RETEST, not this session — the 3x15 @ 305W rung moves to 9/01 and must be re-anchored to the tested FTP first (at ~318 it becomes roughly 3x15 @ 318W). Progression to date: 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801; 8/20 held 2x20 over-unders at 300W blended (8 overs @ 322W, 0.0% fade) with ride max HR 177 vs 197. Both clearly submaximal. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
+        description: "WU, Threshold reps @ ~100% FTP, CD. NOTE (8/26): the deferred rung is now **3x15 @ 320W on 9/01**, re-anchored to the 8/25 tested FTP of 320. That session is the CONFIRMATION of the new anchor, not a new test — read it as: HR <=170 with fade >= -2% means 320 is still conservative (the ramp under-reads for this rider) and the next anchor moves up again; HR >178 or fade < -4% means 320 is right and this is the rung to repeat. Progression to date: 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801; 8/20 held 2x20 over-unders at 300W blended (8 overs @ 322W, 0.0% fade) with ride max HR 177 vs 197. Both clearly submaximal. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
       wednesday:
         type: Endurance
         duration_min: 75
-        target_watts: "195-225"
+        target_watts: "205-235"
         target_if: 0.65
         target_tss: 52
-        description: "Z2, 75 min."
+        description: "Z2, 75 min. Band rescaled to FTP 320 on 8/26 (was 195-225). Same 64-74% FTP — this is not extra work, it is the same ride at the corrected anchor. Govern it by feel and HR as much as by watts; if HR runs above the usual Z2 pattern (~124-132 bpm at this intensity), ride the bottom of the band."
       thursday:
         type: Threshold
         duration_min: 75
-        target_watts: "under 280 / over 320"
+        target_watts: "under 294 / over 336"
         target_if: 0.88
         target_tss: 95
-        description: "Over-unders: 2 sets of 4x(3 min under @280W / 2 min over @320W). Trains lactate shuttling."
+        description: "Over-unders: 2 sets of 4x(3 min under @294W / 2 min over @336W). Trains lactate shuttling. Re-anchored to FTP 320 on 8/26 (was 280/320) — blended 311W vs the 300W actually ridden on 8/20, a +3.6% step onto the session that passed the gate with 20 bpm of HR headroom and 0.0% fade."
       friday:
         type: Rest
         description: "Full rest."
       saturday:
         type: Endurance
         duration_min: 165
-        target_watts: "Z2 195-225, tempo 230-275"
+        target_watts: "Z2 205-235, tempo 240-290"
         target_if: 0.71
         target_tss: 135
-        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 230-275W. The tempo blocks ARE being ridden, correctly — corrected 8/20: 8/08 logged 36.2 min and 8/15 logged 36.2 min in Z3 (232-274W) against a prescribed 36 min. The earlier 'flat Z2, no tempo detectable' note was a detection artifact (tempo sits below the 268W interval threshold, and 36 min at ~250W barely moves VI on a 165-min ride at ~206W) — do not re-derive it from VI or the interval table. Keep riding them as prescribed. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr on the bike."
+        description: "Long endurance 2.5-3 hr with 3x12 min tempo @ 240-290W (rescaled to FTP 320 on 8/26; was 230-275). IMPORTANT for the durability trend: the 8/08 and 8/15 blocks were ridden at 249W and 244W and gave the clean block1->block3 HR read (+7 bpm then +2 bpm). Ride the BOTTOM of the new band (~255-260W) so the series stays comparable — do not jump to 290. The tempo blocks ARE being ridden, correctly — corrected 8/20: 8/08 logged 36.2 min and 8/15 logged 36.2 min in Z3 (232-274W) against a prescribed 36 min. The earlier 'flat Z2, no tempo detectable' note was a detection artifact (tempo sits below the 268W interval threshold, and 36 min at ~250W barely moves VI on a 165-min ride at ~206W) — do not re-derive it from VI or the interval table. Keep riding them as prescribed. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr on the bike."
       sunday:
         type: Endurance
         duration_min: 90
-        target_watts: "195-225"
+        target_watts: "205-235"
         target_if: 0.65
         target_tss: 62
-        description: "Z2, 90 min."
+        description: "Z2, 90 min. Band rescaled to FTP 320 on 8/26 (was 195-225)."
 
   # -------------------------------------------------------------------------
   - name: "Phase 3 — VO2max Block"
@@ -127,24 +129,24 @@ phases:
       tuesday:
         type: VO2max
         duration_min: 60
-        target_watts: "325-350"
+        target_watts: "340-368"
         target_if: 0.88
         target_tss: 85
-        description: "WU, 4x4 min @ 115% FTP (~350W) w/ 4 min easy between, CD."
+        description: "WU, 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD. Rescaled to FTP 320 on 8/26 (was 325-350). Start rep 1 at 340 and only take 368 if rep 1 finishes with HR under 180."
       wednesday:
         type: Endurance
         duration_min: 60
-        target_watts: "195-225"
+        target_watts: "205-235"
         target_if: 0.63
         target_tss: 40
-        description: "Easy Z2. Lower volume block — keep this genuinely easy."
+        description: "Easy Z2. Lower volume block — keep this genuinely easy. Band rescaled to FTP 320 on 8/26."
       thursday:
         type: VO2max
         duration_min: 60
-        target_watts: "345 / 195"
+        target_watts: "362 / 205"
         target_if: 0.86
         target_tss: 80
-        description: "30/15s: 30 sec @ 345W / 15 sec @ 195W x13, 2-3 sets."
+        description: "30/15s: 30 sec @ 362W / 15 sec @ 205W x13, 2-3 sets. Rescaled to FTP 320 on 8/26 (was 345/195)."
       friday:
         type: Rest
         description: "Rest."
@@ -156,17 +158,17 @@ phases:
                                    # (7/12 6.2% -> 8/08 9.8% -> 8/15 8.0%). Durability is the
                                    # standing limiter, so the VO2 block does not get to shrink
                                    # the one session that treats it.
-        target_watts: "195-225"
+        target_watts: "205-235"
         target_if: 0.66
         target_tss: 120
-        description: "Z2 endurance, 2.5-2.75 hr. Held at 165 min (not cut to 135) while long-ride decoupling stays >6% — this is the durability lever. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. Cut to 135 min once two consecutive long rides come in under 6%."
+        description: "Z2 endurance, 2.5-2.75 hr. Band rescaled to FTP 320 on 8/26. Held at 165 min (not cut to 135) while long-ride decoupling stays >6% — this is the durability lever. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. Cut to 135 min once two consecutive long rides come in under 6%."
       sunday:
         type: Endurance
         duration_min: 75
-        target_watts: "195-225"
+        target_watts: "205-235"
         target_if: 0.63
         target_tss: 48
-        description: "Easy Z2 or rest."
+        description: "Easy Z2 or rest. Band rescaled to FTP 320 on 8/26."
 
   # -------------------------------------------------------------------------
   - name: "Phase 4 — Consolidation + Peak"
@@ -178,24 +180,24 @@ phases:
       tuesday:
         type: Threshold
         duration_min: 90
-        target_watts: "98-100% FTP (re-anchor)"
+        target_watts: "314-320"
         target_if: 0.86
         target_tss: 110
-        description: "Threshold 2x25-30 min @ 98-100% FTP. Re-anchor to current FTP."
+        description: "Threshold 2x25-30 min @ 98-100% FTP (314-320W at the 8/25 anchor of 320). Re-anchor again after the 11/03 test."
       wednesday:
         type: Endurance
         duration_min: 75
-        target_watts: "195-225"
+        target_watts: "205-235"
         target_if: 0.65
         target_tss: 52
-        description: "Z2, 75 min."
+        description: "Z2, 75 min. Band rescaled to FTP 320 on 8/26."
       thursday:
         type: Threshold
         duration_min: 75
-        target_watts: "under 280 / over 320+"
+        target_watts: "under 294 / over 336+"
         target_if: 0.88
         target_tss: 95
-        description: "Over-unders, longer overs."
+        description: "Over-unders, longer overs. Rescaled to FTP 320 on 8/26 (was 280/320+)."
       friday:
         type: Rest
         description: "Full rest."
@@ -209,10 +211,10 @@ phases:
       sunday:
         type: Endurance
         duration_min: 90
-        target_watts: "195-225"
+        target_watts: "205-235"
         target_if: 0.64
         target_tss: 58
-        description: "Easy Z2."
+        description: "Easy Z2. Band rescaled to FTP 320 on 8/26."
 
 # Date-specific overrides — highest priority per date. Used for tests and for the
 # 7/26-8/02 re-entry ramp after the 11-day off-bike gap (7/16-7/26). Retest Tue 8/04.
@@ -278,7 +280,18 @@ schedule:
                                   # Thursday over-under fired on all three criteria, so the retest
                                   # comes forward two weeks rather than training on a stale anchor.
     type: Test
-    description: "FTP retest (20-min x0.95 preferred over ramp — ramp under-reads for this rider). Moved up from 9/08: the 8/20 over-under passed every gate criterion — full 40 min completed as 2x4x(3/2), overs 8x322W with 0.0% fade, last over HR 175, ride max 177 vs 197 max. Rode it ABOVE prescription (unders 286W vs 280, overs 322W vs 320, blend 300W vs 296) and still finished with 20 bpm of HR headroom. Also set a 40-min best of 283W two days after 8/18's 284W. FTP estimate 315-322 against a 305 anchor; do not train another block on it. Replaces the 9/08 slot entirely — do NOT also test 9/08. Supersedes the Tuesday 3x15 @ 305, which moves to 9/01 at re-anchored watts. Re-anchor Phase 2/3/4 targets after."
+    description: "FTP retest (20-min x0.95 preferred over ramp — ramp under-reads for this rider). Moved up from 9/08: the 8/20 over-under passed every gate criterion — full 40 min completed as 2x4x(3/2), overs 8x322W with 0.0% fade, last over HR 175, ride max 177 vs 197 max. Rode it ABOVE prescription (unders 286W vs 280, overs 322W vs 320, blend 300W vs 296) and still finished with 20 bpm of HR headroom. Also set a 40-min best of 283W two days after 8/18's 284W. FTP estimate 315-322 against a 305 anchor; do not train another block on it. Replaces the 9/08 slot entirely — do NOT also test 9/08. Supersedes the Tuesday 3x15 @ 305, which moves to 9/01 at re-anchored watts. Re-anchor Phase 2/3/4 targets after. RESULT (logged 8/26): ridden as a Zwift RAMP, not the preferred 20-min x0.95. Clean 20W/min ramp, last full step 419W, failure part-way into the 439W step, best 60s 426W, peak HR 187/197. FTP = 0.75 x 426 = 320. Phase 2/3/4 targets re-anchored 305 -> 320 on 8/26. Because the ramp under-reads for this rider, 320 is a floor — 9/01's 3x15 @ 320W is the confirmation and no further test is scheduled before 11/03."
+
+  # -------------------- First session at the re-anchored watts --------------------
+  2026-08-27:                     # ADDED 8/26. Phase 2 Thursday, but the first time the
+                                  # over-unders are ridden at the 320 anchor. Watts come from
+                                  # the rescaled template; this entry exists for the HR spec.
+    type: Threshold
+    duration_min: 75
+    target_watts: "under 294 / over 336"
+    target_if: 0.88
+    target_tss: 95
+    description: "Over-unders at the NEW anchor: 2 sets of 4x(3 min under @294W / 2 min over @336W), blended 311W. This is +11W blended on the 300W ridden on 8/20 (+3.6%) and +14W on the overs. HR spec, scaled from what 8/20 actually produced (set 1 avg 164 / peak 173; set 2 avg 168 / peak 175, ride max 177 vs 197): expect set 1 avg 166-172, peak <=178; set 2 avg 170-176, peak <=182. ABORT LINE 186 — if any over crosses it, or if two consecutive unders fail to shed >=3 bpm, stop the set and finish Z2; that is the signal 320 is too high and the anchor comes back to ~312. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on). Detector note: work threshold is now 0.88 x 320 = 282W, still below the 294W unders, so a correct ride is again detected as ONE continuous ~20:00 interval per set at the 311W blend — not eight reps. Eight short reps means it was ridden wrong."
   # -------------------- Protecting the 8/25 test --------------------
   2026-08-23:                     # ADDED 8/20. Sunday trimmed 90 -> 60 min purely to freshen for
                                   # the Tuesday test. Saturday stays at 165 min — it is the
