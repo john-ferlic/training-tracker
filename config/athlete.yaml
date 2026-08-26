@@ -3,8 +3,12 @@
 # Not secret (no tokens here), so it's fine to keep in the repo.
 # =============================================================================
 
-ftp: 305            # Functional Threshold Power, watts. RE-ANCHOR after each retest
+ftp: 320            # Functional Threshold Power, watts. RE-ANCHOR after each retest
                     # (8/04 Zwift ramp test: 317 -> 305, -3.8% after the 11-day gap)
+                    # (8/25 Zwift ramp test: 305 -> 320, +4.9%. Best 60s 426W x 0.75 = 320.
+                    #  Clean 20W/min ramp, failed mid-step 22 at ~439W, peak HR 187.
+                    #  Ramp under-reads for this rider (see 8/20 log), so 320 is a FLOOR;
+                    #  the 9/01 3x15 @ 320W is the confirmation, not a new test.)
                     # (plan retests at start of Phase 2 and end of Phase 4).
 max_hr: 197         # Max heart rate, bpm — your peak on record (197 on VO2 efforts 5/02, 5/09)
 resting_hr: 44      # Resting HR baseline, bpm (synced from Oura median; sync-profile keeps it current)

@@ -10,6 +10,44 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-26 — **FTP 305 → 320 (+4.9%). The 8/25 retest landed, and it landed exactly where the 8/20 gate said it would.**
+
+- **Stat change (this PR): `ftp: 305` → `ftp: 320`.** Nothing else moved — max HR stays **197**
+  (the test peaked at **187**, 95% of max, no new peak), RHR stays **44** (Oura median unchanged),
+  weight stays **79** (Strava profile carries no weight).
+- **Source ride: "Zwift - FTP Ramp Test", 8/25, activity 19900806011.** Sanity-check it before
+  merging. Reconstructed from the power stream, it is a textbook Zwift ramp:
+  - ~6 min warmup, then a dead-clean **20 W/min** ramp — step deltas 19.8–20.4 W across all 16
+    steps, no stalls: 119 → 139 → 159 → 179 → 199 → 219 → 239 → 259 → 279 → 299 → 319 → 339 →
+    359 → 379 → 399 → **419W** (last full minute, min 21).
+  - Failure part-way into step 22 at ~439W. **Best 60 s = 426.3W.**
+  - **FTP = 0.75 × 426.3 = 319.7 → 320.**
+- **Two independent methods now agree.** The 8/20 over-under gate estimated **315–322** from
+  ridden power (8 overs at 322W, 0.0% fade, last over HR 175, ride max 177 vs 197). The ramp
+  says **320**. That is the middle of the predicted band, from a completely different protocol.
+  The 305 anchor was carrying a **−15W / −4.7%** error into every watt target in the plan.
+- **Caveat, and it cuts one way only: 320 is a floor, not a ceiling.** The 8/25 slot prescribed a
+  **20-min × 0.95**, explicitly "preferred over ramp — ramp under-reads for this rider." A ramp
+  was ridden instead. The 8/04 ramp read **305** against ridden evidence of ~318 two weeks later,
+  so this protocol has a documented negative bias here. **Do not re-test to chase the gap** —
+  the **9/01 3×15 @ 320W** is the confirmation. Read it as: HR ≤ 170 with fade ≥ −2% means 320 is
+  still conservative and the next anchor moves up again; HR > 178 or fade < −4% means 320 is right.
+- **Ignore the 13.3% decoupling flag on this ride, and ignore "harder than planned."** Both fired
+  by rule and neither means anything on a maximal incremental test with a 10-min sub-80W cooldown
+  tacked on — whole-ride first-half/second-half Pw:HR is undefined for this shape. Same rule
+  limitation already documented for 8/13 and 8/20. It was a test. It was supposed to run hot.
+- **`sync-profile` cannot see this and will keep reporting "clean."** It reads FTP from the Strava
+  *profile*, which is currently **unset** (`ftp: None`), so it has never had an FTP opinion. The
+  anchor has to be moved by hand after each test. Setting FTP in Strava would let the tool catch
+  this automatically in future.
+- **Recovery absorbed the test without a mark.** Today: readiness **87**, sleep **86**, **8.11 h**,
+  RHR **42** vs base 44, HRV **60** vs base 61. HRV dipped **68 → 58 → 51** (8/22→8/24) around the
+  test and is already back to **60**. Only soft contributor is recovery_index **55**. CTL **44.5**,
+  ATL 38.9, TSB **+5.6**, 7-day TSS **263**, ramp −1.4/wk.
+- **Merge this PR before `plan-update-2026-08-26`**, which re-anchors the watt targets to 320.
+
+---
+
 ## 2026-08-22 — **Trend shift: the Saturday tempo blocks now have a clean durability number, and it is improving fast.** No config change.
 
 - **No stat or plan edit.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
