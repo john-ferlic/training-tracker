@@ -10,6 +10,75 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-25 (evening) — **Retest: FTP 305 → 320 (+4.9%). Ramp protocol, not the 20-min. All Phase 2/3/4 watts re-anchored.**
+
+- **FTP 305 → `320`** in `config/athlete.yaml`. Max HR **197 unchanged**, RHR 44, weight 79 —
+  `sync-profile` suggested nothing (it does not parse ramp tests into an FTP; 320 is a coach call
+  off the stream).
+- **The test.** `Zwift - FTP Ramp Test`, 33.1 min, NP 265, IF 0.87, 42 TSS. A **+20W/min ramp from
+  120W**. Last complete step **420W** (21:00-22:00). Started the **440W** step and held it **22
+  seconds**. Best 1-min **426.3W** → **0.75 × 426 = 320**. Conservative floor off the last complete
+  step: 419W × 0.75 = **315**.
+- **The protocol swap cost nothing — two independent methods converged.** The 8/20 over-under
+  evidence put true FTP at **315-322** before the test; the ramp landed **320**, inside it. That is
+  why this is being accepted rather than re-tested: a 20-min effort would be confirming a number
+  two lines of evidence already agree on, at the cost of a session and another week on a stale
+  anchor. Note for the record that the plan asked for 20-min × 0.95 and the ramp was ridden instead.
+- **Like-for-like against 8/04 — same protocol, same trainer, 21 days apart:**
+
+  | | 8/04 | 8/25 |
+  |---|---|---|
+  | Peak sustained block | 341W / 427 s | **352W / 507 s** |
+  | Best 1-min | ~407W | **426W** |
+  | Derived FTP | 305 | **320** |
+  | Ride max HR | 192 (97% of max) | **187 (95%)** |
+
+  **11W more power for 80 s longer, at 5 bpm lower peak HR.** The same efficiency shift showing up
+  in the tempo blocks (−15 bpm at held power) and the over-unders (peak 189 on 8/06 → 177 on 8/20
+  for a harder session) is now visible in a maximal test.
+- **Why peak HR was 187 and not 197 — asked by the athlete, and it is not a red flag.**
+  1. **HR plateaued.** It hit 187 at 21:39 and sat 186-187 for the final ~45 s *while power went
+     420 → 440*. A flat HR against rising power is the ceiling signal. It arrived at 187.
+  2. **Ramps truncate peak HR by construction.** The athlete terminates within ~60-90 s of reaching
+     VO2max — HR never gets the 2-3 min at max intensity it needs to climb out. Both his ramps
+     under-run the record: **192** (8/04), **187** (8/25). The **197** was set on VO2max
+     *intervals* (5/02, 5/09), which accumulate HR across reps. Different stimulus. **Do not lower
+     `max_hr` off a ramp** — noted in `athlete.yaml`.
+  3. **The limiter was neuromuscular, not aerobic.** Cadence held **95-97 rpm** all the way through
+     420W, then **93 → 76 → 0 in about 20 seconds**. That is torque failure, not an engine running
+     out of oxygen — which is exactly what "my legs gave up" describes.
+- **The skipped primers probably cost a step, so 320 is more likely a floor than a ceiling.** The
+  8/25 morning PR prescribed 3×1 min @ 330-340W in the warm-up specifically because he'd arrive on
+  three zero-TSS days at TSB +5.2. The logged warm-up has **one ~1 min block at ~250W** at 2:30 and
+  nothing else. Anaerobic/neuromuscular readiness is precisely what primers restore and precisely
+  what the 440W step demanded. Had the 440W step gone the full minute, best-1-min ≈ 440 → **FTP
+  330**. Not claiming 330; claiming the true number is at the top of 315-322, or above it.
+- **Re-anchored 305 → 320 across Phases 2-4** (Phase 1 left alone — weeks 1-7 are history).
+  `target_if` and `target_tss` are unchanged by construction, since watts scale with FTP:
+  - **P2 Tue Threshold** 290-305 → **305-320**; the deferred rung is now **3×15 @ 320W on 9/01**.
+  - **P2 Thu Over-unders** under 280 / over 320 → **under 295 / over 335**.
+  - **P2 Sat** tempo 230-275 → **240-290**; all Z2 bands 195-225 → **205-235** (P2/P3/P4).
+  - **P3 Tue VO2** 325-350 → **340-370** (4×4 @ 115% = ~368W); **P3 Thu 30/15s** 345/195 → **360/205**.
+  - **P4 Tue** "98-100% FTP (re-anchor)" → **314-320**; **P4 Thu** under 280/over 320+ → **under
+    295 / over 335+**.
+- **Thu 8/27 is the confirmation session, and this is a pre-commitment.** The 8/06 entry is the
+  cautionary precedent: 305 looked pessimistic on paper until the over-unders at that anchor felt
+  "extremely difficult," which settled it. Same test here, written into the plan:
+  - **Overs holding 335W, fade ≥ −2%, last-over HR ≤ 180 → 320 confirmed.**
+  - **Set 2 fragmenting, fade past −3%, or HR past 183 → the ramp over-read; drop to 315** and
+    re-run the targets.
+  - Ride 335 and let it answer. Do not split the difference mid-session.
+- **Ignore the brief's 13.3% decoupling flag on this ride.** Same artifact class already documented
+  for the over-unders (8/13, 8/20) and the long rides (8/22), and worse here than anywhere: a ramp
+  is 54% Z1 recovery followed by a monotonic build to failure, so a first-half/second-half Pw:HR
+  comparison is meaningless by construction. The brief also renders "⚠️ Harder than planned" — a
+  maximal test is *supposed* to be. Neither is a fatigue signal.
+- **Load.** The ramp was only **42 TSS**, so the week is unaffected: Wed 8/26 stays the 75-min Z2
+  (now 205-235W), Thu 8/27 the over-under. Same 2-day test→over-under spacing as 8/04 → 8/06.
+  Post-test: CTL **45.6**, ATL 45.4, TSB **+0.2**, ramp −0.1/wk, 7-day TSS **317**.
+
+---
+
 ## 2026-08-25 — **Test day. The 8/22 durability prediction beat its own target (0 bpm drift), and the Sunday ride was skipped — openers written into the test.** Plan edit; no stat change.
 
 - **`sync-profile` clean.** FTP 305, max HR 197, RHR 44, weight 79 all current — no `athlete.yaml`
