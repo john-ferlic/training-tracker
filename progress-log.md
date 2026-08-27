@@ -10,6 +10,70 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-27 — **Trend shift: long-ride durability has closed. 8/22 came in at 3.8% decoupling with zero HR drift across the tempo blocks.** No config change.
+
+- **No stat or plan edit today.** `sync-profile` clean. The FTP re-anchor is already written and
+  waiting in **PR #20** (`stats-update-2026-08-26`, FTP 305 → 320) and **PR #21**
+  (`plan-update-2026-08-26`, Phase 2/3/4 watts). Both are still **unmerged**, so this morning's
+  briefing computed against the stale 305 anchor and prescribed today's over-unders as
+  under 280 / over 320. **Ride 294/336 regardless of merge state.**
+- **The 8/25 ramp was independently re-derived from the power stream today and 320 holds.**
+  Best 60 s = **426.3W**; 0.75 × 426.3 = **319.7**. Cross-check: the 8/04 ramp's best 60 s was
+  **402.9W** against a Zwift-reported **305**, an implied factor of 0.7570 — apply that and 8/25
+  reads **322.7**. So the honest band is **320-323** and 320 is the conservative end of it. No
+  reason to revise PR #20.
+- **The 8/22 long-ride result was never logged — and it is the best durability number of the
+  block.** The 8/22 entry was written that morning, before the ride; nothing since has recorded
+  what it produced. Third same-power datapoint on the Saturday tempo blocks:
+
+  | Date | tempo blocks | block HRs | drift b1→b3 | whole-ride decoupling | EF | ride HR @ ~207W |
+  |---|---|---|---|---|---|---|
+  | 8/08 | 3×12 @ **249W** | 156 / 159 / 163 | **+7 bpm** | 9.8% | 1.471 | 147 |
+  | 8/15 | 3×12 @ **244W** | 143 / 144 / 145 | **+2 bpm** | 8.0% | 1.563 | 135 |
+  | 8/22 | 3×12 @ **244W** | **142 / 141 / 141** | **−1 bpm** | **3.8%** | **1.632** | **130** |
+
+  Fade **0.0%** on all three; 8/22 logged **36.1 min** in Z3 against a prescribed 36. That is
+  **−17 bpm at the same power in two weeks**, and HR now *falls* across the blocks rather than
+  climbing.
+- **3.8% is the first long ride under the 6.0% flag since 7/04** (7/12 6.2% → 8/08 9.8% →
+  8/15 8.0% → **8/22 3.8%**). The whole-ride-decoupling artifact caveat from the 8/22 entry still
+  stands in principle, but it does not explain this: 8/15 and 8/22 are the *same ride shape* —
+  same duration, same 3×12 in the back half, same 244W, 1.5W apart on whole-ride average. Like
+  for like, the number halved.
+- **Durability was the standing limiter since 8/13. On this evidence it is no longer the
+  limiter.** The plan's live rule (Phase 3 Saturday, held at 165 min) reads: *"Cut to 135 min once
+  two consecutive long rides come in under 6%."* **8/22 is the first.** Sat **8/29** decides it —
+  and it is now the most informative ride of the week, not just the biggest.
+- **Recommended amendment to that rule — flagged, not applied, pending the athlete's call.** Judge
+  the cut on **intra-block HR drift (b1→b3 ≤ +2 bpm)** rather than whole-ride decoupling, per the
+  8/22 entry's own reasoning about the artifact. Both criteria happen to agree on 8/22, so nothing
+  is lost by waiting; but if 8/29 splits them, the block-drift number is the one to trust.
+- **Sunday 8/23 was not ridden.** The 60-min Z2 that was trimmed from 90 specifically to freshen
+  the Tuesday test never happened — no activity logged. Cost ~42 TSS. It did its job for the test
+  (readiness 88 on 8/25), but the week is now light: **7-day TSS 230** against the 450 flag,
+  CTL **46.3**, ATL 40.6, TSB **+5.8** (fresh), ramp **−2.6/wk**. Fitness is drifting down, not up.
+  Nothing to fix today — today's 95 TSS plus Saturday's 135 restores it — but do not also skip
+  Sunday 8/30.
+- **The new Z2 band already has a confirming datapoint, one day old.** PR #21 raised Z2
+  195-225 → **205-235** and set a watch: *"if EF on the easy days drops below ~1.55 over the next
+  fortnight, the Z2 band is too high."* Wed **8/26** rode **208W at HR 123**, EF **1.702**,
+  decoupling **1.8%** — the **best short-Z2 efficiency on record** (prior best 8/16, 200W / HR 124
+  / EF 1.630), and 208W sits in the lower-middle of the new band. The rescale is not too
+  aggressive at that end.
+- **Recovery: green, with one soft contributor worth naming.** Readiness **83**, sleep **84**,
+  **7.55 h**, RHR **42** vs base 44, HRV **67** vs base 61 (best in five days). But readiness has
+  stepped down 88 → 88 → 85 → **83** across the post-test days and the `recovery_index`
+  contributor has sat at **55 / 57** for two nights (it was 92-100 through the pre-test week).
+  That is the residual cost of a maximal ramp, not a flag — HRV recovering to 67 argues against
+  reading it as accumulated fatigue. Proceed, but it is the number to re-check on 8/29.
+- **Today's session is the first ride at the 320 anchor.** HR spec and abort lines are already
+  written into the 2026-08-27 schedule override in PR #21 — use them as written (set 1 avg
+  166-172 / peak ≤178; set 2 avg 170-176 / peak ≤182; abort 186; two consecutive unders failing to
+  shed ≥3 bpm ends the set). Against 8/20's actual output (set 1 164/173, set 2 168/175, ride max
+  177 vs 197) there is room for all of it.
+
+---
+
 ## 2026-08-26 — **Plan re-anchored to FTP 320. Every Phase 2/3/4 watt target rescaled +4.9%.**
 
 - **Plan change (this PR).** Multiply-through of 320/305 on Phases 2, 3 and 4. `target_if` and
