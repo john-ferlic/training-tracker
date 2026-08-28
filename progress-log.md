@@ -72,6 +72,63 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   shed ≥3 bpm ends the set). Against 8/20's actual output (set 1 164/173, set 2 168/175, ride max
   177 vs 197) there is room for all of it.
 
+### Addendum, same day — **the session was ridden and it passed every line. FTP 320 is confirmed as roughly right, and the 305 anchor is dead.**
+
+- **Executed complete and marginally above prescription, for the second over-under running.**
+  2 sets × 4×(3 min under / 2 min over), **19:54 + 19:55 = 39:49**, no unplanned stops.
+  Prescribed **294 / 336**; ridden **295-296 / 338-340**. NP 282, IF 0.881, **91 TSS**,
+  EF **1.869** — the highest efficiency factor on record for a threshold session
+  (8/18 1.801, 8/20 1.783).
+- **The overs did not fade at all.** 340 / 339 / 340 / 339 / 339 / 339 / 340 / 340.
+  `fade_pct_overs` **0.0%**, first→last **0.6%**, whole-block fade **0.0%**. Sixteen minutes at
+  **106% FTP** with a dead-flat power profile.
+- **New bests at both durations, one week after the last ones.** Best 20-min: 8/18 **305** →
+  8/20 **301** → **8/27 313W**. Best 40-min: 8/18 **284** → 8/20 **283** → **8/27 295W**.
+  These remain prescribed sessions, not max efforts — floors, not ceilings.
+- **Against the HR spec, both sets came in at or under prediction:**
+
+  | | predicted | actual | ceiling | actual peak |
+  |---|---|---|---|---|
+  | Set 1 avg | 166-172 | **164** | ≤178 | **175** |
+  | Set 2 avg | 170-176 | **171** | ≤182 | **181** |
+
+  Ride max **181 vs 197 max (92%)**. The 186 abort line was never approached. Set 2's peak
+  landed 1 bpm inside its ceiling — the tightest margin of the block, and the reason this is a
+  pass with room rather than a pass with lots of room.
+- **Clearance was never in doubt, and the abort rule as written would have said otherwise —
+  fix the rule, not the session.** Measured properly (peak HR of each over → trough HR of the
+  following under): set 1 **−11 / −12 / −9**, set 2 **−6 / −7 / −10**. 296W is still a genuine
+  recovery valley at the new anchor. But on *segment averages* — the numbers the interval table
+  actually prints — set 2 reads **−2 / −2 / −3**, which trips "two consecutive unders failing to
+  shed ≥3 bpm" and would have ended a session that had nothing wrong with it. **Carry forward:
+  the clearance rule is over-peak-to-under-trough, not average-to-average.** Segment averages
+  understate the shed by roughly 5-8 bpm because they include the whole ramp up and down.
+- **The one number that got worse: set 1 → set 2 drift at held power.** Both sets averaged
+  **312W**; HR went **164 → 171 = +7 bpm**. On 8/20 the same comparison was **164 → 168 = +4 bpm**
+  at 300W. This is the clean, artifact-free threshold-durability read on this session shape — same
+  power, same structure, same ride — and it widened as the watts went up. Expected at +12W, not a
+  flag, but it is the number to watch on the next over-under. Over-peaks tell the same story:
+  8/20 ran 168/173/173/173 | 172/173/176/177, today 168/172/172/175 | 173/177/180/181.
+- **Decoupling 11.7% — still artifact-inflated, but do not fully wave this one away.** The
+  whole-ride first-half/second-half Pw:HR comparison is meaningless on a shape with eight recovery
+  valleys plus a warmup, exactly as documented for 8/13 and 8/20. *However*, unlike 8/20 there is
+  a real drift underneath it this time, and 11.7% vs 8/20's 6.1% is directionally honest. **The
+  clean version of that number is the +7 bpm above** — use it, not 11.7%.
+- **What this says about the anchor: 320 is approximately right, and the large error is gone.**
+  On 8/20 at the 305 anchor he finished with **20 bpm** of HR headroom, which is what made the
+  anchor obviously stale. Today he finished with **16**, with set-2 drift of +7 and a peak inside
+  its ceiling by 1. That is near-threshold physiology, not sweet-spot physiology. Both set
+  averages still undershot prediction, so 320 may be a few watts conservative — but nothing here
+  justifies moving it again on inference. **Ride 9/01's 3×15 @ 320W as written; it is still the
+  confirmation.**
+- **Load is back where it should be.** Today's 91 TSS lifts 7-day TSS **230 → 321** (flag 450),
+  3-day 192, CTL **48.5** (from 46.3), ATL 53.6, TSB **−5.1**, ramp **−0.4/wk** — the −2.6/wk
+  bleed from the skipped Sunday is arrested. Fri 8/28 is a full rest day.
+- **Sat 8/29 is now the highest-value ride of the week** — it is the second of the two consecutive
+  sub-6% long rides that decides whether Phase 3 Saturday drops 165 → 135 min. Ride the tempo
+  blocks at **255-260W** (bottom of the rescaled band) so the durability series stays comparable,
+  and do not skip Sun 8/30 the way 8/23 was skipped.
+
 ---
 
 ## 2026-08-26 — **Plan re-anchored to FTP 320. Every Phase 2/3/4 watt target rescaled +4.9%.**
