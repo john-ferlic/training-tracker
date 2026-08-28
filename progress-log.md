@@ -124,6 +124,31 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 - **Load is back where it should be.** Today's 91 TSS lifts 7-day TSS **230 → 321** (flag 450),
   3-day 192, CTL **48.5** (from 46.3), ATL 53.6, TSB **−5.1**, ramp **−0.4/wk** — the −2.6/wk
   bleed from the skipped Sunday is arrested. Fri 8/28 is a full rest day.
+### Correction, same day — **the tested FTP is 322, not 320. Zwift's ramp factor is ~0.756, not the textbook 0.75.**
+
+- **Stat change: `ftp: 320` → `ftp: 322`** (athlete-confirmed — 322 is the number Zwift displayed
+  at the end of the 8/25 test, which is authoritative over any reconstruction).
+- **The stream reconstruction had already pointed here and the 8/26 pass used the wrong constant.**
+  Best 60 s = **426.3W**. The textbook ramp factor 0.75 gives **319.7** → 320, which is what 8/26
+  wrote. But Zwift's *own implied* factor is recoverable from the 8/04 test: best 60 s **402.9W**
+  against a displayed **305** ⇒ **0.7570**. Apply that: 426.3 × 0.7570 = **322.7**. The 8/27
+  briefing had flagged the band as 320-323 for exactly this reason. **Use 0.757, not 0.75, on the
+  next Zwift ramp.**
+- **Watt targets corrected 320 → 322 where the prescription is a specific %FTP** — P2 Tue
+  threshold 305-320 → **307-322**; P2/P4 Thu over-unders under 294 / over 336 → **under 296 /
+  over 338**; P3 4×4 VO2 340-368 → **342-370**; P3 30/15s 362/205 → **364/206**; P4 Tue
+  314-320 → **316-322**. The Z2 (205-235) and tempo (240-290) *bands* are unchanged — they are
+  still 64-73% and 76-90% of 322, inside rounding.
+- **The 2026-08-27 schedule override keeps its as-written 294/336 prescription** (rewriting a past
+  day's prescription would falsify the record, same principle applied to Phase 1 and the re-entry
+  week); its result is appended instead.
+- **This makes today's execution look better, not worse.** Re-analyzed at 322, the session was
+  ridden at **unders 91.9% / overs 105.0% FTP** against a prescribed **92% / 105%**. He hit the
+  physiological targets to within a tenth of a percent. IF 0.876, 90 TSS.
+- **It does not change any conclusion above.** 320 and 322 differ by 0.6%; today's blend is 96.9%
+  of 322 vs 97.5% of 320. No single session resolves 2W, and nothing in the HR, fade or clearance
+  data reads differently at one anchor than the other. All 32 rides re-analyzed at 322.
+
 - **Sat 8/29 is now the highest-value ride of the week** — it is the second of the two consecutive
   sub-6% long rides that decides whether Phase 3 Saturday drops 165 → 135 min. Ride the tempo
   blocks at **255-260W** (bottom of the rescaled band) so the durability series stays comparable,
