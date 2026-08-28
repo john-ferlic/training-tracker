@@ -10,6 +10,61 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-28 — **FTP 305 → 320 from the 8/25 ramp. Phase 2/3/4 watt targets re-anchored. Durability series now negative.**
+
+- **The 8/25 retest was ridden but never applied.** The test happened on schedule, and then three
+  days of training ran on the stale 305 anchor. `sync-profile` reported "no stat changes" and will
+  keep doing so: it reads FTP only from the **Strava profile field**, which wasn't updated after
+  the test. That is a blind spot worth knowing about — *a completed FTP test will never surface
+  through `sync-profile` unless you also set the new number in Strava.*
+- **Stat change — `ftp: 305 → 320`** (+15W, +4.9%; **3.86 → 4.05 W/kg** at 79 kg).
+  - Source: **8/25 Zwift ramp test**, 33.1 min. **Best 1-min 426W**; Zwift ramp FTP = 0.75 × 426 =
+    **319.5 → 320**. Final ramp step 8:27 @ 352W avg, HR 175, ride max HR **187** (vs 197 max —
+    no max-HR change, and nothing above 187 since May).
+  - **Provisional, and flagged as such in both configs.** The 8/20 entry specified *20-min ×0.95*
+    because the ramp has historically **under**-read for this rider (8/04 ramp said 305 while the
+    8/18–8/20 sessions pointed at 315-322). A ramp was ridden instead. If the historical bias
+    holds, 320 is a floor rather than a ceiling.
+  - **Corroboration — the athlete was already self-anchoring above 305.** On 8/27 he rode the
+    over-unders at **296W under / 338W over** against a prescription of 280/320. Those are within
+    1-2W of the FTP-320 re-anchored numbers (295/336). He has been training at ~322 for a week.
+  - **Sub-maximal 20-min bests keep climbing:** 7/15 **285W** → 8/18 **305W** → 8/27 **313W**.
+    40-min: 7/15 **275W** → 8/18 **284W** → 8/27 **295W**. None of these were max efforts; 8/27's
+    313W came inside a prescribed session that finished 16 bpm under max HR. They are floors.
+- **Plan change — Phase 2, 3 and 4 watt targets re-anchored to 320.** `target_if` and `target_tss`
+  are FTP-relative and are unchanged, so the intended stimulus is identical; only the watt numbers
+  move. Phase 1 and the 7/26-8/02 re-entry entries are left at their historical values.
+  - Z2 band **195-225 → 205-235** across all three phases.
+  - P2 Tue threshold **290-305 → 305-320**; the deferred **3×15 is now 3×15 @ 320W on Tue 9/01**.
+  - P2 Thu over-unders **280/320 → 295/336**. Not a step up — see above, he rode 296/338 on 8/27.
+  - P2 Sat tempo **230-275 → 245-288**, *with an explicit instruction to keep riding the blocks at
+    245-250W.* The band moved; the session should not. See the durability series below.
+  - P3 Tue VO2 **325-350 → 340-368**; P3 Thu 30/15s **345/195 → 362/205**.
+  - P4 Tue **"98-100% FTP (re-anchor)" → 314-320**; P4 Thu **280/320+ → 295/336+**.
+- **9/01 is the validation gate for the 320 number.** Written into the Tuesday entry: three reps
+  held at **318-322W**, fade ≥ **−2%**, last-rep HR ≤ **175** ⇒ 320 is real. If rep 3 falls under
+  **310W**, or HR passes **180** by mid-rep-2, the anchor is high and comes back to ~313.
+- **History re-analysed at the new anchor** (`fetch --reanalyze`), so TSS/IF are consistent across
+  the whole 56-day window rather than splicing two anchors. This restates the fitness numbers
+  downward — **CTL 47.6 → 43.2, ATL 47.1 → 42.7, 7-day TSS 331 → 300** — which is arithmetic, not
+  lost fitness: the same work divided by a bigger FTP. TSB is unchanged at **+0.5**.
+- **Trend shift: the durability series went negative, three weeks running.** Same power, same
+  session, block-3 HR minus block-1 HR: **8/08 249W → +7 bpm**, **8/15 244W → +2 bpm**,
+  **8/22 244W → −1 bpm** (142/141/141, fade 0.0%). This is the standing limiter and it is
+  resolving. Whole-ride decoupling on the same three rides: **9.8% → 8.0% → 3.8%**.
+- **Live gate for Sat 8/29.** Phase 3's Saturday is held at 165 min "until two consecutive long
+  rides come in under 6%" decoupling. 8/22 was **3.8%** — the first. **If 8/29 also comes in under
+  6%, that gate is met** and Phase 3 Saturday can drop 165 → 135 min. Ride 8/29's tempo blocks at
+  **245-250W**, not the new 288W ceiling, or the comparison is broken and the gate can't be read.
+- **8/23 and 8/24 were both taken off** ahead of the test — the trimmed 60-min Sunday wasn't
+  ridden. Extra freshness into 8/25; noted in the schedule entry so it isn't read as missing data.
+- **Recovery today is the softest point of the block, mildly.** Readiness **78**, sleep **80**,
+  **7.24 h**, RHR **45** vs base 44, HRV **53** vs base 61 (**−13%**, just past the 12% flag).
+  HRV has been ≤60 on 4 of the last 6 days (51/53/60/67/53). Today is a scheduled rest day and
+  that is the right call — no change proposed.
+
+---
+
 ## 2026-08-20 (evening) — **The gate fired on all three. FTP retest moves 9/08 → Tue 8/25.**
 
 - **The session was ridden, complete, and above prescription.** 2 sets × 4×(3 min under / 2 min
