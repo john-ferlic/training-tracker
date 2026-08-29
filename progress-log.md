@@ -65,6 +65,38 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-22 — **Trend shift: the Saturday tempo blocks now have a clean durability number, and it is improving fast.** No config change.
+
+- **No stat or plan edit.** `sync-profile` clean — FTP 305, max HR 197, RHR 44, weight 79 all
+  current. The plan needs no touch either: with Saturday at 165 min (135 TSS) and Sunday at the
+  trimmed 60 min (42 TSS), Tuesday's retest projects to **CTL 46.1 / ATL 44.3 / TSB +1.8**. The
+  8/20 Sunday trim already bought the freshness; cutting further (Sun 60 → 40 min) would move the
+  test to TSB +2.9, which does not change a 20-min effort for a rider who set a 40-min best of
+  283W at TSB −11. Saturday stays whole — it is the durability session.
+- **New metric, courtesy of the 8/20 detection fix.** The Saturday 3×12 tempo blocks are now
+  detected, so for the first time there is a same-power, artifact-free durability read:
+  - **8/08** — 3×12 @ **249W**, HR **156 / 159 / 163** → **+7 bpm** across the three blocks.
+  - **8/15** — 3×12 @ **244W**, HR **143 / 144 / 145** → **+2 bpm** across the three blocks.
+  - Fade **0.0%** on both. Absolute tempo HR fell **13 bpm for −5W**; whole-ride EF **1.471 →
+    1.563** at 209W → 206W. That is a large durability gain in one week.
+- **Whole-ride decoupling on the Saturday ride is not a clean read — use the intra-block drift
+  instead.** 9.8% → 8.0% against the 6.0% flag looks red, but a 165-min ride with three back-half
+  tempo blocks inflates the first-half/second-half Pw:HR comparison by construction — the same
+  artifact class already documented for the over-unders on 8/13 and 8/20. **Block 3 HR minus
+  block 1 HR at held power is the durability number to track on this session.** Do not re-derive
+  a fatigue verdict from whole-ride decoupling here.
+- **Focus for today's session:** repeat **244-250W** on the tempo blocks rather than riding the
+  275W top of the prescribed band, so 8/22 is a clean third datapoint on the same scale instead
+  of a new stimulus three days before the test. Read: **≤ +3 bpm** block 1 → block 3 = the trend
+  holds; **≥ +6 bpm** = under-fuelled, and Sunday gets trimmed further.
+- **Recovery is the best of the block and load is not limiting.** Readiness **91**, sleep **84**,
+  **7.79 h**, RHR **41** vs base 44, HRV **68** vs base 61. 7-day TSS **295** (flag 450), CTL
+  **45.3**, ATL **44.1**, TSB **+1.2**, ramp **−0.7/wk** — the intended pre-test unload, working.
+- **8/20's 6.1% decoupling flag: ignore, as pre-committed.** Interval-shaped ride, eight recovery
+  valleys, 0.0% fade across the overs, ride max HR 177 vs 197. Same rule limitation as 8/13.
+
+---
+
 ## 2026-08-20 (evening) — **The gate fired on all three. FTP retest moves 9/08 → Tue 8/25.**
 
 - **The session was ridden, complete, and above prescription.** 2 sets × 4×(3 min under / 2 min
