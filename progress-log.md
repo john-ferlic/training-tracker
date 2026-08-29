@@ -10,6 +10,42 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-29 — **Test-week load trough (7-day TSS 182, CTL 41.2). And: stop reading whole-ride decoupling on the Thursday over-unders.** No config change.
+
+- **No stat or plan edit.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
+  current. Today's session (Sat 165 min, 3×12 tempo @ 245-250W) is ridden as written; it is the
+  second data point on the sub-6% durability gate.
+- **Load trough, by design but worth naming.** Week of 8/24 is **182 TSS / 3 rides**, against
+  **378** (8/10) and **333** (8/17) — the lightest week since the July gap. Cause is the test
+  block: 8/23 and 8/24 off, the 8/25 ramp itself only **38 TSS**, 8/28 rest. CTL has slid
+  **43.2 → 41.2** with a ramp of **−2.8/wk**; TSB **+4.6**. Today's 135 TSS is the week's biggest
+  single stimulus and is what arrests that slide (projects CTL **43.4**, TSB **−7.3** tonight,
+  back to **≈ −2** by Tuesday morning). *Do not trim volume this week* — the freshness argument
+  that justified the 8/23 Sunday trim before the test does not apply now, and the athlete is
+  already under-loaded. Sunday 8/30 stays at 90 min.
+- **Correction: whole-ride decoupling is not a readable fatigue signal on over-under sessions.**
+  The brief flagged 8/27 "harder than planned" on **11.7%** decoupling. On intensity it was not
+  hot at all: **IF 0.881 vs 0.88 planned, TSS 91 vs 95**, overs **8 × 338W with 0.0% fade**.
+  The decoupling number on this session type does not track intensity — **8/13 12.0% (NP 262) →
+  8/20 6.1% (NP 271) → 8/27 11.7% (NP 282)** — because a sawtooth power profile plus warm-up and
+  cool-down breaks the first-half/second-half EF comparison. Same class of artifact as the 8/20
+  tempo-detection note: **do not re-derive fatigue from it.**
+- **The readable number on this session is rep-to-rep HR at held power**, and it is healthy:
+  **8/20 rep1 164 → rep2 168 bpm at 300W blended (+4)**; **8/27 rep1 164 → rep2 171 bpm at 312W
+  blended (+7)**. The extra drift is the 12W (+4%) step in power, not fatigue — ride max HR
+  **181 vs 197**, i.e. 16 bpm of headroom, and whole-session **EF is climbing at rising power:
+  1.752 → 1.783 → 1.869**.
+- **Read-ahead for 9/01 (the 320 validation).** 8/27's rep 2 averaged **171 bpm at 312W blended**
+  with a last-over peak of **178**. A steady 3×15 @ 320W will sit above that, so the pre-committed
+  "last-rep HR ≤ 175" line is the criterion most likely to be the one that bites — expect the
+  power criterion (hold 318-322W, fade ≥ −2%) to pass more comfortably than the HR one. Judge the
+  two together rather than failing the anchor on HR alone.
+- **Recovery is green and improving off the 8/28 dip.** Readiness **86** (78 yesterday), HRV
+  **67** vs 30-day mean **62**, RHR **43** vs base 44, temp **+0.04**. Softest input is sleep —
+  **7.03 h, score 78**, the shortest of the last five nights, well clear of the 70 flag.
+
+---
+
 ## 2026-08-28 — **FTP 305 → 320 from the 8/25 ramp. Phase 2/3/4 watt targets re-anchored. Durability series now negative.**
 
 - **The 8/25 retest was ridden but never applied.** The test happened on schedule, and then three
