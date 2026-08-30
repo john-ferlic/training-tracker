@@ -46,6 +46,29 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 - **Next limiter, provisionally: time at 95-105% FTP.** With durability resolved and Z2 volume
   clearly working, the constraint on FTP from here is more likely weekly threshold minutes
   (currently ~85 min across Tue + Thu) than more aerobic volume. Do not act on this before 9/01.
+- **Supporting evidence — the August EF gain does not track Z2 volume.** Weekly Z1-2 hours against
+  the long-ride EF they preceded, and weekly Z4-5 minutes:
+
+  | week of | Z1-2 hrs | Z4-5 min | total hrs | TSS | → long-ride EF |
+  |---|---|---|---|---|---|
+  | 6/29 – 7/13 | 4.2 / 6.6 / 1.9 | **0** | 4.5 / 7.2 / 2.6 | 226 / 353 / 133 | — |
+  | 8/03 | 5.2 | 23 | 6.6 | 290 | 1.471 (8/08) |
+  | 8/10 | **5.8** | 54 | 7.7 | 378 | 1.563 (8/15) |
+  | 8/17 | 4.3 | **58** | 6.3 | 333 | 1.632 (8/22) |
+  | 8/24 | **4.2** | 36 | 5.7 | 309 | **1.653 (8/29)** |
+
+  Z1-2 volume went **5.8 → 4.3 → 4.2 hrs** across the exact window EF rose **1.563 → 1.653**.
+  What was *added* over that period was threshold work: **0 min of Z4-5 in all of June/July**,
+  then 23 → 54 → 58 → 36. Sub-maximal 20-min bests over the same span: **285W (7/15) → 305W
+  (8/18) → 313W (8/27)**.
+- **Confounds, stated so this isn't over-read.** n=4, observational, and three real problems:
+  (a) the **11-day gap (7/16-7/26)** means the 8/08 reading was partly de-trained, so some of the
+  early gain is re-acquisition, not new adaptation; (b) total volume fell alongside Z2 (7.7 → 5.7
+  hrs), partly the 8/25 test taper, so "less Z2" and "less everything" are not separable here;
+  (c) EF is HR-based and moves with heat, fuelling and fan placement. **This does not show Z2 is
+  unnecessary** — the August threshold block was built on a June/July base of 4-7 h/wk that was
+  essentially all Z1-2. It shows only that *at this athlete's current 6-8 h/wk, the marginal
+  aerobic hour is not where the return is.*
 
 ---
 
