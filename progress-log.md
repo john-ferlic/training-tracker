@@ -10,6 +10,45 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-29 (post-ride) — **Durability limiter is resolved. Sub-6% gate MET. Same-power HR is down 16 bpm in three weeks.** Plan change proposed, not yet applied — awaiting athlete decision.
+
+- **Today's ride is a near-perfect controlled repeat of 8/08** — same 3×12 @ **249W**, same NP
+  (**217 vs 217**), same IF (**0.678 vs 0.677**), 165 vs 159 min. So this is a clean read, not a
+  trend line across drifting conditions:
+
+  | | 8/08 | 8/29 | Δ |
+  |---|---|---|---|
+  | Tempo block HR @ 249W | 156 / 159 / 163 | **141 / 142 / 141** | −15 / −17 / **−22** |
+  | Block-3 − block-1 drift | **+7 bpm** | **0 bpm** | −7 |
+  | Whole-ride avg HR | 147 | **131** | **−16 bpm** |
+  | Efficiency factor | 1.471 | **1.653** | **+12.4%** |
+  | Decoupling | 9.8% | **5.7%** | −4.1 pts |
+
+- **The durability series is complete and flat:** **+7 (8/08 @ 249W) → +2 (8/15 @ 244W) → −1
+  (8/22 @ 244W) → 0 (8/29 @ 249W)**, fade 0.0% on all four. EF across the same four:
+  **1.471 → 1.563 → 1.632 → 1.653**. Durability has been the standing limiter since 7/12; on this
+  evidence **it is no longer the limiter.**
+- **Pre-committed gate is MET.** Phase 3 Saturday was held at 165 min "until two consecutive long
+  rides come in under 6%" decoupling: **8/22 3.8%** and **8/29 5.7%**. Both under. Note honestly
+  that 5.7% is a *marginal* pass and higher than 8/22's, at slightly higher power (213W vs 208W
+  avg) — but the cleaner same-power metric (block drift 0 bpm) is unambiguous, and the gate is
+  read on decoupling as written.
+- **NOT applied yet, deliberately.** The athlete has said he does not value long-ride performance
+  for its own sake, which makes this a bigger question than the mechanical gate: it reopens
+  whether the *Phase 2* Saturday should also come down from 165, and whether freed minutes are
+  better spent as threshold volume. That interacts with **Tue 9/01**, which is the validation of
+  the provisional FTP 320 — restructuring the week before that read would be premature. Proposal
+  on the table: Phase 3 Sat **165 → 135** (gate, mechanical); Phase 2 Sat **165 → 135** with the
+  3×12 tempo retained (goal-driven, needs athlete sign-off). Revisit 9/01.
+- **Load recovered from the trough in one session:** 7-day TSS **182 → 309**, CTL **41.2 → 44.3**,
+  ramp **−2.8 → +0.3/wk**, TSB **−10.5** (productive overload). Sun 8/30 stays at 90 min; Mon rest
+  puts Tuesday at roughly **TSB −2**.
+- **Next limiter, provisionally: time at 95-105% FTP.** With durability resolved and Z2 volume
+  clearly working, the constraint on FTP from here is more likely weekly threshold minutes
+  (currently ~85 min across Tue + Thu) than more aerobic volume. Do not act on this before 9/01.
+
+---
+
 ## 2026-08-29 — **Test-week load trough (7-day TSS 182, CTL 41.2). And: stop reading whole-ride decoupling on the Thursday over-unders.** No config change.
 
 - **No stat or plan edit.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
