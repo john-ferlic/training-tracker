@@ -10,6 +10,47 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-30 — **The durability gate fired. Phase 3 Saturday released 165 → 135 min.** No stat change.
+
+- **Plan change — Phase 3 Saturday `duration_min: 165 → 135`, `target_tss: 120 → 98`** (IF 0.66
+  and the 205-235W band unchanged; TSS is just rescaled for the shorter ride).
+  - The release condition was written into that entry on 8/18 and restated on 8/28: *"cut to 135
+    min once two consecutive long rides come in under 6%."* **8/22 3.8% → 8/29 5.7%.** Two
+    consecutive. It fired.
+  - It fires on the better metric too. The same-power block-3-minus-block-1 HR series on the
+    Saturday tempo blocks: **8/08 249W → +7 bpm**, **8/15 244W → +2 bpm**, **8/22 244W → −1 bpm**,
+    **8/29 249W → 0 bpm** (HR **141 / 142 / 141**, fade **0.0%**). Flat drift at the *highest*
+    power of the series. Both readings agree durability has resolved.
+  - 135 min was the original Phase 3 design; 165 was the exception held while durability was the
+    limiter. This restores the plan rather than cutting below it, and gives the VO2 block the
+    volume headroom it was drawn with. **Reversion rule: if long-ride decoupling goes back over
+    6% two weeks running, restore 165 min.**
+  - Phase 3 starts week 14 (~9/14), so nothing about the next two weeks changes.
+- **8/29 long ride was ridden exactly to spec.** 165.4 min, NP **217W**, IF **0.678**, **127 TSS**,
+  avg HR **131**, EF **1.653**, decoupling **5.7%**. Tempo blocks **3×12 @ 249W** (78% FTP),
+  35.7 min in Z3 against 36 min prescribed — the 245-250W instruction was followed, so the series
+  stays comparable. Slightly under the planned IF 0.71 / 135 TSS; that is the right side to miss on.
+- **The FTP-320 anchor still looks like a floor, not a ceiling.** 8/27 over-unders: 2×20 at **312W
+  blended**, overs **8 × 338W (106% FTP)**, unders **296W**, fade **0.0%**, last over HR **178**,
+  ride max **181 vs 197** — 16 bpm of headroom on a session prescribed at 295/336. **Tue 9/01's
+  3×15 @ 320W is still the validation gate** and its read is unchanged: three reps at 318-322W,
+  fade ≥ −2%, last-rep HR ≤ 175 ⇒ 320 is real; rep 3 under 310W or HR past 180 by mid-rep-2 ⇒
+  the anchor comes back to ~313.
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (The known blind spot still applies: it reads FTP from the Strava profile field, so a test
+  result never surfaces through it on its own.)
+- **Recovery is green but softest of the week, in one contributor only.** Readiness **74**, sleep
+  **80**, **7.17 h**, HRV **64** vs base 62, temp **−0.11**. RHR **47** vs base 44 (**+3**, under
+  the 5 bpm flag) is the whole of it — the RHR contributor scored **59** while HRV balance held at
+  **81**. Elevated RHR with intact HRV the morning after a 127-TSS long ride is acute load, not
+  illness. CTL **40.0** / ATL **46.9** / TSB **−6.9**, 7-day TSS **309** (flag 450).
+- **Sunday held at the full 90 min, deliberately.** Trimming it to 60 buys Tuesday about **2 TSB
+  points** (−2.5 vs −0.5 at the gate) — the same margin the 8/22 entry judged irrelevant to a
+  threshold effort for a rider who set a 40-min best at TSB −11. The freshness is not worth the
+  aerobic hour. The real risk today is drift, not duration.
+
+---
+
 ## 2026-08-28 — **FTP 305 → 320 from the 8/25 ramp. Phase 2/3/4 watt targets re-anchored. Durability series now negative.**
 
 - **The 8/25 retest was ridden but never applied.** The test happened on schedule, and then three
