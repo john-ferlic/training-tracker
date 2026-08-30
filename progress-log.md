@@ -61,6 +61,31 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   What was *added* over that period was threshold work: **0 min of Z4-5 in all of June/July**,
   then 23 → 54 → 58 → 36. Sub-maximal 20-min bests over the same span: **285W (7/15) → 305W
   (8/18) → 313W (8/27)**.
+- **Recovery cost by session type — next-morning Oura, grouped by the preceding day.** Relevant to
+  any decision to trade Saturday Z2 minutes for threshold minutes:
+
+  | preceding session | n | mean TSS | → next-morning readiness | HRV | RHR | sleep score |
+  |---|---|---|---|---|---|---|
+  | Short Z2 | 12 | 55 | **85.8** | 64.2 | 43.6 | 84.8 |
+  | Threshold / VO2 | 7 | 73 | **82.3** | 58.7 | 44.0 | 81.6 |
+  | Long Z2 (≥115 min) | 6 | 122 | **78.2** | 58.0 | 45.7 | 82.2 |
+
+  **Per session, the long rides have cost more next-morning recovery than the threshold sessions**
+  (readiness 78.2 vs 82.3) — the opposite of the usual "Z2 is recovery-cheap" intuition. Sleep
+  scores are near-identical across groups (82.2 vs 81.6), so this is not a weekend-sleep artifact.
+  **Per unit of TSS the ordering reverses**, as theory expects: measured against the Short-Z2
+  baseline, threshold costs ≈ **0.19 readiness points per TSS** above baseline vs ≈ **0.11** for
+  long Z2, i.e. roughly **1.7× per TSS**.
+  *Caveat:* n=6/7, and the two worst long-ride mornings (**8/01** — ready 78, HRV 41, RHR 49, five
+  days after the 11-day gap; **8/08** — ready 69, HRV 51, RHR 50, the 9.8%-decoupling ride) both
+  come from the de-trained / poor-durability period. Excluding them, long-ride mornings average
+  readiness **80.5**, HRV **64**, RHR **43.8** — i.e. the long-ride recovery cost has been falling
+  as durability resolved, and the gap vs threshold is probably smaller now than the table shows.
+- **Arithmetic on the proposed swap.** 30 min of Z2 at IF 0.66 ≈ **22 TSS**; 30 min at threshold
+  (IF ≈ 0.98) ≈ **48 TSS**. Swapping one for the other is **+26 TSS and ~2.2× the load per
+  minute**, not a wash — and TSS understates it, since it captures neither glycogen depletion nor
+  autonomic load. A **TSS-neutral** version of the same trade: cut Saturday 30 min (−22) and add
+  ~9 min of threshold (Tue 3×15 → 3×18, +15). That is the version to propose after 9/01.
 - **Confounds, stated so this isn't over-read.** n=4, observational, and three real problems:
   (a) the **11-day gap (7/16-7/26)** means the 8/08 reading was partly de-trained, so some of the
   early gain is re-acquisition, not new adaptation; (b) total volume fell alongside Z2 (7.7 → 5.7
