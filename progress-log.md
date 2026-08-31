@@ -10,6 +10,49 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-08-31 — **The durability gate fired. Phase 3 Saturday cut 165 → 135 min. Matched-power HR drift is at zero.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same caveat as 8/28: `sync-profile` reads FTP from the **Strava profile field**, so tomorrow's
+  9/01 validation result will not surface here unless the number is also set in Strava.)
+- **Plan change — Phase 3 Saturday `duration_min: 165 → 135`, `target_tss: 120 → 98`.** This is the
+  8/18 hold releasing on its own written exit condition ("cut to 135 once two consecutive long
+  rides come in under 6%"), not a new judgement call.
+  - **Long-ride decoupling: 7/12 6.2% → 8/08 9.8% → 8/15 8.0% → 8/22 3.8% → 8/29 5.7%.** Two
+    straight under the 6.0% flag. **Caveat worth naming: 8/29 cleared by 0.3 pt**, and it did so on
+    a slightly bigger ride (165.4 min, 127 TSS, NP 217W) than 8/22 (160.3 min, 118 TSS, NP 212W) —
+    so the margin is thin, but it is thin in the right direction.
+  - **The matched-power read is the stronger evidence, and it is unambiguous.** Block-3 HR minus
+    block-1 HR on the Saturday 3×12 tempo blocks, at held power: **8/08 @ 249W → +7 bpm**
+    (156/159/163) · **8/15 @ 244W → +2 bpm** · **8/22 @ 244W → −1 bpm** · **8/29 @ 249W → 0 bpm**
+    (141/142/141, fade 0.0%). 8/29 is a **power-for-power match with 8/08** — same 249W, same 12-min
+    blocks, three weeks apart — and the drift went from +7 bpm to 0. Absolute tempo HR at 249W fell
+    **156 → 141**, 15 bpm for the same watts.
+  - The tempo blocks were ridden at **249W**, correctly at the bottom of the re-anchored 245-288
+    band, so the series stayed comparable. Keep doing that.
+  - **A re-entry rule is now written into the session**: two consecutive Saturdays back over 6%
+    decoupling and it returns to 165 min. The lever isn't discarded, just stood down.
+- **Watch item — Thursday over-under decoupling roughly doubled as the power went up.** 8/20 at a
+  300W blend: **6.1%**, set-1 → set-2 avg HR **164 → 168 (+4)**. 8/27 at a 312W blend: **11.7%**,
+  set-1 → set-2 avg HR **164 → 171 (+7)**, last over HR **178**, ride max **181**. +4% power cost
+  +3 bpm of inter-set drift. That is what riding nearer the true ceiling looks like, and it is the
+  one piece of evidence suggesting **320 may sit at the top of the real range rather than in the
+  middle of it**. Not a plan change — it is exactly what 9/01 is scheduled to resolve.
+- **9/01 3×15 @ 320W is unchanged and is the block's key session.** Gate as written 8/28: three reps
+  at 318-322W, fade ≥ −2%, last-rep HR ≤ 175 ⇒ 320 confirmed; rep 3 under 310W or HR past 180 by
+  mid-rep-2 ⇒ anchor comes back to ~313. Prior from 8/27: he held **296W with HR 172-174** late in
+  set 2, so 320W for 15 min should land near **175-180** — genuinely on the gate line.
+- **Recovery going into it: fine, with one soft spot.** Readiness **80** (green), sleep **79**,
+  RHR **46** vs base 44, HRV **56** vs base 62 (−9.7%, inside the 12% flag). The 7-day HRV average
+  is **60.0 vs 59.6** the week before — flat, so today's 56 is single-day noise, not a trend. The
+  real soft spot is **sleep: 7.03 / 7.17 / 6.97 h** three nights running, against 7.5-8.1 h through
+  mid-August, with RHR at **47 and 46** the last two mornings. Load is moderate — 7-day TSS **356**,
+  CTL **40.1**, TSB **−5.8**.
+- **No change to today.** Monday is a scheduled rest day and it stays one; the highest-leverage
+  input before the validation session is tonight's sleep, not a spin.
+
+---
+
 ## 2026-08-28 — **FTP 305 → 320 from the 8/25 ramp. Phase 2/3/4 watt targets re-anchored. Durability series now negative.**
 
 - **The 8/25 retest was ridden but never applied.** The test happened on schedule, and then three

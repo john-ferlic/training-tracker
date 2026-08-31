@@ -150,16 +150,17 @@ phases:
         description: "Rest."
       saturday:
         type: Endurance
-        duration_min: 165          # HELD at 165 on 8/18 (was 135) — the 8/13 log's pre-committed
-                                   # rule fired: 8/15 long-ride decoupling came in at 8.0%, still
-                                   # above the 6.0% flag and the 3rd straight Saturday over it
-                                   # (7/12 6.2% -> 8/08 9.8% -> 8/15 8.0%). Durability is the
-                                   # standing limiter, so the VO2 block does not get to shrink
-                                   # the one session that treats it.
+        duration_min: 135          # RELEASED to 135 on 8/31 — the 8/18 hold's own exit condition is
+                                   # met. Long-ride decoupling came in under the 6.0% flag twice in
+                                   # a row (8/22 3.8%, 8/29 5.7%), after 7/12 6.2% -> 8/08 9.8% ->
+                                   # 8/15 8.0%. Confirmed independently by the matched-power tempo
+                                   # read: 8/08 3x12 @ 249W -> +7 bpm, 8/29 3x12 @ the same 249W ->
+                                   # 0 bpm (HR 141/142/141). Durability is no longer the limiter,
+                                   # so the VO2 block gets its freshness back.
         target_watts: "205-235"
         target_if: 0.66
-        target_tss: 120
-        description: "Z2 endurance, 2.5-2.75 hr. Held at 165 min (not cut to 135) while long-ride decoupling stays >6% — this is the durability lever. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. Cut to 135 min once two consecutive long rides come in under 6%."
+        target_tss: 98
+        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 8/31: the pre-committed gate fired — two consecutive long rides under 6% decoupling (8/22 3.8%, 8/29 5.7%) plus matched-power tempo HR drift at 0 bpm (8/29 3x12 @ 249W, HR 141/142/141, vs +7 bpm at the same 249W on 8/08). Note 8/29's 5.7% cleared the line by only 0.3 pt. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. RE-ENTRY RULE: if long-ride decoupling goes back over 6% on two consecutive Saturdays, put this back to 165 min — durability regains priority over VO2 freshness."
       sunday:
         type: Endurance
         duration_min: 75
