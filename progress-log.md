@@ -10,6 +10,56 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-01 — **The durability gate was met. Phase 3 Saturday released 165 → 135 min. The standing limiter since July is resolved.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  Note the known blind spot from 8/28: `sync-profile` reads FTP from the **Strava profile field**,
+  so it will keep reporting "no changes" regardless of what a test says. It is not a check on the
+  anchor.
+- **Plan change — Phase 3 Saturday `duration_min: 165 → 135`, `target_tss: 120 → 98`.**
+  This is the pre-committed gate from the 8/18 entry firing, not a new judgement. The session was
+  held at 165 because long-ride decoupling sat above the 6.0% flag three Saturdays running
+  (7/12 **6.2%** → 8/08 **9.8%** → 8/15 **8.0%**). The stated release condition was *two
+  consecutive long rides under 6%*:
+  - 8/22 — **3.8%** (first)
+  - 8/29 — **5.7%** (second). **Gate met.**
+- **The same-power series is the stronger evidence, and it is emphatic.** 8/29's tempo blocks were
+  ridden at **249W** — identical to 8/08's 249W, so this is a like-for-like comparison rather than
+  a drifting one:
+
+  | date | block W | block HR | drift | whole-ride decoupling |
+  |---|---|---|---|---|
+  | 8/08 | 249 | 156 / 159 / 163 | **+7 bpm** | 9.8% |
+  | 8/15 | 244 | 143 / 144 / 145 | +2 bpm | 8.0% |
+  | 8/22 | 244 | 142 / 141 / 141 | −1 bpm | 3.8% |
+  | 8/29 | **249** | 141 / 142 / 141 | **0 bpm** | 5.7% |
+
+  Against 8/08 at the same 249W, HR is not merely flatter across the ride — it is **15-22 bpm
+  lower in absolute terms**. Durability has been the standing limiter since mid-July; on this
+  evidence it is no longer the thing holding the athlete back.
+- **The release is hedged, deliberately.** 8/29's 5.7% is only marginally under the line and rose
+  from 3.8%. It also came on a slightly harder ride (165 min, TSS 127, NP 217 vs 160 min, TSS 118,
+  NP 212), which is a fair reason for a higher number rather than a regression — but it is close
+  enough to the flag to warrant a re-check. **Two more long rides land before Phase 3 begins
+  (9/05, 9/12). If either comes back over 6.0%, restore Saturday to 165 min / TSS 120.** That
+  condition is written into the plan file itself, not just here.
+- **Today, 9/01, is the FTP-320 validation session** — the deferred 3×15 @ 320W, read against the
+  criteria set on 8/28: three reps at **318-322W**, fade ≥ **−2%**, last-rep HR ≤ **175** ⇒ 320 is
+  real; rep 3 under **310W** or HR past **180** by mid-rep-2 ⇒ the anchor drops to ~313. Recovery
+  supports running it as prescribed: readiness **88**, RHR **41** vs base 44, HRV **57** vs base
+  61 (−6.6%, inside the 12% flag), TSB **−1.5**, 3-day TSS only **47**. Result to be logged after.
+- **Recovery dipped and recovered cleanly over the weekend**, which is worth noting as a pattern
+  rather than a problem: readiness 86 (8/29) → **74** (8/30) → 79 (8/31) → **88** (9/01), with RHR
+  spiking to **47** on 8/30 before returning to 41. That is a normal response to a 127-TSS
+  Saturday, absorbed inside 48 hours.
+- **Sunday 8/30 ran short** — 60.9 min against a planned 90 (47 TSS vs 62), at IF 0.68 vs a 0.65
+  target: slightly hot, notably short. Immaterial on its own, and it left the athlete fresher into
+  today's validation. But the Sunday Z2 has been shrinking across the block — **8/09 90.8 min →
+  8/16 80.1 min → 8/30 60.9 min** (8/23 was deliberately not ridden, pre-test). Not worth a plan
+  change; worth watching, since Sunday is where Phase 2's aerobic volume quietly lives.
+
+---
+
 ## 2026-08-28 — **FTP 305 → 320 from the 8/25 ramp. Phase 2/3/4 watt targets re-anchored. Durability series now negative.**
 
 - **The 8/25 retest was ridden but never applied.** The test happened on schedule, and then three

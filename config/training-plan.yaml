@@ -150,16 +150,21 @@ phases:
         description: "Rest."
       saturday:
         type: Endurance
-        duration_min: 165          # HELD at 165 on 8/18 (was 135) — the 8/13 log's pre-committed
-                                   # rule fired: 8/15 long-ride decoupling came in at 8.0%, still
-                                   # above the 6.0% flag and the 3rd straight Saturday over it
-                                   # (7/12 6.2% -> 8/08 9.8% -> 8/15 8.0%). Durability is the
-                                   # standing limiter, so the VO2 block does not get to shrink
-                                   # the one session that treats it.
+        duration_min: 135          # RELEASED to 135 on 9/01 — the gate written here on 8/18 has
+                                   # now been met. It was HELD at 165 (was 135) because long-ride
+                                   # decoupling was over the 6.0% flag three Saturdays running
+                                   # (7/12 6.2% -> 8/08 9.8% -> 8/15 8.0%). The release condition
+                                   # was "two consecutive long rides under 6%": 8/22 came in at
+                                   # 3.8% and 8/29 at 5.7%. Both under. Gate met, so the hold
+                                   # comes off and Phase 3's Saturday returns to its planned 135.
+                                   # RE-CHECK: 8/29's 5.7% is only marginally under the line and
+                                   # rose from 3.8%. Two more long rides land before Phase 3
+                                   # starts (9/05, 9/12) — if EITHER comes back over 6.0%,
+                                   # restore this to 165 min / TSS 120 before the block begins.
         target_watts: "205-235"
         target_if: 0.66
-        target_tss: 120
-        description: "Z2 endurance, 2.5-2.75 hr. Held at 165 min (not cut to 135) while long-ride decoupling stays >6% — this is the durability lever. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. Cut to 135 min once two consecutive long rides come in under 6%."
+        target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
+        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). Restore to 165 min if 9/05 or 9/12 decoupling comes back over 6.0%. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
       sunday:
         type: Endurance
         duration_min: 75
