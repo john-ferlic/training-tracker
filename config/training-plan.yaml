@@ -84,7 +84,7 @@ phases:
         target_watts: "305-320"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold reps @ ~100% FTP, CD. RE-ANCHORED 8/28 to the tested FTP 320 (was 290-305 @ FTP 305). NOTE: Tue 9/01 is the deferred 3x15, now at 320W (3x15 @ 320W, 5 min easy between). This session doubles as the validation of the 8/25 ramp number — the ramp has under-read for this rider before, so treat 320 as provisional until 9/01 confirms it. Read: hold all three reps at 318-322W with fade >= -2% and last-rep HR <= 175 and 320 is real; if rep 3 drops below 310W or HR passes 180 by mid-rep-2, the anchor is high and drops to ~313. Progression to date: 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801 (sub-max 20-min best 305W); 8/20 held 2x20 over-unders at 300W blended (8 overs @ 322W, 0.0% fade), max HR 177 vs 197; 8/27 held 2x20 over-unders at 312W blended (8 overs @ 338W, -0.1% fade), max HR 181, sub-max 20-min best 313W. All clearly submaximal. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
+        description: "WU, Threshold reps @ ~100% FTP (3x15 @ 320W, 5 min easy between), CD. RE-ANCHORED 8/28 to the tested FTP 320 (was 290-305 @ FTP 305). FTP 320 CONFIRMED 9/02 — the 9/01 3x15 was the validation gate and it passed, but only just: reps held 319W / 319W / 314W (fade 1.6%, inside the -2% tolerance), rep-3 HR 175 exactly at the <= 175 line, and rep 3 was cut 90 s short at 13:30 of 15:00. Rep 3 stayed above the 310W fail line, so the anchor stays at 320 and 'provisional' is dropped — but unlike every session before it, this one was NOT submaximal. Read 320 as a true ~100% FTP with no headroom, not a floor. Progression to date: 8/18 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801; 8/20 2x20 over-unders at 300W blended (8 overs @ 322W, 0.0% fade), max HR 177; 8/27 2x20 over-unders at 312W blended (8 overs @ 338W, -0.1% fade), max HR 181, sub-max 20-min best 313W; 9/01 3x15 @ 319/319/314W, avg HR 168/175/175, ride max HR 183, EF 1.829. Next progression step is duration at 320W (3x15 -> 3x18 -> 2x25), NOT watts — hold 320 until the 11/03 test. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
       wednesday:
         type: Endurance
         duration_min: 75
@@ -150,16 +150,17 @@ phases:
         description: "Rest."
       saturday:
         type: Endurance
-        duration_min: 165          # HELD at 165 on 8/18 (was 135) — the 8/13 log's pre-committed
-                                   # rule fired: 8/15 long-ride decoupling came in at 8.0%, still
-                                   # above the 6.0% flag and the 3rd straight Saturday over it
-                                   # (7/12 6.2% -> 8/08 9.8% -> 8/15 8.0%). Durability is the
-                                   # standing limiter, so the VO2 block does not get to shrink
-                                   # the one session that treats it.
+        duration_min: 135          # CUT 165 -> 135 on 9/02: the release gate written into this
+                                   # entry on 8/18 has now fired. It said "cut to 135 once two
+                                   # consecutive long rides come in under 6%" decoupling —
+                                   # 8/22 came in at 3.8% and 8/29 at 5.7%. Series across the
+                                   # block: 7/12 6.2% -> 8/08 9.8% -> 8/15 8.0% -> 8/22 3.8%
+                                   # -> 8/29 5.7%. Durability is no longer the standing limiter,
+                                   # so the VO2 block gets its volume back.
         target_watts: "205-235"
         target_if: 0.66
-        target_tss: 120
-        description: "Z2 endurance, 2.5-2.75 hr. Held at 165 min (not cut to 135) while long-ride decoupling stays >6% — this is the durability lever. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. Cut to 135 min once two consecutive long rides come in under 6%."
+        target_tss: 98
+        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/02 — the two-consecutive-rides-under-6% gate was met (8/22 3.8%, 8/29 5.7%), corroborated by the same-power tempo-block drift going flat (8/08 +7 bpm -> 8/15 +2 -> 8/22 -1 -> 8/29 0 bpm, the last at 249W vs 244W). Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr. REVERT to 165 min if two consecutive long rides go back over 6% decoupling, or if block-3-minus-block-1 HR at held power returns to +5 bpm or more."
       sunday:
         type: Endurance
         duration_min: 75

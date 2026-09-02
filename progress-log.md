@@ -10,6 +10,60 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-02 — **FTP 320 confirmed by the 9/01 3×15, but marginally. Durability gate fired: Phase 3 Saturday 165 → 135 min.**
+
+- **The 9/01 validation gate passed — and it is the first session of this block that was not
+  submaximal.** Prescribed 3×15 @ 320W. Ridden: **319W / 319W / 314W**, avg HR **168 / 175 / 175**,
+  fade **1.6%** (tolerance −2%), NP 290, IF 0.908, 90 TSS, EF 1.829, ride max HR **183** (vs 197).
+  - Against the pre-committed read written 8/28 — *"all three reps at 318-322W, fade ≥ −2%,
+    last-rep HR ≤ 175 ⇒ 320 is real; rep 3 under 310W or HR past 180 by mid-rep-2 ⇒ drop to ~313"*
+    — this is a **pass on every criterion, each one at its edge**: rep 3 at **314W** is 4W above
+    the fail line but 4W below the target band, last-rep HR **175** is exactly the limit, and
+    **rep 3 was cut 90 s short (13:30 of 15:00)**.
+  - **Stat unchanged: `ftp` stays 320.** The gate's fail branch did not trigger, so the number
+    holds and the *provisional* flag is dropped from `athlete.yaml` and the plan.
+  - **But the interpretation changes.** Every prior read of 320 called it a **floor** — the ramp
+    under-reads for this rider, and 8/18 / 8/20 / 8/27 all finished 16-20 bpm under max HR. This
+    one did not: three reps at ~100% FTP with a truncated third and HR pinned at the ceiling is a
+    **true 100% FTP with no headroom**. 320 is now the honest number, not a conservative one.
+  - **Consequence for the block: progress the Tuesday threshold by duration, not watts.**
+    3×15 → 3×18 → 2×25 at **320W**, holding the anchor until the **11/03** test. Written into the
+    Phase 2 Tuesday entry.
+- **Plan change — Phase 3 Saturday `duration_min: 165 → 135`, `target_tss: 120 → 98`.** The
+  release gate written into that entry on 8/18 has fired: *"cut to 135 min once two consecutive
+  long rides come in under 6%."*
+  - **8/22 → 3.8%**, **8/29 → 5.7%**. Two consecutive, gate met.
+  - Whole-block series: 7/12 **6.2%** → 8/08 **9.8%** → 8/15 **8.0%** → 8/22 **3.8%** → 8/29 **5.7%**.
+  - Corroborated by the cleaner metric (the 8/22 log warned whole-ride decoupling is a noisy read
+    on a ride with back-half tempo blocks). Same-power block-3-minus-block-1 HR: **8/08 +7 bpm
+    (249W) → 8/15 +2 (244W) → 8/22 −1 (244W) → 8/29 0 bpm (249W)**, fade 0.0% throughout. The 8/29
+    read is at **249W**, 5W *above* the two middle datapoints, and still flat. Long-ride EF over
+    the same four weeks: **1.471 → 1.563 → 1.632 → 1.653**.
+  - **Durability is no longer the standing limiter.** It was the reason the VO2 block's Saturday
+    was held at 165; that reason is gone, so the volume goes back. A revert condition is written
+    into the entry: two consecutive long rides back over 6%, or block drift returning to +5 bpm.
+  - Phase 2's Saturday stays at **165 min** — it is the session producing these numbers, and there
+    are two weeks of Phase 2 left.
+- **Trend shift — sharp one-day autonomic dip, post-session, not accumulating.** This morning:
+  **RHR 49** (baseline 44, and the **highest in the 18-day window** — prior max 47) and **HRV 42**
+  (baseline 61, **−31%**, the **lowest in the window by 9** — prior min 51). Readiness 75.
+  - **It is a response to 9/01, not a trend.** The morning *before* that session read readiness
+    **88**, RHR **41**, HRV **57** — the best numbers of the week. Sleep last night was fine
+    (**80** score, **7.69 h**) and body temp is **−0.21°C**, i.e. no illness signature.
+  - Load is not the driver either: 7-day TSS **355** against a 450 flag, CTL **39.1**, TSB **−5.7**.
+    One 90-TSS session at IF 0.908 with a suffer score of 108 — the hardest of the block — is a
+    sufficient explanation on its own.
+- **Do not read 9/01's 12.3% decoupling as fatigue.** Same documented artifact class as 8/13 and
+  8/20: an interval-shaped ride with recovery valleys inflates the first-half/second-half Pw:HR
+  comparison by construction. Companion reads: 8/25 ramp **13.3%**, 8/27 over-unders **11.7%**.
+  The fatigue signal today is Oura, not this number.
+- **Today (Wed 9/02) recommended as Modify, not Proceed:** Z2 **75 → 50 min** at **195-210W**
+  (below the 205-235 band floor), HR capped ~130. No plan edit — a single easy day inside the
+  athlete's discretion. Reasoning: today's 52 TSS is the least valuable session of the week and
+  Thursday's over-unders (95 TSS, IF 0.88) are the one to protect.
+
+---
+
 ## 2026-08-28 — **FTP 305 → 320 from the 8/25 ramp. Phase 2/3/4 watt targets re-anchored. Durability series now negative.**
 
 - **The 8/25 retest was ridden but never applied.** The test happened on schedule, and then three

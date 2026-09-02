@@ -5,9 +5,12 @@
 
 ftp: 320            # Functional Threshold Power, watts. RE-ANCHOR after each retest
                     # (8/04 Zwift ramp test: 317 -> 305, -3.8% after the 11-day gap)
-                    # (8/25 Zwift ramp test: 305 -> 320, +4.9%. Best 1-min 426W x 0.75.
-                    #  Provisional — ramp has historically under-read for this rider, and
-                    #  the plan called for 20-min x0.95. Validate on the 9/01 3x15 @ 320W.)
+                    # (8/25 Zwift ramp test: 305 -> 320, +4.9%. Best 1-min 426W x 0.75.)
+                    # (9/01 3x15 validation: CONFIRMED 320, marginally. Reps 319/319/314W,
+                    #  fade 1.6%, rep-3 HR 175 (gate line <=175), rep 3 cut short at 13:30.
+                    #  Above the 310W fail line, so 320 stands and is no longer provisional —
+                    #  but it is a true 100% FTP with no headroom, not a floor. Progress by
+                    #  duration at 320W, not watts, until the 11/03 test.)
                     # (plan retests at start of Phase 2 and end of Phase 4).
 max_hr: 197         # Max heart rate, bpm — your peak on record (197 on VO2 efforts 5/02, 5/09)
 resting_hr: 44      # Resting HR baseline, bpm (synced from Oura median; sync-profile keeps it current)
