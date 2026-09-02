@@ -6,8 +6,13 @@
 ftp: 320            # Functional Threshold Power, watts. RE-ANCHOR after each retest
                     # (8/04 Zwift ramp test: 317 -> 305, -3.8% after the 11-day gap)
                     # (8/25 Zwift ramp test: 305 -> 320, +4.9%. Best 1-min 426W x 0.75.
-                    #  Provisional — ramp has historically under-read for this rider, and
-                    #  the plan called for 20-min x0.95. Validate on the 9/01 3x15 @ 320W.)
+                    #  Was provisional — ramp has historically under-read for this rider, and
+                    #  the plan called for 20-min x0.95. Validated on the 9/01 3x15.)
+                    # (9/01 VALIDATION PASSED, no change: reps 1-2 held 15:00 each at exactly
+                    #  319W / 100% FTP, HR 168 then 175, fade 1.6%, EF 1.829, ride max HR 183
+                    #  vs 197. Rep 3 (13:30 @ 314W) is VOID as evidence — a stomach cramp from
+                    #  over-drinking in the recovery stopped him ~1 min in; he restarted and
+                    #  rode the remainder. Do not read that 5W as threshold decay.)
                     # (plan retests at start of Phase 2 and end of Phase 4).
 max_hr: 197         # Max heart rate, bpm — your peak on record (197 on VO2 efforts 5/02, 5/09)
 resting_hr: 44      # Resting HR baseline, bpm (synced from Oura median; sync-profile keeps it current)

@@ -10,6 +10,58 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-01 — **FTP 320 VALIDATED. The 3×15 passed on reps 1-2; rep 3 is void as evidence (stomach cramp, not decay). No stat change.**
+
+- **No stat change — `ftp` stays 320.** `sync-profile` clean (FTP 320, max HR 197, RHR 44, weight
+  79). What changed is the *status* of the number: the 8/25 ramp result was flagged provisional in
+  both configs pending this session, and it is now confirmed. Comments updated in
+  `config/athlete.yaml` and the Phase 2 Tuesday entry; no values moved.
+- **The session — deferred 3×15 @ 320W, ridden 9/01.**
+
+  | rep | duration | avg W | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 14:55 | **319** | 100% | 168 |
+  | 2 | 14:54 | **319** | 100% | 175 |
+  | 3 | 13:30 | 314 | 98% | 175 |
+
+  Fade **1.6%** · NP 290 · IF 0.908 · TSS **90** (vs 92 planned) · EF **1.829** · ride max HR
+  **183** vs 197 · 67% of the ride in Z4 · 43.3 min of the prescribed 45 at threshold.
+- **Read against the 8/28 criteria: pass.** Reps 1 and 2 sat dead on the 318-322W band for the
+  full 15 min each, fade was inside the ±2% tolerance, and last-rep HR came in at **175**, exactly
+  the ≤175 line. **Neither failure trigger fired** — rep 3 at 314W cleared the 310W floor, and
+  rep-2 HR was 175, not past 180.
+- **Rep 3 is void as evidence, and that is the whole story of this entry.** On the numbers alone,
+  13:30 @ 314W looks like a rider running out of threshold, and the first read of this session
+  called 320 a *ceiling* on that basis. It is not: **a stomach cramp from over-drinking during the
+  5-min recovery stopped him about a minute into rep 3**; he restarted and rode the remainder at
+  314W. The 5W is a GI event, not threshold decay.
+  - This **reinstates the 8/28 hypothesis** that the ramp under-reads for this rider and 320 may
+    be a floor rather than a ceiling. Holding 314W for 13:30 straight after a cramp stop is not
+    the profile of someone at his limit.
+  - **Lesson for the pipeline, not just the athlete:** interval tables cannot distinguish a
+    physiological fade from a mechanical interruption. The 8/28 gate was written purely in watts
+    and HR, and read literally it would have dropped the anchor to ~313 on a bad bottle. Ask what
+    happened before re-anchoring off a single rep.
+- **Execution fix — drink by the clock, not by the recovery.** Fluid was going in as a bolus
+  during the 5-min recoveries. Gastric emptying is already suppressed at 100% FTP, so a large slug
+  lands in a stomach that cannot clear it. Carried into the Phase 2 Tuesday entry: sip
+  **100-150 ml every ~10 min** across the whole session, keep the mix at **6-8% carb**, and get the
+  sodium actually into the bottle (**500-800 mg/hr**) — sodium is what drives gastric emptying and
+  fluid uptake. Same total fluid, spread out. The plan has carried a fuelling rule since 8/08; this
+  is the first time the *delivery* has been the failure point rather than the amount.
+- **The threshold signature moved.** Same session shape as 8/18, 20W higher:
+  **8/18** 2×20 @ 299/304W, HR 162 → 169, EF **1.801**. **9/01** 3×15 @ 319W, HR 168 → 175,
+  EF **1.829**. Higher efficiency factor at 20W more power. Whole-ride decoupling read **12.3%**,
+  which is *not* a fatigue flag here — with HR climbing 7 bpm at constant power across reps, the
+  first-half/second-half Pw:HR comparison is measuring real cardiac drift at threshold, which is
+  what riding at true FTP is supposed to look like. Same "don't re-derive fatigue from whole-ride
+  decoupling on an interval session" rule as 8/13, 8/20 and 8/27, for a slightly different reason.
+- **Open item:** rep 3 never got a clean 15:00 at 320W. Not worth a standalone retest — the 9/08
+  Tuesday covers it. **If that session also fails to complete rep 3 at 318-322W with no mechanical
+  excuse, revisit the anchor at ~316.** Written into the plan file so it isn't lost.
+
+---
+
 ## 2026-08-28 — **FTP 305 → 320 from the 8/25 ramp. Phase 2/3/4 watt targets re-anchored. Durability series now negative.**
 
 - **The 8/25 retest was ridden but never applied.** The test happened on schedule, and then three
