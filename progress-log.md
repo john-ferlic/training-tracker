@@ -10,6 +10,38 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-03 — **FTP-320 validation (9/01) passed — anchor confirmed, no headroom. Closing the loop the 9/01 entry left open.**
+
+- **No config change.** `sync-profile` clean (FTP 320, max HR 197, RHR 44, weight 79). Reminder
+  from 8/28: `sync-profile` reads FTP from the **Strava profile field**, so "no changes" is not a
+  verdict on the anchor — this session is.
+- **The deferred 3×15 @ 320W validation was ridden 9/01** (`Zwift - sweet spot/threshold`, NP 290,
+  IF 0.908, TSS 90, whole-ride decoupling 12.3%, max HR 183). Read against the criteria set 8/28
+  (three reps 318–322W, fade ≥ −2%, last-rep HR ≤ 175 ⇒ 320 real; rep 3 < 310W or HR past 180 by
+  mid-rep-2 ⇒ drop to ~313):
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 14.9 min | 319W | 100 | 168 |
+  | 2 | 14.9 min | 319W | 100 | 175 |
+  | 3 | 13.5 min | 314W | 98 | 175 |
+
+  Fade **−1.6%** (well inside −2%). Last-rep HR **175 — exactly at the ceiling**. Rep 3 held **314W**,
+  above the 310 floor. HR never crossed 180 by mid-rep-2. **All pass criteria met, no fail
+  condition triggered ⇒ FTP 320 is validated.**
+- **It is a true anchor, not a conservative one.** Rep 3 shortened itself to 13.5 min and slid to
+  314W with HR pinned at the 175 ceiling — the athlete was at his limit by the third rep. 320 is
+  the right number and there is **no headroom to raise it**; this closes the retest arc that ran
+  305 → 320 across the 8/06–8/28 entries.
+- **Recovery absorbed the effort on the documented 48h pattern.** 9/01 readiness 88 → **9/02 dipped
+  hard** (readiness 75, RHR **49** vs base 44, HRV **42** vs base 61 = −31%, temp −0.21) → **9/03
+  recovered clean** (readiness 85, RHR 42, HRV 57, temp +0.06). Same dip-and-return inside 48h the
+  8/30 weekend showed; not a concern, but the 9/02 HRV trough is the sharpest single-day drop in the
+  window and worth remembering if it recurs without a hard session in front of it.
+- **Durability re-check still pending.** The 9/01 gate release stands: next long rides 9/05 and 9/12
+  must both stay under 6.0% decoupling or Phase 3 Saturday restores to 165 min / TSS 120. 9/05 is
+  the next data point.
+
 ## 2026-09-01 — **The durability gate was met. Phase 3 Saturday released 165 → 135 min. The standing limiter since July is resolved.**
 
 - **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
