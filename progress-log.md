@@ -10,6 +10,75 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-04 — **Thursday's over-under was missed with recovery green. Config comments closed out on the validated 320 anchor; 9/10 flagged as the last over-under of the block.**
+
+- **No stat change.** `sync-profile` clean (FTP 320, max HR 197, RHR 44, weight 79). Ride max HR
+  has now gone 187 (8/25) → 181 (8/27) → 183 (9/01) — nothing near the 197 on record since May, so
+  no max-HR question to resolve.
+- **Config hygiene, not a numbers change.** Both files still described FTP 320 as *provisional,
+  pending the 9/01 session*. That session has been ridden and read. Updated in place, comments
+  preserved:
+  - `athlete.yaml` — the FTP comment now records the validation (319/319/314W, fade 1.6%, HR
+    168/175/175) instead of instructing a validation that already happened.
+  - `training-plan.yaml` Phase 2 Tuesday — same, plus the **9/08 prescription**: repeat 3×15 @
+    320W and **hold rep 3 to the full 15 min**. Rep 3 self-shortened to 13.5 min at the 175 bpm
+    ceiling on 9/01, so *duration is the progression next week, not watts.*
+  - The Tuesday progression list now ends honestly: everything through 8/27 was submaximal; 9/01
+    was the first session of the block that found the ceiling.
+- **Thu 9/03 — the over-under was not ridden.** First Thursday miss of Phase 2 (8/13, 8/20, 8/27
+  all completed). **This one was not a recovery call:** Oura that morning read readiness **85**,
+  RHR **42** vs base 44, HRV **57**, temp +0.06, and 3-day TSS was only **124**. Flagged in the
+  Thursday plan entry, with **9/10 named as the last over-under before the VO2 block opens 9/15** —
+  and the Wednesday Z2 named as the session to sacrifice instead if the week gets compressed.
+- **The volume drift noted on 9/01 has become the live issue.** Weekly TSS: 8/10 **378** → 8/17
+  **333** → 8/24 **356** → this week **124 through Thursday** against ~239 planned to that point.
+  Sessions are landing short as well as absent — Sun 8/30 60.9 min vs 90 planned, Wed 9/02 **50.3
+  min vs 75** (34 TSS vs 52). CTL has flattened to **36.4**, ramp **+0.9/wk**, TSB **−0.1**. Not a
+  fatigue pattern — recovery has been green throughout — so no plan cut is warranted; the week now
+  rests entirely on Saturday.
+- **No makeup session Friday, deliberately, and the reason is the gate.** Sat 9/05 is the first of
+  the two long rides that decide whether Phase 3's Saturday stays at 135 min or reverts to 165.
+  8/29 came in at **5.7%** decoupling against a **6.0%** flag — a **0.3-point** margin. Any Friday
+  load would raise Saturday's number and could trip a reversion that reflects the makeup ride
+  rather than the athlete's durability. Rest today is worth more than the 40 TSS.
+- **Recovery is where it should be going into it:** last Oura read (9/03) readiness 85, RHR 42,
+  HRV 57 vs a 30-day median of 61, RHR median 43. The 9/02 trough (readiness 75, RHR 49, HRV 42,
+  −31%) resolved inside 24h — the same dip-and-return the 8/30 weekend showed.
+
+---
+
+## 2026-09-03 — **FTP-320 validation (9/01) passed — anchor confirmed, no headroom. Closing the loop the 9/01 entry left open.**
+
+- **No config change.** `sync-profile` clean (FTP 320, max HR 197, RHR 44, weight 79). Reminder
+  from 8/28: `sync-profile` reads FTP from the **Strava profile field**, so "no changes" is not a
+  verdict on the anchor — this session is.
+- **The deferred 3×15 @ 320W validation was ridden 9/01** (`Zwift - sweet spot/threshold`, NP 290,
+  IF 0.908, TSS 90, whole-ride decoupling 12.3%, max HR 183). Read against the criteria set 8/28
+  (three reps 318–322W, fade ≥ −2%, last-rep HR ≤ 175 ⇒ 320 real; rep 3 < 310W or HR past 180 by
+  mid-rep-2 ⇒ drop to ~313):
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 14.9 min | 319W | 100 | 168 |
+  | 2 | 14.9 min | 319W | 100 | 175 |
+  | 3 | 13.5 min | 314W | 98 | 175 |
+
+  Fade **−1.6%** (well inside −2%). Last-rep HR **175 — exactly at the ceiling**. Rep 3 held **314W**,
+  above the 310 floor. HR never crossed 180 by mid-rep-2. **All pass criteria met, no fail
+  condition triggered ⇒ FTP 320 is validated.**
+- **It is a true anchor, not a conservative one.** Rep 3 shortened itself to 13.5 min and slid to
+  314W with HR pinned at the 175 ceiling — the athlete was at his limit by the third rep. 320 is
+  the right number and there is **no headroom to raise it**; this closes the retest arc that ran
+  305 → 320 across the 8/06–8/28 entries.
+- **Recovery absorbed the effort on the documented 48h pattern.** 9/01 readiness 88 → **9/02 dipped
+  hard** (readiness 75, RHR **49** vs base 44, HRV **42** vs base 61 = −31%, temp −0.21) → **9/03
+  recovered clean** (readiness 85, RHR 42, HRV 57, temp +0.06). Same dip-and-return inside 48h the
+  8/30 weekend showed; not a concern, but the 9/02 HRV trough is the sharpest single-day drop in the
+  window and worth remembering if it recurs without a hard session in front of it.
+- **Durability re-check still pending.** The 9/01 gate release stands: next long rides 9/05 and 9/12
+  must both stay under 6.0% decoupling or Phase 3 Saturday restores to 165 min / TSS 120. 9/05 is
+  the next data point.
+
 ## 2026-09-01 — **The durability gate was met. Phase 3 Saturday released 165 → 135 min. The standing limiter since July is resolved.**
 
 - **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
