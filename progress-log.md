@@ -10,6 +10,57 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-05 — **FTP 320 confirmed by the 9/01 3×15 — the anchor is no longer provisional. But it is a ceiling, not a floor. Week 12 load collapsed to 124 TSS.**
+
+- **No numeric stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
+  current. (Same blind spot as 8/28 and 9/01: it reads FTP from the **Strava profile field**, so it
+  can never confirm or deny a test result. Ignore it as a check on the anchor.)
+- **Status change — FTP 320 goes from *provisional* to *confirmed*.** This is the 8/28 gate firing,
+  read against the criteria written then: three reps at 318-322W, fade ≥ −2%, last-rep HR ≤ 175
+  ⇒ 320 real; rep 3 under 310W or HR past 180 by mid-rep-2 ⇒ drop to ~313. The 9/01 session:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 14.9 min | 319W | 100 | 168 |
+  | 2 | 14.9 min | 319W | 100 | 175 |
+  | 3 | **13.5 min** | **314W** | 98 | 175 |
+
+  Fade **1.6%** (inside the −2% gate), ride max HR **183** (never near 180 by mid-rep-2), NP 290,
+  IF 0.908, 90 TSS, EF 1.829. **No fail criterion tripped — 320 stands.** The provisional wording
+  is now removed from `athlete.yaml` and from the Phase 2 Tuesday note.
+- **Read the caveat, because it changes how the number should be used.** Every threshold session
+  from 8/18-8/27 finished clearly *submaximal* — 8/20 overs at 322W with 0.0% fade and 20 bpm of
+  HR headroom, 8/27 overs at 338W with −0.1% fade. 9/01 was not that. Rep 3 was cut **1.4 min
+  short** and gave back 5W, and HR was pinned at **175 for two consecutive reps**. 320 is now the
+  honest ceiling rather than a conservative placeholder. **Do not let Tuesday self-anchor above
+  305-320W before the 11/03 test** — the pattern of riding prescription+2% has been fine while the
+  anchor lagged the athlete; it isn't any more.
+- **Week 12 (8/31-9/06) load has collapsed and it is not a recovery week.** Weekly TSS across the
+  block: 8/10 **378** → 8/17 **333** → 8/24 **356** → this week **124** through Saturday morning.
+  Wed 9/02 ran **50.3 min against a planned 75**; **Thu 9/03's over-unders were not ridden at all**,
+  and that is the week's key intensity session gone. CTL **34.2**, ramp **−2.0/wk**, TSB **+2.9**,
+  3-day TSS **0**. Riding today's 165 min / 135 TSS lands the week near 259 — still ~27% under the
+  block average, but a defensible landing rather than a hole. **The risk this week is detraining,
+  not overreach**, and that is the reason today's amber recovery does not buy a trim.
+- **The Sunday-shrinkage note from 9/01 has widened into a midweek pattern.** It is no longer just
+  Sunday: 8/09 90.8 → 8/16 80.1 → 8/30 60.9 min on Sundays, and now Wednesday 9/02 at 50.3 of 75.
+  The long Saturday and the Tuesday threshold are being protected; the connective Z2 around them is
+  quietly eroding. **New focus area: defend Wednesday and Sunday duration.** Phase 3 (VO2max, from
+  week 14 / 9/14) deliberately *lowers* volume, so aerobic volume lost now is not recovered later.
+- **Today's recovery amber is sleep debt, not training fatigue.** Readiness **76**, HRV **50** vs
+  a 60 baseline (**−17%**, past the 12% flag), on **6.12h** sleep after **5.99h** the night before —
+  against a 7-night run of 7.0-7.7h. RHR **45** vs base 44 and temp **−0.15** are both clean, and
+  the athlete has ridden **nothing in three days**. With TSB +2.9 there is no load to blame; the
+  HRV 7-day mean sliding **58.4 → 54.4** tracks the two short nights. Verdict: **proceed at full
+  165 min**, tempo blocks strictly at 245-250W.
+- **Gate check live today.** The Phase 3 Saturday release (165 → 135 min, made 9/01) is conditional
+  on 9/05 and 9/12 long-ride decoupling staying under **6.0%**. Today is the first of those two.
+  **Flagged in advance:** if today comes back marginally over 6% *on 6.1h of sleep*, that is a
+  contaminated reading, not a durability regression — weigh it against 9/12 before restoring the
+  hold, and do not auto-restore on today alone.
+
+---
+
 ## 2026-09-01 — **The durability gate was met. Phase 3 Saturday released 165 → 135 min. The standing limiter since July is resolved.**
 
 - **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
