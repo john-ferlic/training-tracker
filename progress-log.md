@@ -10,6 +10,69 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-06 — **FTP 320 validated on 9/01, but at the edge. Week 12 collapsed to 124 TSS; today's Sunday Z2 becomes the missed long ride, 150 min.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197 (highest since May is 187; 9/01
+  peaked at 183), RHR 44, weight 79 all current. Same known blind spot as 8/28 and 9/01:
+  `sync-profile` reads FTP from the **Strava profile field**, so it cannot confirm or reject a
+  test result. The validation below is read from the ride file, not from it.
+- **The 9/01 validation passed — narrowly. FTP stays 320, no change.** The gate written on 8/28
+  was: three reps at **318-322W**, fade ≥ **−2%**, last-rep HR ≤ **175** ⇒ 320 is real; rep 3
+  under **310W** or HR past **180** by mid-rep-2 ⇒ drop to ~313. What was actually ridden:
+
+  | rep | duration | avg W | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 14:55 | **319** | 100 | 168 |
+  | 2 | 14:54 | **319** | 100 | 175 |
+  | 3 | **13:30** | **314** | 98 | 175 |
+
+  Fade **1.6%** (inside the 2% allowance), last-rep HR **175** (exactly at the limit, not under
+  it), ride max HR 183. **No fail criterion was tripped** — rep 3's 314W sits comfortably above
+  the 310W floor. But two things say 320 is the top of the range rather than a floor with room
+  above it, which is what the 8/28 entry expected: **rep 3 was cut 90 seconds short**, and it
+  came in 5W under the band. Contrast the pre-test picture, where every session read as
+  submaximal (8/27's over-unders finished 16 bpm under max HR). **320 is the right anchor and
+  should be trained on. It should not be assumed to be conservative.** Re-read this at the
+  11/03 test.
+- **Trend shift — week 12 was a washout, and it is a life-load week, not a fatigue week.**
+  Mon 8/31 → Sun 9/06 delivered **2 rides and 124 TSS against 436 planned (28%)**:
+  - Tue 9/01 threshold — ridden, 90 TSS (the validation above).
+  - Wed 9/02 Z2 — ridden short, **50.3 min vs 75 planned**, 34 TSS.
+  - Thu 9/03 over-unders — **not ridden** (95 TSS lost).
+  - Sat 9/05 long endurance — **not ridden** (135 TSS lost).
+
+  The cause reads clearly in the sleep data rather than in recovery markers: **9/04 5.99 h /
+  sleep score 66** and **9/05 6.12 h / sleep 70**, the two worst nights of the block, against a
+  7.0-8.3 h norm. HRV never collapsed (42 on 9/02 was a one-day dip, back to 57 the next day)
+  and RHR never held elevated. This is time and sleep going missing, not the body refusing work.
+- **Cost: CTL 43.2 (8/28) → 33.4 today, both on the FTP-320 anchor**, so it is a like-for-like
+  −9.8 and not the arithmetic restatement that the 8/28 re-anchor produced. Ramp **−3.0/wk**.
+  TSB **+6.6**, ATL 26.8, 3-day TSS **0**. Phase 3 is a VO2max block starting week 14 (9/14);
+  arriving at it with a sliding CTL is the thing to avoid.
+- **Plan change — added a dated override for today, 9/06: Sunday Z2 90 min → the missed long
+  ride at 150 min / TSS 122**, tempo protocol intact at 3×12 @ 245-250W. Reasoning:
+  - Recovery has fully rebounded and supports it — **readiness 88, sleep 82, 7.99 h, RHR 42 vs
+    base 44, HRV 63 vs base 60 (+5%)**, four days off the bike.
+  - Of the two missed sessions, the long ride is the one worth recovering. It carries the
+    **durability gate reading that Phase 3's Saturday duration depends on**, and 9/05 was one of
+    only two remaining chances to take it. The Thursday over-unders are not recovered — 9/08's
+    threshold already covers that intensity this week.
+  - Trimmed 165 → 150 because it is a bolt-on after four days off and **Tue 9/08's threshold is
+    the week's key session**. Mon 9/07 stays a full rest day; projected TSB back near **+1** by
+    Tuesday morning (150 min ≈ 122 TSS → ATL ~40, CTL ~35 tonight, then a rest day).
+  - The 15 min comes off the Z2, not the tempo. Decoupling is a whole-ride ratio, so a 150-min
+    reading is marginally softer than the 160-165 min rides it is being compared against —
+    **a result near the 6.0% line should be read as the worse case.**
+- **The Phase 3 Saturday gate now rests on 9/06 and 9/12, not 9/05 and 9/12.** Updated in the
+  plan file. The hold was released on 9/01 (165 → 135 min) on the strength of 8/22's 3.8% and
+  8/29's 5.7%, with a re-check condition attached because 5.7% is barely under the flag and rose
+  from 3.8%. Losing 9/05 halves the remaining evidence. **If today or 9/12 comes back over 6.0%,
+  restore Phase 3 Saturday to 165 min / TSS 120 before the block begins** — and if today is also
+  missed, 9/12 stands alone and one reading over the line restores the hold. Do not start a
+  VO2max block on no durability data.
+
+---
+
 ## 2026-09-01 — **The durability gate was met. Phase 3 Saturday released 165 → 135 min. The standing limiter since July is resolved.**
 
 - **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
