@@ -161,6 +161,11 @@ phases:
                                    # rose from 3.8%. Two more long rides land before Phase 3
                                    # starts (9/05, 9/12) — if EITHER comes back over 6.0%,
                                    # restore this to 165 min / TSS 120 before the block begins.
+                                   # UPDATED 9/06: 9/05 was NOT ridden (see the 9/06 schedule
+                                   # override). The re-check pair is now 9/06 and 9/12. If either
+                                   # is over 6.0%, restore to 165 min / TSS 120. If 9/06 is also
+                                   # missed, 9/12 stands alone and a single reading over 6.0%
+                                   # restores the hold — do not start Phase 3 on no data.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
@@ -271,6 +276,26 @@ schedule:
     target_if: 0.65
     target_tss: 42
     description: "Easy Z2 close to re-entry week. Was 90 min w/ tempo — no tempo this week."
+
+  # -------------------- Recovering the missed 9/05 long ride --------------------
+  2026-09-06:                     # ADDED 9/06. Sunday Z2 90 min -> the missed Saturday long ride,
+                                  # trimmed 165 -> 150 min. Week 12 collapsed: only 2 rides and
+                                  # 124 TSS against 436 planned (28%). Thu 9/03 over-unders and
+                                  # Sat 9/05 long endurance were both missed, on the back of two
+                                  # short nights (9/04 5.99 h / sleep 66, 9/05 6.12 h / sleep 70)
+                                  # — a life-load week, not accumulated training fatigue.
+                                  # Recovery has fully rebounded today: readiness 88, sleep 82,
+                                  # 7.99 h, RHR 42 vs base 44, HRV 63 vs base 60 (+5%), TSB +6.6,
+                                  # 3-day TSS 0. The long ride is the higher-value session of the
+                                  # two that were missed — it carries the durability gate reading
+                                  # that Phase 3's Saturday duration depends on, and 9/05 was one
+                                  # of only two remaining chances to take it before the block.
+    type: Endurance
+    duration_min: 150
+    target_watts: "Z2 205-235, tempo 245-250"
+    target_if: 0.70
+    target_tss: 122
+    description: "The missed 9/05 long ride, moved to Sunday and trimmed 165 -> 150 min. Ride the FULL tempo protocol: 3x12 min @ 245-250W, exactly as on 8/08 (249W), 8/15 (244W), 8/22 (244W) and 8/29 (249W). The protocol is what makes the durability number readable — block-3 HR minus block-1 HR at held power — so do NOT ride the blocks at the 288W band top and do NOT drop a block to save time; take the 15 min off the Z2, not off the tempo. Why 150 and not 165: this is a bolt-on after 4 days off the bike, and Tue 9/08's threshold (75 min, 305-320W, 92 TSS) is the week's key session and is protected — Mon 9/07 stays a full rest day, which puts projected TSB back near +1 by Tuesday morning. Decoupling is a whole-ride ratio, so 150 vs 165 min makes this reading slightly softer than its predecessors; read a result near the 6.0% line as the worse case, not the better one. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr on the bike. If legs are flat at 60 min, drop to 120 min but still ride all three tempo blocks."
 
   # -------------------- Test day --------------------
   # Test is Tue 8/04, first Tuesday of the new Phase 2 window. One re-entry week
