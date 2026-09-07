@@ -10,6 +10,64 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
+
+- **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
+  current. (Same blind spot as always: `sync-profile` reads FTP from the **Strava profile field**,
+  so it can never confirm or refute a test result. It is not a check on the anchor.)
+- **Stat annotation — FTP 320 is no longer provisional.** The 9/01 3×15 was the validation session
+  written on 8/28, and it ran:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 14.9 min | **319W** | 100% | 168 |
+  | 2 | 14.9 min | **319W** | 100% | 175 |
+  | 3 | **13.5 min** | **314W** | 98% | 175 |
+
+  Fade **1.6%**, max HR **183**, 43.3 min total at 99% FTP, IF 0.908, TSS 90.
+  Against the pre-committed criteria: rep 3 stayed above the **310W** fail line (pass), last-rep HR
+  landed exactly on the **175** ceiling (pass), fade inside **±2%** (pass). But rep 3 came in 5W
+  under the 318-322 band *and* was cut 1.5 min short. **320 holds.**
+- **This reverses the 8/28 hypothesis, and that is the useful finding.** The 8/28 entry argued the
+  ramp historically *under*-reads for this rider, so "if the historical bias holds, 320 is a floor
+  rather than a ceiling." The validation says the opposite: he could hold 319W for two reps and
+  then gave back 5W and 90 seconds on the third. **320 is a ceiling.** Don't drift the Tuesday reps
+  above it before the 11/03 test. The next progression on that session is **duration — 3×15 → 3×18
+  at the same 320W** — not watts. Written into the Phase 2 Tuesday description.
+- **The week fell apart after 9/02.** Four consecutive off-bike days, **9/03-9/06**, taking out the
+  Thursday over-unders (95 TSS), the **Saturday long ride** (135) and the Sunday Z2 (62) — about
+  **292 TSS** of prescribed work.
+  - Week TSS **124** against **356 / 333 / 378** for the three weeks before it.
+  - TSB **−19.8 (9/01) → +5.9 today**; ATL **52.3 → 23.0**. He is not fatigued, he is *unloaded*.
+  - (CTL reads 28.8, but the rolling 56-day window now seeds on the 7/16-7/26 gap, so the absolute
+    number is biased low. Read the **ramp, −2.3/wk**, and TSB — not the level.)
+  - Oura shows a plausible cause rather than illness: sleep **66 / 5.99 h** on 9/04 and **70 /
+    6.12 h** on 9/05, with HRV bottoming at **42** on 9/02. Temp deviation never left ±0.3 and RHR
+    never left 41-49. It reads as life load, not sickness.
+  - **It has already rebounded**: 9/06 readiness **88**, sleep **82 / 8.63 h**, RHR **42** vs base
+    44, HRV **60** — dead on the 54-day median.
+  - One flag to keep an eye on: the **7-day HRV mean is 53.9 vs 62.6 for the prior 21 days, −14%**,
+    just past the 12% flag. That window is dominated by the two short nights and the trailing
+    reading is back at baseline, so it is a watch item, not an action item.
+- **Plan change — the Phase 3 Saturday re-check is now a single-sample gate on 9/12.** The 9/01
+  release of 165 → 135 min was hedged on two more long rides (9/05, 9/12) coming in under 6.0%
+  decoupling. **9/05 never happened.** So the plan now reads explicitly:
+  - 9/12 decoupling **≤ 6.0%** → keep 135 min / TSS 98.
+  - 9/12 decoupling **> 6.0%** → restore 165 min / TSS 120.
+  - **9/12 not ridden** → restore 165 min / TSS 120.
+  The third branch is the real change. The release rested on two samples, one of them marginal
+  (5.7%) and rising from 3.8%, and the athlete has now gone a full week with no long ride. With no
+  confirming data, default back to the durability duration rather than assume the limiter stayed
+  resolved. **Sat 9/12 is the protected session of this week** — it is a decision, not just a ride.
+- **No change to this week's structure otherwise.** Week 13 is the last of Phase 2 (Phase 3 opens
+  9/14). Coming off four days down with TSB +5.9 and readiness 88, Tue threshold and Thu
+  over-unders can run as prescribed; the risk is skipping them, not riding them. Today's Monday is
+  written as "Rest or easy spin" and the recommendation is the **spin** — 45-60 min Z2 @ 205-220W,
+  ~35 TSS. A fifth consecutive rest day buys no recovery he hasn't already banked and costs
+  aerobic volume the week can't spare.
+
+---
+
 ## 2026-09-01 — **The durability gate was met. Phase 3 Saturday released 165 → 135 min. The standing limiter since July is resolved.**
 
 - **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
