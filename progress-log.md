@@ -10,6 +10,51 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-08 — **The 3×18 duration progression is deferred out of Phase 2. Two independent signals say he is a notch below his 9/02 aerobic state, and the HRV flag did not clear.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  never confirm or refute a test. It is not a check on the anchor.)
+- **Plan change — Phase 2 Tuesday: hold at 3×15 @ 318-322W; the 3×15 → 3×18 progression written on
+  9/07 is deferred to Phase 4 / post-11/03-test.** Today (9/08) is the *last* Phase 2 Tuesday —
+  Phase 3 opens 9/14 with a 4×4 VO2 Tuesday and has no threshold day — so "next progression" as
+  written on 9/07 read as an instruction to ride 3×18 today. Three reasons not to:
+  - **He has not completed the shorter version yet.** On 9/01, off a much deeper base, rep 3 came
+    in at **314W for 13.5 min** — 5W under band and 90 sec short. Asking for **+9 min at the same
+    320W** (45 → 54 min) is a 20% duration jump on a session he last left unfinished.
+  - **Matched-pair evidence that he is off baseline.** The same 50-min short-endurance session,
+    ridden twice at effectively identical power:
+
+    | date | dur | NP | avg HR | EF | decoupling |
+    |---|---|---|---|---|---|
+    | 9/02 | 50.3 min | 203W | **127** | **1.601** | **0.3%** |
+    | 9/07 | 50.2 min | 204W | **133** | **1.534** | **2.5%** |
+
+    **+6 bpm at the same watts, EF −4.2%.** 1.534 is the lowest endurance EF in the 56-day window.
+    Both numbers are individually benign (2.5% is well inside the 6.0% flag) — it is the *matched
+    pair* that carries the signal, and it points at the four off-bike days plus the 9/04-9/05 sleep
+    debt, not at illness (temp deviation −0.08, RHR 45 vs base 44).
+  - **The base is thin right now.** Week 36 = **124 TSS** against **356 / 333 / 378** for the three
+    weeks before it; the only ride since 9/02 is a 34-TSS spin. Not fatigued — *unloaded*.
+- **Trend flag, second consecutive run: the HRV drop did not clear.** 7-day HRV mean **53.4 vs 62.2**
+  for the prior 21 days = **−14.2%**, still past the 12% flag and effectively unchanged from the
+  −14% logged on 9/07. The 9/07 entry called it a watch item on the grounds that the *trailing*
+  reading was back at baseline (60 on 9/06). It has since stepped **down** two days running —
+  **60 → 56 → 54** against a 60 baseline — so that mitigation no longer holds. Today's readiness 78
+  is green on the headline but its weakest contributors are `recovery_index` **60** and
+  `hrv_balance` **70**, and RHR went **41 → 45** overnight. Still a watch item, not a stop: sleep
+  7.82 h / score 77, temp clean, and this is exactly the profile of a rider resuming load after a
+  down week. **If the 7-day HRV mean is still ≤ −12% on 9/11 with the trailing value under 55, trim
+  Sat 9/12 rather than push it** — see the next point for why that ride matters.
+- **Sat 9/12 stays the protected session and no other structure changes.** It is the single-sample
+  gate on the Phase 3 Saturday duration (≤6.0% decoupling → keep 135 min; >6.0% or not ridden →
+  restore 165). Projecting the week as written (92 / 52 / 95 / 0 / 135) off today's CTL 28.9 /
+  ATL 23.9 puts him into Saturday morning at **TSB −6.6** — mild, and a cleaner state to read
+  decoupling from than the −19.8 he carried on 9/01. The week does **not** need trimming to protect
+  the gate; it needs the Tuesday ridden at its written length rather than inflated.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
