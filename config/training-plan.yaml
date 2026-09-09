@@ -168,15 +168,24 @@ phases:
                                    #   - 9/12 decoupling <= 6.0%  -> keep this at 135 / TSS 98.
                                    #   - 9/12 decoupling  > 6.0%  -> restore 165 min / TSS 120.
                                    #   - 9/12 NOT RIDDEN          -> restore 165 min / TSS 120.
-                                   # The last case is deliberate: the release rested on two
+                                   #   - 9/12 ridden with NO USABLE HR (decoupling_pct null)
+                                   #                              -> restore 165 min / TSS 120.
+                                   # The last two cases are deliberate: the release rested on two
                                    # samples, one of them marginal (5.7%) and rising, and the
                                    # athlete has now gone a full week without a long ride. With
                                    # no confirming data, default back to the durability-building
                                    # duration rather than assume the limiter stayed resolved.
+                                   # The no-HR branch was ADDED 9/09 because it stopped being
+                                   # hypothetical: the 9/08 threshold session recorded no HR at
+                                   # all (avg_hr, EF and decoupling_pct all null). A long ride
+                                   # logged without HR yields no decoupling number, which is the
+                                   # same epistemic position as no ride — so it resolves the same
+                                   # way. Tell the athlete to confirm the strap BEFORE Saturday;
+                                   # this branch is the fallback, not the plan.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
-        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). Restore to 165 min / TSS 120 if Sat 9/12 decoupling comes back over 6.0% — or if 9/12 is not ridden at all. 9/05 was missed (four off-bike days 9/03-9/06), so 9/12 is the only remaining sample and the gate is now single-sample; see the duration_min comment above. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
+        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). Restore to 165 min / TSS 120 if Sat 9/12 decoupling comes back over 6.0% — or if 9/12 is not ridden at all, or is ridden without usable HR (added 9/09 after the 9/08 threshold logged no HR at all). 9/05 was missed (four off-bike days 9/03-9/06), so 9/12 is the only remaining sample and the gate is now single-sample; see the duration_min comment above. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
       sunday:
         type: Endurance
         duration_min: 75

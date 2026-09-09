@@ -10,6 +10,62 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-09 — **The 9/08 threshold recorded no HR, and that is the week's real problem: Saturday's decoupling number is a pre-committed gate. Today's red Oura is the same acute echo the 9/01 session produced, not new fatigue.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: it reads FTP from the **Strava profile field**, so it can never
+  confirm or refute a test result.)
+- **The 9/08 Tuesday threshold ran the full prescription — on power.** 3×~14.9 min at **319W**
+  (100% FTP), 44.8 min total at threshold, NP 292, IF 0.912, TSS 91, 68.8% of ride time in Z4.
+  Against 9/01's 3×15: rep 3 on 9/01 came in at **314W and was cut to 13.5 min**; on 9/08 all
+  three reps went **full length and on target**. That is a real completion improvement at the
+  320 ceiling.
+- **But `avg_hr`, `max_hr`, `efficiency_factor` and `decoupling_pct` are all null for 9/08.** The
+  HR strap did not record. This matters more than it looks:
+  - The **0.0% fade** on 9/08 is *not* evidence of a lower physiological cost. All three reps
+    read exactly 319/319/319 — that is ERG mode holding power, so fade on this session measures
+    the trainer, not the athlete. On an ERG-locked rep the informative channel is **HR drift**,
+    and it is missing. 9/01's 1.6% fade was informative precisely *because* the athlete came off
+    the target (314W, short rep) — a mode of failure ERG masks.
+  - So the honest read is: **9/08 ≥ 9/01 on completion, unknown on cost.** Do not log this as
+    "fade improved 1.6% → 0.0%."
+- **Plan change — the Phase 3 Saturday gate gets a fourth branch: ridden without usable HR →
+  restore 165 min / TSS 120.** The 9/07 entry made 9/12 a single-sample gate on long-ride
+  decoupling ≤ 6.0%. A long ride logged with no HR produces **no decoupling number at all**,
+  which is the same epistemic position as no ride, so it resolves the same way. This is a
+  clarification of the already-committed rule, not a new training judgement — but after 9/08 it
+  is no longer hypothetical. **Action for the athlete: confirm the strap on today's easy ride,
+  not on Saturday morning.** Sat 9/12 is the last sample before Phase 3 opens 9/14.
+- **Today's red Oura is a dose-dependent echo of Tuesday, not accumulated fatigue.** RHR **49**
+  (+5 vs 44 base), HRV **46** (−22% vs 59 median). The pattern is now reproducible across the
+  block — next-morning readings after each hard session:
+
+  | session | IF | TSS | next-day RHR | next-day HRV | readiness |
+  |---|---|---|---|---|---|
+  | 8/18 Threshold | 0.835 | 82 | 46 | 55 | 73 |
+  | 8/20 Threshold | 0.846 | 84 | 42 | 61 | 85 |
+  | 8/27 over-unders | 0.881 | 91 | 45 | 53 | 78 |
+  | **9/01 Threshold** | **0.908** | 90 | **49** | **42** | 75 |
+  | **9/08 Threshold** | **0.912** | 91 | **49** | **46** | 76 |
+
+  The two IF-0.91 sessions produce a near-identical morning; everything at IF ≤ 0.88 does not.
+  And **9/02 → 9/03 recovered in a single day** (RHR 49 → 42, HRV 42 → 57) *while riding a
+  50-min Z2*. Temp deviation −0.05, sleep 84 / 7.49 h. This is not illness and not a hole.
+- **He is unloaded, not fatigued — the risk this week is under-riding it.** 7-day TSS **125**,
+  CTL **30.4**, TSB **−1.2**, ramp **−2.1/wk**, 2 rides this week. Riding the rest of the week
+  as prescribed (52 + 95 + 0 + 135 + 62) lands **week TSS 469** and **TSB −17.8** entering Phase
+  3 on 9/14 — against the **−19.8** he carried on 9/01 and handled. CTL rebuilds 30.4 → 34.8
+  (+4.4/wk). No volume change warranted; the full week is the right call.
+- **Watch item, carried forward and unchanged: the HRV drift.** 7-day HRV mean **53.9 vs 61.4**
+  for the prior 21 days, **−12.3%** — still just past the 12% flag, and essentially flat against
+  the −14% logged on 9/07, so it is not deepening. But Oura's own longer-baseline `hrv_balance`
+  contributor has fallen steadily for three weeks: **93 (8/17) → 66 (today)**, and the last 12
+  days read 86, 81, 81, 84, 73, 83, 71, 68, 74, 68, 70, 66. Two of the seven days in the current
+  window are IF-0.91 threshold days, which explains part of it. Re-read this after Phase 3's
+  first week: if `hrv_balance` is still falling on a normal load, it stops being a watch item.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
