@@ -84,7 +84,7 @@ phases:
         target_watts: "305-320"
         target_if: 0.85
         target_tss: 92
-        description: "WU, Threshold reps @ ~100% FTP, CD. RE-ANCHORED 8/28 to the tested FTP 320 (was 290-305 @ FTP 305). VALIDATION RESULT (9/01, read 9/07): 320 CONFIRMED and no longer provisional — the 3x15 ran 319W/HR 168, 319W/HR 175, 314W/HR 175, fade 1.6%, max HR 183, 43.3 min total at 99% FTP. Against the pre-committed gate: rep 3 above the 310W fail line (pass), last-rep HR exactly on the 175 ceiling (pass), fade inside +/-2% (pass); but rep 3 came in 5W under the 318-322 band and was cut short to 13.5 min of 15. So 320 is a CEILING, not the floor the 8/28 note hypothesised — hold the anchor at 320 and do not drift the Tuesday reps above it before the 11/03 test. Next progression here is duration (3x15 -> 3x18 at the same 320W), not watts. Progression to date: 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801 (sub-max 20-min best 305W); 8/20 held 2x20 over-unders at 300W blended (8 overs @ 322W, 0.0% fade), max HR 177 vs 197; 8/27 held 2x20 over-unders at 312W blended (8 overs @ 338W, -0.1% fade), max HR 181, sub-max 20-min best 313W. All clearly submaximal. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
+        description: "WU, Threshold reps @ ~100% FTP, CD. RE-ANCHORED 8/28 to the tested FTP 320 (was 290-305 @ FTP 305). VALIDATION RESULT (9/01, read 9/07): 320 CONFIRMED and no longer provisional — the 3x15 ran 319W/HR 168, 319W/HR 175, 314W/HR 175, fade 1.6%, max HR 183, 43.3 min total at 99% FTP. Against the pre-committed gate: rep 3 above the 310W fail line (pass), last-rep HR exactly on the 175 ceiling (pass), fade inside +/-2% (pass); but rep 3 came in 5W under the 318-322 band and was cut short to 13.5 min of 15. So 320 is a CEILING, not the floor the 8/28 note hypothesised — hold the anchor at 320 and do not drift the Tuesday reps above it before the 11/03 test. Next progression here is duration (3x15 -> 3x18 at the same 320W), not watts. 9/08 RESULT: the full 3x15 was completed clean — 319W/319W/319W for 14.9/14.9/15.0 min, 0.0% fade, 44.8 min at 100% FTP, IF 0.912, TSS 91. That closes out what 9/01 left open (rep 3 there was 314W and cut to 13.5 min), so the duration progression is earned. But CAVEAT: the HR strap was dead for this ride (avg/max HR and EF all null), and in ERG mode holding exactly 319W is what the trainer does, not what the athlete proves — the cost of the session is unmeasured. Also note 9/08 was the last Phase 2 Tuesday (Phase 3 opens 9/14), so there is no slot left here for 3x18; carry the earned duration into the Phase 4 Tuesday and re-test the anchor on 11/03 as planned. Progression to date: 8/18 held 2x20 @ 299W/HR 162 + 304W/HR 169, fade -1.7%, EF 1.801 (sub-max 20-min best 305W); 8/20 held 2x20 over-unders at 300W blended (8 overs @ 322W, 0.0% fade), max HR 177 vs 197; 8/27 held 2x20 over-unders at 312W blended (8 overs @ 338W, -0.1% fade), max HR 181, sub-max 20-min best 313W. All clearly submaximal. Fuel per the indoor-threshold rule (main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike, fan on)."
       wednesday:
         type: Endurance
         duration_min: 75
@@ -168,15 +168,25 @@ phases:
                                    #   - 9/12 decoupling <= 6.0%  -> keep this at 135 / TSS 98.
                                    #   - 9/12 decoupling  > 6.0%  -> restore 165 min / TSS 120.
                                    #   - 9/12 NOT RIDDEN          -> restore 165 min / TSS 120.
-                                   # The last case is deliberate: the release rested on two
+                                   #   - 9/12 RIDDEN WITH NO HR   -> restore 165 min / TSS 120.
+                                   # The last two cases are deliberate: the release rested on two
                                    # samples, one of them marginal (5.7%) and rising, and the
                                    # athlete has now gone a full week without a long ride. With
                                    # no confirming data, default back to the durability-building
                                    # duration rather than assume the limiter stayed resolved.
+                                   # ADDED 9/10 — the no-HR branch. Decoupling is a power:HR
+                                   # ratio, so a ride with no HR stream scores decoupling_pct
+                                   # null, not "fine": it is a non-sample and must not be read
+                                   # as a pass. This is live, not hypothetical — the HR strap
+                                   # dropped out on 9/08 and 9/09 (both rides logged avg_hr,
+                                   # max_hr, EF and decoupling all null; 9/07 still had HR, so
+                                   # it failed between 9/07 and 9/08). Fix or replace the strap
+                                   # before Saturday: with no HR on 9/12 the single remaining
+                                   # sample is lost and Phase 3 Saturday reverts to 165 min.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
-        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). Restore to 165 min / TSS 120 if Sat 9/12 decoupling comes back over 6.0% — or if 9/12 is not ridden at all. 9/05 was missed (four off-bike days 9/03-9/06), so 9/12 is the only remaining sample and the gate is now single-sample; see the duration_min comment above. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
+        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). Restore to 165 min / TSS 120 if Sat 9/12 decoupling comes back over 6.0%, or if 9/12 is not ridden at all, or if it is ridden with no HR data. 9/05 was missed (four off-bike days 9/03-9/06), so 9/12 is the only remaining sample and the gate is now single-sample; see the duration_min comment above. The no-HR branch was added 9/10 after the HR strap dropped out on 9/08 and 9/09 — decoupling is a power:HR ratio, so a ride with no HR is a non-sample, not a pass. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
       sunday:
         type: Endurance
         duration_min: 75
