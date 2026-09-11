@@ -10,6 +10,106 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-11 — **Tuesday cleared the threshold progression trigger; Thursday was the first key session of the block left unfinished. No config change — the Saturday gate fires tomorrow.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Known blind spot, unchanged: it reads FTP from the **Strava profile field**, so it can never
+  confirm or refute a test.) Ride max HR 179 on 9/10, nothing near the 197 anchor.
+- **No plan change.** The one live decision this week — Phase 3's Saturday duration — is a
+  pre-committed single-sample gate that reads **Sat 9/12**, and it is already written into
+  `config/training-plan.yaml`. Nothing to change until it fires.
+
+### Tue 9/08 — the threshold progression trigger is met
+
+The 8/28 validation session (9/01) left rep 3 short. 9/08 did not:
+
+| rep | 9/01 | 9/08 |
+|---|---|---|
+| 1 | 14.9 min @ **319W** (HR 168) | 14.9 min @ **319W** |
+| 2 | 14.9 min @ **319W** (HR 175) | 14.9 min @ **319W** |
+| 3 | **13.5 min @ 314W** (HR 175) | **14.9 min @ 319W** |
+| total | 43.3 min, fade **1.6%** | **44.8 min, fade 0.0%** |
+
+NP 292 / IF 0.912 / TSS 91, all three reps at **100% FTP**, no fade. This is the clean 3×15 the
+9/07 entry said was still owed. **The plan's stated next progression — 3×15 → 3×18 at the same
+320W — is now earned.** Caveat: **no HR was recorded on 9/08 or 9/09** (strap absent both days; it
+was back on 9/10), so the power is verified and the cost in HR is not.
+
+Where that progression actually lands is an open question worth raising now: Phase 2's Tuesdays are
+finished (week 13 is the last), Phase 3's Tuesday is VO2max, and **Phase 4's Tuesday (from 10/12)
+is written as 2×25-30 min @ 314-320W** — longer reps than 3×18, not shorter. Phase 4 also gets
+re-anchored after the 11/03 test. Recommend leaving it alone for now and re-reading it at the
+Phase 3 → Phase 4 transition rather than writing 3×18 into a phase five weeks out.
+
+### Thu 9/10 — half the session, at the right power, with hotter HR
+
+The over-unders were ridden **exactly on prescription for power and less than halfway on volume**:
+
+| | 8/27 | 9/10 |
+|---|---|---|
+| work time | **39.8 min** | **31.6 min** |
+| overs | **8 × 338W** | **4 × 335W** |
+| unders | 8 × 296W | 5 × 294W |
+| NP / IF / TSS | 282 / 0.881 / 91 | 273 / 0.852 / 79 |
+| decoupling | 11.7% | **14.1%** |
+| ride max HR | 181 | 179 |
+
+Prescription is 2 sets of 4×(3 min under @295 / 2 min over @336). He completed **set 1 as 3×(3/2)**
+— 15.0 min — then the ride fragments into a 3.9 min block, a 7.3 min under/over/under, a 1.1 min
+stub and a 4.3 min block. Watts were right (unders 294-296 vs 295, overs 335 vs 336); the second
+set never happened.
+
+HR at matched power tells the same story earlier than the abandonment does:
+
+| over # | 8/27 W / HR | 9/10 W / HR |
+|---|---|---|
+| 1 | 338 / **164** | 338 / **167** |
+| 2 | 338 / **167** | 338 / **172** |
+| 3 | 338 / **169** | 336 / **175** |
+| 4 | 336 / 172 | 328 / 172 |
+| 5-8 | 338/171, 338/174, 338/177, 336/**178** | — |
+
+**+6 bpm by over 3 at identical watts**, and 175 is the same last-rep HR ceiling the 9/01
+validation ran into. Two weeks ago he carried that load through eight overs and finished at 178.
+Decoupling 14.1% is the highest of the four over-under sessions in the window (8/13 12.0% → 8/20
+6.1% → 8/27 11.7% → 9/10 14.1%), though this session structure inflates Pw:Hr, so read the HR
+table, not the single number.
+
+**The most likely cause is placement, not decline.** 9/08 was the largest threshold session he has
+done (44.8 min at 100% FTP), it came **48 h** earlier, and the day between it and Thursday was the
+week's worst recovery print — **9/09 readiness 74, RHR 49 (+5 over the 44 base, exactly the
+elevated flag), HRV 46 vs a 59 54-day median (−22%)**. Week TSS also stepped 124 → 257 after four
+off-bike days. One unfinished session inside that sequence is a cost of the Tuesday, not evidence
+the athlete is going backwards. Worth one line here so that if the *next* over-under also comes in
+short, this is the second data point and not the first.
+
+### Recovery trend
+
+Readiness 85 / 79 / 74 / 82 across 9/07-9/10; RHR 41 / 45 / 49 / 46 against a 44 base; HRV 56 / 53
+/ 46 / 57 against a 59 median. **The −12% HRV flag from 9/07 is still standing**: 7-day mean
+**53.9** vs **61.2** for the prior 21 days (−12.0%, threshold 12%), second week running. Trailing
+reading is back at 57 and sleep has been good all week (81 / 84 / 87, 7.5-7.9 h), so it remains a
+watch item rather than an action item — but it has not cleared. **No Oura record for 9/11 yet** at
+the time of this run, so today's brief carries readiness UNKNOWN.
+
+### Load into Phase 3
+
+7-day TSS **257**, 3-day **132**, CTL **40.2**, ATL 38.5, TSB **+1.7**, ramp −0.5/wk. Phase 3 opens
+Monday **9/14**. Riding Saturday (135) and Sunday (62) as written projects TSB **−1.5 Monday** and
+**−6.6 after Tuesday's VO2** — appropriate, no reason to trim Saturday, and trimming it would break
+the gate it exists to measure.
+
+**One thing to raise before Monday, not to change today:** Phase 3's Tuesday is **4×4 min @
+340-368W (115% FTP)** and this athlete has done **no VO2 work anywhere in this block**. On 9/10 he
+stopped after four 2-min efforts at 335W. 4×4 with full 4-min recoveries is a different and in some
+ways kinder session than over-unders off 3-min unders — but opening a new block at 115% FTP on that
+evidence is a real ask. **Proposal, for the athlete to accept or reject: open Phase 3 Tuesday at
+4×4 @ 355-362W (111-113% FTP) and let week 15 go to 368W if week 14 completes clean.** Not written
+into the plan — deliberately, because Saturday's gate fires first and should be read before
+anything about Phase 3 moves.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
