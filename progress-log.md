@@ -10,6 +10,124 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-11 — **The Thursday over-unders fragmented at 79% and the athlete reported burning quads. Max HR 179 vs 197 says it was substrate, not the engine — and the cause was Tuesday, not Thursday.**
+
+- **No stat change.** FTP 320, max HR 197, RHR 44, weight 79 all stand. Nothing here touches the anchor:
+  the athlete rode *on* target until he stopped, so this is not evidence 320 is wrong.
+- **The HR strap came back.** 9/10 logged avg HR 151, max 179, EF 1.808. The no-HR branch added
+  yesterday stays in as a safety net, but the immediate problem resolved itself.
+- **9/10 vs the same session three weeks running:**
+
+  | | 8/20 | 8/27 | **9/10** |
+  |---|---|---|---|
+  | work blocks | 2 × 19.9 min | 2 × 19.9 min | **5 fragments**: 15.0 / 3.9 / 7.3 / 1.1 / 4.3 |
+  | total work | 39.8 min | 39.8 min | **31.6 min (−21%)** |
+  | overs | 8 @ 323W | 8 @ 338W | **4 @ 335W** |
+  | fade on overs | −0.1% | 0.0% | **+1.8%** |
+  | IF / TSS | 0.846 / 84 | 0.881 / 91 | **0.852 / 79** |
+  | max HR | 177 | 181 | **179** |
+
+  **The fragmentation is the finding.** He didn't ride two sets — he rode one, stopped, and made
+  three more attempts to restart. Set 1 died at exactly **3 of 4 couplets** (15.0 min of 20), dead
+  on prescription the whole way: 296/338, 296/338, 296/336, last over at HR 175 — exactly the
+  validation ceiling, never past it. The restart shows the decay: over back to **328W**, next under
+  to **289W** and cut to 144s of 180.
+- **It was not cardiovascular, and that is the diagnostic point.** Max HR **179 against 197** — 18
+  bpm of headroom. On 8/27 he went to **181 and completed all 40 min**. He stopped with the heart in
+  reserve ⇒ local muscular / glycogen depletion. That matches the subjective report (burning quads)
+  exactly, and it means this is a **fuelling and session-spacing problem, not a fitness regression**.
+- **The cause was Tuesday.** Tuesday→Thursday across the block:
+
+  | week | Tuesday | → Thursday over-unders |
+  |---|---|---|
+  | 8/18 | 2×20 @ 299/304W (**96%** FTP), 82 TSS | 8/20: **full 40 min, 0.0% fade** |
+  | 8/25 | ramp test, 33 min, 38 TSS | 8/27: **full 40 min, 0.0% fade** |
+  | **9/08** | **3×15 @ 319W (100% FTP), 44.8 min at threshold, 91 TSS** | **9/10: 31.6 min, fragmented** |
+
+  9/08 was the largest time-at-threshold Tuesday of the block and his first at a true 100% FTP.
+  48 h and one Z2 ride didn't cover it. **TSB said +5.7 going in** — PMC freshness is a whole-body
+  number and says nothing about quad glycogen. CTL is also still ~6 points below an uninterrupted
+  block. **Fresh but not durable.**
+- **This reframes yesterday's entry rather than reversing it.** 9/08's clean 3×15 was real and the
+  duration progression is still earned — but its price is now visible, 48 h downstream. Written into
+  the Phase 2 Tuesday description as a **pairing constraint**: don't cap the Tuesday, protect the
+  Thursday when the Tuesday steps up. Relevant for the Phase 4 Tuesday, which is 2×25-30.
+- **Recommended but NOT yet applied — swap Sat 9/12 and Sun 9/13.** Easy Z2 90 min Saturday, the
+  165-min long ride with 3×12 tempo Sunday. The reason is **sample validity**, not softness: 9/12 is
+  the single-sample durability gate, and decoupling measured ~24 h after the quads gave out reads
+  residual fatigue rather than durability. A contaminated number would *falsely* fail the gate and
+  revert Phase 3 Saturday to 165 min on bad evidence. The swap buys 48 h instead of 24 h, and 9/13
+  is still inside Phase 2, so the sample still lands before Phase 3 opens 9/14. Held pending the
+  athlete's call — Oura had not posted a 9/11 reading at the time of writing, so there is no
+  recovery number for the day after the failed session.
+- **Watch fuelling on the Tuesday session specifically.** The indoor-threshold rule (main meal 3 h
+  out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike) is written into the plan, but a substrate
+  failure 48 h later is the signature of under-fuelling the *preceding* session, not the failed one.
+
+---
+
+## 2026-09-10 — **The HR strap died on 9/08 and nobody noticed. That silently breaks Saturday's durability gate, so the gate now has a fourth branch. Separately: the 3×15 duration progression was earned on 9/08 — with an asterisk.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  never confirm or refute a test result. It is not a check on the anchor.)
+- **Plan change — a fourth branch on the Phase 3 Saturday gate: *ridden with no HR* → restore
+  165 min / TSS 120.** The 9/07 entry wrote three branches (≤6.0% keep 135, >6.0% restore 165, not
+  ridden restore 165). It did not anticipate the ride happening but the *measurement* failing.
+  - **The HR strap dropped out between 9/07 and 9/08.** 9/07 logged avg HR 133 / max 153. Then
+    **9/08 and 9/09 both logged `avg_hr`, `max_hr`, `efficiency_factor` and `decoupling_pct` as
+    null.** Two consecutive rides, no HR stream at all.
+  - Decoupling is a **power:HR ratio**. A ride with no HR does not score a good decoupling number —
+    it scores **`null`**. Left unhandled, 9/12 could be ridden perfectly and still produce no
+    reading, and the pipeline's silence could easily be misread as a pass.
+  - So the same logic the 9/07 entry applied to "not ridden" applies here: **no confirming data ⇒
+    default back to the durability duration.** Written into `duration_min`'s comment and the
+    session description, not just here.
+  - **Action item for the athlete, and it is the highest-value thing in this entry: fix or replace
+    the strap before Saturday.** 9/12 is the only remaining sample before Phase 3 opens 9/14. Ride
+    it without HR and the sample is lost and Saturday reverts to 165 min by rule.
+- **Trend — the 3×15 → 3×18 progression gate fired on 9/08, and there is no slot left to spend it
+  in.** The 9/07 entry set the next Tuesday progression as duration at a held 320W. 9/08 delivered:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 14.9 min | **319W** | 100% | — |
+  | 2 | 14.9 min | **319W** | 100% | — |
+  | 3 | **15.0 min** | **319W** | 100% | — |
+
+  Fade **0.0%**, 44.8 min at 100% FTP, IF 0.912, TSS 91. Against 9/01 (rep 3 at 314W, cut to
+  13.5 min) this closes out the one thing that session left open — three full reps, no give-back.
+- **But read that table with the asterisk it deserves.** Two reasons not to over-read it:
+  1. **No HR.** The whole point of the 175-bpm last-rep ceiling was to price the effort. That
+     column is empty. We know he *completed* it; we do not know what it cost.
+  2. **ERG mode.** 319 / 319 / 319W with 0.0% fade is partly the trainer holding the number, not
+     the athlete proving it. The meaningful signal is the *completion* — 15.0 min on rep 3 where
+     9/01 gave up 90 seconds — not the flatness of the watts.
+
+  Also: **9/08 was the last Phase 2 Tuesday.** Phase 3 opens 9/14 and its Tuesday is VO2max 4×4,
+  not threshold. There is nowhere to ride a 3×18 before Phase 4. Noted in the Phase 2 Tuesday
+  description so the earned progression carries forward rather than being silently dropped.
+  **No watt change: 320 stays a ceiling until the 11/03 test.**
+- **The week is rebounding hard, and that is mostly correct.** Mon-Wed is **178 TSS**; riding
+  today's over-unders (95) plus Sat (135) and Sun (62) lands the week near **470** — against
+  356 / 333 / 378 for the three good weeks before the gap, and **124** last week. That is a ~24%
+  jump over the recent peak straight out of an unloaded week, which normally earns a trim.
+  - Not trimming it. TSB is **+5.7** and was +5.9 on Monday — he is unloaded, not fatigued — and
+    `review` still flags the standing weakness as **under-doing**: 7 Threshold sessions completed
+    vs ~12 planned, 19 Endurance vs ~27, over 8 weeks. The failure mode for this athlete has
+    consistently been missed sessions, not excess ones.
+  - Recovery supports it: readiness **82**, sleep **87 / 7.9 h**, HRV **57** vs base 59 (back on
+    baseline after the **46** dip on 9/09), RHR **46** vs base 44. The two soft contributors are
+    HRV balance 73 and resting HR 68 — worth a glance, not an action.
+- **One guardrail on today rather than a plan edit.** Ride the over-unders **at** prescription
+  (unders 295W, overs 336W) and do not let them drift hot. Last time out, 8/27 ran unders 296 /
+  overs 338 with **0.0% fade on the overs** and max HR 181 vs 197 — comfortably submaximal, so the
+  temptation to push is real. But there is a weak two-point pattern that a hotter Thursday costs
+  Saturday's number: 8/20 (IF 0.846) → 8/22 decoupling **3.8%**; 8/27 (IF 0.881) → 8/29 **5.7%**.
+  With Saturday now a single-sample, consequential gate, that is not the week to test it.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
