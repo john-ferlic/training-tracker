@@ -10,6 +10,62 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-11 — **The Thursday over-unders fragmented at 79% and the athlete reported burning quads. Max HR 179 vs 197 says it was substrate, not the engine — and the cause was Tuesday, not Thursday.**
+
+- **No stat change.** FTP 320, max HR 197, RHR 44, weight 79 all stand. Nothing here touches the anchor:
+  the athlete rode *on* target until he stopped, so this is not evidence 320 is wrong.
+- **The HR strap came back.** 9/10 logged avg HR 151, max 179, EF 1.808. The no-HR branch added
+  yesterday stays in as a safety net, but the immediate problem resolved itself.
+- **9/10 vs the same session three weeks running:**
+
+  | | 8/20 | 8/27 | **9/10** |
+  |---|---|---|---|
+  | work blocks | 2 × 19.9 min | 2 × 19.9 min | **5 fragments**: 15.0 / 3.9 / 7.3 / 1.1 / 4.3 |
+  | total work | 39.8 min | 39.8 min | **31.6 min (−21%)** |
+  | overs | 8 @ 323W | 8 @ 338W | **4 @ 335W** |
+  | fade on overs | −0.1% | 0.0% | **+1.8%** |
+  | IF / TSS | 0.846 / 84 | 0.881 / 91 | **0.852 / 79** |
+  | max HR | 177 | 181 | **179** |
+
+  **The fragmentation is the finding.** He didn't ride two sets — he rode one, stopped, and made
+  three more attempts to restart. Set 1 died at exactly **3 of 4 couplets** (15.0 min of 20), dead
+  on prescription the whole way: 296/338, 296/338, 296/336, last over at HR 175 — exactly the
+  validation ceiling, never past it. The restart shows the decay: over back to **328W**, next under
+  to **289W** and cut to 144s of 180.
+- **It was not cardiovascular, and that is the diagnostic point.** Max HR **179 against 197** — 18
+  bpm of headroom. On 8/27 he went to **181 and completed all 40 min**. He stopped with the heart in
+  reserve ⇒ local muscular / glycogen depletion. That matches the subjective report (burning quads)
+  exactly, and it means this is a **fuelling and session-spacing problem, not a fitness regression**.
+- **The cause was Tuesday.** Tuesday→Thursday across the block:
+
+  | week | Tuesday | → Thursday over-unders |
+  |---|---|---|
+  | 8/18 | 2×20 @ 299/304W (**96%** FTP), 82 TSS | 8/20: **full 40 min, 0.0% fade** |
+  | 8/25 | ramp test, 33 min, 38 TSS | 8/27: **full 40 min, 0.0% fade** |
+  | **9/08** | **3×15 @ 319W (100% FTP), 44.8 min at threshold, 91 TSS** | **9/10: 31.6 min, fragmented** |
+
+  9/08 was the largest time-at-threshold Tuesday of the block and his first at a true 100% FTP.
+  48 h and one Z2 ride didn't cover it. **TSB said +5.7 going in** — PMC freshness is a whole-body
+  number and says nothing about quad glycogen. CTL is also still ~6 points below an uninterrupted
+  block. **Fresh but not durable.**
+- **This reframes yesterday's entry rather than reversing it.** 9/08's clean 3×15 was real and the
+  duration progression is still earned — but its price is now visible, 48 h downstream. Written into
+  the Phase 2 Tuesday description as a **pairing constraint**: don't cap the Tuesday, protect the
+  Thursday when the Tuesday steps up. Relevant for the Phase 4 Tuesday, which is 2×25-30.
+- **Recommended but NOT yet applied — swap Sat 9/12 and Sun 9/13.** Easy Z2 90 min Saturday, the
+  165-min long ride with 3×12 tempo Sunday. The reason is **sample validity**, not softness: 9/12 is
+  the single-sample durability gate, and decoupling measured ~24 h after the quads gave out reads
+  residual fatigue rather than durability. A contaminated number would *falsely* fail the gate and
+  revert Phase 3 Saturday to 165 min on bad evidence. The swap buys 48 h instead of 24 h, and 9/13
+  is still inside Phase 2, so the sample still lands before Phase 3 opens 9/14. Held pending the
+  athlete's call — Oura had not posted a 9/11 reading at the time of writing, so there is no
+  recovery number for the day after the failed session.
+- **Watch fuelling on the Tuesday session specifically.** The indoor-threshold rule (main meal 3 h
+  out, 60-90 g carb/hr + 500-800 mg sodium/hr on-bike) is written into the plan, but a substrate
+  failure 48 h later is the signature of under-fuelling the *preceding* session, not the failed one.
+
+---
+
 ## 2026-09-10 — **The HR strap died on 9/08 and nobody noticed. That silently breaks Saturday's durability gate, so the gate now has a fourth branch. Separately: the 3×15 duration progression was earned on 9/08 — with an asterisk.**
 
 - **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
