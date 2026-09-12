@@ -10,6 +10,56 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-12 — **The Thursday over-under broke for the first time in the series. No config change; flagging it two days before the VO2 block opens. HR strap dropped on 9/08-9/09, which puts today's gate sample at risk.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: it reads FTP from the **Strava profile field**, so it can never
+  confirm or refute a test result.)
+- **No plan change.** Week 13 runs as written; Phase 3 opens Mon 9/14.
+- **Trend shift — the 9/10 over-unders failed to complete, and this session had never failed
+  before.** Same prescription, same watts, three samples:
+
+  | date | work time | overs | fade | decoupling | NP | IF | EF |
+  |---|---|---|---|---|---|---|---|
+  | 8/20 | 40.0 min (2 full sets) | 8 × 322W | 0.0% | — | — | — | — |
+  | 8/27 | 39.8 min (2 full sets) | 8 × 336-338W | −0.1% | 11.7% | 282 | 0.881 | 1.869 |
+  | **9/10** | **31.6 min, fragmented** | **338 / 338 / 336 → 328** | **4.8%** | **14.1%** | **273** | **0.852** | **1.808** |
+
+  Set 1 stopped at **3×(3/2) = 15.0 min** against a prescribed 4×(3/2) = 20 min, then the session
+  broke into fragments of 3.9 / 7.3 / 1.1 / 4.3 min. Unders decayed **296 → 294 → 289W**, the last
+  over came in at **328W**. At matched power the cost shows up early: first under of set 1 ran
+  **HR 155 @ 296W on 9/10 vs 151 @ 296W on 8/27**, and the whole ride finished 9W down on NP for
+  the same 151 avg HR.
+- **Read it as re-entry cost, not a fitness loss — but don't ignore it.** 9/10 was the fourth ride
+  back after **four off-bike days (9/03-9/06)**, and the week before it carried **124 TSS** against
+  356 / 333 / 378 for the three weeks prior. That is the most likely explanation. The reason it
+  still matters: **Phase 3's VO2 opener (Tue 9/15, 4×4 @ 340-368W) asks for 30W more than the overs
+  that just fell apart.** If 9/15 also fragments, that is two in a row and the VO2 targets need a
+  look — not the anchor, which the 9/01 3×15 validated.
+- **Oura — autonomic markers are drifting down underneath good acute reads.** The `hrv_balance`
+  contributor has fallen **90 (8/22) → 63 (9/11)**, its lowest in the window, and it kept falling
+  *through* the four off-bike days — so it is not this week's training load. 7-day HRV mean **53.1
+  vs 58.8** over 54 days (**−10%**, inside the 12% flag); 7-day RHR **45.0 vs 44.3** baseline. The
+  acute reads are fine — 9/11 readiness **82**, sleep **88 / 8.15 h**, temp deviation **+0.02** —
+  and `hrv_balance` is a lagging 2-week-vs-3-month comparison, so this is a watch item, not an
+  action item. Revisit if readiness drops under 75 twice running.
+- **Data quality — the HR strap recorded nothing on 9/08 and 9/09.** Both rides came back with no
+  avg HR, no max HR and therefore **no decoupling**. Power was intact (9/08 NP 292 / IF 0.912,
+  essentially a repeat of 9/01's 290 / 0.908), so the sessions count for load but are invisible to
+  every HR-based read. **This is the live risk today:** the 9/12 Saturday gate is decided on
+  decoupling, and a dropped strap produces no number at all — which under the 9/07 rule lands in
+  the "not ridden" branch and restores Phase 3 Saturday to 165 min / TSS 120 by default.
+- **Today's gate stands as written (9/07 entry).** Long-ride decoupling: 7/12 **6.2%** → 8/08
+  **9.8%** → 8/15 **8.0%** → 8/22 **3.8%** → 8/29 **5.7%**. Today is the single remaining sample
+  before Phase 3. Note the pacing dependence in the two passing rides — **8/22 NP 212 → 3.8%**,
+  **8/29 NP 217 → 5.7%** — so the Z2 belongs at the *bottom* of the 205-235 band, not the top.
+- **Load projection says the week does not need trimming.** This week reaches ~**454 TSS** against
+  124 last week, but Monday's rest absorbs it: projected TSB on Tue 9/15 is **+1.5** riding the
+  plan as written vs **+3.1** if Sunday were cut 90 → 60 min. A 1.6-point difference does not
+  justify a change, so Sunday stays at 90 min.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
