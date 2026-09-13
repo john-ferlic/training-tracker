@@ -10,6 +10,65 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-13 — **The 9/12 gate fired against the release: Phase 3 Saturday restored 135 → 165 min. Today extended to a 135-min durability makeup — the last sample before Phase 3 opens. Tuesday's 3×15 went clean at 319W with 0.0% fade.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  never confirm or refute a test result. It is not a check on the anchor.)
+- **Plan change — Phase 3 Saturday `duration_min: 135 → 165`, `target_tss: 98 → 120`.**
+  This is the single-sample gate written on 9/07 firing, not a new judgement. It read:
+  9/12 ≤ 6.0% → keep 135; 9/12 > 6.0% → restore 165; **9/12 not ridden → restore 165**.
+  - **Sat 9/12 was ridden, but not as the session.** 60.8 min, NP 211W, IF 0.659, **44 TSS**
+    against a prescribed 165 min / 135 TSS. Time in zone: **98.5% Z2, 0.1% Z3** — the 3×12 tempo
+    blocks were not ridden at all.
+  - Its **4.1% decoupling is not a durability sample.** Pw:Hr drift over 61 min does not test the
+    same thing as drift over 2.5-3 hr; it is the long ride that exposes the limiter. Reading 4.1%
+    as a pass would be the measurement error the 9/07 entry was written to prevent.
+  - So it counts as the **"not ridden"** branch. **Last real long ride: 8/29** — 165 min, 5.7%.
+    That is **14 days** without one, and the release rested on exactly two samples, one marginal
+    (5.7%) and rising from 3.8%. Restoring the duration is the pre-committed default.
+  - **Return condition written into the plan:** back to 135 min / TSS 98 after **two consecutive
+    long rides (≥ 135 min) under 6.0%** — the same bar as the 9/01 release. Today's makeup ride
+    counts as sample one if it is ridden at ≥ 135 min.
+- **Plan change — schedule override for today, 9/13: 90 min flat Z2 (62 TSS) → 135 min with
+  3×12 min tempo @ 245-250W (~105 TSS).** Today is the last day of Phase 2; Phase 3 opens 9/14.
+  With Saturday gone, this is the last chance to sample durability before a **lower-volume VO2max
+  block**, and it restores the same-power HR-drift series (8/08 +7 @ 249W → 8/15 +2 @ 244W →
+  8/22 −1 @ 244W → 8/29 0 @ 249W) that has no September reading.
+  - **Justified by recovery, not by making up TSS.** 9/12 Oura: readiness **87**, HRV **83** against
+    a 54-day median of **59** (the highest in the window), RHR **40** (the lowest in the window),
+    sleep 7.76 h. TSB **+5.6**, 7-day TSS **301** against ~**436** prescribed, 3-day TSS **44**.
+  - **It does not cost Tuesday.** Mon 9/14 is a full rest day; ~105 TSS today projects TSB ≈ **−3**
+    tomorrow and back to ≈ **+2** for the Tue 9/15 VO2max opener, which stays the protected session.
+  - **Floor if time-limited:** ride the planned 90 min but put the 3×12 blocks inside it. The
+    blocks are the measurement; the duration is the bonus.
+  - Today's Oura had not synced at fetch time (14:46 UTC), hence the rule engine's "no recovery
+    data". The override carries an abort condition: readiness < 75 or RHR ≥ 46 → ride the original
+    90 min flat Z2.
+- **Trend — Tuesday's threshold session completed clean, and that closes out the 9/07 question.**
+  9/08 ran **3×15 at 319W / 319W / 319W, all three full 15 min, fade 0.0%**, IF 0.912, 91 TSS.
+  On 9/01 the same session gave back 5W and 90 seconds on rep 3 (319/319/314, rep 3 cut to
+  13.5 min). Same power, full duration, no fade — **the 320 anchor is confirmed a second time**, and
+  the "next progression is duration, 3×15 → 3×18 at 320W" note is now the live recommendation for
+  when threshold returns in **Phase 4**. No HR on 9/08 (strap dropped, avg and max both null), so
+  there is no HR-for-power reading to pair with it.
+- **Watch item — decoupling on the hard sessions is climbing, but read it with the structure.**
+  8/18 **2.7%** → 8/20 **6.1%** → 8/27 **11.7%** → 9/01 **12.3%** → 9/10 **14.1%**. Two things say
+  hold off on acting: decoupling is a poor metric on interval sessions (it compares ride halves,
+  so it mostly tracks how the work is distributed), and **9/10 was itself cut short** — 5 overs
+  detected against 8 prescribed, ~32 min of work against 40, with the second set fragmenting after
+  one under/over/under. Within the intervals the quality was fine: **overs 335W avg (target 336W),
+  fade across overs 1.8%**, last-over HR 175, ride max 179 vs 197. Not a fitness signal yet.
+  Re-check it on the Phase 3 VO2 sessions, where the structure is consistent.
+- **The real pattern this week is adherence, not physiology.** Both hard-session cuts and the
+  Saturday cut land on the same week: 9/10 over-unders ~32 of 40 min of work, 9/12 long ride 61 of
+  165 min, and the week before it lost four consecutive days (9/03-9/06). Week TSS **301 / 124 /
+  356 / 333 / 378** over the last five weeks. CTL **39.3**, ramp **+0.5/wk** — flat. Recovery is
+  not the constraint; every Oura marker is at or better than baseline. **The risk going into
+  Phase 3 is sessions not happening, not sessions being too hard.**
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
