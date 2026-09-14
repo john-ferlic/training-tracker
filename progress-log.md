@@ -10,6 +10,63 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-14 — **Phase 3 opens. The 9/12 long ride didn't happen, so the single-sample gate fired on its "no valid sample" branch: Saturday restored 135 → 165 min. Two weeks now without a long ride.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  never confirm or refute a test result. It is not a check on the anchor.)
+- **Plan change — Phase 3 Saturday `duration_min: 135 → 165`, `target_tss: 98 → 120`.**
+  This is the pre-committed gate from 9/07 firing, not a new judgement — but it fires on the
+  branch that needed a call, so the reasoning is written out:
+  - The gate had three branches. 9/12 decoupling ≤ 6.0% → keep 135; > 6.0% → restore 165;
+    **not ridden → restore 165**.
+  - **A ride happened on 9/12. The long ride did not.** 60.9 min, **44 TSS**, IF 0.659, NP 211,
+    decoupling 4.1% — against a prescribed **165 min / 135 TSS** with 3×12 tempo. That is 37% of
+    the prescribed duration and 33% of the load.
+  - **The 4.1% does not clear branch 1.** Decoupling over ~1 hr at IF 0.66 cannot answer a
+    2.25-hour durability question. Treating it as a pass would release a durability gate on a
+    session a third the length of the one the gate was written about. Branch 3 applies.
+  - **The gap is the real argument.** Last true long ride was **8/29 (165 min, 127 TSS)**. 9/05
+    was missed to the four-day layoff; 9/12 came in at an hour. **Sixteen days, and the longest
+    ride in that window is 90 min (9/13).** The 9/01 release rested on two samples, one of them
+    marginal (5.7%) and rising from 3.8%. With no confirming data since, default back to the
+    durability-building duration.
+  - **This is not a claim the limiter returned.** The same-power evidence from 8/29 still stands
+    (249W → 141/142/141 bpm, 0 drift, 15-22 bpm below 8/08 at identical power). It is a claim
+    that the release is unverified. **Sat 9/19 settles it**: ride 165, and if decoupling comes
+    back ≤ 6.0%, cut to 135 / TSS 98 for the rest of Phase 3. Written into the plan file.
+  - **Escape hatch, written into the plan:** if Tue 9/15 or Thu 9/17 VO2 runs rough, Saturday is
+    the release valve — trim it, not the VO2 work. This is a VO2 block; the intervals are the
+    point. Note the restored Saturday puts the Phase 3 week at **373 TSS** vs 351 at 135 min,
+    which is a full week for a block whose whole design is lower volume at higher intensity.
+- **Trend worth flagging — the 9/10 over-unders regressed against the identical 8/27 session.**
+  Same workout, same targets, 14 days apart:
+
+  | date | work completed | blended W | overs | fade (overs) | decoupling | max HR |
+  |---|---|---|---|---|---|---|
+  | 8/27 | **39.8 min** (2×20, clean) | **312W** | 8 × 338W | **−0.1%** | 11.7% | 181 |
+  | 9/10 | **~31.6 min** (fragmented) | **302W** | 4 × 335W | **1.8%** | **14.1%** | 179 |
+
+  9/10 broke into five pieces — one clean 15.0-min block, then 3.9 / 7.3 / 1.1 / 4.3 min — instead
+  of holding 2×20. That is **8 min less work at 10W lower blended power**, with decoupling at the
+  block high. **Most of this is explainable**: 9/10 was day 4 back from the four-day layoff, in a
+  week that had already run Tue threshold (9/08, 3×15 @ 319W, fade **0.0%**) and Wed Z2. CTL was
+  still rebuilding. **Watch it, don't act on it** — Phase 2's Thursday over-unders don't recur
+  until Phase 4, so there is nothing to change now. Log it so the Phase 4 re-anchor has the data.
+- **The rebound week was genuine and well-absorbed.** Week of 9/07: **372 TSS / 6 rides / 407 min**
+  against **124 TSS / 2 rides** the week before — a 3× jump, and recovery never flinched:
+  readiness 79 → 74 → 82 → 82 → 87 → 83, RHR held 40-49 against a 44 base, no temp deviation past
+  ±0.3. CTL **40.0**, ramp **+1.3/wk**, TSB **+2.5**.
+- **The 9/07 HRV flag has fully cleared.** That entry logged a 7-day HRV mean of 53.9 vs 62.6 for
+  the prior 21 days (−14%, just past the 12% flag) and called it a watch item. It is now
+  **58.9 vs 58.9 — dead level**, with the 54-day median at 59.0. Closed.
+- **Aerobic volume is the thing to keep an eye on now, not recovery.** Weekly minutes have held up
+  (407 last week), but they are all in 50-90 min pieces. Phase 3 is deliberately a lower-volume
+  block, so the restored Saturday is where the long-ride stimulus has to live for the next four
+  weeks. Missing it twice more would make the Phase 4 durability question unanswerable.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
