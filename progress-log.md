@@ -10,6 +10,88 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-15 — **The 9/12 gate returned no usable sample: the long ride was ridden as 61 min, not 165. Phase 3 Saturday restored 135 → 165. Threshold is progressing; the Thursday over-under is the session that came apart.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  never confirm or refute a test. It is not a check on the anchor.)
+- **Plan change — Phase 3 Saturday `duration_min: 135 → 165`, `target_tss: 98 → 120`.**
+  This is the 9/07 single-sample gate resolving, not a new judgement — but it resolves on the
+  *third* branch, and that needs stating plainly because the literal reading points the other way.
+  - The gate: 9/12 decoupling ≤6.0% → hold 135; >6.0% → restore 165; **not ridden → restore 165**.
+  - What happened: **9/12 was ridden — as 60.8 min / NP 211W / IF 0.659 / 44 TSS / 4.1% decoupling.**
+    Against a prescribed 165 min / 135 TSS. That is a short Z2, not the long ride.
+  - So the letter says "ridden, 4.1% ≤ 6.0%, hold 135." **The letter is wrong here.** Decoupling
+    only becomes a durability reading somewhere past ~90 min; the limiter this gate has tracked
+    since July lives in hours 2-3. A 61-minute ride cannot pass or fail it. No sample was taken,
+    which is branch 3, and branch 3 was written for exactly this: *"With no confirming data,
+    default back to the durability-building duration rather than assume the limiter stayed
+    resolved."*
+- **The supporting picture makes this easy rather than marginal.**
+  - **Last true long ride is 8/29** — 165 min, 5.7%, and *rising* from 8/22's 3.8%. That is
+    **17 days ago**. 9/05 was missed outright, 9/12 was truncated to 61 min. Two consecutive
+    Saturdays without the session the block is built around.
+  - `review` currently reports Z2 decoupling **"↗ improving, recent avg 3.1%"**. Do not read that
+    as the missing sample — **every ride in that recent window is 50-90 min** (9/02 50m 0.3%,
+    9/07 50m 2.5%, 9/12 61m 4.1%, 9/13 90m 2.6%). The trend is a **duration artifact**. Decoupling
+    improves when you stop riding long. Noted in the plan file so it doesn't get re-derived.
+  - Load can absorb it: week 14 goes 351 → **373 TSS**, inside the demonstrated 333-378 range of
+    weeks 9-11, against **CTL 39.1 with ramp −0.8/wk** (fitness drifting down) and **TSB +6.9**.
+- **Re-release condition, tightened so this can't recur:** two consecutive Saturdays of **≥120 min**
+  with decoupling **≤6.0%** → cut back to 135 / TSS 98. The duration floor is the new part — the
+  old condition said "long ride" and a 61-min ride slipped through it. **Sat 9/19 is sample 1.**
+- **Open question for the athlete, and the real issue behind the gate:** the Saturday long ride has
+  now not happened as prescribed on 9/05 or 9/12. Adding 30 minutes to a session that isn't getting
+  ridden fixes nothing. **If Saturday is not actually available, say so and the long ride moves to
+  Sunday** (Sunday is currently a 75-min easy Z2 and is the cheapest thing in the week to convert).
+  Restoring 165 is the right default in the absence of information; it is not a bet that Saturday
+  works.
+- **Threshold is progressing, and 9/08 is the good news of the block.** The 3×15 @ 320W was re-run
+  and cleaned up:
+
+  | date | rep 1 | rep 2 | rep 3 | fade | TSS |
+  |---|---|---|---|---|---|
+  | 9/01 | 14.9 min @ **319W** / HR 168 | 14.9 min @ **319W** / HR 175 | **13.5 min** @ **314W** / HR 175 | 1.6% | 90 |
+  | 9/08 | 14.9 min @ **319W** | 14.9 min @ **319W** | **15.0 min** @ **319W** | **0.0%** | 91 |
+
+  Same power, rep 3 now complete and no longer giving back 5W. **FTP 320 is holding and the
+  duration step (3×15 → 3×18 at 320W) is earned** — carried into the first Phase 4 Tuesday.
+  Caveat: **9/08 has no HR file at all** (strap dropout — no avg HR, no decoupling), and 9/09 the
+  same, so the HR cost of that cleaner session is unknown. Worth a strap check before Phase 4.
+- **Trend shift to watch — the Thursday over-under is the session that is regressing.** Same
+  workout, three runnings:
+
+  | date | work completed | overs | fade | decoupling | set-1 over HRs |
+  |---|---|---|---|---|---|
+  | 8/20 | 2×20 min, clean | 8 @ 322W | 0.0% | 6.1% | — |
+  | 8/27 | 2×20 min, clean | 8 @ **338W** | −0.1% | 11.7% | 164/167/169/172 |
+  | 9/10 | **~31 of 40 min, broke up** | 338W → **328W** | **4.8%** | **14.1%** | **167/172/175** |
+
+  9/10 delivered one 15-min set (3 pairs, not 4), then fragments of 231s / 440s / 65s / 260s, with
+  the overs falling to 328W and an "under" dropping to 289W for 144s. **79 TSS against 95 planned.**
+  At an identical 338W the set-1 over HRs are **3-5 bpm higher** than 8/27.
+  **This is most likely acute, not structural:** 9/10 sat at the end of 257 TSS in four days
+  (9/07 34 → 9/08 91 → 9/09 53 → 9/10 79), straight out of the 124-TSS unloaded week, and 9/09 was
+  the worst Oura night of the month (readiness **74**, RHR **49**, HRV **46**). Recovery has been
+  excellent every day since. Treat it as a fuelling/placement failure rather than a fitness one —
+  but if the *next* over-under also breaks up on a green-recovery day, that is a real finding and
+  the session needs re-anchoring, not re-riding.
+- **Recovery is the best window in the 55-day dataset**, which is why today's VO2max opener goes
+  ahead at full prescription: readiness **87**, HRV **81 vs a 55-day median of 60 (+35%)** on a
+  four-day run of **83 / 67 / 80 / 81**, RHR **40 vs base 44** three of the last four days, and
+  9/14 slept **8.75 h at a sleep score of 97**. TSB **+6.9**, 3-day TSS only **71**.
+  The 9/07 flag (7-day HRV −14% vs prior 21) has fully cleared and inverted: **+16%** (66.3 vs 57.3).
+- **Today, 9/15, opens Phase 3 — the first genuine VO2max session of the build.** The `review` line
+  reading "VO2max — 4 sessions" is a **classification artifact**: those four are the 8/25 ramp test
+  plus three over-unders that tripped the VO2 classifier. **He has never ridden 4×4 @ 368W (115%
+  FTP).** Highest structured work on record is 2-min overs at 338W (106%). The 8/25 ramp's final
+  step — **8:27 @ 352W avg, HR 175, ride max 187 vs 197** — says 368W for 4 min is available, but
+  rep 1 at an untested intensity is where these sessions get blown. Prescription unchanged; open
+  rep 1 at the **band bottom, 340W**, and build toward 368W across reps 2-4 if HR and RPE allow.
+  The band in the plan is already "340-368W", so this is pacing, not a plan change.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
