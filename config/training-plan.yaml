@@ -11,6 +11,38 @@
 #
 # Workout fields: type, duration_min, target_watts, target_if, target_tss, description
 # Types used: Rest, Recovery, Endurance, SweetSpot, Threshold, VO2max, Test
+#
+# -----------------------------------------------------------------------------
+# THE DOWNGRADE LADDER — added 9/16. Read this on any day you are not mentally
+# up for the session. It is pre-committed on purpose: the point is that the
+# choice is already made before you are 12 minutes into a rep and hating it.
+#
+# THE RULE: decide at the END OF REP 1, not in the middle of rep 3.
+#
+# Pick one, in order of preference:
+#   1. SAME POWER, SMALLER BITES. Same watts, same total time at intensity,
+#      shorter reps. Threshold 3x15 @ 320W -> 5x9 @ 320W w/ 2 min easy.
+#      VO2 4x4 @ 368W -> 6x2.5 @ 368W w/ 2.5 min easy. Costs almost nothing
+#      physiologically and is a completely different mental proposition.
+#   2. CUT THE LAST REP, KEEP THE QUALITY. 3x15 -> 2x15 at full power. About
+#      two thirds of the stimulus, zero fade, and a session you finished on
+#      your own terms rather than one that beat you.
+#   3. DROP TO ENDURANCE. 60 min Z2 @ 205-235W, ~40 TSS. No mental load, and
+#      it protects the week's key session instead of burning it.
+#
+# WHY THIS EXISTS — the 9/15 arithmetic. That session was abandoned in rep 3
+# and logged as a failure: 14.9 min @ 319W + 14.9 min @ 309W + 3.9 min = 33.7
+# min of work. Option 2, chosen deliberately at the end of rep 1, would have
+# produced 29.8 min of work. FOUR MINUTES LESS TRAINING, and it would have
+# been a win instead of a demoralising quit. The training difference is noise.
+# The difference in how the session is remembered is not — and how it is
+# remembered is what determines whether the next one gets ridden.
+#
+# A downgraded session that gets finished beats a prescribed one that gets
+# abandoned, every time. 9/12 is the same lesson in duration form: 165 min
+# prescribed became 61 min ridden (44 TSS). A 135 min session completed is
+# 98 TSS. Prescribe what will actually happen.
+# -----------------------------------------------------------------------------
 # =============================================================================
 
 meta:
@@ -130,7 +162,7 @@ phases:
         target_watts: "340-368"
         target_if: 0.88
         target_tss: 85
-        description: "WU 20 min with 3x1 min openers @ ~340W in the last 8 min, then 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD 8 min. OPEN REP 1 AT THE BAND BOTTOM (340W) and build toward 368W across reps 2-4 if HR and RPE allow — do not lead with 368W at an untested intensity. Cadence 90+; dropping cadence at these watts loads the quads instead of the aerobic system. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305). FUELLING (added 9/16, previously only written on the Phase 2 sessions — this block is higher intensity, not lower, so the rule applies at least as much): main meal 3h out, nothing large inside 90 min, 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. Take on-bike carb in steady small sips from the warmup onward rather than a concentrated slug at the start — 9/15 produced side stitch, which tracks with meal timing and drink concentration rather than with total intake."
+        description: "WU 20 min with 3x1 min openers @ ~340W in the last 8 min, then 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD 8 min. OPEN REP 1 AT THE BAND BOTTOM (340W) and build toward 368W across reps 2-4 if HR and RPE allow — do not lead with 368W at an untested intensity. Cadence 90+; dropping cadence at these watts loads the quads instead of the aerobic system. NOT MENTALLY UP FOR IT? See the DOWNGRADE LADDER at the top of this file and decide at the end of rep 1, not mid-rep-3: this session downgrades to 6x2.5 min @ 368W w/ 2.5 min easy (same watts, same time at intensity), or 3x4, or 60 min Z2. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305). FUELLING (added 9/16, previously only written on the Phase 2 sessions — this block is higher intensity, not lower, so the rule applies at least as much): main meal 3h out, nothing large inside 90 min, 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. Take on-bike carb in steady small sips from the warmup onward rather than a concentrated slug at the start — 9/15 produced side stitch, which tracks with meal timing and drink concentration rather than with total intake."
       wednesday:
         type: Endurance
         duration_min: 60
@@ -144,7 +176,7 @@ phases:
         target_watts: "362 / 205"
         target_if: 0.86
         target_tss: 80
-        description: "WU 20 min with 3x1 min openers @ ~340W in the last 8 min, then 30/15s: 30 sec @ 362W / 15 sec @ 205W x13, 2-3 sets (5 min easy between sets), CD 8 min. START AT 2 SETS and only take the third if set 2 finishes with the last three 30s reps still holding 362W. Cadence 95-100 on the 30s — spin them, don't grind them. RE-ANCHORED 8/28 to FTP 320 (was 345/195 @ FTP 305). FUELLING (added 9/16, previously only written on the Phase 2 sessions): main meal 3h out, nothing large inside 90 min, 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. Steady small sips from the warmup onward, not a concentrated slug at the start."
+        description: "WU 20 min with 3x1 min openers @ ~340W in the last 8 min, then 30/15s: 30 sec @ 362W / 15 sec @ 205W x13, 2-3 sets (5 min easy between sets), CD 8 min. START AT 2 SETS and only take the third if set 2 finishes with the last three 30s reps still holding 362W. Cadence 95-100 on the 30s — spin them, don't grind them. NOT MENTALLY UP FOR IT? See the DOWNGRADE LADDER at the top of this file and decide at the end of set 1, not mid-set-2: this session downgrades to 1 set at full quality, or 60 min Z2. A finished downgrade beats an abandoned prescription. RE-ANCHORED 8/28 to FTP 320 (was 345/195 @ FTP 305). FUELLING (added 9/16, previously only written on the Phase 2 sessions): main meal 3h out, nothing large inside 90 min, 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. Steady small sips from the warmup onward, not a concentrated slug at the start."
       friday:
         type: Rest
         description: "Rest."

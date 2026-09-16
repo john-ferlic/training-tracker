@@ -76,6 +76,58 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   9/17 also ends early *with* the warmup and fuelling done properly, the next thing to question is
   the FTP 320 anchor itself — 9/15's rep 2 dropping to 309W is the first sign of give in that
   number since it was validated.
+- **ADDENDUM, same day — the athlete's own read, and it is the one that fits.** Asked directly, he
+  says it was **mental**: a long day at the end of a long week at work, and he "wasn't there to
+  survive the burn." That is not a hedge or an excuse; it is the explanation most consistent with
+  the file, because the file rules out the alternatives. Rep 1 was the best of the series, HR per
+  watt was normal, max HR was 8 beats under 9/01, decoupling was half, and 786 kJ cannot deplete
+  anyone. **Everything measurable said he could continue. He stopped anyway.** When the physiology
+  is intact and the session ends regardless, the limiter is tolerance, not capacity.
+  - The warmup (20.9 → 16.7 min) and cadence (88.5 → 86.8 rpm) findings above **still stand and
+    still matter** — they are measured, not inferred. But their role is now clear: they made the
+    burn arrive sooner and harder on a day when tolerance for it was already low. **Physical
+    factors set the difficulty; mental state set the tolerance.** Both moved the wrong way at once.
+  - The side stitch is the one piece "mental" does not directly explain — stitch is a physical
+    event. A plausible bridge is breathing pattern (stress → shallower, higher-chest breathing,
+    which is associated with stitch), but that is a reasonable mechanism, not a measured one. The
+    meal-timing and drink-concentration protocol in this entry covers it either way.
+- **This reframes the truncation pattern into ONE story rather than three.** The 9/07 entry already
+  attributed the 9/03-9/06 off-bike block to "life load, not sickness." Extend that line and the
+  whole run resolves:
+
+  | date | session | delivered | previously attributed to |
+  |---|---|---|---|
+  | 9/03-9/06 | 4 days of training | nothing (~292 TSS lost) | life load |
+  | 9/10 | over-unders, 40 min work | ~31 min, structure broke | acute load |
+  | 9/12 | long ride, 165 min | 61 min | unexplained |
+  | 9/15 | threshold, 45 min work | 33.7 min, abandoned | unexplained |
+
+  **Nearly two weeks in which work/life, not fitness, has been the binding constraint on training.**
+  The easy rides land exactly on prescription throughout (9/09 75.1 vs 75, 9/13 90.2 vs 90) — it is
+  specifically the sessions that demand mental engagement that are failing. No amount of reading
+  power files was going to surface that; it took asking him.
+- **Plan change — added THE DOWNGRADE LADDER to the top of `training-plan.yaml`**, referenced from
+  both Phase 3 VO2 sessions so it appears in the daily brief. Three pre-committed options for a day
+  he is not mentally up for: (1) same power, smaller bites — 3×15 @ 320W → 5×9 @ 320W, 4×4 → 6×2.5,
+  same watts and same time at intensity; (2) cut the last rep at full quality; (3) drop to 60 min
+  Z2. **The rule is to decide at the end of rep 1, not in the middle of rep 3.**
+  - **The arithmetic is why this matters, and it is stark.** 9/15 as ridden: 33.7 min of work,
+    logged as a failure. Option 2 chosen deliberately at the end of rep 1: **29.8 min of work**,
+    logged as a win. **Four minutes of training separates those two outcomes.** The physiological
+    difference is noise; the difference in how the session is remembered is not, and how it is
+    remembered is what decides whether the next one gets ridden. His current failure mode is
+    binary — full session or abandon — and binary is exactly wrong for a high-stress fortnight.
+- **This materially weakens the case for the Saturday restore in PR #41, and that needs saying
+  rather than being quietly left to stand.** #41 restored 135 → 165 min reasoning "no confirming
+  data, default to the durability duration." That was correct on the information available. With
+  the information now available, the logic partly inverts: **if the reason long rides are not
+  happening is life load, adding 30 minutes makes completion less likely, not more.** Value of a
+  session = duration × P(completion). 9/12 is the proof: 165 prescribed → 61 ridden → **44 TSS**,
+  where a completed 135 is **98 TSS**. **Prescribe what will actually happen.**
+  Not unilaterally reverting #41 — one bad week is not a trend, Sat 9/19 is the live test, and the
+  athlete has not said Saturday is unavailable, only that last week was hard. But the question put
+  to him in #41 is now sharper: **if the work crunch is ongoing rather than a one-off, cut Saturday
+  to 135 and complete it.** Awaiting his answer.
 
 ---
 
