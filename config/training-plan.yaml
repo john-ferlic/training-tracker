@@ -130,7 +130,7 @@ phases:
         target_watts: "340-368"
         target_if: 0.88
         target_tss: 85
-        description: "WU, 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305)."
+        description: "WU 20 min with 3x1 min openers @ ~340W in the last 8 min, then 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD 8 min. OPEN REP 1 AT THE BAND BOTTOM (340W) and build toward 368W across reps 2-4 if HR and RPE allow — do not lead with 368W at an untested intensity. Cadence 90+; dropping cadence at these watts loads the quads instead of the aerobic system. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305). FUELLING (added 9/16, previously only written on the Phase 2 sessions — this block is higher intensity, not lower, so the rule applies at least as much): main meal 3h out, nothing large inside 90 min, 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. Take on-bike carb in steady small sips from the warmup onward rather than a concentrated slug at the start — 9/15 produced side stitch, which tracks with meal timing and drink concentration rather than with total intake."
       wednesday:
         type: Endurance
         duration_min: 60
@@ -144,7 +144,7 @@ phases:
         target_watts: "362 / 205"
         target_if: 0.86
         target_tss: 80
-        description: "30/15s: 30 sec @ 362W / 15 sec @ 205W x13, 2-3 sets. RE-ANCHORED 8/28 to FTP 320 (was 345/195 @ FTP 305)."
+        description: "WU 20 min with 3x1 min openers @ ~340W in the last 8 min, then 30/15s: 30 sec @ 362W / 15 sec @ 205W x13, 2-3 sets (5 min easy between sets), CD 8 min. START AT 2 SETS and only take the third if set 2 finishes with the last three 30s reps still holding 362W. Cadence 95-100 on the 30s — spin them, don't grind them. RE-ANCHORED 8/28 to FTP 320 (was 345/195 @ FTP 305). FUELLING (added 9/16, previously only written on the Phase 2 sessions): main meal 3h out, nothing large inside 90 min, 60-90 g carb/hr + 500-800 mg sodium/hr on the bike, fan on. Steady small sips from the warmup onward, not a concentrated slug at the start."
       friday:
         type: Rest
         description: "Rest."

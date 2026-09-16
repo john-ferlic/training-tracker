@@ -10,6 +10,75 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-16 — **9/15 was ridden as the wrong session and abandoned in rep 3. The cardiovascular data says he was fine; the limiter was local and perceptual. Fuelling + warmup protocol added to both Phase 3 VO2 sessions.**
+
+- **No stat change.** No plan *load* change either — this entry adds execution protocol only.
+- **What happened.** Phase 3 opened Tue 9/15 with the 4×4 @ 340-368W. The athlete rode the Phase 2
+  threshold session instead (hadn't checked the plan, didn't realise the block had rolled over),
+  and abandoned it in rep 3. His account: **quads burning, side cramps, "mentally I couldn't
+  ride."** His own guess was fuelling.
+- **The file does not support fuelling in the "ran out of energy" sense**, and this is worth writing
+  down because the intuition is a natural one:
+
+  | date | rep 1 | rep 2 | rep 3 | work | fade | max HR | EF | decoupling |
+  |---|---|---|---|---|---|---|---|---|
+  | 9/01 | 14.9m @ 319W / HR 168 | 14.9m @ 319W / HR 175 | 13.5m @ 314W / HR 175 | 43.3m | 1.6% | 183 | 1.829 | 12.3% |
+  | 9/08 | 14.9m @ 319W | 14.9m @ 319W | 14.9m @ 319W | 44.8m | 0.0% | — | — | — |
+  | 9/15 | 14.9m @ 319W / **HR 165** | 14.9m @ 309W / HR 169 | **3.9m** @ 309W / HR 162 | **33.7m** | 3.1% | **175** | **1.864** | **6.3%** |
+
+  - **Rep 1 was the best of the series** — 319W at HR **165**, three beats under 9/01 at identical
+    power, and ride EF **1.864** is the highest of the three. A glycogen-depleted athlete does not
+    post his best opening rep.
+  - **HR per watt was normal to good.** Rep 2: **0.547 bpm/W** vs 9/01's 0.549 at the same point.
+    Rep 3 HR actually *fell* to 162.
+  - **He was not near his ceiling when he stopped.** Max HR **175**, against **183** on 9/01 and a
+    **197** max. Decoupling **6.3%** vs **12.3%** on 9/01 — cardiac drift was *half*.
+  - **50 minutes cannot deplete him.** ~786 kJ of total work against 1500-2000 kcal of stored
+    glycogen. Recovery was also the best in the dataset (readiness 87, HRV 81 vs base 60, RHR 40,
+    TSB +6.9, 3-day TSS 71).
+  **Conclusion: the cardiovascular system was not the limiter. The limitation was peripheral
+  (local quad fatigue) and perceptual.** That is a different problem from "under-fuelled" and has
+  different fixes.
+- **What did change between 9/08 and 9/15, from the file:**
+  - **Warmup/cooldown time: 20.9 min → 16.7 min** (ride minus interval time). Rep 3 being cut makes
+    this impossible to split cleanly between WU and CD, so treat it as a hypothesis, not a finding —
+    but a short warmup into 100% FTP is a textbook cause of early quad burn.
+  - **Cadence: 88.5 → 86.8 rpm** (whole-ride average; 9/01 and 9/08 were *both* exactly 88.5).
+    ~2% more pedal force per stroke at 319W. Small on its own, directionally right for quad burn.
+- **On the side cramps specifically:** stitch tracks with **meal timing and drink concentration**,
+  not with total carb intake — it is typically caused by eating too close to the effort or by a
+  hypertonic drink taken in a slug, which is close to the *opposite* of under-fuelling. So "fuelling"
+  is plausibly right as a category and plausibly wrong as a mechanism: the lever is *when and how
+  concentrated*, not *how much*.
+- **Plan change — fuelling + warmup protocol added to Phase 3 Tuesday and Thursday.** This was a
+  real gap: the "main meal 3h out, 60-90 g carb/hr + 500-800 mg sodium/hr, fan on" rule was written
+  into the Phase 2 threshold and long-ride descriptions but **nowhere in Phase 3**, which is the
+  higher-intensity block. Also added: a 20-min warmup with 3×1 min openers before both VO2 sessions,
+  explicit cadence targets (90+ on the 4×4, 95-100 on the 30/15s), "open rep 1 at 340W and build"
+  on the 4×4, and "start at 2 sets" on the 30/15s. **No change to duration, watts, TSS or weekly
+  load** — execution only.
+- **Cost of the missed session is small and does not need making up.** 85 planned TSS vs 67 ridden
+  = an **18 TSS** gap. Thursday 9/17's 30/15s is intact, so week 14 still gets one of its two VO2
+  sessions, and Phase 3 (weeks 14-17) has **8 VO2 sessions total — this is 1 of 8**, with three 4×4
+  Tuesdays left (9/22, 9/29, 10/06). Explicitly did **not** move the 4×4 into Wed 9/16 (back-to-back
+  with Thursday) or Fri 9/18 (would compromise the Sat 9/19 long ride, which is sample 1 of the new
+  durability gate). Load also no longer supports adding: TSB **+6.9 → −1.1**, 7-day TSS **247 → 314**,
+  ramp flipped to **+0.8/wk**.
+- **The truncation pattern from the 9/15 entry now has three of four sessions explained, and the
+  explanations differ** — worth not collapsing them into one story:
+  - **9/10** over-unders (~31 of 40 min) — acute load: end of 257 TSS in four days, after the worst
+    Oura night of the month (readiness 74, RHR 49, HRV 46).
+  - **9/12** long ride (61 of 165 min) — unexplained; the Saturday-availability question is still
+    open in PR #41.
+  - **9/15** threshold (33.7 of 45 min) — peripheral/perceptual, on perfect recovery, as above.
+  The common thread is that **hard and long sessions get cut while easy ones land exactly**
+  (9/09 75.1 vs 75 planned, 9/13 90.2 vs 90). Watch whether the protocol above closes it. If Thu
+  9/17 also ends early *with* the warmup and fuelling done properly, the next thing to question is
+  the FTP 320 anchor itself — 9/15's rep 2 dropping to 309W is the first sign of give in that
+  number since it was validated.
+
+---
+
 ## 2026-09-15 — **The 9/12 gate returned no usable sample: the long ride was ridden as 61 min, not 165. Phase 3 Saturday restored 135 → 165. Threshold is progressing; the Thursday over-under is the session that came apart.**
 
 - **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
