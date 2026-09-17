@@ -10,6 +10,66 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-17 — **Phase 3 opened and no VO2max has happened yet. The 9/12 Saturday gate landed outside all three of its branches, so it's held at 135 and re-armed on 9/19 — final deferral. Recovery is the best on record.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  No max-HR bump to sanity-check: the top HR anywhere in the window is **192** (8/04 ramp test),
+  then 189 / 187 / 183, all comfortably inside the 197 anchor. (Same standing blind spot:
+  `sync-profile` reads FTP from the **Strava profile field**, so it can never confirm or refute a
+  test result.)
+- **The headline: Phase 3 is the VO2max block, and there has been no VO2max work.** The block
+  opened Mon 9/14. Tue 9/15 was prescribed 4×4 min @ ~368W and was ridden as the **Phase 2 3×15
+  threshold** instead — and cut short:
+
+  | date | rep 1 | rep 2 | rep 3 | fade | total |
+  |---|---|---|---|---|---|
+  | 9/01 | 319W / HR 168 | 319W / HR 175 | 314W / HR 175 (13.5 min) | 1.6% | 43.3 min |
+  | 9/08 | 319W | 319W | 319W (14.9 min) | **0.0%** | 44.7 min |
+  | 9/15 | 319W / HR 165 | 309W / HR 169 | 309W / **3.9 min** | 3.1% | 33.7 min |
+
+  50.4 min total, IF 0.895, 67 TSS, decoupling 6.3%, **0.0% of time in Z5**.
+- **That bail does not read as fatigue, which is what makes it interesting.** HR was *lower* for
+  the power than on 9/01 — 165 bpm at 319W vs 168, and 169 at 309W vs 175 — and readiness that
+  morning was **87**. He had the engine for rep 3 and stopped anyway. Treat it as a time or
+  motivation constraint, not a physiological one, and don't deload for it.
+- **Across the whole 56-day history there is no sustained VO2 work at all.** The only Z5+ on
+  record is incidental: 3.9 min (8/04 ramp), 1.5 (8/13), 1.4 (8/20), 5.1 (8/25 ramp), 9.3 (8/27),
+  4.2 (9/10). Written into the Phase 3 Tuesday description: **368W is a ceiling**, the first one
+  or two sessions will feel disproportionately hard for the TSS, and the work comes from
+  completing reps rather than exceeding watts. This also stays consistent with the 9/07 finding
+  that 320 is a ceiling, not a floor.
+- **Plan change — Phase 3 Saturday HELD at 135 min / TSS 98, gate re-armed on 9/19.** The
+  single-sample gate written on 9/07 had three branches (≤6% → keep 135; >6% → restore 165; not
+  ridden → restore 165). **9/12 fit none of them.** It was ridden, but as **60.8 min / 44 TSS /
+  NP 211** against a 165-min Phase 2 Saturday, and its **4.1%** decoupling is under the line on an
+  *hour* — the gate was only ever asking about hour 2+. So:
+  - Still **no long-ride sample since 8/29** (165 min, 5.7%) — 19 days.
+  - Longest ride since is **90 min** (9/13 group ride, 71 TSS, decoupling 2.6%).
+  - Restoring to 165 would ask for **+83% on his recent longest**, after two Saturdays at 135 and
+    165 produced a miss and a 61-min stand-in. A 165 that goes unridden buys no durability *and*
+    yields no decoupling number; a 135 that gets completed buys both.
+  - Re-armed for **Sat 9/19, single sample, no further deferral**: ≥120 min *and* ≤6.0% keeps 135;
+    over 6.0%, under 120 min, or not ridden restores 165 / TSS 120 immediately.
+  - **This is the third deferral of this gate, and it is the last one.** If 9/19 doesn't produce a
+    real long ride, the honest read is that the limiter is Saturday *compliance*, not durability,
+    and the plan should be rewritten around that instead of re-measuring.
+- **Load is fine; the shape of it is the issue.** Week of 9/07 was a full **372 TSS / 6 rides /
+  407 min** — his second-biggest of the block. This week is **67 TSS / 1 ride** so far (Mon rest
+  as written, Tue as above, **Wed 9/16's 60-min Z2 not ridden**). 7-day TSS **182**, 3-day **67**,
+  CTL 38.7, TSB **+8.1**, ramp −2.4/wk. Not fatigued — under-stimulated since Sunday.
+- **Recovery is the strongest stretch in the dataset, and it followed the 372-TSS week.**
+  Readiness 87 / 88 / 91 / 88 over the last four days. **7-day HRV mean 71.6 vs 56.7 for the prior
+  21 days, +26%** — that is the 9/07 entry's −14% HRV flag fully resolved and then some, so close
+  that watch item. RHR 7-day mean **42.1** vs base 44; `hrv_balance` contributor **93** today.
+  Temp deviation −0.25. The one soft spot is last night: **6.67 h / sleep 75**, a single short
+  night against 7.3-8.8 h for the five before it.
+- **Reading it together:** green recovery, low 3-day load, a block that hasn't started, and an
+  athlete whose last two skipped sessions were skipped while fresh. The risk this week is
+  under-riding, not over-riding. Today (Thu 9/17, 30/15s) should be ridden in full — 3 sets, not
+  2 — and Saturday should be a real long ride.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
