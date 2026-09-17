@@ -130,7 +130,7 @@ phases:
         target_watts: "340-368"
         target_if: 0.88
         target_tss: 85
-        description: "WU, 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305)."
+        description: "WU, 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305). NOT YET RIDDEN (noted 9/17): Phase 3 opened 9/14 and Tue 9/15 was ridden as the Phase 2 3x15 threshold instead (319/309/309W, rep 3 cut to 3.9 min of 15, fade 3.1%, 50.4 min, 0.0% of time in Z5). There is no sustained VO2max work anywhere in the 56-day history — the only Z5 on record is incidental, from over-under overs and the two ramp tests. So the first real VO2 session of this block is a first exposure: hold 368W as a CEILING, take the work from completing the reps, not from exceeding the watts, and expect the first one or two sessions to feel disproportionately hard for the TSS."
       wednesday:
         type: Endurance
         duration_min: 60
@@ -173,10 +173,31 @@ phases:
                                    # athlete has now gone a full week without a long ride. With
                                    # no confirming data, default back to the durability-building
                                    # duration rather than assume the limiter stayed resolved.
+                                   #
+                                   # RESOLVED 9/17 — and NONE of the three branches above fits.
+                                   # 9/12 WAS ridden, but as 60.8 min / 44 TSS / NP 211 against a
+                                   # 165-min Phase 2 Saturday. Decoupling came back 4.1%, which is
+                                   # under the line but on an hour — it says nothing about hour 2+,
+                                   # which is the only thing this gate was ever asking about. So
+                                   # there is still NO long-ride sample since 8/29 (165 min, 5.7%),
+                                   # now 19 days back, and the longest ride since is 90 min (9/13).
+                                   # HELD at 135 rather than restored to 165, deliberately:
+                                   # restoring would ask for +83% on his recent longest ride, and
+                                   # the last two Saturdays at 135 and 165 produced a miss and a
+                                   # 61-min stand-in. A 165 that goes unridden buys no durability
+                                   # AND yields no decoupling number; a 135 that gets completed
+                                   # buys both. Sat 9/19 is the protected session of this week.
+                                   # RE-ARMED on 9/19, single sample, NO further deferral:
+                                   #   - >= 120 min AND decoupling <= 6.0% -> 135 stands for Phase 3.
+                                   #   - decoupling > 6.0%, OR under 120 min, OR not ridden
+                                   #     -> restore 165 min / TSS 120 immediately.
+                                   # Third deferral of this gate. If 9/19 does not produce a real
+                                   # long ride, stop treating it as a measurement problem: the
+                                   # limiter is then Saturday compliance, not durability.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
-        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). Restore to 165 min / TSS 120 if Sat 9/12 decoupling comes back over 6.0% — or if 9/12 is not ridden at all. 9/05 was missed (four off-bike days 9/03-9/06), so 9/12 is the only remaining sample and the gate is now single-sample; see the duration_min comment above. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
+        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). 9/17: the 9/12 gate landed outside all three of its branches — ridden, but 60.8 min / 44 TSS, decoupling 4.1% on an hour, which does not test hour 2+. No long-ride sample since 8/29. Held at 135 and re-armed on Sat 9/19 as a single-sample gate with no further deferral: >= 120 min and decoupling <= 6.0% keeps 135; over 6.0%, under 120 min, or not ridden restores 165 min / TSS 120. See the duration_min comment above — 9/19 is this week's protected session. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
       sunday:
         type: Endurance
         duration_min: 75
