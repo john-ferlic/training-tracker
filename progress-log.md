@@ -10,6 +10,75 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-20 — **Phase 3 opened on a blank week (67 TSS). The 9/12 Saturday gate fired on its "not ridden" branch, so 165 min is restored — with a 120-min re-entry step on 9/26. First VO2max session of the block entered graded.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+- **Week 14 (9/14-9/20), the opening week of the VO2max block, effectively did not happen.**
+  1 ride, 50 min, **67 TSS** against ~351 TSS prescribed. Weekly TSS for scale:
+  W11 **356** · W12 **124** · W13 **372** · W14 **67**.
+  - The one ride, **Tue 9/15**, was prescribed VO2max 4x4 @ 340-368W. He rode a Phase 2
+    threshold 3x15 instead — and then abandoned it:
+
+    | rep | duration | power | %FTP | avg HR |
+    |---|---|---|---|---|
+    | 1 | 14.9 min | 319W | 100% | 165 |
+    | 2 | 14.9 min | 309W | 97% | 169 |
+    | 3 | **3.9 min** | 309W | 97% | 162 |
+
+    Fade **3.1%**, IF 0.895, NP 286, TSS 67, decoupling 6.3%. Compare the identical session
+    one week earlier (**9/08**): 319 / 319 / 319W, fade **0.0%**, full 45 min. So this is not a
+    power problem — HR was *lower* on 9/15 (165/169/162 vs 168/175/175 on 9/01) at lower power.
+    He stopped, he didn't fail.
+  - **9/16 → 9/20: five consecutive off-bike days.** That took out the Wed Z2 (40), the Thu
+    30/15s (80), the **Sat long ride** (98) and today's Z2 (48).
+- **This is the second four-plus-day gap in three weeks** (9/03-9/06, then 9/16-9/20) and the
+  third Saturday long ride in a row to go missing or be cut. **The limiter in this build is no
+  longer physiological — it is consistency.** Threshold quality is intact (0.0% fade on 9/08);
+  what is not happening is the volume around it.
+- **Fitness: unloaded, not fatigued.** CTL **36.0** · ATL 19.3 · TSB **+16.7** (fresh /
+  detraining risk) · ramp **-5.0/wk**. 3-day TSS **0**, 7-day TSS **67**.
+- **Oura — one sharp autonomic spike on 9/19, on a zero-load day.** HRV **44** against a 14-day
+  mean of **64.1** (**-31%**, the config flag is 12%); RHR **49** vs baseline **43** (**+6**, flag
+  is 5); temp deviation **+0.26**, up from -0.49 two days earlier; readiness 78. Both config
+  thresholds trip at once. Context: the four nights before it ran **7.3 / 6.7 / 6.4 / 6.9 h** —
+  four straight under 7. With zero training load in the window this reads as life/sleep stress,
+  and 9/09 showed the same one-day shape (RHR 49, HRV 46) and cleared the next day. **No Oura
+  record for 9/20 yet** — the ring had not synced at fetch time (14:45 UTC), so today's call was
+  made on the 9/19 reading.
+- **Plan change 1 — Phase 3 Saturday RESTORED to 165 min / TSS 120** (was 135 / 98). The
+  single-sample gate written on 9/07 fired on its third branch: **9/12 was not ridden as a long
+  ride** — 60.8 min / 44 TSS of flat Z2 (IF 0.659, decoupling 4.1%, no tempo blocks) against a
+  prescribed 165 min / 135 TSS with 3x12 tempo. A 61-minute spin is not a durability sample;
+  decoupling over an hour at IF 0.66 says nothing about hour three. 9/19 was missed outright too,
+  so **the last real long-ride sample is still 8/29 (165 min, 5.7%)** — and 5.7% was the marginal,
+  *rising* number the release was hedged on in the first place. No confirming data → default back
+  to the durability duration, as pre-committed.
+- **Plan change 2 — Sat 2026-09-26 overridden to a 120-min re-entry long ride** with the
+  **3x12 @ 245-250W** series restored. He will be four Saturdays clear of his last long ride;
+  prescribing 165 straight off that gap is how it gets skipped a fourth time. **This is a step on
+  the way to 165, not a release** — the template default stays 165. New re-release gate, read on
+  9/26, both criteria required: decoupling **≤ 6.0%** AND block-3 HR minus block-1 HR at 249W
+  **≤ +3 bpm** → 10/03 and 10/10 return to 135 / 98. Either fails, or 9/26 is not ridden → hold
+  165 / 120. (Same-power series to date, all at 249W: 8/08 **+7 bpm** → 8/15 **+2** → 8/22 **-1**
+  → 8/29 **0**.)
+- **Plan change 3 — Tue 2026-09-22 entered graded: 4x4 min @ 340-368W → 5x3 min @ 350-365W**
+  (IF 0.88 → 0.87, TSS 85 → 80). Near-identical total work (15 min vs 16) in shorter reps.
+  Rationale: **zero VO2max sessions have been completed in this VO2max block.** The one time 4x4
+  @ 368W was prescribed, he substituted threshold and then binned rep 3. A rep target he abandons
+  is worth less than one he finishes, and he is fresh enough (TSB +16.7) that the limiter is
+  willingness, not capacity. **Pre-committed gate, read 9/29:** reps 4 and 5 both hold **≥350W**
+  AND last-rep HR **≤180** (max HR 197; the 9/01 threshold session peaked at 183) → 9/29 goes to
+  the full **4x4 @ 360-368W**. Either fails → repeat 5x3 and do not progress the watts.
+- **Deliberately NOT changed: Phase 3 is not extended.** Weeks 15-17 still give a full three-week
+  VO2max block from a fresh start, and the **11/03 test date stays put**. Losing week 14 cost
+  load, not adaptation.
+- **Focus for the next three weeks: finish the sessions, don't upgrade them.** FTP 320 is a
+  confirmed ceiling and the next progression on threshold is duration (3x15 → 3x18 @ 320W), not
+  watts. Nothing in the data argues for more intensity; it argues for the Tuesday, the Thursday
+  and the Saturday actually being ridden.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
