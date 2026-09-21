@@ -173,6 +173,22 @@ phases:
                                    # athlete has now gone a full week without a long ride. With
                                    # no confirming data, default back to the durability-building
                                    # duration rather than assume the limiter stayed resolved.
+                                   # RESOLVED 9/21: 9/12 WAS ridden, at 4.1% decoupling — so by
+                                   # the letter of the gate the "not ridden" branch never fired and
+                                   # this session STAYS at 135 min / TSS 98. But read the sample
+                                   # honestly: 9/12 ran 60.8 min / 44 TSS against a prescribed 165,
+                                   # and a 61-minute decoupling figure is not a durability
+                                   # measurement — nothing drifts in an hour. So the gate is
+                                   # satisfied on its terms but UNRESOLVED on its intent, and the
+                                   # durability question is simply unanswered since 8/29.
+                                   # RE-ARMED: the next completed long ride of >= 120 min is the
+                                   # real sample. If it comes back > 6.0% decoupling, restore this
+                                   # to 165 min / TSS 120. Holding at 135 rather than pre-emptively
+                                   # restoring 165 is deliberate: 7-day TSS is 67, CTL 35.2 and the
+                                   # ramp is -4.8/wk, and two of the last three long rides were
+                                   # missed or cut short. A 165-min Saturday he does not ride is
+                                   # worth 0 TSS; a 135-min Saturday he does ride is worth 98.
+                                   # Consistency is the binding constraint right now, not duration.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
@@ -283,6 +299,21 @@ schedule:
     target_if: 0.65
     target_tss: 42
     description: "Easy Z2 close to re-entry week. Was 90 min w/ tempo — no tempo this week."
+
+  # -------------------- Re-entry after the 9/16-9/20 gap --------------------
+  2026-09-21:                     # ADDED 9/21. Phase 3 Monday is "Rest"; overridden to an easy
+                                  # spin. 9/16-9/20 were five consecutive off-bike days, so a
+                                  # sixth rest day banks no recovery that is not already banked:
+                                  # TSB +18.6, readiness 91, 7-day HRV 68.0 vs 57.3 for the prior
+                                  # 21 days (+18.6%), RHR 44 on base 44. 7-day TSS is 67 and the
+                                  # CTL ramp is -4.8/wk — the cost of today is aerobic volume, not
+                                  # fatigue. Same call as the 9/07 Monday after the 9/03-9/06 gap.
+    type: Endurance
+    duration_min: 55
+    target_watts: "205-225"
+    target_if: 0.64
+    target_tss: 38
+    description: "Re-entry spin after five off-bike days. Pure Z2, cadence 90+, NO tempo and no efforts — this exists to re-open the legs before Tuesday's VO2max, not to add load. Cut to 35-40 min easy if the legs feel flat; do not extend past 60 min, because Tuesday's 4x4 is the week's protected session."
 
   # -------------------- Test day --------------------
   # Test is Tue 8/04, first Tuesday of the new Phase 2 window. One re-entry week
