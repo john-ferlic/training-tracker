@@ -10,6 +10,83 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-22 — **Phase 3 is one week old and has produced zero minutes of Z5. The 9/15 VO2 session was ridden as a Phase 2 threshold workout and abandoned; then five days off. Today's 4x4 cut to 3x4 as VO2 re-entry, and the Saturday gate re-armed because the 9/12 sample is void.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it
+  cannot confirm or refute a test. It is not a check on the anchor.)
+- **The headline finding is a specificity failure, not a fatigue one.** Phase 3 — the VO2max block
+  — opened **9/14**. Z5 time since then: **0.0 min**. Across the last four weeks, total Z5+Z6 is
+  **~14 min**, and every second of it is incidental overshoot inside over-unders (8/27 **9.3 min**,
+  9/10 **4.2 min**, 9/13 **0.4 min**). Nothing has been ridden as an actual VO2 interval since the
+  8/25 ramp test. **A VO2max block that never enters Z5 is a threshold block**, and this one has
+  been a threshold block for its entire first week.
+- **Tue 9/15 is where it went wrong, and it is worth reading closely.** The prescription was the
+  Phase 3 opener, 4x4 min @ ~368W. What got loaded was the *Phase 2* Zwift "sweet spot/threshold"
+  3x15 @ 320W — the same file as 9/01 and 9/08 — and it was then abandoned:
+
+  | rep | 9/01 (validation) | 9/08 | **9/15** |
+  |---|---|---|---|
+  | 1 | 14.9 min @ 319W / HR 168 | 14.9 min @ 319W | **14.9 min @ 319W / HR 165** |
+  | 2 | 14.9 min @ 319W / HR 175 | 14.9 min @ 319W | **14.9 min @ 309W / HR 169** |
+  | 3 | 13.5 min @ 314W / HR 175 | 15.0 min @ 319W | **3.9 min @ 309W / HR 162** |
+  | fade | 1.6% | **0.0%** | **3.1%** |
+  | total at/near FTP | 43.3 min | 44.8 min | **33.7 min** |
+
+  Two weeks earlier he held 319W three times with 0.0% fade. On 9/15 he gave back 10W on rep 2 and
+  pulled the plug 3.9 min into rep 3. **Then 9/16-9/20 were five consecutive off-bike days.** The
+  shape of that — a session abandoned mid-rep, followed immediately by a week down — is the shape
+  of life load arriving, and Oura agrees it was not illness (see below). But the training
+  consequence stands: the block's opening week delivered **67 TSS** against **372** the week before.
+- **Oura rules out illness and, unusually, the gap looks like it *worked*.** Across 9/16-9/20
+  readiness ran **91 / 88 / 82 / 78 / 91**, sleep 74-89, temp deviation never outside **-0.49 to
+  +0.26**, RHR 39-49. HRV *rose* through the break — **71, 69, 74**, against a 56-day median of 60 —
+  with a single-night dip to 44 on 9/19 that recovered to 57/58. Today's read (9/21 night): readiness
+  **87**, RHR **40** vs base 44, HRV **58** vs that 60 median (-3%), sleep 83 / 7.04 h. He is not sick and he is not buried;
+  he is **rested and under-stimulated**. TSB **+17.0**, CTL **35.1**, ramp **-5.6/wk**.
+- **Plan change 1 — today (Tue 9/22) written down as a date override: 4x4 -> 3x4 @ 360-368W**,
+  55 min / 68 TSS, with the 4th rep conditional on rep 3 averaging >= 360W. The reasoning is that
+  the two limiters point opposite ways: *systemically* he is as fresh as he has been all block
+  (TSB +17, readiness 87, RHR -4 vs base) and the case for riding hard is strong; *specifically*
+  he has not touched 115% FTP in a month and is one 45-min spin removed from five days off. Twelve
+  quality minutes at 115% is worth more than sixteen that decay into threshold. **The hard floor
+  written into the plan: any rep that cannot hold 355W ends the session.** Finishing a VO2 workout
+  at 320W is precisely the 9/15 failure mode, and it is what turns this block into another
+  threshold block.
+- **Plan change 2 — the Phase 3 Saturday gate is re-armed on 9/26; the 9/12 sample is VOID.**
+  The 9/07 entry left a single-sample gate: *9/12 decoupling <= 6.0% keeps Saturday at 135 min.*
+  Read literally, it passed — 9/12 logged **4.1%**. **It should not be read literally.** 9/12 was
+  ridden as **61 min** against a prescribed 165, and decoupling over an hour carries no information
+  about the hour-2 drift this gate was built to catch. Calling that a pass would retire a
+  three-month limiter on a ride a third of the required length.
+  - The honest state: the last true long ride is **8/29** (165 min, 5.7%). **9/05, 9/12 and 9/19 all
+    failed to produce a sample.** It has been **24 days with nothing over 90 min**.
+  - The same-power HR series (8/08 **+7 bpm** -> 8/22 **-1** -> 8/29 **0 bpm**, all at ~249W) — the
+    stronger of the two signals — has likewise had no new sample since 8/29.
+  - **Saturday stays at 135 min / 98 TSS this week anyway.** This is a deliberate override of the
+    "no data, default to the durability duration" rule from 9/07: week TSS has gone **372 -> 67 ->
+    32 so far**, and stacking a restored 165 onto a re-entry week that already contains two VO2
+    sessions is the wrong risk. The durability question does not outrank the re-entry.
+  - New gate, on **Sat 9/26** at 135 min: **<= 6.0%** keeps 135 for the rest of Phase 3 and the
+    limiter is called resolved; **> 6.0%** restores 165 / TSS 120 for weeks 16-17; **ridden under
+    120 min** voids it again and re-arms on 10/03. That third branch is the lesson from 9/12
+    written into the file — a short ride is not evidence.
+- **Open question for the athlete, not actioned: should Phase 3 extend a week?** Week 14 delivered
+  67 TSS and zero VO2 work, so the block has effectively lost 1 of its 4 weeks. There is precedent
+  (Phase 1 was extended +1wk after the 7/16-7/26 gap). Extending Phase 3 to weeks 14-18 would push
+  Phase 4 and the **11/03 final test** to 11/10. Not changed, because it cascades through the rest
+  of the calendar and there may be a date constraint the plan file does not know about. **Flagged
+  for a decision by end of this week** — the answer only matters from week 17 onward.
+- **Watch item carried forward:** this is the **third** multi-day interruption in ten weeks
+  (7/16-7/26 eleven days, 9/03-9/06 four days, 9/16-9/20 five days). Each one has been absorbed
+  without a fitness collapse, and Oura has cleared each of them as life load rather than illness.
+  But the pattern now has a cost that shows up in the plan rather than the numbers: **no long ride
+  has survived any of the last three weeks**, and the block that was supposed to add top-end has
+  not started. If a fourth gap lands inside Phase 3, the block should be re-planned rather than
+  patched week by week.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
