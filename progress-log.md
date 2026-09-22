@@ -40,9 +40,9 @@ the analysis math needs them. This log is the narrative of *how they got there*.
   consequence stands: the block's opening week delivered **67 TSS** against **372** the week before.
 - **Oura rules out illness and, unusually, the gap looks like it *worked*.** Across 9/16-9/20
   readiness ran **91 / 88 / 82 / 78 / 91**, sleep 74-89, temp deviation never outside **-0.49 to
-  +0.26**, RHR 39-49. HRV *rose* through the break — **71, 69, 74**, against a 56-day median of 58 —
+  +0.26**, RHR 39-49. HRV *rose* through the break — **71, 69, 74**, against a 56-day median of 60 —
   with a single-night dip to 44 on 9/19 that recovered to 57/58. Today's read (9/21 night): readiness
-  **87**, RHR **40** vs base 44, HRV **58**, sleep 83 / 7.04 h. He is not sick and he is not buried;
+  **87**, RHR **40** vs base 44, HRV **58** vs that 60 median (-3%), sleep 83 / 7.04 h. He is not sick and he is not buried;
   he is **rested and under-stimulated**. TSB **+17.0**, CTL **35.1**, ramp **-5.6/wk**.
 - **Plan change 1 — today (Tue 9/22) written down as a date override: 4x4 -> 3x4 @ 360-368W**,
   55 min / 68 TSS, with the 4th rep conditional on rep 3 averaging >= 360W. The reasoning is that
