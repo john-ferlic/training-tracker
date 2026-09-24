@@ -10,6 +10,93 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-24 — **Phase 3 opened into a lost week. CTL ramp is negative, the limiter is consistency, not recovery — and the decoupling flag is firing on an artifact.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: it reads FTP from the **Strava profile field**, so it is not a check
+  on the anchor.) Max HR on 9/22 peaked at **188** — under the 197 on record, nothing to bump.
+
+- **The headline: Phase 3's opening week was 67 TSS.**
+
+  | week | TSS | rides | hours |
+  |---|---|---|---|
+  | W13 (9/07) | **372** | 6 | 6.8 |
+  | W14 (9/14) | **67** | 1 | 0.8 |
+  | W15 (9/21) | 88 (thru Thu) | 2 | 1.5 |
+
+  W14 is the week Phase 3 started. About **280 TSS** of prescribed work went missing — 9/16-9/20
+  was five consecutive off-bike days. CTL **36.3**, ramp **-4.3/wk**, TSB **+17.1**. This is the
+  third such block this cycle (7/16-7/26, 9/03-9/06, 9/16-9/20). **The pattern is now the finding.**
+  He is not fatigued, he is unloaded — for the third time — and a VO2 block launched off a falling
+  CTL spends four weeks of hard sessions to buy nothing.
+
+- **The rule engine said MODIFY today. It is wrong, and the reason is worth writing down:
+  aerobic decoupling is invalid on interval sessions, and it is systematically over-flagging.**
+  9/22's 18.0% decoupling was cited as "harder than planned." That ride was **53.5% Z1** — half of
+  it was the recovery valleys between VO2 reps. Pw:Hr decoupling assumes a steady aerobic effort;
+  on a 3-min-on/3-min-off structure, HR ratchets up across reps by design while average power
+  stays flat, and the first-half/second-half EF comparison reads that as drift. Across the file
+  the metric tracks **Z1 fraction, not fatigue**:
+
+  | session type | Z1 % | decoupling |
+  |---|---|---|
+  | Endurance (continuous) | 0.5-5.5% | **0.3-5.7%** |
+  | Threshold / VO2 (intervals) | 13-55% | **6.3-18.0%** |
+
+  Highest Z1 share in the file (9/22, 53.5%) produced the highest decoupling in the file (18.0%).
+  8/25 at 55.0% Z1 → 13.3%. **Read decoupling on endurance rides only.** On interval sessions read
+  rep-to-rep power and HR instead. (Engine fix, not a config fix — `decoupling_high: 6.0` is the
+  right threshold for the rides it *should* apply to. Left alone deliberately.)
+
+- **The "9.8% fade" on 9/22 is the same kind of artifact.** The reps themselves were excellent:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 179 s | **360W** | 113% | 163 |
+  | 2 | 178 s | **361W** | 113% | 169 |
+  | 3 | 175 s | **361W** | 113% | 172 |
+  | 4 | 176 s | **360W** | 113% | 177 |
+  | 5 | **117 s** | 290W | 90% | 161 |
+
+  Reps 1-4: **0.3% fade** across four 3-min reps at 113% FTP. The headline 9.8% is entirely rep 5
+  being cut short at 117 s. HR 163→177 is a normal VO2 ladder, not decay. **This was a good
+  session, executed on target** — it just stopped one rep early and came in short on volume
+  (47.3 min / 56 TSS vs 60 min / 85 planned). That is the honest read, and it points at volume,
+  not at fatigue.
+
+- **Plan change — VOLUME GATE added at the top of Phase 3, scored Mon 9/28 on W15's finished TSS.**
+  No session changes today or this week; this is a pre-committed decision rule in the same style as
+  the Saturday gate, so the next run does not have to re-derive it:
+  - **W15 ≥ 250 TSS** → base recovering. W16/W17 run as written.
+  - **W15 150-249** → hold intensity, rebuild volume: **Thursday VO2max → Endurance 90 min @
+    205-235W** (IF 0.65, TSS 62) for W16-W17. Tuesday's VO2max stays. One quality VO2 day holds the
+    adaptation; two on a falling CTL just accumulate cost.
+  - **W15 < 150** → the block is not being run. Extend `weeks` to **[14, 18]** and rebuild W16 as an
+    aerobic re-entry week (~300 TSS, no VO2), resume Phase 3 at W17.
+  Protecting the 11/03 retest and Phase 4 (opens W18, 10/12).
+
+- **Plan change — the Phase 3 Saturday gate is CLOSED at 135 min / TSS 98.** It had been open and
+  unadjudicated since 9/07. Scoring it: 9/12 *was* ridden, at **4.1%** decoupling — the literal
+  condition passed, so 135 holds. Honest caveat: it was only **60.8 min / 44 TSS**, not the
+  prescribed 135, and an hour cannot really settle a 2.25 hr durability question. The better sample
+  supports the same call — **Sun 9/13, 90.2 min, 2.6% decoupling**, the cleanest Pw:Hr trace in the
+  file. Sat 9/19 was not ridden.
+  I closed it at 135 rather than defaulting back to 165 because **nothing says durability is still
+  the limiter** (seven straight endurance rides at 0.3-5.7%), and because lengthening a session he
+  is already skipping raises a bar he is failing to clear instead of building anything. **Get 135
+  ridden, then talk about 165.** Saturday is this week's protected session.
+
+- **Today (Thu 9/24) — PROCEED, full 30/15s, not the trimmed version the engine asked for.**
+  Readiness **88** (above the 85 push threshold), RHR **43** vs base 43, slept **8.86 h**, sleep
+  score 84, temp deviation +0.08. The one amber is **HRV 49 vs baseline 60 (-18%)** — and its
+  timing exonerates training: HRV fell on **9/19**, during a five-day no-ride block, right after
+  three short nights (9/17 **6.67 h**, 9/18 **6.42 h**, 9/19 **6.89 h**). It is trailing life load,
+  not accumulated training stress, and this athlete's HRV swings 44-83 inside a single week. Sleep
+  has since recovered; HRV lags it. **Watch item, not an action item** — same call, and same
+  language, as the 9/07 entry.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
