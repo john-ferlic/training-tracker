@@ -10,6 +10,96 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-26 — **The limiter has changed. Durability is resolved and top-end is intact; the problem is now that he isn't riding. Saturday holds at 135, and a consistency gate is pre-committed for the rest of Phase 3.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  Max HR seen in the last 56 days is **188** (9/22), well inside the 197 anchor — no bump, no
+  strap glitch to chase. (Same standing blind spot: `sync-profile` reads FTP from the **Strava
+  profile field**, so it can never confirm or refute a test result.)
+
+- **The headline is volume, not fatigue.** He is fresh and unloaded, not tired:
+
+  | week ending | TSS | rides |
+  |---|---|---|
+  | 8/15 | 386 | 5 |
+  | 8/22 | 386 | 5 |
+  | 8/29 | 309 | 4 |
+  | 9/05 | 171 | 3 |
+  | 9/12 | 301 | 5 |
+  | 9/19 | **138** | **2** |
+  | 9/26 | **88** | **2** |
+
+  Two off-bike streaks inside twelve days — **9/16-9/20 (5 days)** and **9/23-9/26 (4 days and
+  counting)**. CTL **34.6** on a **-4.1/wk** ramp, ATL 14.1, **TSB +20.5**. Recovery is green
+  throughout: 9/24 readiness **88**, sleep **84 / 8.86 h**, RHR **43** vs base 44, temp deviation
+  +0.08. The 7-day HRV mean is 57 vs 69.9 the week before, but that prior week was an outlier
+  spike (83/80/81/71/69/74) and 57 sits on the **54-day median of 59.5** — a normalisation, not a
+  drop. Nothing in the recovery data explains the missed rides.
+
+- **Durability: resolved, and it stayed resolved.** Every aerobic sample since the gate is well
+  under the 6.0% flag — 9/12 **4.1%**, 9/13 **2.6%**, 9/21 **2.1%** — and Z2 efficiency has not
+  decayed across four low weeks (EF 1.564 / **1.715** / 1.669 on 9/12, 9/13, 9/21, against a
+  late-August best of 1.702). Four weeks of under-riding have cost him fitness, not economy.
+
+- **Top-end: intact, and the briefing's numbers mislead on this.** 9/22 reads as "faded 9.8%
+  across 5 intervals, decoupling 18.0%". The interval table says otherwise:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 2:59 | **360W** | 113% | 163 |
+  | 2 | 2:58 | **361W** | 113% | 169 |
+  | 3 | 2:55 | **361W** | 113% | 172 |
+  | 4 | 2:56 | **360W** | 113% | 177 |
+  | 5 | **1:57** | 290W | 90% | 161 |
+
+  Four reps at 113% FTP with **zero fade** across them, peak HR 188 vs a 197 max, then a fifth rep
+  abandoned at under two minutes. The 9.8% is that abandoned rep. The 18.0% decoupling is an
+  artifact of the session shape — 47 min with **53% of the time in Z1** — and whole-ride
+  decoupling means nothing on an interval session. **Do not read either number as fatigue.**
+  Written into the Phase 3 Tuesday description so it isn't re-derived next week.
+
+- **Threshold durability is the one thing that has actually slipped.** Same session, two weeks
+  apart, at the same 320 anchor:
+
+  | date | rep 1 | rep 2 | rep 3 | total at ~98-100% FTP |
+  |---|---|---|---|---|
+  | 9/01 | 319W / HR 168 | 319W / HR 175 | 314W / 13.5 min | **43.3 min** |
+  | 9/15 | 319W / HR 165 | **309W** / HR 169 | 309W / **3.9 min** | **33.7 min** |
+
+  Rep 2 gave back 10W and rep 3 was abandoned at under 4 minutes. That is what 138-TSS weeks buy.
+  It is *not* a reason to move the FTP anchor — 9/22's 360W x 4 says the ceiling is still there —
+  but the **3x15 -> 3x18 duration progression written on 9/07 is off the table** until he strings
+  two normal weeks together. Get back to 43 minutes at 320W before adding any.
+
+- **Plan change 1 — Phase 3 Saturday HOLDS at 135 min / TSS 98; the 9/12 gate is void.**
+  The 9/07 entry made 9/12 a single-sample gate with three branches. None of them cleanly applies:
+  **9/12 was ridden, but as a 61-min Z2** ("Endurance - short", NP 211, dec 4.1%) rather than the
+  long ride. A 61-minute decoupling number is not a durability sample, so the "≤ 6.0% → keep 135"
+  branch cannot be claimed on it — and the "not ridden → restore 165" branch would be restoring
+  duration on a technicality at exactly the wrong moment. His **last ride over 90 minutes was
+  8/29**, four weeks ago. Prescribing 165 to a rider on 88 TSS/week raises the odds the session is
+  skipped outright, and **a completed 135 is worth more than a skipped 165**. The durability
+  evidence that does exist is uniformly reassuring. **Sat 9/26 becomes the fresh sample**, read
+  the same way, with an explicit third branch this time: under 120 min or not ridden, the gate
+  *rolls* to 10/03 — it does not restore 165 while CTL is falling.
+
+- **Plan change 2 — a pre-committed consistency gate on Phase 3's Thursday, read Mon 10/05.**
+  Nothing changes before then. On week 16 (9/28-10/04) alone:
+  - **≥ 3 rides AND ≥ 200 TSS** → Phase 3 runs as written, Thursday stays a second VO2 day.
+  - **otherwise** → for week 17 and for Phase 4's Thursday, the slot **converts to Endurance
+    75 min @ 205-235W / IF 0.65 / TSS 52**, leaving Tuesday as the single weekly intensity day.
+
+  The reasoning is the one thing worth arguing with: a VO2 block only pays off on a base that is
+  being maintained. At two rides a week, two VO2 days mean *all* of his riding is intensity while
+  CTL bleeds — the worst available combination five weeks out from the 11/03 test. Top-end is
+  demonstrably not what is at risk. Aerobic volume is. If the riding doesn't come back, the extra
+  day should go to Z2, not to 30/15s.
+
+- **Focus for the next two weeks: ride days, not ride quality.** The sessions he completes are
+  good. The plan is not the problem and does not need loosening — three rides a week, one of them
+  the Tuesday VO2 and one of them long, would stop the ramp and hold enough base to make Phase 4
+  and the 11/03 test worth running.
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all

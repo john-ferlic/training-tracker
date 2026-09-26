@@ -130,7 +130,7 @@ phases:
         target_watts: "340-368"
         target_if: 0.88
         target_tss: 85
-        description: "WU, 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305)."
+        description: "WU, 4x4 min @ 115% FTP (~368W) w/ 4 min easy between, CD. RE-ANCHORED 8/28 to FTP 320 (was 325-350 @ FTP 305). THIS IS THE ONE SESSION TO PROTECT (9/26): top-end is the part of the athlete that is still intact. 9/22 ran 4x3 min at 360/361/361/360W — 113% FTP, 0% fade across the four, HR climbing 163->177 against a 197 max — then a 5th rep was abandoned at 1:57 / 290W. The headline \"fade 9.8%\" is that abandoned 5th rep, not a fade; treat 9/22 as four clean reps plus a bailed extra. Likewise ignore its 18.0% decoupling: it is a 47-min session with 53% of its time in Z1, and whole-ride decoupling is meaningless on that shape. Progress this by taking the reps back to the prescribed 4 min at the same 360W before adding a 5th."
       wednesday:
         type: Endurance
         duration_min: 60
@@ -140,11 +140,27 @@ phases:
         description: "Easy Z2. Lower volume block — keep this genuinely easy."
       thursday:
         type: VO2max
-        duration_min: 60
+        duration_min: 60           # PRE-COMMITTED CONSISTENCY GATE, written 9/26. Read it on
+                                   # Mon 10/05, on week 16 (9/28-10/04) alone:
+                                   #   - week 16 >= 3 rides AND >= 200 TSS -> Phase 3 runs as
+                                   #     written; this stays a second VO2 day.
+                                   #   - otherwise -> for week 17 (10/05-10/11) and for Phase 4's
+                                   #     Thursday, CONVERT this slot to Endurance 75 min /
+                                   #     205-235W / IF 0.65 / TSS 52, keeping Tuesday as the
+                                   #     single weekly intensity day.
+                                   # Why: a VO2 block only pays off if it lands on a base that is
+                                   # being maintained. At 2 rides/week (week 14: 138 TSS, week 15:
+                                   # 88 TSS) two VO2 days mean essentially ALL of the athlete's
+                                   # riding is intensity while CTL falls (-4.1/wk, now 34.6) — the
+                                   # worst combination available, and 5-6 weeks out from the 11/03
+                                   # test. Top-end is not the thing at risk: 9/22 held 360W x 4 x
+                                   # 3 min with 0% fade. Aerobic volume is. If the riding does not
+                                   # come back, spend the extra day on Z2, not on 30/15s.
+                                   # This gate changes NOTHING before 10/05.
         target_watts: "362 / 205"
         target_if: 0.86
         target_tss: 80
-        description: "30/15s: 30 sec @ 362W / 15 sec @ 205W x13, 2-3 sets. RE-ANCHORED 8/28 to FTP 320 (was 345/195 @ FTP 305)."
+        description: "30/15s: 30 sec @ 362W / 15 sec @ 205W x13, 2-3 sets. RE-ANCHORED 8/28 to FTP 320 (was 345/195 @ FTP 305). Subject to the consistency gate in the duration_min comment above — if week 16 (9/28-10/04) comes in under 3 rides / 200 TSS, this slot converts to Endurance 75 min @ 205-235W (TSS 52) for week 17 and Phase 4, leaving Tuesday as the only intensity day."
       friday:
         type: Rest
         description: "Rest."
@@ -173,10 +189,29 @@ phases:
                                    # athlete has now gone a full week without a long ride. With
                                    # no confirming data, default back to the durability-building
                                    # duration rather than assume the limiter stayed resolved.
+                                   # RESOLVED 9/26: the single-sample gate is VOID, and the
+                                   # duration HOLDS AT 135. 9/12 was ridden, but as a 61-min Z2
+                                   # ("Endurance - short", NP 211, dec 4.1%) — not the long ride.
+                                   # A 61-min decoupling number is not a durability sample, so
+                                   # neither the "<= 6.0%" branch nor the "NOT RIDDEN" branch
+                                   # honestly applies. Restoring 165 on that technicality would be
+                                   # wrong in the other direction: the athlete's last ride over
+                                   # 90 min was 8/29, CTL has fallen 4.1/wk to 34.6 and the last
+                                   # two weeks ran 138 and 88 TSS. A completed 135 is worth more
+                                   # than a skipped 165, and the durability evidence that remains
+                                   # is all reassuring (dec 4.1% on 9/12, 2.6% on 9/13, 2.1% on
+                                   # 9/21; Z2 EF 1.56-1.72, no aerobic decay in four low weeks).
+                                   # The limiter has changed from durability to CONSISTENCY, and
+                                   # duration is no longer the lever. Sat 9/26 becomes the fresh
+                                   # sample; read it the same way:
+                                   #   - 9/26 dec <= 6.0% over >= 120 min -> hold 135 / TSS 98.
+                                   #   - 9/26 dec  > 6.0% over >= 120 min -> restore 165 / TSS 120.
+                                   #   - under 120 min or not ridden      -> gate rolls to Sat 10/03;
+                                   #     do NOT restore 165 on a missed ride while CTL is falling.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
-        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). Restore to 165 min / TSS 120 if Sat 9/12 decoupling comes back over 6.0% — or if 9/12 is not ridden at all. 9/05 was missed (four off-bike days 9/03-9/06), so 9/12 is the only remaining sample and the gate is now single-sample; see the duration_min comment above. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
+        description: "Z2 endurance, 2.25 hr. Cut 165 -> 135 min on 9/01: the durability gate was met (8/22 3.8%, 8/29 5.7% — two consecutive long rides under the 6% decoupling flag). The same-power series that this session was protecting has resolved — at an identical 249W, 8/08 ran 156/159/163 bpm across the three tempo blocks (+7) and 8/29 ran 141/142/141 (0 drift, and 15-22 bpm lower in absolute terms). RESOLVED 9/26 — HOLD AT 135. The 9/12 single-sample gate is void: 9/12 was ridden as a 61-min Z2 (dec 4.1%), not a long ride, so it produced no durability sample. Do not restore 165 on that technicality — the athlete has not ridden over 90 min since 8/29, CTL is down to 34.6 on a -4.1/wk ramp, and the last two weeks ran 138 and 88 TSS. The limiter is now consistency, not duration, and a completed 135 beats a skipped 165. Sat 9/26 is the fresh sample; see the duration_min comment above for how to read it. Keep riding the tempo blocks at 245-250W, not the 288W band top — the comparison depends on held power. Fuel it: 60-90 g carb/hr + 500-800 mg sodium/hr."
       sunday:
         type: Endurance
         duration_min: 75
