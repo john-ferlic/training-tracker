@@ -10,6 +10,89 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-27 — **The VO2 top end is intact; the base under it is eroding. Volume, not fatigue, is the limiter. Phase 3 Saturday 135 → 120, and today's Sunday spin extended to a 120-min re-entry long ride.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: it reads FTP from the **Strava profile field**, so it can never
+  confirm or refute a test.)
+- **The headline is the volume collapse, and it is now five weeks old.** Weekly TSS:
+
+  | week of | TSS | rides | longest ride |
+  |---|---|---|---|
+  | 8/17 | 333 | 4 | 160 min |
+  | 8/24 | 356 | 5 | **165 min** |
+  | 8/31 | 124 | 2 | 65 min |
+  | 9/07 | 372 | 6 | 90 min |
+  | 9/14 | **67** | 1 | 50 min |
+  | 9/21 | **88** | 2 | 47 min |
+
+  **No ride over 90 min since 8/29. None over 100 min in five weeks.** The last 14 days hold
+  155 TSS against roughly 450 prescribed. CTL **35.3**, ramp **−4.3/wk**, TSB **+23.2** —
+  "fresh / detraining risk". Two full off-bike blocks inside three weeks (9/16-9/20, 9/23-9/26).
+- **He is not fatigued, and the recovery data is unambiguous about it.** Last 7 recorded Oura days:
+  readiness mean **84.9** (vs 82.2 the prior 21), RHR **42.7** vs a 44 baseline, HRV **57.0** vs a
+  60 median (**−5.9%**, well inside the 12% flag), temp deviation never outside ±0.26. There is no
+  physiological reason he is not training. *(Oura is 3 days stale — last record 9/24, nothing for
+  9/25-9/27. Worth a ring/sync check; today's brief had to run with recovery UNKNOWN.)*
+- **Read the 9/22 VO2max correctly — the rule-based flag is misleading on this one.** The brief
+  called it "harder than planned, decoupling 18.0%, faded 9.8%". The interval table says otherwise:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 179 s | 360W | 113% | 163 |
+  | 2 | 178 s | 361W | 113% | 169 |
+  | 3 | 175 s | 361W | 113% | 172 |
+  | 4 | 176 s | 360W | 113% | **177** |
+  | 5 | **117 s** | **290W** | 90% | 161 |
+
+  Reps 1-4 are **zero fade** — 360/361/361/360W, inside the prescribed 340-368W band. *All* of the
+  "9.8% fade" is rep 5 being abandoned at two-thirds distance. And the 18.0% decoupling is not a
+  real signal here: 53.5% of that ride was Z1 and only 26.3% Z5, and whole-ride Pw:Hr on a
+  stop-start VO2 session is not a durability metric. The session was also **short of plan, not over
+  it** — 47.3 min / 56 TSS against 60 min / 85 TSS.
+- **What the session actually shows is the useful finding: +14 bpm of drift at constant power.**
+  163 → 169 → 172 → 177 across four reps at an identical 360W, then the fifth rep gone. Top-end
+  power production is fine; the aerobic support underneath it is not holding the repeats. That is
+  exactly what five weeks without a long ride produces, and it says **the fix is aerobic volume,
+  not more VO2 work.**
+- **Plan change — Phase 3 Saturday `duration_min: 135 → 120`, `target_tss: 98 → 87`.**
+  The single-sample gate written on 9/07 **fired**. It said: 9/12 ≤ 6.0% → keep 135; > 6.0% →
+  restore 165; **not ridden → restore 165**. Sat 9/12 was ridden, but as **60.8 min / TSS 44**
+  against a prescribed 165 — a 61-minute ride tells you nothing about hour three, so its 4.1%
+  decoupling is not a durability sample and the third branch applies. **Strictly, the gate calls
+  for 165.**
+  **Staged to 120 instead, and that is a judgement call against the pre-committed rule, so it is
+  worth stating plainly.** The fact the gate was written against has changed: when it was set, the
+  athlete was completing 165-min Saturdays. He now has not completed 100 min in five weeks.
+  Prescribing 165 into that prescribes a session that will not be ridden, and an unridden 165
+  protects durability less than a completed 120. 120 is the shortest duration that still yields a
+  readable decoupling number. **Re-gate, with two Saturdays left in Phase 3 (10/03, 10/10):** a 120
+  completed at ≤ 6.0% → go to 165 / TSS 120 and the durability release stands; completed but
+  > 6.0% → hold 120 and treat durability as a live limiter again in Phase 4; not ridden → the
+  problem is consistency, not prescription, and the number should stop climbing.
+- **Plan change — date override `2026-09-27`: Endurance 75 → 120 min, TSS 48 → 78.**
+  Today is the Phase 3 Sunday, written as "Easy Z2 or rest". On a **+23.2 TSB** after five days
+  off, a 48-TSS spin buys nothing — there is no fatigue to protect and CTL is bleeding 4.3/wk.
+  Extended to a flat-Z2 re-entry long ride at 210-220W, no tempo blocks, which also produces the
+  first usable decoupling number since 8/29. Monday is a full rest day, so **Tue 9/29's VO2max is
+  not compromised** (projected TSB still roughly +12 to +14 at the start of it). Written-in
+  bail-out: if HR at a held 215W is more than 8 bpm above its 30-min value by 90 min, close it out
+  at 90.
+- **Watch, not yet an action — the Tuesday VO2 prescription may be mis-specified.** Phase 3 Tuesday
+  reads *4×4 min @ 115% FTP (~368W)*. He has twice not ridden it that way: 9/15 substituted a
+  threshold session entirely, and 9/22 he rode **5×3 min @ 360W** and ran out at rep 5. The 3-min
+  format at 113% is defensible and he executes it cleanly for four reps. If 9/29 again ends with an
+  abandoned last rep, change the prescription to **4×3.5 min @ 355-365W** rather than keep writing
+  a session that gets re-cut every week.
+- **The block itself is at risk, and this is the thing to decide next.** Phase 3 runs weeks 14-17
+  (9/14-10/11) and we are in week 15 with 155 TSS banked across 14 days. A VO2 block half-ridden on
+  a falling CTL will not convert, and Phase 4 opens 10/12 with a final test on 11/03. No
+  restructure made today — one good week changes the picture. **If week 16 (9/28-10/04) also lands
+  under ~200 TSS, the honest move is to stop defending the VO2 block and re-cut Phase 3/4 into a
+  shorter consolidation run at the test.**
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
