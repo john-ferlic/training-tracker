@@ -10,6 +10,106 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-29 — **Phase 3 has not happened. CTL −26% in 19 days, one VO2 session in 16. Re-entry ramp inserted; the dangling 9/12 Saturday gate resolved by holding 135, not restoring 165.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  neither confirm nor refute a test. It is not a check on the anchor.) Nothing in the data argues
+  for moving the anchor either way — **there has been no session capable of testing it**. Max HR on
+  record this month is **188** (9/22), 9 bpm under the 197 baseline; no glitch, no bump.
+
+- **The headline is not today's workout, it is that the VO2 block never started.** Phase 3 opened
+  on 9/14. Two full weeks in:
+
+  | week | dates | rides | TSS | prescribed | longest ride |
+  |---|---|---|---|---|---|
+  | W13 (P2 close) | 9/07-9/13 | 6 | **372** | 436 | 90.2 min |
+  | W14 (P3 wk 1) | 9/14-9/20 | **1** | **67** | 351 | 50.4 min |
+  | W15 (P3 wk 2) | 9/21-9/27 | **2** | **88** | 351 | 47.3 min |
+
+  **19% and 25% of prescribed.** W13 was the athlete's second-best week of the whole build; the two
+  weeks after it are the two worst. The block has produced exactly **one** VO2 session (9/22) in
+  16 days, and 9/15 — a prescribed VO2 day — was ridden as the Phase 2 threshold 3×15 instead.
+  **Phase 3 ends 10/11. There are two weeks left to get a VO2 stimulus out of it.**
+
+- **The fitness cost is now large enough to name.** CTL **45.3 (9/10) → 33.4 today: −11.9, −26% in
+  19 days**, ramp **−6.1/wk**. ATL **44.9 → 8.9**. TSB **+24.5** — and the important point is that
+  this is *detraining* freshness, not taper freshness: it is ATL collapsing, not CTL being held
+  while ATL sheds. Seven consecutive off-bike days, **9/23-9/28**.
+
+- **Oura is blind for the last 5 days — no data since 9/24.** Worth fixing; the ring not syncing is
+  why today's brief fell back to "no recovery data." What the record does show argues against
+  illness and for life load, the same read as 9/03-9/06:
+  - Last reading **9/24**: readiness **88**, sleep **84 / 8.86 h**, RHR **43** vs base 44, HRV 49.
+  - RHR has not left **39-49** all month; temp deviation has not left **±0.3**.
+  - HRV did step down, though: a **9/12-9/18 plateau of 69-83** → **44-58 across 9/19-9/24**
+    (last two readings 48, 49). 14-day mean is still **63.4 vs 55.9** for the prior 14, so the
+    trend is not negative in aggregate — but the *recent* level is the bottom half of his range
+    while RHR sits at baseline. **Watch item, not an action item.**
+
+- **The 9/22 session, read properly.** The brief flags it "harder than planned" on 18.0% decoupling
+  and 9.8% fade. Both numbers are misleading and should not be carried forward as fatigue evidence:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 179 s | 360W | 113% | 163 |
+  | 2 | 178 s | 361W | 113% | 169 |
+  | 3 | 175 s | 361W | 113% | 172 |
+  | 4 | 176 s | 360W | 113% | 177 |
+  | 5 | **117 s** | **290W** | **90%** | — |
+
+  Four reps held **360-361W dead flat**; the "9.8% fade" is entirely rep 5 failing. And **53.5% of
+  that ride was in Z1** (VO2 recovery valleys), which is what produces an 18% Pw:Hr number on a
+  47-min session — it is a structural artifact, **not** a durability read. Do not compare it to the
+  long-ride decoupling series. The real finding is the one the summary metrics hide: **he completed
+  4×3 min at 113% and failed the 5th**, at a point when he was better trained than he is today.
+
+- **Plan change 1 — a Phase 3 re-entry ramp, 9/29 → 10/03, as date overrides.** Opening day 1 back
+  from seven days off with the hardest session on the plan (4×4 min @ **368W**, 115% FTP) is not a
+  defensible bet, and there is direct precedent: the **11-day gap of 7/16-7/26 cost −3.8% FTP**
+  (317 → 305 at the 8/04 test) and was handled with a Z2 re-entry week, not a hard session on
+  re-entry.
+  - **Tue 9/29** — VO2max 60 min / 4×4 min @ 368W / TSS 85 → **55 min / 3×3 min @ 350-360W /
+    TSS 62.** This is the part of 9/22 he *completed*, minus one rep — evidence-led, not cautious.
+    Carries a gate: **rep 3 needing >177 bpm to hold 355W** means the 320 anchor has softened, and
+    Thursday drops to 350W × 2 sets.
+  - **Wed 9/30** — Z2 60 min, unchanged from the template, stated explicitly as the platform under
+    Thursday. Flagged not to drift to tempo on fresh legs at TSB +24.
+  - **Thu 10/01** — 30/15s @ 362/205W, unchanged, and marked **the week's protected session**. It
+    is *why* Tuesday was stepped down. 30/15s are also more completable than 4×4 off a light week —
+    the 15-sec valleys stop the efforts stacking.
+  - **Sat 10/03** — 135 min → **105 min / TSS 76**, pure Z2, no tempo blocks.
+
+- **Plan change 2 — the 9/12 Saturday gate is resolved, and deliberately overridden.** The 9/07
+  entry committed: *9/12 not ridden → restore Saturday to 165 min / TSS 120*. What happened is that
+  **9/12 produced no long-ride sample at all** (a 60.8-min Z2, 44 TSS — its 4.1% decoupling is not
+  a durability read), and **9/19 and 9/26 were not ridden**. So the "not ridden" branch fired.
+  **It is not being executed, and the reasoning matters more than the number.**
+  - That branch was written for an athlete training normally whose durability needed re-testing.
+    **The binding constraint has changed.** No ride has exceeded **90.2 min in 31 days**; the last
+    true long ride was **8/29** (165 min, 5.7%). The limiter on this session is no longer
+    durability — it is that **the session does not happen**.
+  - **135 min already produced 0 min on two consecutive Saturdays.** Raising the prescription to 165
+    lowers, not raises, the chance of a ride. That is the whole argument.
+  - So: **template holds at 135**, and the rebuild is by steps — **105 (10/03) → 120 → 135**. The
+    decoupling gate **re-opens at the first 120+ min ride actually ridden** (tempo blocks back in
+    at 120 min, 245-250W as always, so the same-power series stays comparable): **≤6.0% → 135
+    stands; >6.0% → restore 165 then**, on a measurement rather than on the absence of one.
+  - Flagging this plainly because this log takes pre-commitments seriously: **this is a coach
+    overriding a pre-committed gate**, not the gate firing. It is the change in this PR most worth
+    a second opinion.
+
+- **Recommended but NOT changed — Phase 3's weekly volume, pending the athlete's call.** The plan
+  asks **351 TSS/week** in Phase 3 and has received **67 and 88**. Four of the last six weeks that
+  contained a prescribed long ride did not produce one — and the last four in a row did not. A plan that is met 20-25% of the time is
+  not providing progressive overload; it is providing a record of misses. The honest options are
+  (a) re-cut Phase 3-4 to a **4-day / ~250 TSS week** that gets completed, or (b) keep the current
+  structure and treat W14-W15 as an interruption to ride through. **That is a life-constraints
+  question, not a physiology one, so it is being asked rather than decided.** The 11/03 final test
+  is 5 weeks out and currently has no block behind it.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
