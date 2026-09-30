@@ -10,6 +10,81 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-09-30 — **Phase 3 has not happened. 8 days off-bike, third gap of the block, and the VO2max stimulus is 1-for-6. Re-entry ramp inserted; the Saturday durability gate fired back to 165 min.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  Highest max HR in the 56-day window is **189** (8/06), then **188** on 9/22 — nothing challenging
+  the 197 anchor. Oura RHR 7-day mean **42.7** vs the 44 baseline, so the baseline still reads right.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  never confirm or refute a test. It is not a check on the anchor.)
+- **The headline is the block, not the day. Phase 3 opened 9/14 and has been run at roughly a
+  quarter of prescription:**
+
+  | week | dates | TSS | rides | vs 351 TSS template |
+  |---|---|---|---|---|
+  | W14 | 9/14-9/20 | **67** | 1 | 19% |
+  | W15 | 9/21-9/27 | **88** | 2 | 25% |
+  | W16 | 9/28-9/30 | **0** | 0 | Tue VO2max missed |
+
+  For contrast, Phase 2 ran **378 / 333 / 356 / 372** in its healthy weeks. CTL **34.9**, ATL
+  **7.6**, TSB **+27.3**, ramp **−6.4/wk**. He is not fatigued, he is unloaded — for the third time
+  in this block (11 days 7/16-7/26, 4 days 9/03-9/06, now **8 days 9/23-9/30**).
+- **The VO2max block has delivered one VO2max session.** Of six prescribed Tue/Thu VO2 slots in
+  W14-W16, 9/15 was substituted with a threshold 3×15 and 9/22 was the only VO2 session ridden.
+  Four were missed outright. A block that doesn't run isn't a block.
+- **9/22 'LOX' is the session to read, and it argues against the prescription, not for it.**
+  4×3 min, and the power held — but nothing else did:
+
+  | rep | duration | power | %FTP | avg HR |
+  |---|---|---|---|---|
+  | 1 | 3.0 min | 360W | 113% | 163 |
+  | 2 | 3.0 min | 361W | 113% | 169 |
+  | 3 | 2.9 min | 361W | 113% | 172 |
+  | 4 | 2.9 min | 360W | 113% | 177 |
+  | 5 | **1.9 min** | **290W** | 90% | 161 |
+
+  Fade **9.8%**, first-to-last **19.4%**, whole-ride decoupling **18.0%**, max HR **188** = 95% of
+  the 197 anchor. HR climbed **14 bpm** across four reps at flat power and rep 5 collapsed. That is
+  the ceiling being found — and it was found while he was *fresher* than he is now.
+- **9/15 also degraded against 9/08 on the same 3×15 @ 320W.** 9/08: 319/319/319, fade **0.0%**,
+  all three reps full. 9/15: 319/309/309 with rep 3 cut to **3.9 min** of 15, fade **3.1%**,
+  decoupling 6.3%. Against the 9/01 validation (319/319/314, fade 1.6%) the direction is the wrong
+  one. Worth naming now so it isn't read as noise later: **threshold durability slipped before the
+  gap, and 320 remains a ceiling.**
+- **Oura is dark too — last day on record is 9/24.** Six days with no ring data alongside eight with
+  no ride. The last readings were unremarkable (9/24 readiness **88**, sleep 84 / 8.86 h, RHR 43,
+  HRV 49; 9/23 readiness 80, sleep 68) and the trailing trend is mild: HRV 7-day mean **57.0** vs
+  **61.9** for the prior 14 days (−8%, inside the 12% flag), RHR **42.7** vs 43.3. Nothing in the
+  data before it went dark suggests illness — but the cause of the gap is **unknown**, and that
+  matters for how fast to reload. **Ask before assuming it was life load.**
+- **Plan change — re-entry ramp for 10/01-10/06, as date overrides in `schedule:`.**
+  Direct precedent: the 7/26-8/02 ramp after the July gap, and the **−3.8% FTP (317 → 305)** the
+  8/04 ramp test measured coming out of it. Treat 320 as optimistic this week.
+  - **Thu 10/01: VO2max 30/15s @ 362W (80 TSS) → SweetSpot 2×12 @ 275W, 60 min (52 TSS).**
+    9/22 already failed at 360W when not detrained; repeating it off eight days down buys a failed
+    session, not a stimulus. Gate written into the file: HR above 168 at the end of rep 1 → stop at
+    2×10 and keep the whole week aerobic.
+  - **Sat 10/03: 165 min → 120 min Z2, NO tempo (87 TSS).** Mirrors 8/01's 180 → 120 step-back.
+  - **Tue 10/06: VO2max 4×4 @ 368W (115%) → 4×3 @ 345W (108%), 80 TSS.** A VO2 block needs
+    *completed* reps. Progression rule in the file: four reps at 343-350W with last-rep HR ≤ 180 and
+    no truncation → W17 Thursday runs the full 362W 30/15s. Rep 4 under 330W or cut short → hold
+    345W and add reps (5×3) before watts.
+- **Plan change — Phase 3 Saturday `duration_min: 135 → 165`, `target_tss: 98 → 120`.** This is the
+  9/07 single-sample gate firing on its **third branch**, not a new judgement. That gate read:
+  9/12 decoupling ≤ 6.0% → keep 135; > 6.0% → restore 165; **9/12 not ridden → restore 165.**
+  9/12 produced a **60.8 min / 44 TSS ride at 210W** — decoupling 4.1%, but a 60-minute Z2 ride is
+  not a durability sample. There has been **no long ride since 8/29**. With no confirming data the
+  duration defaults back to the durability number, as pre-committed. Because 10/03 is overridden to
+  120, the 165 first applies **Sat 10/10**, which becomes the fresh sample against the 6.0% line.
+- **Open question for the athlete, not decided here: Phase 3 is one week from ending (W17 closes
+  10/11, Phase 4 opens 10/12, final test 11/03) and has produced one VO2 session.** The July
+  precedent was to shift the phases +1 week rather than train on a stale block. Extending Phase 3
+  by a week — pushing Phase 4 to 10/19 and the test to 11/10 — is the honest response to a block
+  that didn't run, but it cascades through Phase 4 and the test date, so it is **recommended and
+  asked, not applied.**
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
