@@ -173,6 +173,27 @@ phases:
                                    # athlete has now gone a full week without a long ride. With
                                    # no confirming data, default back to the durability-building
                                    # duration rather than assume the limiter stayed resolved.
+                                   # RESOLVED 10/02 — and the honest answer is "no valid sample",
+                                   # so this template no longer decides anything. Sat 9/12 WAS
+                                   # ridden and came in at 4.1% decoupling, which reads as a pass
+                                   # on the letter of the gate. It is not one: 9/12 was 60.8 min /
+                                   # 44 TSS against a prescribed 165 min, and decoupling over an
+                                   # hour says nothing about durability at 135-165. The gate wanted
+                                   # a long-ride sample and did not get one. By intent that is the
+                                   # "not ridden" branch, which says restore 165.
+                                   # It is NOT being restored, because restoring long-ride duration
+                                   # is the wrong move three days into a re-entry ramp. Instead both
+                                   # remaining Phase 3 Saturdays (10/03, 10/10) are overridden under
+                                   # `schedule:` at 90 and 120 min, so this value is now dead for
+                                   # the rest of the block and the question moves to Phase 4.
+                                   # CARRY FORWARD: the last true long ride was 8/29 (5.7%,
+                                   # marginal and rising from 3.8%). The same-power tempo series
+                                   # (block-3 HR minus block-1 HR at a held 245-250W) is suspended,
+                                   # not abandoned — restart it on the first Phase 4 Saturday at
+                                   # 150 min, after the 10/13 retest, and read 8/29 as its baseline.
+                                   # Do not restart it during the ramp: HR at held power is not
+                                   # comparable across a ten-day layoff, and a contaminated sample
+                                   # is worse than a missing one.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
@@ -306,6 +327,93 @@ schedule:
     target_if: 0.65
     target_tss: 42
     description: "Easy Z2, 60 min (trimmed from 90). NOT RIDDEN — 8/23 and 8/24 were both taken off ahead of the test; left at the old FTP-305 watts as a historical record. Freshens Tue 8/25's FTP test: projected TSB +1.4 at 90 min vs +3.2 at 60 min. Genuinely easy — no tempo."
+
+  # -------------------- Re-entry ramp (10/02 → 10/11) after the 9/23-10/01 gap --------------------
+  # ADDED 10/02. The athlete has not ridden since Tue 9/22 — ten consecutive off-bike
+  # days (9/23-10/01), with Oura also stopping on 9/24. Phase 3 has effectively not
+  # happened: weekly TSS ran 372 (wk13) -> 67 (wk14) -> 88 (wk15) -> 0 (wk16, current)
+  # against 351/wk prescribed, and the block produced two quality sessions in three
+  # weeks — 9/15 was ridden as threshold instead of the prescribed 4x4 VO2, and 9/22's
+  # VO2 ran 3-min reps instead of 4-min with the 5th rep collapsing to 290W (-19.4%
+  # first-to-last, 18.0% decoupling).
+  #
+  # This is the SECOND gap of this length: 7/16-7/26 was 11 days, and the response then
+  # was a one-week re-entry ramp (7/26-8/02) followed by a retest on 8/04. That retest
+  # came back 317 -> 305, -3.8%. That precedent is the reason for both halves of this
+  # change: ramp first, then re-anchor before Phase 4 spends three weeks on a number a
+  # layoff has probably eroded. Structure of this ramp mirrors the July one — easy Z2
+  # re-entry, one stepped-back quality session, one sub-anchor threshold read, long ride
+  # rebuilt to 120 min with NO tempo, then test.
+  #
+  # Phases are NOT shifted this time. Putting the retest on Tue 10/13 — the first
+  # Tuesday of Phase 4 — re-anchors the block at its start, keeps the 11/03 final test
+  # where it is, and costs nothing: Phase 3's remaining Saturdays (10/03, 10/10) are
+  # both overridden below, so the template is moot for the rest of the block.
+  2026-10-02:                     # today — was Phase 3 Friday "Rest"
+    type: Endurance
+    duration_min: 50
+    target_watts: "205-220"
+    target_if: 0.62
+    target_tss: 32
+    description: "Re-entry ride #1 after the ten-day gap. Pure Z2, genuinely easy, cadence 90+. This OVERRIDES the Phase 3 Friday rest deliberately: with ATL 5.6 and TSB +28.4 there is no fatigue left to recover from, so an eleventh rest day buys nothing and costs aerobic volume. Same call as 9/07. If HR runs away above 140 at 210W, cut to 35 min easy spin — do not force it."
+  2026-10-03:                     # was Phase 3 Saturday, Endurance 135 min / TSS 98
+    type: Endurance
+    duration_min: 90
+    target_watts: "205-230"
+    target_if: 0.65
+    target_tss: 63
+    description: "Long-ride re-entry — 90 min Z2, NO tempo blocks. Stepped back from 135 min. Fuel it anyway (60-90 g carb/hr on the bike) — the point is to re-establish the habit alongside the volume. Do NOT restart the same-power tempo series here; see the durability note on the Phase 3 Saturday above."
+  2026-10-04:                     # was Phase 3 Sunday, Endurance 75 min / TSS 48
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-230"
+    target_if: 0.63
+    target_tss: 40
+    description: "Easy Z2, 60 min (was 75). Conversational."
+  2026-10-05:
+    type: Rest
+    description: "Full rest. Matches the Phase 3 Monday; stated explicitly for the log."
+  2026-10-06:                     # was Phase 3 Tuesday, VO2max 4x4 @ 340-368W / TSS 85
+    type: SweetSpot
+    duration_min: 60
+    target_watts: "275-285"
+    target_if: 0.72
+    target_tss: 52
+    description: "Re-entry quality session #1: WU 15 min, 2x10 min @ 280W (~87% of the 320 anchor, 3 min easy between), CD. DELIBERATELY NOT the prescribed 4x4 @ 115% FTP. Two reasons: ten days off is the wrong place to open with VO2 work, and the 320 anchor is unverified after the layoff — 115% of a stale number is an unknown intensity. This is the same step-back the 7/29 re-entry used. If HR is under 162 at the end of rep 1, take rep 2 to 12 min."
+  2026-10-07:
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-230"
+    target_if: 0.63
+    target_tss: 40
+    description: "Easy Z2, 60 min."
+  2026-10-08:                     # was Phase 3 Thursday, VO2max 30/15s @ 362W / TSS 80
+    type: Threshold
+    duration_min: 60
+    target_watts: "300-310"
+    target_if: 0.82
+    target_tss: 67
+    description: "Re-entry quality session #2 AND the read on where FTP actually sits: WU, 2x12 min @ 305W (~95% of the 320 anchor), CD. Held deliberately below the anchor so it is completable rather than a test. THIS IS THE DIAGNOSTIC for Tuesday's retest: if both reps hold 300-310W with last-rep HR at or under 175 and fade inside 3%, the 320 anchor has survived the gap and the 10/13 test is a confirmation. If rep 2 drops under 295W or HR passes 180 mid-rep-2, expect the test to come back near 305-310 — the same -3.8% the 8/04 retest showed after the July gap."
+  2026-10-09:
+    type: Rest
+    description: "Full rest. Freshens the weekend's volume."
+  2026-10-10:                     # was Phase 3 Saturday, Endurance 135 min / TSS 98
+    type: Endurance
+    duration_min: 120
+    target_watts: "205-230"
+    target_if: 0.66
+    target_tss: 87
+    description: "Long ride rebuilt to 120 min Z2, NO tempo — same step as the 8/01 re-entry long ride. Fuel: 60-90 g carb/hr + 500-800 mg sodium/hr."
+  2026-10-11:
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-230"
+    target_if: 0.63
+    target_tss: 40
+    description: "Easy Z2, 60 min. Closes the re-entry ramp. Keep it easy — Tuesday is a test."
+  2026-10-13:                     # ADDED 10/02. Replaces the Phase 4 week-18 Tuesday threshold.
+    type: Test
+    description: "FTP retest — 20-min x0.95 STRONGLY preferred over the ramp (the ramp under-read for this rider in the past, and the 8/25 ramp result is exactly why 320 had to be validated separately on 9/01). Rationale: FTP 320 was validated as a CEILING on 9/01, and since then the athlete has ridden two quality sessions in four weeks and taken ten days off. The 8/04 precedent after an 11-day gap was 317 -> 305, -3.8%; a similar erosion here puts the real number near 305-310. Phase 4 is three weeks of threshold and over-under work feeding the 11/03 final test — do not spend it on an unverified anchor. RE-ANCHOR Phase 4's watt targets to the result before Thu 10/15. If the result lands within 5W of 320, keep 320 and treat the gap as absorbed."
   2026-11-03:                     # was 2026-10-27; final test shifted +1wk with the phases.
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."
