@@ -306,6 +306,72 @@ schedule:
     target_if: 0.65
     target_tss: 42
     description: "Easy Z2, 60 min (trimmed from 90). NOT RIDDEN — 8/23 and 8/24 were both taken off ahead of the test; left at the old FTP-305 watts as a historical record. Freshens Tue 8/25's FTP test: projected TSB +1.4 at 90 min vs +3.2 at 60 min. Genuinely easy — no tempo."
+  # -------------------- Re-entry ramp (10/03 → 10/11) --------------------
+  # ADDED 10/03 after an 11-day off-bike gap (last ride 9/22). This is the same
+  # situation as 7/16-7/26 and is handled the same way: a staged re-entry rather
+  # than dropping back into the block mid-prescription. That ramp preceded the
+  # 8/25 ramp retest at +4.9%, so the pattern is known to work for this rider.
+  #
+  # The numbers behind it: 0 TSS in the last 7 days, CTL 33.2 with ramp -6.1/wk,
+  # TSB +28.4 ("fresh / detraining risk"). Phase 3's VO2max block has barely run —
+  # W14 67 TSS, W15 88, W16 0, against ~351/wk prescribed, i.e. ~155 of ~1050.
+  # There is also NO Oura data after 9/24, so recovery is unknown for the whole
+  # gap; the ramp is deliberately conservative until a few days of ring data
+  # confirm the gap was life/travel rather than illness.
+  #
+  # NOTE: these overrides stand whether or not the athlete is back on the bike on
+  # 10/03. Any day not ridden simply passes; re-entry restarts from ride #1 on the
+  # first day he does ride, so nothing here needs re-dating if the gap runs longer.
+  2026-10-03:                     # Sat — was Phase 3 Endurance 135 min / 98 TSS
+    type: Endurance
+    duration_min: 75
+    target_watts: "205-225"
+    target_if: 0.65
+    target_tss: 50
+    description: "Re-entry ride #1 after the 11-day gap (last ride 9/22). Pure Z2, NO tempo blocks, cadence 90+. Cut from 135 min / 98 TSS: the first ride back is not the week's durability session. Watch HR in the first 20 min at 210-215W — he has been running 205-211W at 125-135 bpm (9/12 211W/135, 9/21 208W/125). If HR sits 10+ bpm above that, cut to 45-60 min easy and make 10/04 a rest day; that pattern would say the gap was illness, not life."
+  2026-10-04:                     # Sun — was Phase 3 Endurance 75 min / 48 TSS
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-225"
+    target_if: 0.63
+    target_tss: 38
+    description: "Re-entry ride #2. Easy Z2, conversational. Skip it entirely if 10/03 ran hot."
+  2026-10-05:                     # Mon — Rest (same as the Phase 3 Monday; stated for the log)
+    type: Rest
+    description: "Rest. Full rest between the two re-entry Z2 rides and the first intensity back on 10/06."
+  2026-10-06:                     # Tue — STEP-BACK from Phase 3 VO2max 4x4 @ 340-368W / 85 TSS
+    type: SweetSpot
+    duration_min: 60
+    target_watts: "300-310"
+    target_if: 0.80
+    target_tss: 55
+    description: "Re-entry intensity: WU 15 min, 2x12 min @ 300-310W (94-97% FTP, 4 min easy between), CD. This replaces the Phase 3 Tuesday VO2max (4x4 @ 368W) — the same one clean step-back the 7/29 re-entry used before rebuilding. Two reasons not to open with 4x4 @ 115% FTP: it would be the third ride back after 11 days down, and the last VO2 session (9/22) already failed its 5th rep. Do NOT chase 320W+ here — 310W is the ceiling for this session."
+  2026-10-07:                     # Wed — unchanged from the Phase 3 Wednesday
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-235"
+    target_if: 0.63
+    target_tss: 40
+    description: "Easy Z2. Genuinely easy — this is the recovery day between the two intensity sessions."
+  2026-10-08:                     # Thu — SCALED from Phase 3 VO2max 30/15s @ 362W / 80 TSS
+    type: VO2max
+    duration_min: 60
+    target_watts: "350-360"
+    target_if: 0.84
+    target_tss: 68
+    description: "First real VO2 session back: WU, 4x3 min @ 350-360W (109-113% FTP) w/ 4 min easy between, CD. Scaled from the 30/15s. These are the reps he actually held on 9/22 — 4x3 min at 360/361/361/360W, HR 163 -> 169 -> 172 -> 177 — so this is a repeat of a known-completable session, not a progression. THE GATE for returning to the full 4x4 @ 368W: all four reps at 350W+ with fade under 5% and last-rep HR at or under 180. Rep 4 under 340W or a 5th-rep-style collapse -> hold VO2 at 4x3 and raise duration before watts. Do not add a 5th rep: 9/22's 5th rep fell to 290W after 1:57 (fade 9.8%, first-to-last 19.4%, whole-ride decoupling 18.0%) and that is the known failure point."
+  2026-10-09:                     # Fri — Rest (same as the Phase 3 Friday; stated for the log)
+    type: Rest
+    description: "Full rest."
+  2026-10-10:                     # Sat — was Phase 3 Endurance 135 min / 98 TSS
+    type: Endurance
+    duration_min: 120
+    target_watts: "205-235"
+    target_if: 0.66
+    target_tss: 86
+    description: "Long-ride re-entry — 120 min Z2, NO tempo (the 7-day ramp ends here). Stepped back from 135 min, the same way 8/01 was stepped back from 180 to 120 in the July re-entry. This also carries the UNRESOLVED 9/12 gate: the 9/01 release of Saturday 165 -> 135 min was hedged on Sat 9/12 coming in under 6.0% decoupling, and 9/12 was NOT ridden as a long ride — it was 60.8 min / 44 TSS, so its 4.1% decoupling does not satisfy a long-ride durability gate. By the gate's own third branch that means restore 165 min / TSS 120. Restoring 165 min one week into re-entry is not sensible, so the restore is DEFERRED to the first normal week, and the decision is now: ride 10/10 at 120 min and read its decoupling. <= 6.0% -> the 135 min release stands and Phase 4's Saturdays need no durability hold. > 6.0% -> durability regressed over the gap; hold Phase 4 Saturday long and re-open the same-power tempo series at 245-250W."
+
+  # -------------------- Final test --------------------
   2026-11-03:                     # was 2026-10-27; final test shifted +1wk with the phases.
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."
