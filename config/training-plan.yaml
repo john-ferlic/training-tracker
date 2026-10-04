@@ -173,6 +173,30 @@ phases:
                                    # athlete has now gone a full week without a long ride. With
                                    # no confirming data, default back to the durability-building
                                    # duration rather than assume the limiter stayed resolved.
+                                   # RESOLVED-AS-MOOT 10/04. The gate fired in its third branch:
+                                   # Sat 9/12's long ride was NOT ridden (a 60-min / 44-TSS
+                                   # "Endurance - short" was done instead), so by the letter of
+                                   # the rule this should now read 165 min / TSS 120. It is being
+                                   # left at 135 deliberately, and the restoration is DEFERRED
+                                   # rather than cancelled. Reasons, so this is not re-litigated:
+                                   #   1. No Phase 3 Saturday was ever ridden — 9/19, 9/26 and
+                                   #      10/03 are all blank. The gate was written to choose
+                                   #      between two durations for a session that then did not
+                                   #      happen once in four weeks.
+                                   #   2. The last long ride of any kind is 8/29. There is no
+                                   #      decoupling sample on either side of the line, so there
+                                   #      is nothing to read 165-vs-135 off.
+                                   #   3. CTL is 32.0, down 40% from 53.3 on 9/01. Writing a
+                                   #      165-min / 120-TSS ride into the plan now prescribes a
+                                   #      session ~3.7x today's ATL. The durability limiter is no
+                                   #      longer the binding constraint; the aerobic base is.
+                                   # The 10/10 override below supersedes this week's value with a
+                                   # 120-min rebuild ride, which is explicitly NOT a gate sample.
+                                   # CARRY FORWARD: the durability question is genuinely unsettled
+                                   # (8/29's 5.7% was marginal and rising from 3.8%). Re-open it
+                                   # in Phase 4 once two long rides have actually been ridden —
+                                   # read decoupling at a held 245-250W, not at whatever power
+                                   # the rebuild rides land on.
         target_watts: "205-235"
         target_if: 0.66
         target_tss: 98             # 135 min @ IF 0.66 (was 120 at 165 min)
@@ -306,6 +330,70 @@ schedule:
     target_if: 0.65
     target_tss: 42
     description: "Easy Z2, 60 min (trimmed from 90). NOT RIDDEN — 8/23 and 8/24 were both taken off ahead of the test; left at the old FTP-305 watts as a historical record. Freshens Tue 8/25's FTP test: projected TSB +1.4 at 90 min vs +3.2 at 60 min. Genuinely easy — no tempo."
+  # ------------- Re-entry ramp after the 9/23-10/03 gap (10/04 → 10/11) -------------
+  # ADDED 10/04. Twelve consecutive off-bike days, 9/23-10/03 — the longest gap since
+  # the 11-day 7/16-7/26 one. Last ride 9/22. Oura also stops 9/24 (ring off 10 days),
+  # so there is NO recovery data to clear a hard session.
+  #   Weekly TSS: wk37 (9/07) 372 -> wk38 (9/14) 67 -> wk39 (9/21) 88 -> wk40 (9/28) 0.
+  #   CTL 53.3 (9/01) -> 32.0 today, -21.3 points / -40%. TSB +27.8, ramp -5.8/wk.
+  # Phase 3's VO2max block has effectively not happened: of weeks 14-17, wk14 held one
+  # ride (the 9/15 threshold, not the prescribed 4x4), wk15 two, wk16 none. Week 17 is
+  # the last Phase 3 week and is used here as a re-entry week instead — the VO2 work is
+  # NOT salvageable off a CTL of 32 and would be the third breakdown in this block.
+  # Shape mirrors the proven 7/27-8/02 ramp (aerobic re-build, one sub-threshold touch,
+  # long ride stepped back), re-anchored to FTP 320. Projected: CTL 32.0 -> 33.7 (decay
+  # arrested), ATL 4.1 -> 30.5, TSB +27.8 -> +3.2 by 10/11. Riding wk17 as prescribed
+  # would instead dump ~351 TSS onto an ATL of 4.
+  # IF THE GAP WAS ILLNESS (unknown — no Oura to say): halve ride #1, get the ring back
+  # on, and do not take the Thursday SST until two clean days of recovery data exist.
+  2026-10-04:                     # today — was Endurance 75 min / IF 0.63 / 48 TSS
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-225"
+    target_if: 0.63
+    target_tss: 40
+    description: "Re-entry ride #1 after the 12-day gap. Pure Z2 at the BOTTOM of the band, cadence 90+, no tempo and no surges. Trimmed 75 -> 60 min. If HR drifts past ~140 at 215W or the legs are empty, cut to 40 min easy spin — the point today is to restart the habit, not to score TSS."
+  2026-10-05:                     # Mon — Rest (matches Phase 3 Mon; stated for the log)
+    type: Rest
+    description: "Rest between re-entry rides #1 and #2. Easy 20-min spin is fine if legs are stiff. Put the Oura ring back on tonight — Tuesday onward needs recovery data."
+  2026-10-06:                     # was VO2max 4x4 @ 340-368W / IF 0.88 / 85 TSS
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-235"
+    target_if: 0.65
+    target_tss: 42
+    description: "Re-entry ride #2. Z2, 60 min, conversational. REPLACES the Phase 3 Tuesday VO2max (4x4 min @ 340-368W, 85 TSS) — do NOT ride 4x4 today. Off 12 days with CTL 32 and no recovery data, 113% FTP intervals are how the 9/22 rep-5 collapse happens again. VO2 work resumes no earlier than the week of 10/12, and only after this week lands clean."
+  2026-10-07:                     # unchanged from the Phase 3 Wednesday — restated for the ramp
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-235"
+    target_if: 0.63
+    target_tss: 40
+    description: "Easy Z2, 60 min. Genuinely easy — this is the third aerobic day in four and its job is volume, not stimulus."
+  2026-10-08:                     # was VO2max 30/15s @ 362/205W / IF 0.86 / 80 TSS
+    type: SweetSpot
+    duration_min: 60
+    target_watts: "270-285"
+    target_if: 0.72
+    target_tss: 52
+    description: "WU 15 min, SST 2x10 min @ 278W (~87% FTP, 3 min easy between), CD. REPLACES the Phase 3 Thursday 30/15s (362/205W, 80 TSS). This is the one sub-threshold touch of the week and it is deliberately a step back from the 2x15 @ 320W last ridden 9/15 — exactly as 7/29 stepped back to 2x10 @ 275W after the July gap. If HR is under ~162 at the end of rep 1, take rep 2 to 12 min. Skip it entirely if readiness is under 70 or RHR is 5+ over 44."
+  2026-10-09:
+    type: Rest
+    description: "Full rest."
+  2026-10-10:                     # was Endurance 135 min / IF 0.66 / 98 TSS
+    type: Endurance
+    duration_min: 120
+    target_watts: "205-235"
+    target_if: 0.66
+    target_tss: 87
+    description: "Long-ride re-entry — 120 min Z2, NO tempo blocks. Stepped back from the Phase 3 Saturday's 135 min, same as 8/01 was stepped back from 180. Fuel it properly (60-90 g carb/hr on the bike, ~2 g/kg carbs in the 2 hr before) — under-fuelling a 2-hr ride off twelve days off is what turns a rebuild ride into another week off. This ride does NOT settle the durability gate below; it is too short and too easy to compare against the 249W same-power series."
+  2026-10-11:
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-235"
+    target_if: 0.65
+    target_tss: 42
+    description: "Easy Z2, 60 min, closing the re-entry week. Was 75 min / 48 TSS. Phase 4 opens 10/12 — whether it opens on time is a decision for the 10/11 brief, not a given: see the Phase 3 Saturday note and the 11/03 test."
   2026-11-03:                     # was 2026-10-27; final test shifted +1wk with the phases.
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."
