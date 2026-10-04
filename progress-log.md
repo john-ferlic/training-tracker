@@ -10,6 +10,84 @@ the analysis math needs them. This log is the narrative of *how they got there*.
 
 ---
 
+## 2026-10-04 — **Twelve days off the bike (9/23-10/03). Phase 3's VO2max block did not happen; week 17 becomes a re-entry ramp. CTL 53.3 → 32.0.**
+
+- **No stat change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all current.
+  (Same standing blind spot: `sync-profile` reads FTP from the **Strava profile field**, so it can
+  never confirm or refute a test result. It is not a check on the anchor.)
+- **The gap, and it is the largest one yet.** Last ride **9/22**. Twelve consecutive off-bike days,
+  **9/23-10/03**, against 11 days for the 7/16-7/26 gap and four for 9/03-9/06.
+  - Weekly TSS: **372** (wk37, 9/07) → **67** (wk38, 9/14) → **88** (wk39, 9/21) → **0** (wk40, 9/28).
+    The fall-off starts the week Phase 3 opened, not the week he stopped.
+  - **CTL 53.3 (9/01) → 32.0 today, −21.3 points / −40%.** ATL 52.7 → **4.1**. TSB **+27.8**, ramp
+    **−5.8/wk**. He is not fatigued and not merely unloaded this time — this is detraining.
+  - Unlike 9/03-9/06, **Oura cannot tell us why.** The ring data also stops, at **9/24** — ten days
+    dark. There is no recovery data for today, so nothing can clear a hard session.
+  - What the last readings did say, and it is reassuring: **9/24 readiness 88, sleep 84 / 8.86 h,
+    RHR 43 vs base 44, HRV 49, temp dev +0.08.** The 7-day HRV mean is **57.0 vs 61.2** for the
+    prior 39 days, **−6.9%** — inside the 12% flag. The one-day dip on **9/19** (readiness 78, RHR
+    **49**, HRV **44**, temp **+0.26**) rebounded to **91 / HRV 57** on 9/20. **He was not broken
+    when he stopped.** Read this as life load, not illness — but the ring being off is itself the
+    reason that read is a guess rather than a finding.
+- **Phase 3's VO2max block has effectively not been ridden, and that is the real cost.** Of weeks
+  14-17: wk14 held **one** ride (the 9/15 session, and it was the Phase 2 threshold, not the
+  prescribed 4×4), wk15 held two, wk16 held **none**. Week 17 is the last Phase 3 week.
+  - The one genuine VO2 session, **9/22 "LOX"**, was actually good and then wasn't: four reps at
+    **360 / 361 / 361 / 360W (113% FTP)** with HR climbing **163 → 169 → 172 → 177**, then rep 5
+    **collapsed to 290W (90% FTP)** and was cut to 1:57. Fade **9.8%**, first-to-last **19.4%**,
+    decoupling **18.0%**, max HR 188. He went to the well on the last ride before twelve days off.
+  - **9/15 is the earlier warning, and it was missed at the time.** The 3×15 @ 320W ran
+    **319W/HR 165, 309W/HR 169, then 309W abandoned after 3.9 min of 15.** Fade **3.1%**,
+    decoupling **6.3%**. Against **9/01's 319 / 319 / 314, fade 1.6%**, that is a clear step down —
+    rep 2 gave back 10W and rep 3 was abandoned rather than merely cut short. Two weeks of
+    deteriorating threshold execution preceded the stop.
+- **Plan change — week 17 (10/05-10/11) is now a re-entry ramp, encoded as date overrides.**
+  Same mechanism and same shape as the proven 7/27-8/02 ramp, re-anchored to FTP 320:
+
+  | date | was | now |
+  |---|---|---|
+  | Sun 10/04 | Endurance 75 min / 48 TSS | Endurance **60 min @ 205-225W** / 40 TSS — re-entry #1 |
+  | Mon 10/05 | Rest | Rest (+ ring back on) |
+  | Tue 10/06 | **VO2max 4×4 @ 340-368W / 85 TSS** | Endurance **60 min** / 42 TSS — re-entry #2 |
+  | Wed 10/07 | Endurance 60 min / 40 TSS | unchanged |
+  | Thu 10/08 | **VO2max 30/15s @ 362/205W / 80 TSS** | **SweetSpot 2×10 @ 278W** / 52 TSS |
+  | Fri 10/09 | Rest | Rest |
+  | Sat 10/10 | Endurance 135 min / 98 TSS | Endurance **120 min, no tempo** / 87 TSS |
+  | Sun 10/11 | Endurance 75 min / 48 TSS | Endurance 60 min / 42 TSS |
+
+  Week **~263 TSS vs ~351** as prescribed. Projected **CTL 32.0 → 33.7** (decay arrested rather
+  than reversed), **ATL 4.1 → 30.5**, **TSB +27.8 → +3.2** by 10/11. Riding wk17 as written would
+  have dropped **85 TSS of 113%-FTP intervals onto an ATL of 4** on day two back.
+  - **Dropping the VO2 work is the deliberate part.** The 9/22 rep-5 collapse is what a 4×4 off
+    twelve days and a CTL of 32 looks like, and it would be the third breakdown in this block. The
+    aerobic base is the binding constraint now, not VO2max. VO2 resumes no earlier than the week of
+    10/12, and only if this week lands clean.
+  - The Thursday SST is deliberately a step back from the 2×15 @ 320W last ridden 9/15, exactly as
+    7/29 stepped back to 2×10 @ 275W. It is gated: **skip it if readiness < 70 or RHR ≥ 49.**
+- **Plan housekeeping — the 9/12 durability gate fired, and is recorded as moot rather than
+  applied.** The 9/07 entry wrote "**9/12 not ridden → restore 165 min / TSS 120**". Sat 9/12's long
+  ride was indeed **not ridden** (a 60-min / 44-TSS "Endurance - short" went in instead), so by the
+  letter of the rule Phase 3's Saturday should now read 165/120. **It is being left at 135 and the
+  restoration deferred**, which is a judgement call and is flagged as one in the PR:
+  - **No Phase 3 Saturday was ever ridden** — 9/19, 9/26 and 10/03 are all blank. The gate chose
+    between two durations for a session that did not happen once in four weeks.
+  - **The last long ride of any kind is 8/29.** There is no decoupling sample on either side of the
+    6.0% line, so there is nothing to read 165-vs-135 off.
+  - A 165-min / 120-TSS prescription against today's ATL of 4.1 is ~3.7× ATL. It would not be ridden.
+  - **The durability question stays genuinely open** — 8/29's **5.7%** was marginal and rising from
+    **3.8%**. Re-open it in Phase 4 once two long rides have actually been ridden, read at a held
+    **245-250W** so it is comparable to the 249W same-power series, not at whatever power the
+    rebuild rides land on. The 10/10 ride is explicitly **not** a gate sample.
+- **Open question for the athlete, not decided here: Phase 4 opens 10/12 and the final test is
+  11/03.** Phase 4 is a threshold/consolidation block that assumes a Phase 3 that did not happen,
+  and it would open on a CTL of ~34 against the 53 it was designed around. The July precedent was to
+  shift every phase **+1 week** and push the test. That restructures the whole back half of the plan
+  on one data point — the re-entry week — so it is left as a recommendation to settle in the
+  **10/11 brief**, when there is a week of actual riding to read. Flagging it now so it is not
+  stumbled into on 10/12.
+
+---
+
 ## 2026-09-07 — **FTP 320 validated — but as a ceiling, not a floor. Four off-bike days cost the week's long ride, so the Phase 3 Saturday gate is now a single sample on 9/12.**
 
 - **No stat *value* change.** `sync-profile` clean — FTP 320, max HR 197, RHR 44, weight 79 all
