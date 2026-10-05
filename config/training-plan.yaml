@@ -306,6 +306,67 @@ schedule:
     target_if: 0.65
     target_tss: 42
     description: "Easy Z2, 60 min (trimmed from 90). NOT RIDDEN — 8/23 and 8/24 were both taken off ahead of the test; left at the old FTP-305 watts as a historical record. Freshens Tue 8/25's FTP test: projected TSB +1.4 at 90 min vs +3.2 at 60 min. Genuinely easy — no tempo."
+  # ---------- Re-entry ramp after the 13-day gap (9/23 → 10/04) ----------
+  # ADDED 10/05. Week 17 (10/05-10/11) is the last week of Phase 3, but the VO2max
+  # block it belongs to did not happen: W14 67 TSS (1 ride), W15 88 TSS (2 rides),
+  # W16 0 TSS (no rides, 9/28-10/04), against 356-378 TSS in W9-W11. Last ride was
+  # 9/22. CTL 30.4, ramp -5.6/wk, TSB +26.8 — this is detraining, not taper.
+  # Of the 8 VO2max sessions Phase 3 prescribed, exactly one was ridden (9/22, and
+  # ridden well: 4x4 at 360/361/361/360W = 113% FTP, 0.0% fade across the four).
+  # So Week 17 is rebuilt as a re-entry ramp, on the model of the 7/27-8/02 ramp
+  # that followed the 11-day July gap (that week ran ~311 TSS and he tested two
+  # days later). No VO2max and no threshold this week: the first intensity is a
+  # sub-threshold SST on Wed, stepped back the same way 7/29 was.
+  # Oura reads travel, not illness: no ring data 9/25-10/04, and the last two days
+  # before the gap were normal (9/23 RHR 42 / temp +0.16, 9/24 RHR 43 / temp +0.08).
+  # Today is the best readiness in the 46-day file (93, sleep 82 / 8.45 h, RHR 42 vs
+  # base 43, HRV 63 vs base 59). IF THE 13 DAYS WERE ILLNESS OR INJURY, not travel,
+  # ignore this ramp and restart from 2-3 days of 45 min easy spinning instead.
+  2026-10-05:                     # Mon — was Rest (Phase 3 Monday)
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-225"
+    target_if: 0.65
+    target_tss: 42
+    description: "Re-entry ride #1 after the 13-day gap. Pure Z2, cadence 90+, conversational — no tempo, no surges. This replaces a rest day deliberately: after 13 consecutive days off there is no fatigue left to recover (TSB +26.8, readiness 93), so a 14th rest day buys nothing and costs aerobic volume. Self-limiting: if HR runs away above 140 at 215W, or the legs are genuinely empty, cut to 40 min easy and treat that as the data point."
+  2026-10-06:                     # Tue — was VO2max 4x4 @ 340-368W, IF 0.88, 85 TSS
+    type: Endurance
+    duration_min: 75
+    target_watts: "205-230"
+    target_if: 0.66
+    target_tss: 54
+    description: "Re-entry ride #2. Z2, 75 min. NOT the prescribed 4x4 @ 340-368W — a 115% FTP VO2max session is the wrong first quality day off 13 days down, and it is also the session least worth spending on a body that cannot yet absorb it. VO2max work resumes only once the aerobic week is back under him."
+  2026-10-07:                     # Wed — was Endurance 60 min (Phase 3 Wednesday)
+    type: SweetSpot
+    duration_min: 60
+    target_watts: "265-275"
+    target_if: 0.72
+    target_tss: 52
+    description: "First intensity of the re-entry: WU 15 min, 2x10 min @ 270W (~84% FTP, 3 min easy between), CD. Mirrors the 7/29 re-entry SST — one clean step-back below the last threshold work (9/15 ran 3x15 at 319/309/309W) rather than straight back to 100% FTP. If HR is under 162 at the end of rep 1, take rep 2 to 12 min. Do NOT drift above 275W: the point is to re-open the session, not to test it."
+  2026-10-08:                     # Thu — was VO2max 30/15s @ 362/205W, IF 0.86, 80 TSS
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-230"
+    target_if: 0.65
+    target_tss: 42
+    description: "Z2, 60 min, genuinely easy. Replaces the 30/15s — second VO2max session of the week deferred for the same reason as Tuesday's."
+  2026-10-09:                     # Fri — Rest (matches Phase 3 Friday; stated for the log)
+    type: Rest
+    description: "Full rest."
+  2026-10-10:                     # Sat — was Endurance 135 min, IF 0.66, 98 TSS
+    type: Endurance
+    duration_min: 105
+    target_watts: "205-230"
+    target_if: 0.66
+    target_tss: 72
+    description: "Long ride re-entry — 105 min Z2, NO tempo blocks. Stepped back from 135 the way 8/01 was stepped back from 180. This is also the first usable durability sample since 8/29: read the decoupling, since the Phase 3 Saturday gate written on 9/07 never got its sample (9/12 was ridden as 61 min of Z2, not the 165-min long ride, so the gate fell into its 'not ridden' branch — see progress-log 10/05). Fuel it anyway: 60-90 g carb/hr + 500-800 mg sodium/hr."
+  2026-10-11:                     # Sun — was Endurance 75 min, IF 0.63, 48 TSS
+    type: Endurance
+    duration_min: 60
+    target_watts: "205-230"
+    target_if: 0.65
+    target_tss: 42
+    description: "Easy Z2 to close the re-entry week. Week 17 totals ~304 TSS, almost all of it Z2 — close to the 311 TSS of the 7/27-8/02 re-entry week, and a deliberate ATL step up from 3.5."
   2026-11-03:                     # was 2026-10-27; final test shifted +1wk with the phases.
     type: Test
     description: "Final FTP test (20-min x0.95 or ramp). Converts the raised ceiling into testable FTP."
